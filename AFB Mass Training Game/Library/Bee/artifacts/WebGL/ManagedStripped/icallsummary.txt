@@ -39,6 +39,7 @@ UnityEngine.Behaviour::get_isActiveAndEnabled
 UnityEngine.Component::get_gameObject
 UnityEngine.Component::get_transform
 UnityEngine.ComputeShader::FindKernel
+UnityEngine.ContactPair::ExtractContactsArray_Injected
 UnityEngine.Coroutine::ReleaseCoroutine
 UnityEngine.Cubemap::Internal_CreateImpl
 UnityEngine.CubemapArray::Internal_CreateImpl
@@ -110,6 +111,18 @@ UnityEngine.Object::ToString
 UnityEngine.Object::DestroyImmediate
 UnityEngine.Object::DontDestroyOnLoad
 UnityEngine.Object::set_hideFlags
+UnityEngine.Physics::get_invokeCollisionCallbacks
+UnityEngine.Physics::get_reuseCollisionCallbacks
+UnityEngine.Physics::SendOnCollisionEnter
+UnityEngine.Physics::SendOnCollisionExit
+UnityEngine.Physics::SendOnCollisionStay
+UnityEngine.Physics::get_defaultPhysicsScene_Injected
+UnityEngine.Physics::GetColliderByInstanceID
+UnityEngine.Physics::GetBodyByInstanceID
+UnityEngine.Physics::Internal_RaycastAll_Injected
+UnityEngine.PhysicsScene::Internal_RaycastTest_Injected
+UnityEngine.PhysicsScene::Internal_Raycast_Injected
+UnityEngine.PhysicsScene::Internal_RaycastNonAlloc_Injected
 UnityEngine.PlayerConnectionInternal::IsConnected
 UnityEngine.PlayerConnectionInternal::TrySendMessage
 UnityEngine.PlayerConnectionInternal::DisconnectAll

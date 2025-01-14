@@ -200,6 +200,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.ComputeShader
 
+	//Start Registrations for type : UnityEngine.ContactPair
+
+		//System.Int32 UnityEngine.ContactPair::ExtractContactsArray_Injected(UnityEngine.ContactPair&,UnityEngine.ContactPoint[],System.Boolean)
+		void Register_UnityEngine_ContactPair_ExtractContactsArray_Injected();
+		Register_UnityEngine_ContactPair_ExtractContactsArray_Injected();
+
+	//End Registrations for type : UnityEngine.ContactPair
+
 	//Start Registrations for type : UnityEngine.Coroutine
 
 		//System.Void UnityEngine.Coroutine::ReleaseCoroutine(System.IntPtr)
@@ -559,6 +567,62 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Object_set_hideFlags();
 
 	//End Registrations for type : UnityEngine.Object
+
+	//Start Registrations for type : UnityEngine.Physics
+
+		//System.Boolean UnityEngine.Physics::get_invokeCollisionCallbacks()
+		void Register_UnityEngine_Physics_get_invokeCollisionCallbacks();
+		Register_UnityEngine_Physics_get_invokeCollisionCallbacks();
+
+		//System.Boolean UnityEngine.Physics::get_reuseCollisionCallbacks()
+		void Register_UnityEngine_Physics_get_reuseCollisionCallbacks();
+		Register_UnityEngine_Physics_get_reuseCollisionCallbacks();
+
+		//System.Void UnityEngine.Physics::SendOnCollisionEnter(UnityEngine.Component,UnityEngine.Collision)
+		void Register_UnityEngine_Physics_SendOnCollisionEnter();
+		Register_UnityEngine_Physics_SendOnCollisionEnter();
+
+		//System.Void UnityEngine.Physics::SendOnCollisionExit(UnityEngine.Component,UnityEngine.Collision)
+		void Register_UnityEngine_Physics_SendOnCollisionExit();
+		Register_UnityEngine_Physics_SendOnCollisionExit();
+
+		//System.Void UnityEngine.Physics::SendOnCollisionStay(UnityEngine.Component,UnityEngine.Collision)
+		void Register_UnityEngine_Physics_SendOnCollisionStay();
+		Register_UnityEngine_Physics_SendOnCollisionStay();
+
+		//System.Void UnityEngine.Physics::get_defaultPhysicsScene_Injected(UnityEngine.PhysicsScene&)
+		void Register_UnityEngine_Physics_get_defaultPhysicsScene_Injected();
+		Register_UnityEngine_Physics_get_defaultPhysicsScene_Injected();
+
+		//UnityEngine.Collider UnityEngine.Physics::GetColliderByInstanceID(System.Int32)
+		void Register_UnityEngine_Physics_GetColliderByInstanceID();
+		Register_UnityEngine_Physics_GetColliderByInstanceID();
+
+		//UnityEngine.Component UnityEngine.Physics::GetBodyByInstanceID(System.Int32)
+		void Register_UnityEngine_Physics_GetBodyByInstanceID();
+		Register_UnityEngine_Physics_GetBodyByInstanceID();
+
+		//UnityEngine.RaycastHit[] UnityEngine.Physics::Internal_RaycastAll_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_Physics_Internal_RaycastAll_Injected();
+		Register_UnityEngine_Physics_Internal_RaycastAll_Injected();
+
+	//End Registrations for type : UnityEngine.Physics
+
+	//Start Registrations for type : UnityEngine.PhysicsScene
+
+		//System.Boolean UnityEngine.PhysicsScene::Internal_RaycastTest_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_PhysicsScene_Internal_RaycastTest_Injected();
+		Register_UnityEngine_PhysicsScene_Internal_RaycastTest_Injected();
+
+		//System.Boolean UnityEngine.PhysicsScene::Internal_Raycast_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,System.Single,UnityEngine.RaycastHit&,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_PhysicsScene_Internal_Raycast_Injected();
+		Register_UnityEngine_PhysicsScene_Internal_Raycast_Injected();
+
+		//System.Int32 UnityEngine.PhysicsScene::Internal_RaycastNonAlloc_Injected(UnityEngine.PhysicsScene&,UnityEngine.Ray&,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_PhysicsScene_Internal_RaycastNonAlloc_Injected();
+		Register_UnityEngine_PhysicsScene_Internal_RaycastNonAlloc_Injected();
+
+	//End Registrations for type : UnityEngine.PhysicsScene
 
 	//Start Registrations for type : UnityEngine.PlayerConnectionInternal
 
