@@ -36,6 +36,19 @@ UnityEngine.AnimationCurve::Internal_Create
 UnityEngine.AnimationCurve::Internal_Destroy
 UnityEngine.Behaviour::get_enabled
 UnityEngine.Behaviour::get_isActiveAndEnabled
+UnityEngine.Camera::GetAllCamerasCount
+UnityEngine.Camera::GetAllCamerasImpl
+UnityEngine.Camera::get_cullingMask
+UnityEngine.Camera::get_eventMask
+UnityEngine.Camera::get_targetDisplay
+UnityEngine.Camera::get_farClipPlane
+UnityEngine.Camera::get_nearClipPlane
+UnityEngine.Camera::ScreenPointToRay_Injected
+UnityEngine.Camera::get_pixelRect_Injected
+UnityEngine.Camera::get_clearFlags
+UnityEngine.Camera::get_targetTexture
+UnityEngine.CameraRaycastHelper::RaycastTry2D_Injected
+UnityEngine.CameraRaycastHelper::RaycastTry_Injected
 UnityEngine.Component::get_gameObject
 UnityEngine.Component::get_transform
 UnityEngine.ComputeShader::FindKernel
@@ -46,6 +59,8 @@ UnityEngine.CubemapArray::Internal_CreateImpl
 UnityEngine.Debug::ExtractStackTraceNoAlloc
 UnityEngine.DebugLogHandler::Internal_Log
 UnityEngine.DebugLogHandler::Internal_LogException
+UnityEngine.Display::RelativeMouseAtImpl
+UnityEngine.Display::GetSystemExtImpl
 UnityEngine.Experimental.Rendering.BuiltinRuntimeReflectionSystem::BuiltinUpdate
 UnityEngine.Experimental.Rendering.GraphicsFormatUtility::CanDecompressFormat
 UnityEngine.Experimental.Rendering.GraphicsFormatUtility::IsCompressedFormat_Native_TextureFormat
@@ -59,6 +74,7 @@ UnityEngine.Experimental.Rendering.GraphicsFormatUtility::GetGraphicsFormat_Nati
 UnityEngine.Experimental.Rendering.ScriptableRuntimeReflectionSystemSettings::ScriptingDirtyReflectionSystemInstance
 UnityEngine.GameObject::GetComponentsInternal
 UnityEngine.GameObject::Internal_CreateGameObject
+UnityEngine.GameObject::SendMessage
 UnityEngine.GameObject::GetComponent
 UnityEngine.GameObject::Internal_AddComponentWithType
 UnityEngine.GameObject::get_transform
@@ -66,6 +82,10 @@ UnityEngine.Gradient::Internal_Equals
 UnityEngine.Gradient::Init
 UnityEngine.Gradient::Cleanup
 UnityEngine.Hash128::Hash128ToStringImpl_Injected
+UnityEngine.Input::CheckDisabled
+UnityEngine.Input::GetMouseButton
+UnityEngine.Input::GetMouseButtonDown
+UnityEngine.Input::get_mousePosition_Injected
 UnityEngine.Jobs.TransformAccess::GetLocalToWorldMatrix
 UnityEngine.Jobs.TransformAccess::GetWorldToLocalMatrix
 UnityEngine.Jobs.TransformAccessArray::GetCapacity
@@ -136,6 +156,8 @@ UnityEngine.Profiling.Profiler::EndSample
 UnityEngine.QualitySettings::get_activeColorSpace
 UnityEngine.Renderer::get_enabled
 UnityEngine.Renderer::get_isVisible
+UnityEngine.Renderer::SetMaterialArray
+UnityEngine.Renderer::GetMaterialArray
 UnityEngine.Rendering.GraphicsSettings::get_lightsUseLinearIntensity
 UnityEngine.Rendering.ScriptableRenderContext::GetCameras_Internal_Injected
 UnityEngine.RenderTexture::GetDescriptor_Injected
@@ -148,6 +170,8 @@ UnityEngine.RenderTexture::set_depthStencilFormat
 UnityEngine.RenderTexture::set_height
 UnityEngine.RenderTexture::set_width
 UnityEngine.ResourcesAPIInternal::FindObjectsOfTypeAll
+UnityEngine.Screen::get_height
+UnityEngine.Screen::get_width
 UnityEngine.ScriptableObject::CreateScriptableObject
 UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromType
 UnityEngine.Shader::TagToID

@@ -372,6 +372,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Marvin_GenerateSeed_mB7995CFEF963DEA847889D
 IL2CPP_EXTERN_C const RuntimeMethod* Marvin__cctor_m232768BD291CEFEDF9C76FE70FD2449557F91880_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Marvin__rotl_m6F6EE99A253FC2C9B98968720C729DEEC05F6CB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Math_Abs_m467758B420C9B26E325F1616A4486CAC3709F3B5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Math_Abs_m9AC832833620E36FDADACC7664F431DC274F0F48_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Math_Atan_m653A85096EA3E38D6B5998337232B82A3548EAC7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Math_Ceiling_m1DD5C3B6154AA4BD9FE95186C26E47129BC900A4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Math_Max_m530EBA549AFD98CFC2BD29FE86C6376E67DF11CF_RuntimeMethod_var;
@@ -9263,6 +9264,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Sign_mC342EFA64DCA2E65BCF71F1206
 		int64_t L_1 = ___0_value;
 		return ((int32_t)((int64_t)(((int64_t)(L_0>>((int32_t)63)))|((int64_t)((uint64_t)((-L_1))>>((int32_t)63))))));
 	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Math_Abs_m9AC832833620E36FDADACC7664F431DC274F0F48 (float ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_Abs_m9AC832833620E36FDADACC7664F431DC274F0F48_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	StackTraceSentry _stackTraceSentry(Math_Abs_m9AC832833620E36FDADACC7664F431DC274F0F48_RuntimeMethod_var);
+	return fabsf(___0_value);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Atan_m653A85096EA3E38D6B5998337232B82A3548EAC7 (double ___0_d, const RuntimeMethod* method) 
 {

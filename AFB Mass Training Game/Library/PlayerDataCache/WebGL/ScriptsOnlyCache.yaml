@@ -1,8 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - Glow
+    - Test
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
+    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -53,9 +57,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 24984}
+    - Class: 114
+      Script: {instanceID: 28480}
+    - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1046,6 +1058,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c4306a195d243153a70c9ebe4229729f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Glow
+  - hash:
+      serializedVersion: 2
+      Hash: 77069a9f80255043c3575bcb46deaba4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Test
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
