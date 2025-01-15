@@ -6,7 +6,7 @@ public class Glow : MonoBehaviour
 {
     private Color startColor;
     //public GameObject plane;
-    public Material door;
+    //public Material door;
     public Material tinted;
     public Material clear;
     //public var yellow;
