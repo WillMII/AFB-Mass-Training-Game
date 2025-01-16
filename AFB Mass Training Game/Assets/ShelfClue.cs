@@ -9,6 +9,7 @@ public class ShelfClue : MonoBehaviour
     public GameObject canvas;
     public GameObject lilShelf;
     public GameObject toolbar;
+    private bool alreadyClicked;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +25,19 @@ public class ShelfClue : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("Down");
-        Instantiate(canvas.gameObject);
-        if (!alreadyInstantiated)
+        if (!alreadyClicked)
         {
-            Instantiate(lilShelf.gameObject, toolbar.transform);
-            alreadyInstantiated = true;
+            Debug.Log("Down");
+            Instantiate(canvas.gameObject);
+            if (!alreadyInstantiated)
+            {
+                Instantiate(lilShelf.gameObject, toolbar.transform);
+                alreadyInstantiated = true;
+            }
+
+            canvas.gameObject.SetActive(true);
+            Debug.Log(alreadyInstantiated);
+            alreadyClicked = true;
         }
-        
-        canvas.gameObject.SetActive(true);
-        Debug.Log(alreadyInstantiated);
     }
 }

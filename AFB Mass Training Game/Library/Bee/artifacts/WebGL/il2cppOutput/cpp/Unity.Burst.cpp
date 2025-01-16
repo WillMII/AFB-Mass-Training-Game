@@ -4387,7 +4387,7 @@ IL_0014:
 		L_4 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_3, NULL);
 		NullCheck(L_4);
 		bool L_5;
-		L_5 = VirtualFuncInvoker0< bool >::Invoke(37, L_4);
+		L_5 = VirtualFuncInvoker0< bool >::Invoke(38, L_4);
 		V_4 = L_5;
 		bool L_6 = V_4;
 		if (!L_6)
@@ -4434,7 +4434,7 @@ IL_005d:
 		MethodInfo_t* L_17 = ___1_methodInfo;
 		NullCheck(L_17);
 		bool L_18;
-		L_18 = VirtualFuncInvoker0< bool >::Invoke(22, L_17);
+		L_18 = VirtualFuncInvoker0< bool >::Invoke(23, L_17);
 		V_6 = L_18;
 		bool L_19 = V_6;
 		if (!L_19)
@@ -5408,7 +5408,7 @@ IL_0024_1:
 				Type_t* L_14 = V_5;
 				NullCheck(L_14);
 				String_t* L_15;
-				L_15 = VirtualFuncInvoker0< String_t* >::Invoke(23, L_14);
+				L_15 = VirtualFuncInvoker0< String_t* >::Invoke(24, L_14);
 				bool L_16;
 				L_16 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_15, _stringLiteralBEE03BDA1448C10795E764222E36CC6226EECA1A, NULL);
 				V_6 = L_16;
