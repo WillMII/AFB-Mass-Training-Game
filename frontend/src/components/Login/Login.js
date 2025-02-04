@@ -35,6 +35,7 @@ const Login = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Enter Air Force email"
           />
         </div>
         <div className="form-group">
@@ -45,6 +46,7 @@ const Login = () => {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="Enter password"
           />
         </div>
         <button type="submit" className="btn btn-primary">

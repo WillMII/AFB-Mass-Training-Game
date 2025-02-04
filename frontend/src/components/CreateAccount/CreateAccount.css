@@ -84,3 +84,41 @@ button:hover {
 .form-group-horizontal .form-group {
   flex: 0 1 48%; /*dropdowns taking up space*/
 }
+
+select {
+  color: gray;
+}
+
+select option[value=""] {
+  color: grey;
+}
+
+select:invalid {
+  color: grey;
+}
+
+.form-group-remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-footer {
+  text-align: center;
+}
+
+.form-footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.login-link {
+  color: #00308f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  color: rgb(25, 14, 140);
+  text-decoration: underline;
+}
