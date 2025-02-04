@@ -2,13 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
-import logo from '../imgs/SoftwareDirectorateShield.png';
+import logo from '../imgs/402_SWEG_Shield.png';
 
 const Hdr = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand to={"/"} as={NavLink}>
+                <Navbar.Brand to={"/"} as={NavLink} className='text-primary fw-medium'>
                     <img
                         alt=""
                         src={logo}
@@ -25,10 +25,9 @@ const Hdr = () => {
                         <Nav.Link to={"/Admin"} as={NavLink}>Admin</Nav.Link>
                     </Nav>
                     <Nav className='justify-content-end'>
-                        <Navbar.Text>
-                            Signed in as: <a href="#login">Trainee Name</a>
-                        </Navbar.Text>
-                        <Nav.Link to={"/login"} as={NavLink}>Sign Out</Nav.Link>
+                        <Navbar.Text>Signed in as: </Navbar.Text>
+                        <Nav.Link to={"/"} as={NavLink} className="ps-1"> Trainee Name</Nav.Link>
+                        <Nav.Link to={"/login"} as={NavLink} className="text-primary fw-medium">Sign Out</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

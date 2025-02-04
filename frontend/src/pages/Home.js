@@ -5,17 +5,32 @@ import ProgressCenter from '../components/ProgressCenter';
 import ModuleCard from '../components/ModuleCard';
 
 const Home = () => {
-  return (
-    <>
-        <Hdr />
-        <Container >
-            <h1>Progress Center</h1>
-            <ProgressCenter />
-            <h1>Training Modules</h1>
-            <ModuleCard />
-        </Container>
-    </>
-  )
+
+    const modules = [
+        { title: "Module 1", desc: "" },
+        { title: "Module 2", desc: "This is some added text to see some variation in heights." },
+        { title: "Module 3", desc: "" },
+    ];
+
+    return (
+        <>
+            <Hdr />
+            <Container >
+                <div className='my-5'>
+                    <h1 className='text-primary text-decoration-underline'>Progress Center</h1>
+                    <ProgressCenter />
+                </div>
+                <div>
+                    <h1 className='text-primary text-decoration-underline'>Training Modules</h1>
+                    <div class="d-flex justify-content-between align-self-stretch wrap">
+                        {modules.map((module, index) => (
+                            <ModuleCard key={index} title={module.title} desc={module.desc} />
+                        ))}
+                    </div>
+                </div>
+            </Container>
+        </>
+    )
 }
 
 export default Home
