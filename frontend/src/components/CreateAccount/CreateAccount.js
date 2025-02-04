@@ -30,6 +30,7 @@ const CreateAccount = () => {
     <div className="create-account-container">
       <form onSubmit={handleSubmit}>
       <h1>Create Account</h1>
+      <hr className="blue-line" />
         <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
           <input
@@ -62,36 +63,37 @@ const CreateAccount = () => {
             onChange={handleChange}
           />
         </div>
+        <div className="form-group-horizontal">
+          <div className="form-group">
+            <label htmlFor="squadron">Squadron:</label>
+            <select
+              id="squadron"
+              name="squadron"
+              value={formData.squadron}
+              onChange={handleChange}
+            >
+              <option value="">Select Squadron</option>
+              <option value="Squadron 1">Squadron 1</option>
+              <option value="Squadron 2">Squadron 2</option>
+              <option value="Squadron 3">Squadron 3</option>
+            </select>
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="squadron">Squadron:</label>
-          <select
-            id="squadron"
-            name="squadron"
-            value={formData.squadron}
-            onChange={handleChange}
-          >
-            <option value="">Select Squadron</option>
-            <option value="Squadron 1">Squadron 1</option>
-            <option value="Squadron 2">Squadron 2</option>
-            <option value="Squadron 3">Squadron 3</option>
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="flight">Flight:</label>
-          <select
-            id="flight"
-            name="flight"
-            value={formData.flight}
-            onChange={handleChange}
-          >
-            <option value="">Select Flight</option>
-            <option value="Flight A">Flight A</option>
-            <option value="Flight B">Flight B</option>
-            <option value="Flight C">Flight C</option>
-            <option value="N/A">N/A</option>
-          </select>
+          <div className="form-group">
+            <label htmlFor="flight">Flight:</label>
+            <select
+              id="flight"
+              name="flight"
+              value={formData.flight}
+              onChange={handleChange}
+            >
+              <option value="">Select Flight</option>
+              <option value="Flight A">Flight A</option>
+              <option value="Flight B">Flight B</option>
+              <option value="Flight C">Flight C</option>
+              <option value="N/A">N/A</option>
+            </select>
+          </div>
         </div>
 
         <div className="form-group">
@@ -115,7 +117,7 @@ const CreateAccount = () => {
             onChange={handleChange}
           />
         </div>
-
+        <hr className="blue-line" />
         <button type="submit" className="btn btn-primary">Create Account</button>
       </form>
     </div>
