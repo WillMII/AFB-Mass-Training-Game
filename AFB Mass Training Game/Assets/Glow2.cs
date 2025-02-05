@@ -28,6 +28,7 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseEnter()
     {
+        
         if (!alreadyClicked)
         {
             Renderer renderer = GetComponent<Renderer>();
