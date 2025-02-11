@@ -1,21 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount/CreateAccount";
 import Login from "./components/Login/Login";
 import logo from "./logo.svg";
 import "./App.css";
 
 import "./custom.scss";
-import { Routes, Route, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
 import Admin from './pages/Admin';
 
-
-function Home() {
+function App() {
   return (
-
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -28,29 +25,19 @@ function Home() {
           <Link to="/create-account" className="App-link">Create Account</Link>
           {" | "}
           <Link to="/login" className="App-link">Login</Link>
+          {" | "}
+          <Link to="/admin" className="App-link">Admin</Link>
         </nav>
       </header>
 
-    <div> 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="*" element={<ErrorPage />} /> 
-      </Routes>
-
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={<ErrorPage />} /> 
       </Routes>
-    </Router>
+    </div>
   );
 }
 
