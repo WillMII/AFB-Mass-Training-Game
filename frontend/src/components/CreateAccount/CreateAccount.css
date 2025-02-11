@@ -1,0 +1,125 @@
+.create-account-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff; 
+}
+
+form {
+  background-color: #DDDDDD; 
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00308F;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #00308F;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(25, 14, 140);
+}
+
+.blue-line {
+  border: none;
+  height: 2px;
+  background-color: #00308F;
+  margin: 20px 0;
+  position: relative;
+}
+
+.form-group-horizontal {
+  display: flex;
+  justify-content: space-between;
+  gap: 3%;
+}
+
+.form-group-horizontal .form-group {
+  flex: 0 1 48%; /*dropdowns taking up space*/
+}
+
+select {
+  color: gray;
+}
+
+select option[value=""] {
+  color: grey;
+}
+
+select:invalid {
+  color: grey;
+}
+
+.form-group-remember {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form-footer {
+  text-align: center;
+}
+
+.form-footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.login-link {
+  color: #00308f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  color: rgb(25, 14, 140);
+  text-decoration: underline;
+}
