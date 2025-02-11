@@ -27,6 +27,7 @@ const Login = () => {
     <div className="login-form-container">
       <form onSubmit={handleSubmit}>
         <h1>Log In</h1>
+        <hr className="blue-line" />
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input

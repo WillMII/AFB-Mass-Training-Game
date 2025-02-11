@@ -100,6 +100,7 @@ select:invalid {
 .form-group-remember {
   display: flex;
   align-items: center;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 

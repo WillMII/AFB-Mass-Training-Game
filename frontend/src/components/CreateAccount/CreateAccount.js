@@ -128,7 +128,11 @@ const CreateAccount = () => {
             placeholder="Confirm password"
           />
         </div>
-        
+
+        <button type="submit" className="btn btn-primary">
+          Create Account
+        </button>
+
         <div className="form-group-remember">
           <input
             type="checkbox"
@@ -146,15 +150,12 @@ const CreateAccount = () => {
         </div>
 
         <hr className="blue-line" />
-        <button type="submit" className="btn btn-primary">
-          Create Account
-        </button>
 
         <div className="form-footer">
           <p>
             Already have an account?{" "}
             <a href="/login" className="login-link">
-              Login
+              Log In
             </a>
           </p>
         </div>
