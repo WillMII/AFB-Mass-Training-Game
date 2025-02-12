@@ -31,14 +31,9 @@ Air Force Record Life Cycle
 -Disposition
 
 Discovery:
-Discovery is the obligation of parties to a lawsuit to exchange information. 
-The number of litigation hold/record searches involving the Air Force continues to 
-increase. Therefore, you may be involved in a search for responsive information, 
-to include records in your workspace, government desktop/laptop computer, 
-and government email accounts.
+Discovery is the obligation of parties to a lawsuit to exchange information. The number of litigation hold/record searches involving the Air Force continues to increase. Therefore, you may be involved in a search for responsive information, to include records in your workspace, government desktop/laptop computer, and government email accounts.
  
-Exchanging electronically stored information (ESI) as part of the discovery 
-process is called "eDiscovery" as covered by the Federal Rules of Civil Procedure.
+Exchanging electronically stored information (ESI) as part of the discovery process is called "eDiscovery" as covered by the Federal Rules of Civil Procedure.
 
 ESI:
 -E-mails

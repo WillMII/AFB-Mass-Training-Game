@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3dd0ada0b642c94d87fb41f69bf2c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: a67a279a5201e58438ce11e17e100b40, type: 3}
+  canvas: {fileID: 2203950869843888959, guid: facdb6fea8334b24aa8320f01274f873, type: 3}
   mini: {fileID: 3084578634096866506, guid: 1413a6bb0f81b1e4180b715191281550, type: 3}
   toolbar: {fileID: 1981270362}
 --- !u!114 &420392827
@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab69702707e4044dbc4bf0dedccd64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 5424825c484503c4ca9b47cbd0e343e7, type: 3}
+  canvas: {fileID: 2203950869843888959, guid: 30e6717aacd4cec46b86b831b2658646, type: 3}
   mini: {fileID: 6081388995030442588, guid: a8184c3e078548a489c90b22494ebdc7, type: 3}
   toolbar: {fileID: 1981270362}
 --- !u!114 &1953534926
