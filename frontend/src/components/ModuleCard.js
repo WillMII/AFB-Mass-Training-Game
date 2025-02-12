@@ -5,7 +5,7 @@ import temp from '../imgs/temp_img.png';
 
 const ModuleCard = ({ title, desc }) => {
     return (
-        <Card className="d-flex flex-column" style={{ width: '18rem' }}>
+        <Card className="d-flex flex-column mb-3" style={{ width: '18rem' }}>
             <Card.Img variant="top" src={temp} />
             <Card.Body className="d-flex flex-column">
                 <Card.Title> {title} </Card.Title>
