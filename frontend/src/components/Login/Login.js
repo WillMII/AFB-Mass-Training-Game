@@ -50,7 +50,7 @@ const Login = () => {
             placeholder="Enter password"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary login-button">
           Log In
         </button>
         <div className="login-options">

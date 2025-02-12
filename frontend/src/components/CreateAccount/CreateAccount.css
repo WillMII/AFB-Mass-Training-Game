@@ -52,7 +52,7 @@ select:focus {
   border-color: #007bff;
 }
 
-button {
+.login-button {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -61,7 +61,7 @@ button {
   color: white;
   border-radius: 20px;
   cursor: pointer;
-}
+} 
 
 button:hover {
   background-color: rgb(25, 14, 140);
