@@ -29,7 +29,7 @@ const CreateAccount = () => {
 
   return (
     <div className="create-account-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="login-form">
         <h1>Create Account</h1>
         <hr className="blue-line" />
         <div className="form-group">
@@ -41,6 +41,7 @@ const CreateAccount = () => {
             value={formData.firstName}
             onChange={handleChange}
             placeholder="Enter first name"
+            className="login-input"
           />
         </div>
 
@@ -53,6 +54,7 @@ const CreateAccount = () => {
             value={formData.lastName}
             onChange={handleChange}
             placeholder="Enter last name"
+            className="login-input"
           />
         </div>
 
@@ -65,6 +67,7 @@ const CreateAccount = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter Air Force email"
+            className="login-input"
           />
         </div>
 
@@ -114,6 +117,7 @@ const CreateAccount = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Enter password"
+            className="login-input"
           />
         </div>
 
@@ -126,6 +130,7 @@ const CreateAccount = () => {
             value={formData.confirmPassword}
             onChange={handleChange}
             placeholder="Confirm password"
+            className="login-input"
           />
         </div>
 

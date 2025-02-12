@@ -17,7 +17,8 @@ const ProgressCenter = () => {
                 <Col sm>Module Name</Col>
                 <Col sm={5}>Progress</Col>
                 <Col sm>Due</Col>
-                <Col sm={3}>Completed</Col>
+                {/* <Col sm={3}>Completed</Col> */}
+                <Col sm>Completed</Col>
             </Row>
             <hr className='m-0 mb-2' />
             {user_progress.map((module, index) => (

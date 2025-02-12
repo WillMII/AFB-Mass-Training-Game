@@ -11,7 +11,8 @@ const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
                 <ProgressBar now={progress} label={`${progress}%`} />
             </Col>
             <Col sm>{due}</Col>
-            <Col sm={3}>{completed} <a href='/link'>{certificate}</a></Col>            
+            {/* <Col sm={3}>{completed} <a href='/link'>{certificate}</a></Col>*/}
+            <Col sm>{completed}</Col>            
         </Row>
     )
 }

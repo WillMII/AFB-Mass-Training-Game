@@ -16,7 +16,7 @@ const Hdr = () => {
                         height="30"
                         className="d-inline-block align-top"
                     />{' '}
-                    Warner Robins Training
+                    Mass Training
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

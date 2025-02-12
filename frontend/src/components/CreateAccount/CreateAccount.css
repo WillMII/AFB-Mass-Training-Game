@@ -6,7 +6,7 @@
   background-color: #ffffff; 
 }
 
-form {
+.login-form {
   background-color: #DDDDDD; 
   padding: 20px;
   border-radius: 20px;
@@ -32,10 +32,19 @@ label {
   font-size: 14px;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+} */
+
+.login-input {
   width: 100%;
   padding: 10px;
   font-size: 14px;

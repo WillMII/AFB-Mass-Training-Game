@@ -6,7 +6,7 @@
     background-color: #ffffff;
   }
   
-  form {
+  .login-form {
     background-color: #dddddd;
     padding: 20px;
     border-radius: 20px;
@@ -32,15 +32,26 @@
     font-size: 14px;
   }
   
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
+/* input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+} */
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
   
   input[type="email"]:focus,
   input[type="password"]:focus {

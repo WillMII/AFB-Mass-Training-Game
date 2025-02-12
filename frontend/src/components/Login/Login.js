@@ -25,7 +25,7 @@ const Login = () => {
 
   return (
     <div className="login-form-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="login-form">
         <h1>Log In</h1>
         <hr className="blue-line" />
         <div className="form-group">
@@ -37,6 +37,7 @@ const Login = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter Air Force email"
+            className="login-input"
           />
         </div>
         <div className="form-group">
@@ -48,6 +49,7 @@ const Login = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Enter password"
+            className="login-input"
           />
         </div>
         <button type="submit" className="btn btn-primary login-button">
