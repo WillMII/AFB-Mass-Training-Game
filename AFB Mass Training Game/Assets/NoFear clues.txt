@@ -1,8 +1,6 @@
 No FEAR Act Clues
 
-No FEAR Act ensures the rights of employees, former employees, and applicants for 
-employment are protected under federal antidiscrimination, relaiation, 
-and whistleblower laws.
+No FEAR Act ensures the rights of employees, former employees, and applicants for employment are protected under federal antidiscrimination, relaiation, and whistleblower laws.
 
 Antidiscriminations laws and EEO
 -civil rights
@@ -12,8 +10,7 @@ Antidiscriminations laws and EEO
 -rehabilitation
 -genetic information
 
-A whistleblower is a (former) employer or contractor who provides info 
-about waste, fraud, abuse
+A whistleblower is a (former) employer or contractor who provides info about waste, fraud, or abuse.
 
 13 prohibited personnel practices:
 -discrimination
