@@ -19,9 +19,11 @@ const Home = () => {
                 <Hdr />
                 <Container className="flex-grow-1">
                     <div className='my-5'>
+                        <h2 className='text-primary text-decoration-underline'>Progress Center</h2>
                         <ProgressCenter />
                     </div>
                     <div>
+                        <h2 className='text-primary text-decoration-underline'>Training Modules</h2>
                         <div class="d-flex justify-content-between align-self-stretch wrap">
                             {modules.map((module, index) => (
                                 <ModuleCard key={index} title={module.title} desc={module.desc} />
