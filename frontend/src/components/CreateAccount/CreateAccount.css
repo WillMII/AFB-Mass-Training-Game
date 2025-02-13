@@ -6,7 +6,7 @@
   background-color: #ffffff; 
 }
 
-form {
+.login-form {
   background-color: #DDDDDD; 
   padding: 20px;
   border-radius: 20px;
@@ -32,10 +32,19 @@ label {
   font-size: 14px;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+} */
+
+.login-input {
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -52,7 +61,7 @@ select:focus {
   border-color: #007bff;
 }
 
-button {
+.login-button {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -61,7 +70,7 @@ button {
   color: white;
   border-radius: 20px;
   cursor: pointer;
-}
+} 
 
 button:hover {
   background-color: rgb(25, 14, 140);

@@ -24,7 +24,7 @@ const Home = () => {
                     </div>
                     <div>
                         <h2 className='text-primary text-decoration-underline'>Training Modules</h2>
-                        <div class="d-flex justify-content-between align-self-stretch wrap">
+                        <div class="d-flex justify-content-between align-self-stretch flex-wrap">
                             {modules.map((module, index) => (
                                 <ModuleCard key={index} title={module.title} desc={module.desc} />
                             ))}

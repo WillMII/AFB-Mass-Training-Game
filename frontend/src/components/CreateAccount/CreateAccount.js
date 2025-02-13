@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CreateAccount.css";
+import { useNavigate } from "react-router-dom";
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
@@ -27,9 +28,11 @@ const CreateAccount = () => {
     console.log(formData);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="create-account-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="login-form">
         <h1>Create Account</h1>
         <hr className="blue-line" />
         <div className="form-group">
@@ -41,6 +44,7 @@ const CreateAccount = () => {
             value={formData.firstName}
             onChange={handleChange}
             placeholder="Enter first name"
+            className="login-input"
           />
         </div>
 
@@ -53,6 +57,7 @@ const CreateAccount = () => {
             value={formData.lastName}
             onChange={handleChange}
             placeholder="Enter last name"
+            className="login-input"
           />
         </div>
 
@@ -65,6 +70,7 @@ const CreateAccount = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter Air Force email"
+            className="login-input"
           />
         </div>
 
@@ -76,6 +82,7 @@ const CreateAccount = () => {
               name="squadron"
               value={formData.squadron}
               onChange={handleChange}
+              className="login-input"
             >
               <option value="" disabled hidden>
                 Select Squadron
@@ -93,6 +100,7 @@ const CreateAccount = () => {
               name="flight"
               value={formData.flight}
               onChange={handleChange}
+              className="login-input"
             >
               <option value="" disabled hidden>
                 Select Flight
@@ -114,6 +122,7 @@ const CreateAccount = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Enter password"
+            className="login-input"
           />
         </div>
 
@@ -126,10 +135,11 @@ const CreateAccount = () => {
             value={formData.confirmPassword}
             onChange={handleChange}
             placeholder="Confirm password"
+            className="login-input"
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary login-button" onClick={() => navigate("/")}>
           Create Account
         </button>
 
