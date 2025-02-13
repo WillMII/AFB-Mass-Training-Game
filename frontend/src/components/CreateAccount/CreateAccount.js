@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CreateAccount.css";
+import { useNavigate } from "react-router-dom";
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
@@ -26,6 +27,8 @@ const CreateAccount = () => {
     // account create method/logic
     console.log(formData);
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="create-account-container">
@@ -79,6 +82,7 @@ const CreateAccount = () => {
               name="squadron"
               value={formData.squadron}
               onChange={handleChange}
+              className="login-input"
             >
               <option value="" disabled hidden>
                 Select Squadron
@@ -96,6 +100,7 @@ const CreateAccount = () => {
               name="flight"
               value={formData.flight}
               onChange={handleChange}
+              className="login-input"
             >
               <option value="" disabled hidden>
                 Select Flight
@@ -134,7 +139,7 @@ const CreateAccount = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary login-button">
+        <button type="submit" className="btn btn-primary login-button" onClick={() => navigate("/")}>
           Create Account
         </button>
 
