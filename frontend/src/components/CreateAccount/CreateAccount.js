@@ -22,20 +22,59 @@ const CreateAccount = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // account create method/logic
-    console.log(formData);
+  
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.password || !formData.confirmPassword) {
+      alert("Please fill out all fields.");
+      return;
+    }
+  
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+  
+    try {
+      const response = await fetch("http://localhost:8000/api/create-account", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          squadron: formData.squadron,
+          flight: formData.flight,
+          password: formData.password,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("Account created successfully!");
+        navigate("/login"); // Redirect to login page
+      } else {
+        alert(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      console.error("Error creating account:", error);
+      alert("Error connecting to the server.");
+    }
   };
+  
 
   const navigate = useNavigate();
 
   return (
-    <div className="create-account-container">
-      <form onSubmit={handleSubmit} className="login-form">
+    <div class="create-account-container">
+      <form onSubmit={handleSubmit} class="login-form">
         <h1>Create Account</h1>
-        <hr className="blue-line" />
-        <div className="form-group">
+        <hr class="blue-line" />
+        <div class="form-group">
           <label htmlFor="firstName">First Name:</label>
           <input
             type="text"
@@ -44,11 +83,11 @@ const CreateAccount = () => {
             value={formData.firstName}
             onChange={handleChange}
             placeholder="Enter first name"
-            className="login-input"
+            class="login-input"
           />
         </div>
 
-        <div className="form-group">
+        <div class="form-group">
           <label htmlFor="lastName">Last Name:</label>
           <input
             type="text"
@@ -57,11 +96,11 @@ const CreateAccount = () => {
             value={formData.lastName}
             onChange={handleChange}
             placeholder="Enter last name"
-            className="login-input"
+            class="login-input"
           />
         </div>
 
-        <div className="form-group">
+        <div class="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -70,19 +109,19 @@ const CreateAccount = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter Air Force email"
-            className="login-input"
+            class="login-input"
           />
         </div>
 
-        <div className="form-group-horizontal">
-          <div className="form-group">
+        <div class="form-group-horizontal">
+          <div class="form-group">
             <label htmlFor="squadron">Squadron:</label>
             <select
               id="squadron"
               name="squadron"
               value={formData.squadron}
               onChange={handleChange}
-              className="login-input"
+              class="login-input"
             >
               <option value="" disabled hidden>
                 Select Squadron
@@ -90,17 +129,18 @@ const CreateAccount = () => {
               <option value="Squadron 1">Squadron 1</option>
               <option value="Squadron 2">Squadron 2</option>
               <option value="Squadron 3">Squadron 3</option>
+              <option value="N/A">N/A</option>
             </select>
           </div>
 
-          <div className="form-group">
+          <div class="form-group">
             <label htmlFor="flight">Flight:</label>
             <select
               id="flight"
               name="flight"
               value={formData.flight}
               onChange={handleChange}
-              className="login-input"
+              class="login-input"
             >
               <option value="" disabled hidden>
                 Select Flight
@@ -113,7 +153,7 @@ const CreateAccount = () => {
           </div>
         </div>
 
-        <div className="form-group">
+        <div class="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -122,11 +162,11 @@ const CreateAccount = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Enter password"
-            className="login-input"
+            class="login-input"
           />
         </div>
 
-        <div className="form-group">
+        <div class="form-group">
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
             type="password"
@@ -135,15 +175,15 @@ const CreateAccount = () => {
             value={formData.confirmPassword}
             onChange={handleChange}
             placeholder="Confirm password"
-            className="login-input"
+            class="login-input"
           />
         </div>
 
-        <button type="submit" className="btn btn-primary login-button" onClick={() => navigate("/")}>
+        <button type="submit" class="btn btn-primary login-button">
           Create Account
         </button>
 
-        <div className="form-group-remember">
+        <div class="form-group-remember">
           <input
             type="checkbox"
             id="rememberMe"
@@ -159,12 +199,12 @@ const CreateAccount = () => {
           <label htmlFor="rememberMe">Remember Me</label>
         </div>
 
-        <hr className="blue-line" />
+        <hr class="blue-line" />
 
-        <div className="form-footer">
+        <div class="form-footer">
           <p>
             Already have an account?{" "}
-            <a href="/login" className="login-link">
+            <a href="/login" class="login-link">
               Log In
             </a>
           </p>

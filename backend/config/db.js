@@ -10,7 +10,6 @@ const databaseName = "Mass_Training_Database";
 const db = mysql.createConnection({
     host: "localhost",
     user: "root", 
-    password: "your MySQL password", // your MySQL password
 });
 
 // Connect to MySQL and ensure the database exists
@@ -22,7 +21,7 @@ db.connect(err => {
     console.log("Connected to MySQL");
 
     // Create the database if it doesn't exist
-    db.query(`CREATE DATABASE IF NOT EXISTS ${databaseName}`, (err, result) => {
+    db.query(`CREATE DATABASE IF NOT EXISTS ${databaseName}`, (err) => {
         if (err) {
             console.error("Error creating database:", err);
             return;
@@ -41,13 +40,16 @@ db.connect(err => {
             const createUsersTable = `
                 CREATE TABLE IF NOT EXISTS users (
                     id INT AUTO_INCREMENT PRIMARY KEY,
-                    name VARCHAR(255) NOT NULL,
+                    first_name VARCHAR(255) NOT NULL,
+                    last_name VARCHAR(255) NOT NULL,
                     email VARCHAR(255) UNIQUE NOT NULL,
-                    password VARCHAR(255) NOT NULL
+                    squadron VARCHAR(255) DEFAULT NULL,
+                    flight VARCHAR(255) DEFAULT NULL,
+                    password_hash VARCHAR(255) NOT NULL
                 );
             `;
 
-            db.query(createUsersTable, (err, result) => {
+            db.query(createUsersTable, (err) => {
                 if (err) {
                     console.error("Error creating Users table:", err);
                 } else {

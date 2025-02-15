@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
+  const navigate = useNavigate(); // Initialize navigate function
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     rememberMe: false,
   });
+
+  const [error, setError] = useState(""); // Define error state
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -17,10 +21,41 @@ const Login = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    // login logic/method
+    setError(""); // Reset error messages
+
+    if (!formData.email || !formData.password) {
+      setError("Please enter both email and password.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:8000/api/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            email: formData.email,
+            password: formData.password,
+        }),
+        credentials: "include", // Ensures cookies/sessions are sent
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Login successful!");
+        localStorage.setItem("user", JSON.stringify(data.user)); // Store user session
+        navigate("/"); // Redirect to dashboard (change later)
+      } else {
+        setError(data.error || "Login failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+      setError("Error connecting to the server.");
+    }
   };
 
   return (
@@ -28,6 +63,7 @@ const Login = () => {
       <form onSubmit={handleSubmit} className="login-form">
         <h1>Log In</h1>
         <hr className="blue-line" />
+        {error && <p className="error-message">{error}</p>} {/* Display error message */}
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
