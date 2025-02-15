@@ -10,6 +10,7 @@ const databaseName = "Mass_Training_Database";
 const db = mysql.createConnection({
     host: "localhost",
     user: "root", 
+    password: "your MySQL password", // your MySQL password
 });
 
 // Connect to MySQL and ensure the database exists
