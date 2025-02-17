@@ -6,13 +6,9 @@ import { Container } from 'react-bootstrap';
 import AdminNav from '../components/AdminNav';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Button from 'react-bootstrap/Button';
+import ReportTable from '../components/ReportTable';
 
 const Admin = () => {
-
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   return (
     <>
@@ -20,9 +16,9 @@ const Admin = () => {
         <Hdr />
         <Container className="flex-grow-1">
           <div className='my-5'>
-            <h2 className='text-primary text-decoration-underline'>Admin Page</h2>
+            <h2 className='text-primary text-decoration-underline'>Training Manager Page</h2>
             <AdminNav />
-            
+            <ReportTable className='my-10'/>
           </div>
         </Container>
 

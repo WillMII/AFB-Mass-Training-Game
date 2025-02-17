@@ -20,7 +20,7 @@ const AdminNav = () => {
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
                 <Nav className="justify-content-end">
-                    <Nav.Link to={"/Admin"} as={NavLink}>View Report</Nav.Link>
+                    <Nav.Link to={"/Admin"} as={NavLink}>Print Report</Nav.Link>
                     <Nav.Link to={"/Admin"} as={NavLink} onClick={handleShow}>Filters</Nav.Link>
                 </Nav>
             </Navbar>
