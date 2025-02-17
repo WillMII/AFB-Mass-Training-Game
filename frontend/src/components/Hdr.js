@@ -24,7 +24,7 @@ const Hdr = () => {
                         <Nav.Link to={"/"} as={NavLink}>Home</Nav.Link>
                         <Nav.Link to={"/Admin"} as={NavLink}>Admin</Nav.Link>
                     </Nav>
-                    <Nav className='justify-content-end'>
+                    <Nav className='justify-content-end no-wrap'>
                         <Navbar.Text>Signed in as: </Navbar.Text>
                         <Nav.Link to={"/"} as={NavLink} className="ps-1"> Trainee Name</Nav.Link>
                         <Nav.Link to={"/login"} as={NavLink} className="text-primary fw-medium">Sign Out</Nav.Link>

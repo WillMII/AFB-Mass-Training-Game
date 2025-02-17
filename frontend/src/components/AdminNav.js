@@ -1,18 +1,40 @@
 import React from 'react'
-import SearchBar from './SearchBar'
+import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import { NavLink } from 'react-router-dom'
 import { Navbar } from 'react-bootstrap'
+import Offcanvas from 'react-bootstrap/Offcanvas'
 
 const AdminNav = () => {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
-        <Navbar className="justify-content-between">
-            <SearchBar />
-            <Nav className="me-auto">
-                <Nav.Link to={"/Admin"} as={NavLink}>Filter</Nav.Link>
-                <Nav.Link to={"/Admin"} as={NavLink}>View Report</Nav.Link>
-            </Nav>
-        </Navbar>
+        <>
+            <Navbar className="justify-content-between">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+                <Nav className="justify-content-end">
+                    <Nav.Link to={"/Admin"} as={NavLink}>View Report</Nav.Link>
+                    <Nav.Link to={"/Admin"} as={NavLink} onClick={handleShow}>Filters</Nav.Link>
+                </Nav>
+            </Navbar>
+
+            <Offcanvas show={show} onHide={handleClose} placement="end">
+                <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Filters</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                    Some text as placeholder. In real life you can have the elements you
+                    have chosen. Like, text, images, lists, etc.
+                </Offcanvas.Body>
+            </Offcanvas>
+        </>
     )
 }
 
