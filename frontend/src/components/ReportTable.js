@@ -5,19 +5,20 @@ import Table from 'react-bootstrap/Table';
 const ReportTable = () => {
 
     const users = [
-        { id: 1, firstName: 'John', lastName: 'Doe', squadron: 'N/A', flight: 'N/A', module1: '100', module2: '50', module3: '0' },
-        { id: 2, firstName: 'Jane', lastName: 'Smith', squadron: 'N/A', flight: 'N/A', module1: '75', module2: '100', module3: '25' },
-        { id: 3, firstName: 'Alice', lastName: 'Johnson', squadron: 'N/A', flight: 'N/A', module1: '50', module2: '50', module3: '100' },
-        { id: 4, firstName: 'Bob', lastName: 'Brown', squadron: 'N/A', flight: 'N/A', module1: '100', module2: '100', module3: '100' },
-        { id: 1, firstName: 'John', lastName: 'Doe', squadron: 'N/A', flight: 'N/A', module1: '100', module2: '50', module3: '0' },
-        { id: 2, firstName: 'Jane', lastName: 'Smith', squadron: 'N/A', flight: 'N/A', module1: '75', module2: '100', module3: '25' },
-        { id: 3, firstName: 'Alice', lastName: 'Johnson', squadron: 'N/A', flight: 'N/A', module1: '50', module2: '50', module3: '100' },
-        { id: 4, firstName: 'Bob', lastName: 'Brown', squadron: 'N/A', flight: 'N/A', module1: '100', module2: '100', module3: '100' },
-        { id: 1, firstName: 'John', lastName: 'Doe', squadron: 'N/A', flight: 'N/A', module1: '100', module2: '50', module3: '0' },
-        { id: 2, firstName: 'Jane', lastName: 'Smith', squadron: 'N/A', flight: 'N/A', module1: '75', module2: '100', module3: '25' },
-        { id: 3, firstName: 'Alice', lastName: 'Johnson', squadron: 'N/A', flight: 'N/A', module1: '50', module2: '50', module3: '100' },
-        { id: 4, firstName: 'Bob', lastName: 'Brown', squadron: 'N/A', flight: 'N/A', module1: '100', module2: '100', module3: '100' },
+        { id: 1, firstName: 'John', lastName: 'Doe', squadron: 'N/A', flight: 'N/A', module1: 100, module2: 50, module3: 0 },
+        { id: 2, firstName: 'Jane', lastName: 'Smith', squadron: 'N/A', flight: 'N/A', module1: 75, module2: 100, module3: 25 },
+        { id: 3, firstName: 'Alice', lastName: 'Johnson', squadron: 'N/A', flight: 'N/A', module1: 50, module2: 50, module3: 100 },
+        { id: 4, firstName: 'Bob', lastName: 'Brown', squadron: 'N/A', flight: 'N/A', module1: 100, module2: 100, module3: 100 },
+        { id: 5, firstName: 'John', lastName: 'Doe', squadron: 'N/A', flight: 'N/A', module1: 100, module2: 50, module3: 0 },
+        { id: 6, firstName: 'Jane', lastName: 'Smith', squadron: 'N/A', flight: 'N/A', module1: 75, module2: 100, module3: 25 },
+        { id: 7, firstName: 'Alice', lastName: 'Johnson', squadron: 'N/A', flight: 'N/A', module1: 50, module2: 50, module3: 100 },
+        { id: 8, firstName: 'Bob', lastName: 'Brown', squadron: 'N/A', flight: 'N/A', module1: 100, module2: 100, module3: 100 },
+        { id: 9, firstName: 'John', lastName: 'Doe', squadron: 'N/A', flight: 'N/A', module1: 100, module2: 50, module3: 0 },
+        { id: 10, firstName: 'Jane', lastName: 'Smith', squadron: 'N/A', flight: 'N/A', module1: 75, module2: 100, module3: 25 },
+        { id: 11, firstName: 'Alice', lastName: 'Johnson', squadron: 'N/A', flight: 'N/A', module1: 50, module2: 50, module3: 100 },
+        { id: 12, firstName: 'Bob', lastName: 'Brown', squadron: 'N/A', flight: 'N/A', module1: 100, module2: 100, module3: 100 },
     ];
+
 
     const getStatusIcon = (progress) => {
         if (progress === 100) return <i class="bi bi-check-circle text-success"></i>;

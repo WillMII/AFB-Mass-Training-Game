@@ -18,7 +18,7 @@ const Admin = () => {
           <div className='my-5'>
             <h2 className='text-primary text-decoration-underline'>Training Manager Page</h2>
             <AdminNav />
-            <ReportTable className='my-10'/>
+            <ReportTable/>
           </div>
         </Container>
 

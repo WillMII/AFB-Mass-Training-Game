@@ -3,12 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import temp from '../imgs/temp_img.png';
 
-const ModuleCard = ({ title, desc }) => {
+const ModuleCard = ({ title, desc, due }) => {
     return (
         <Card className="d-flex flex-column mb-3" style={{ width: '18rem' }}>
             <Card.Img variant="top" src={temp} />
             <Card.Body className="d-flex flex-column">
                 <Card.Title> {title} </Card.Title>
+                <Card.Text>
+                    Due: {due}
+                </Card.Text>
                 <Card.Text>
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content. {desc}
