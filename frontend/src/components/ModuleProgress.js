@@ -4,15 +4,27 @@ import Col from 'react-bootstrap/Col'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
+    
+    const getStatus = (progress) => {
+        if (progress === 100) return { icon: "bi bi-check-circle text-success", label: "Complete" };
+        if (progress === 0) return { icon: "bi bi-x-circle text-danger", label: "Not Started" };
+        return { icon: "bi bi-clock text-warning", label: "In Progress" };
+    };
+
+    const { icon, label } = getStatus(progress);
+    
     return (
         <Row>
             <Col sm>{title}</Col>
-            <Col sm={5}>
+            <Col sm={3}>
                 <ProgressBar now={progress} label={`${progress}%`} />
             </Col>
             <Col sm>{due}</Col>
-            {/* <Col sm={3}>{completed} <a href='/link'>{certificate}</a></Col>*/}
-            <Col sm>{completed}</Col>            
+            <Col sm>
+                <i className={icon}></i> {label}
+            </Col>
+            <Col sm>{completed || "-"}</Col>
+            <Col sm>{certificate ? <a href="/">View Certificate</a> : "-"}</Col>         
         </Row>
     )
 }
