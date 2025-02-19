@@ -23,8 +23,8 @@ const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
             <Col sm>
                 <i className={icon}></i> {label}
             </Col>
-            <Col sm>{completed || "-"}</Col>
-            <Col sm>{certificate ? <a href="/">View Certificate</a> : "-"}</Col>         
+            <Col sm>{completed || <i class="bi bi-dash"></i>}</Col>
+            <Col sm>{certificate ? <a href="/">View Certificate</a> : <i class="bi bi-dash"></i>}</Col>         
         </Row>
     )
 }
