@@ -3,15 +3,22 @@ import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import { NavLink } from 'react-router-dom'
 import { Navbar } from 'react-bootstrap'
+import FilterMenu from './FilterMenu';
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const AdminNav = () => {
 
-    const [show, setShow] = useState(false);
+    const [showFilterMenu, setShowFilterMenu] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleCloseFilterMenu = () => setShowFilterMenu(false);
+    const handleShowFilterMenu = () => setShowFilterMenu(true);
+  
+    const applyFilters = (filters) => {
+      console.log("Applied Filters:", filters);
+      // Implement filter logic
+    };
 
     return (
         <>
@@ -24,21 +31,13 @@ const AdminNav = () => {
                     <Nav.Link to={"/Admin"} as={NavLink}>
                         Print Report <i class="bi bi-file-earmark-arrow-down"></i>
                     </Nav.Link>
-                    <Nav.Link to={"/Admin"} as={NavLink} onClick={handleShow}>
-                        Filters<i class="bi bi-funnel"></i> 
+                    <Nav.Link to={"/Admin"} as={NavLink} onClick={handleShowFilterMenu}>
+                        Filters<i class="bi bi-funnel"></i>
                     </Nav.Link>
                 </Nav>
             </Navbar>
 
-            <Offcanvas show={show} onHide={handleClose} placement="end">
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Filters</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
-                </Offcanvas.Body>
-            </Offcanvas>
+            <FilterMenu show={showFilterMenu} handleClose={handleCloseFilterMenu} applyFilters={applyFilters} />
         </>
     )
 }

@@ -16,7 +16,7 @@ const Admin = () => {
         <Hdr />
         <Container className="flex-grow-1">
           <div className='my-5'>
-            <h2 className='text-primary text-decoration-underline'>Training Manager Page</h2>
+            <h2 className='text-primary text-decoration-underline'>User Progress Reports</h2>
             <AdminNav />
             <ReportTable/>
           </div>
