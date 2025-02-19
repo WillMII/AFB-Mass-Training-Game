@@ -8,9 +8,9 @@ import Footer from '../components/Footer';
 const Home = () => {
 
     const modules = [
-        { title: "Module 1", desc: "" },
-        { title: "Module 2", desc: "This is some added text to see some variation in heights." },
-        { title: "Module 3", desc: "" },
+        { title: "Module 1", desc: "", due: "01/01/2022" },
+        { title: "Module 2", desc: "This is some added text to see some variation in heights.", due: "01/01/2022" },
+        { title: "Module 3", desc: "", due: "01/01/2022" },
     ];
 
     return (
@@ -26,7 +26,7 @@ const Home = () => {
                         <h2 className='text-primary text-decoration-underline'>Training Modules</h2>
                         <div class="d-flex justify-content-between align-self-stretch flex-wrap">
                             {modules.map((module, index) => (
-                                <ModuleCard key={index} title={module.title} desc={module.desc} />
+                                <ModuleCard key={index} title={module.title} desc={module.desc} due={module.due} />
                             ))}
                         </div>
                     </div>

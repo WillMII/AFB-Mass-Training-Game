@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ModuleProgress from './ModuleProgress';
@@ -15,10 +14,11 @@ const ProgressCenter = () => {
         <div>
             <Row>
                 <Col sm>Module Name</Col>
-                <Col sm={5}>Progress</Col>
+                <Col sm={3}>Progress</Col>
                 <Col sm>Due</Col>
-                {/* <Col sm={3}>Completed</Col> */}
-                <Col sm>Completed</Col>
+                <Col sm>Status</Col>
+                <Col sm>Date Completed</Col>
+                <Col sm>Certificate</Col>
             </Row>
             <hr className='m-0 mb-2' />
             {user_progress.map((module, index) => (
