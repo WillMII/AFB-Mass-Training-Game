@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
 import Admin from './pages/Admin';
+import Profile from "./pages/Profile";
+import UserManagement from "./pages/UserManagement";
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/user-progress" element={<Admin />} />
+        <Route path="/user-profile" element={<Profile />} />
+        <Route path="/user-management" element={<UserManagement />} />
         <Route path="*" element={<ErrorPage />} /> 
       </Routes>
     </div>
