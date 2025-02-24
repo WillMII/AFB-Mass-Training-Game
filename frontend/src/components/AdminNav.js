@@ -28,10 +28,10 @@ const AdminNav = () => {
                     <Button variant="outline-primary" type="submit">Search</Button>
                 </form>
                 <Nav className="justify-content-end">
-                    <Nav.Link to={"/Admin"} as={NavLink}>
+                    <Nav.Link to={"/user-progress"} as={NavLink}>
                         Print Report <i class="bi bi-file-earmark-arrow-down"></i>
                     </Nav.Link>
-                    <Nav.Link to={"/Admin"} as={NavLink} onClick={handleShowFilterMenu}>
+                    <Nav.Link to={"/user-progress"} as={NavLink} onClick={handleShowFilterMenu}>
                         Filters<i class="bi bi-funnel"></i>
                     </Nav.Link>
                 </Nav>

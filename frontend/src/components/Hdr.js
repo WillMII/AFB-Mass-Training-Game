@@ -23,12 +23,13 @@ const Hdr = () => {
                     <hr></hr>
                     <Nav className="me-auto">
                         <Nav.Link to={"/"} as={NavLink}>Home</Nav.Link>
-                        <Nav.Link to={"/Admin"} as={NavLink}>Training Reports</Nav.Link>
+                        <Nav.Link to={"/user-progress"} as={NavLink}>Training Reports</Nav.Link>
+                        <Nav.Link to={"/user-management"} as={NavLink}>User Management</Nav.Link>
                     </Nav>
                     <Nav className='justify-content-end no-wrap'>
                         <div className='flex-wrap d-flex'>
                             <Navbar.Text>Signed in as: </Navbar.Text>
-                            <Nav.Link to={"/"} as={NavLink} className="ps-1"> Trainee Name</Nav.Link>
+                            <Nav.Link to={"/user-profile"} as={NavLink} className="ps-1"> Trainee Name</Nav.Link>
                         </div>
                         <Nav.Link to={"/login"} as={NavLink} className="text-primary fw-medium">Sign Out</Nav.Link>
                     </Nav>
