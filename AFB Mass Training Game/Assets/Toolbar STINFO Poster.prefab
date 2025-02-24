@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4488505821541459461}
   - component: {fileID: 5964705190292957545}
   - component: {fileID: 4932018254655269565}
-  - component: {fileID: 6576705116060602389}
+  - component: {fileID: 7090751332765110078}
   - component: {fileID: 2237309111041419350}
   m_Layer: 0
   m_Name: Toolbar STINFO Poster
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2221071507338389571}
   serializedVersion: 2
   m_LocalRotation: {x: 0.18301275, y: -0.6830127, z: 0.6830127, w: -0.18301275}
-  m_LocalPosition: {x: -4.78, y: -4.04, z: -0.2}
+  m_LocalPosition: {x: -4.47, y: -4.04, z: -0.2}
   m_LocalScale: {x: 0.07, y: 0, z: 0.07428363}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -131,7 +131,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6576705116060602389
+--- !u!114 &7090751332765110078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +140,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2221071507338389571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3dd0ada0b642c94d87fb41f69bf2c98, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d77f73f916ebf1489e9572e0b625e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: facdb6fea8334b24aa8320f01274f873, type: 3}
-  mini: {fileID: 2221071507338389571}
+  lilShelf: {fileID: 2221071507338389571}
   toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
 --- !u!114 &2237309111041419350
 MonoBehaviour:

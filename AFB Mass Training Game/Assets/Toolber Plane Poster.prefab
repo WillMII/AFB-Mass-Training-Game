@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5181292018813309961}
   - component: {fileID: 7388622378258068145}
   - component: {fileID: 8188253158228068796}
-  - component: {fileID: 1171684498951751451}
   - component: {fileID: 7617889561692418259}
+  - component: {fileID: -2193907885332948155}
   m_Layer: 0
   m_Name: Toolber Plane Poster
   m_TagString: Untagged
@@ -131,21 +131,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1171684498951751451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7548951613064121064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3dd0ada0b642c94d87fb41f69bf2c98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 30e6717aacd4cec46b86b831b2658646, type: 3}
-  mini: {fileID: 7548951613064121064}
-  toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
 --- !u!114 &7617889561692418259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +145,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+--- !u!114 &-2193907885332948155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548951613064121064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d77f73f916ebf1489e9572e0b625e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2203950869843888959, guid: 30e6717aacd4cec46b86b831b2658646, type: 3}
+  lilShelf: {fileID: 7548951613064121064}
+  toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}

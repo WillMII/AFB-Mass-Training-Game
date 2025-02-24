@@ -1,10 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Clue2
     - Glow
     - Glow2
-    - GlowPaint
     - ShelfClue
     - ToolbarClue
     Unity.2D.Animation.Editor.dll:
@@ -94,8 +92,14 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Room1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -147,17 +151,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20984}
     - Class: 114
-      Script: {instanceID: 21916}
+      Script: {instanceID: 21918}
     - Class: 114
-      Script: {instanceID: 22320}
+      Script: {instanceID: 22322}
     - Class: 114
-      Script: {instanceID: 22956}
+      Script: {instanceID: 23158}
     - Class: 114
-      Script: {instanceID: 23156}
-    - Class: 114
-      Script: {instanceID: 23528}
-    - Class: 114
-      Script: {instanceID: 26778}
+      Script: {instanceID: 23530}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -833,6 +833,12 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: b4a784c84e3b3ace20ea8fcdc138959f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GlowPaint
+  - hash:
+      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
@@ -1208,9 +1214,9 @@ ScriptsOnlyBuild:
       Hash: b4a784c84e3b3ace20ea8fcdc138959f
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: GlowPaint
+    className: SpriteGlow
   platform: 20
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Room1.unity
   playerPath: C:/Users/drblu/Documents/School/College/Classes/Spring 2025/CSEE 4911/Proj/AFB-Mass-Training-Game/AFB
     Mass Training Game/Builds

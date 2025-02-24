@@ -309,6 +309,7 @@
 "Assets/Glow2.cs"
 "Assets/GlowPaint.cs"
 "Assets/ShelfClue.cs"
+"Assets/SpriteGlow.cs"
 "Assets/Test.cs"
 "Assets/ToolbarClue.cs"
 -langversion:9.0
