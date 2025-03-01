@@ -15,6 +15,9 @@ const CreateAccount = () => {
     rememberMe: false,
   });
 
+  const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
+  const flightOptions = ["A", "B", "C", "N/A"];
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -128,10 +131,9 @@ const CreateAccount = () => {
                 <option value="" disabled hidden>
                   Select Squadron
                 </option>
-                <option value="Squadron 1">Squadron 1</option>
-                <option value="Squadron 2">Squadron 2</option>
-                <option value="Squadron 3">Squadron 3</option>
-                <option value="N/A">N/A</option>
+                {squadronOptions.map((squadron) => (
+                  <option key={squadron} value={squadron}>{squadron}</option>
+                ))}
               </select>
             </div>
 
@@ -147,10 +149,9 @@ const CreateAccount = () => {
                 <option value="" disabled hidden>
                   Select Flight
                 </option>
-                <option value="Flight A">Flight A</option>
-                <option value="Flight B">Flight B</option>
-                <option value="Flight C">Flight C</option>
-                <option value="N/A">N/A</option>
+                {flightOptions.map((flight) => (
+                  <option key={flight} value={flight}>{flight}</option>
+                ))}
               </select>
             </div>
           </div>

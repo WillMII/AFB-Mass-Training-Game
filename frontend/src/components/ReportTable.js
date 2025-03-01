@@ -36,9 +36,9 @@ const ReportTable = () => {
                         <th>Last Name</th>
                         <th>Squadron</th>
                         <th>Flight</th>
-                        <th>Module 1 - Status</th>
-                        <th>Module 2 - Status</th>
-                        <th>Module 3 - Status</th>
+                        <th>STINFO - Status</th>
+                        <th>Records Management - Status</th>
+                        <th>No FEAR Act - Status</th>
                     </tr>
                 </thead>
                 <tbody>

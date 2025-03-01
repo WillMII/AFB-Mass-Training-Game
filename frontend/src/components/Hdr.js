@@ -28,8 +28,8 @@ const Hdr = () => {
                     </Nav>
                     <Nav className='justify-content-end no-wrap'>
                         <div className='flex-wrap d-flex'>
-                            <Navbar.Text>Signed in as: </Navbar.Text>
-                            <Nav.Link to={"/user-profile"} as={NavLink} className="ps-1"> Trainee Name</Nav.Link>
+                            {/* <Navbar.Text>Signed in as: </Navbar.Text> */}
+                            <Nav.Link to={"/user-profile"} as={NavLink} className="ps-1"><i class="bi bi-person-fill"></i> Trainee Name</Nav.Link>
                         </div>
                         <Nav.Link to={"/login"} as={NavLink} className="text-primary fw-medium">Sign Out</Nav.Link>
                     </Nav>

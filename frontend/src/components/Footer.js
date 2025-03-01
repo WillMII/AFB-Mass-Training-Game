@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <Navbar className="border-top">
             <Container className="text-center">
-                <p className="m-auto">CopyRight Text</p>
+                <p className="m-auto">{"\u00A9"}CopyRight 2025</p>
             </Container>
         </Navbar>
     );

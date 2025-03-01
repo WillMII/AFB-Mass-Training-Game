@@ -17,7 +17,7 @@ const Admin = () => {
         <Container className="flex-grow-1">
           <div className='my-5'>
             <h2 className='text-primary text-decoration-underline'>User Progress Reports</h2>
-            <AdminNav />
+            <AdminNav report={"true"}/>
             <ReportTable/>
           </div>
         </Container>
