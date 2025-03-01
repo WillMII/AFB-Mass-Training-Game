@@ -8,9 +8,10 @@ import Footer from '../components/Footer';
 const Home = () => {
 
     const modules = [
-        { title: "Module 1", desc: "", due: "01/01/2022" },
-        { title: "Module 2", desc: "This is some added text to see some variation in heights.", due: "01/01/2022" },
-        { title: "Module 3", desc: "", due: "01/01/2022" },
+        
+        { title: "STINFO", desc: "STINFO stands for Scientific and Technical INFOrmation. STINFO is information related to experimental, developmental, or engineering works", due: "05/01/2025" },
+        { title: "Records Management", desc: "Enables complete, accurate and objective accounting of the Air Force's activities to the general public.", due: "05/01/2025" },
+        { title: "No FEAR Act", desc: "The No FEAR Act prohibits discrimination and retaliation in the workplace", due: "05/01/2025" },
     ];
 
     return (

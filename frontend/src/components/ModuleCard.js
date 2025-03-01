@@ -13,8 +13,7 @@ const ModuleCard = ({ title, desc, due }) => {
                     Due: {due}
                 </Card.Text>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content. {desc}
+                    {desc}
                 </Card.Text>
                 <div className="mt-auto d-flex justify-content-center">
                     <Button variant="primary">Open Training</Button>

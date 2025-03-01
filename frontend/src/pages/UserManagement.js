@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Hdr from '../components/Hdr'
 import Footer from '../components/Footer';
 import { Container } from 'react-bootstrap';
+import AdminNav from '../components/AdminNav';
+import UserTable from '../components/UserTable'
 
 const UserManagement = () => {
   return (
@@ -11,7 +13,8 @@ const UserManagement = () => {
       <Container className="flex-grow-1">
         <div className='my-5'>
           <h2 className='text-primary text-decoration-underline'>User Management</h2>
-          
+          <AdminNav/>
+          <UserTable/>
         </div>
       </Container>
 
