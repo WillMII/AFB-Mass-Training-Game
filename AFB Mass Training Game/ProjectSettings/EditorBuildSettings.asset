@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Room1.unity
     guid: 621b372463e12f34e80bf71fc07f249d
+  - enabled: 1
+    path: Assets/Room2.unity
+    guid: 3d394e1dfe687164c8292fbc6d4649a4
   m_configObjects: {}

@@ -36,7 +36,8 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -50,7 +51,8 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -87,7 +89,8 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -125,7 +128,8 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -139,7 +143,8 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -165,7 +170,8 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -191,7 +197,8 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -205,7 +212,8 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -213,7 +221,8 @@
           {
             "name": "Mesh",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -221,7 +230,8 @@
           {
             "name": "MeshFilter",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -229,7 +239,8 @@
           {
             "name": "MeshRenderer",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -237,7 +248,8 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -251,7 +263,8 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -259,7 +272,8 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -291,7 +305,8 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -305,7 +320,8 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -337,7 +353,8 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -357,7 +374,8 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -371,7 +389,8 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -391,7 +410,8 @@
           {
             "name": "Texture",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -399,7 +419,8 @@
           {
             "name": "Texture2D",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -559,7 +580,8 @@
           {
             "name": "BoxCollider",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -573,7 +595,8 @@
           {
             "name": "MeshCollider",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -726,7 +749,8 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -769,7 +793,8 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -783,7 +808,8 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Room1.unity"
+              "Assets/Room1.unity",
+              "Assets/Room2.unity"
             ],
             "dependencyType": 0,
             "icon": null

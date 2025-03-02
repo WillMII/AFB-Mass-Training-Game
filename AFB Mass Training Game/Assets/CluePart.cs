@@ -9,6 +9,7 @@ public class CluePart : MonoBehaviour
 {
     //private int foundNum;
     private bool alreadyClicked;
+    public ActivateClue starter;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class CluePart : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!alreadyClicked)
+        if (!alreadyClicked && starter.getAlrClk())
         {
             alreadyClicked = true;
         }

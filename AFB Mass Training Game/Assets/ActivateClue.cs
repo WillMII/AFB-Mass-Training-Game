@@ -9,6 +9,9 @@ public class ActivateClue : MonoBehaviour
     public GameObject canvas;
     public GameObject mini;
     public GameObject toolbar;
+    public GameObject clueCounter;
+
+
     private bool alreadyClicked;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,8 @@ public class ActivateClue : MonoBehaviour
             if (!alreadyInstantiated)
             {
                 Instantiate(mini.gameObject, toolbar.transform);
+                //Instantiate(clueCounter.gameObject);
+                
                 alreadyInstantiated = true;
 
             }
