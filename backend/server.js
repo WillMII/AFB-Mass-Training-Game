@@ -120,6 +120,16 @@ app.get("/api/home", authenticateUser, (req, res) => {
     res.json({ message: `Welcome, ${req.session.user.firstName}!` });
 });
 
+//user-progress route
+app.get("/api/user-progress", (req, res) => {
+    db.query("SELECT * FROM user_progress", (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: "Database query failed" });
+        }
+        res.json(results);
+    });
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
