@@ -10327,6 +10327,7 @@ struct CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B  : public MonoBehaviou
 {
 	bool ___alreadyClicked;
 	ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111* ___starter;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvas;
 };
 struct ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -11911,9 +11912,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3501[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3502[5] = 
 {
 	static_cast<int32_t>(offsetof(Clue2_t29E756DD9ECAF9BAD9540457ED616B44F14E93D1, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(Clue2_t29E756DD9ECAF9BAD9540457ED616B44F14E93D1, ___canvas)),static_cast<int32_t>(offsetof(Clue2_t29E756DD9ECAF9BAD9540457ED616B44F14E93D1, ___mini)),static_cast<int32_t>(offsetof(Clue2_t29E756DD9ECAF9BAD9540457ED616B44F14E93D1, ___toolbar)),static_cast<int32_t>(offsetof(Clue2_t29E756DD9ECAF9BAD9540457ED616B44F14E93D1, ___alreadyClicked)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3503[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3503[3] = 
 {
-	static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___alreadyClicked)),static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___starter)),};
+	static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___alreadyClicked)),static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___starter)),static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___canvas)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3504[6] = 
 {
 	static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___startColor)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___alreadyClicked)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___tinted)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___clear)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___script)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___go)),};

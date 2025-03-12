@@ -793,6 +793,7 @@ struct CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B  : public MonoBehaviou
 {
 	bool ___alreadyClicked;
 	ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111* ___starter;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvas;
 };
 struct ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1619,6 +1620,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CluePart_OnMouseDown_m04D7746CC6FDD25465
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CluePart_OnMouseDown_m04D7746CC6FDD254658A5D8DF99C9A8D847FA984_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	StackTraceSentry _stackTraceSentry(CluePart_OnMouseDown_m04D7746CC6FDD254658A5D8DF99C9A8D847FA984_RuntimeMethod_var);
@@ -1651,14 +1654,27 @@ IL_0017:
 		bool L_3 = V_0;
 		if (!L_3)
 		{
-			goto IL_0024;
+			goto IL_0047;
 		}
 	}
 	{
 		__this->___alreadyClicked = (bool)1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___canvas;
+		NullCheck(L_4);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
+		L_5 = GameObject_get_gameObject_m0878015B8CF7F5D432B583C187725810D27B57DC(L_4, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
+		L_6 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3(L_5, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___canvas;
+		NullCheck(L_7);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
+		L_8 = GameObject_get_gameObject_m0878015B8CF7F5D432B583C187725810D27B57DC(L_7, NULL);
+		NullCheck(L_8);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)1, NULL);
 	}
 
-IL_0024:
+IL_0047:
 	{
 		return;
 	}

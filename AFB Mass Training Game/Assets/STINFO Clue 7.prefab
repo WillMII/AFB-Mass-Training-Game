@@ -511,15 +511,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Marking STINFO Docs\r\nDVD ROM with case: \r\n-Distribution Statement
-    is placed on both the DVD and its case. \r\nPresentation:\r\n-A Distribution
-    Statement and Export Control Warning Notice, if applicable, must be on each slide
-    in a presentation\r\nDocument:\r\n-Distribution Statements must be placed on
-    a conspicuous location on the cover, title page, or on the front page. A Distribution
-    Statement must appear on each printed page of a digitally stored document. (see
-    previous slide)\r\nEngineering drawings\r\n-Distribution Statement must be on
-    all single-sheet drawings and associated lists, and on sheet one of multi-sheet
-    documents. "
+  m_text: "Marking STINFO Docs\r\n-DVD ROM with case \n-Presentation\n-Document\n-Engineering
+    drawings\r\nFind them all to find out how to mark them!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
@@ -546,8 +539,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
