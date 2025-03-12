@@ -28,6 +28,7 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseEnter()
     {
+        
         if (!alreadyClicked)
         {
             Renderer renderer = GetComponent<Renderer>();
@@ -49,7 +50,7 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseExit()
     {
-        Debug.Log("Off");
+        //Debug.Log("Off");
         Renderer renderer = GetComponent<Renderer>();
         Material[] materials = renderer.materials;
         materials[1] = clear;
