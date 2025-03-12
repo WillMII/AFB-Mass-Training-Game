@@ -593,6 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starter: {fileID: 1574584762}
+  canvas: {fileID: 0}
 --- !u!114 &384336317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starter: {fileID: 1574584762}
+  canvas: {fileID: 0}
 --- !u!114 &606480661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,7 +1502,7 @@ Transform:
   m_GameObject: {fileID: 1387522952}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000115958646, y: 0.70710677, z: -0.7071068, w: -0.00011595883}
-  m_LocalPosition: {x: 5.08, y: 2.57, z: -0.11}
+  m_LocalPosition: {x: 8.18, y: 2.57, z: -0.11}
   m_LocalScale: {x: 0.34199998, y: 0, z: 0.19101998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1628,6 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starter: {fileID: 1574584762}
+  canvas: {fileID: 0}
 --- !u!1 &1416007053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,6 +1775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starter: {fileID: 1574584762}
+  canvas: {fileID: 0}
 --- !u!114 &1416007062
 MonoBehaviour:
   m_ObjectHideFlags: 0

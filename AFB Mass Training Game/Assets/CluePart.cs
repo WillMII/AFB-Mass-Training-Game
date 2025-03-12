@@ -10,6 +10,7 @@ public class CluePart : MonoBehaviour
     //private int foundNum;
     private bool alreadyClicked;
     public ActivateClue starter;
+    public GameObject canvas;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,8 @@ public class CluePart : MonoBehaviour
         if (!alreadyClicked && starter.getAlrClk())
         {
             alreadyClicked = true;
+            Instantiate(canvas.gameObject);
+            canvas.gameObject.SetActive(true);
         }
     }
 

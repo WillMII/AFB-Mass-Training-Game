@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 40f53d8af76c970478ccdeb17eb58f5f, type: 3}
-  mini: {fileID: 2221071507338389571, guid: 18fbd2e35dbc42542a6b3d42ac5d3ad6, type: 3}
+  mini: {fileID: 5861055635563820369, guid: 5b7993cdcb2448c40a6674ab5540afb0, type: 3}
   toolbar: {fileID: 1981270362}
 --- !u!65 &1162257799
 BoxCollider:
@@ -3203,7 +3203,10 @@ PrefabInstance:
       value: Toolbar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 896649266054967577, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
+    - {fileID: 5380793217899849118, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
+    - {fileID: 3375505047427398586, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
@@ -3256,6 +3259,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3188691390202385970, guid: 9408a5809e9d7c947b931d8265a794bb, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2203950869843888959, guid: e9afbf8c473629344885de0173690fba, type: 3}
+    - target: {fileID: 3188691390202385970, guid: 9408a5809e9d7c947b931d8265a794bb, type: 3}
       propertyPath: starter
       value: 
       objectReference: {fileID: 1722559517}
@@ -3288,6 +3295,10 @@ PrefabInstance:
       propertyPath: script
       value: 
       objectReference: {fileID: 1722559517}
+    - target: {fileID: 5675215954016357651, guid: b83c5b88aebbe004191b6296d0a1401e, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2203950869843888959, guid: 10e54283760c43d408a709a38a763e78, type: 3}
     - target: {fileID: 5675215954016357651, guid: b83c5b88aebbe004191b6296d0a1401e, type: 3}
       propertyPath: starter
       value: 
@@ -3398,6 +3409,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6620684921749174969, guid: 79ecb38194492e941aab39059aa462e0, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2203950869843888959, guid: bd723b17b45b19b41a8e1fa98dde54f7, type: 3}
+    - target: {fileID: 6620684921749174969, guid: 79ecb38194492e941aab39059aa462e0, type: 3}
       propertyPath: starter
       value: 
       objectReference: {fileID: 1722559517}
@@ -3426,6 +3441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard drive
       objectReference: {fileID: 0}
+    - target: {fileID: 2882769315289307896, guid: 8d53917b5622eb040b83c462907d5e67, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2203950869843888959, guid: 153a3221160802e4793f13a940586b1a, type: 3}
     - target: {fileID: 2882769315289307896, guid: 8d53917b5622eb040b83c462907d5e67, type: 3}
       propertyPath: starter
       value: 
@@ -3491,6 +3510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1367693976}
     m_Modifications:
+    - target: {fileID: 4735586251020576570, guid: 2ce92391143ea4c499c77a8f6bf98ff3, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2203950869843888959, guid: 1d72ea3b8a167934d835a79bef674912, type: 3}
     - target: {fileID: 4735586251020576570, guid: 2ce92391143ea4c499c77a8f6bf98ff3, type: 3}
       propertyPath: starter
       value: 
@@ -3560,6 +3583,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1367693976}
     m_Modifications:
+    - target: {fileID: 880888821152210002, guid: be4252442ae330c499172adc00794ca7, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2203950869843888959, guid: 43faab271b6d1a34f9360f116d447806, type: 3}
     - target: {fileID: 880888821152210002, guid: be4252442ae330c499172adc00794ca7, type: 3}
       propertyPath: starter
       value: 
@@ -3673,6 +3700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood Drawer
       objectReference: {fileID: 0}
+    - target: {fileID: 3608308670705436929, guid: 63c470399304d084983c4120b9b73081, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2203950869843888959, guid: 905dc7efeaa61524687e7fd0e8627209, type: 3}
     - target: {fileID: 3608308670705436929, guid: 63c470399304d084983c4120b9b73081, type: 3}
       propertyPath: starter
       value: 
