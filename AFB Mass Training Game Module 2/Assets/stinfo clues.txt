@@ -1,0 +1,68 @@
+STINFO Clues
+
+STINFO stands for Scientific and Technical INFOrmation
+
+STINFO is information related to experimental, developmental, or engineering works
+
+Regulations and Policies are not STINFO protected
+
+Find all types of STINFO
+
+-Technical order
+
+-Process order
+
+-Engineering drawing
+
+-SW doc
+
+-Tech data package
+
+-TDIP documents
+
+-Briefings (if they contain info from above)
+
+The Controlling DOD Office (CDO) is the office that creates (or procures) or is consigned the document
+
+Categories of distribution:
+-primary (from controlling DoD)
+-secondary
+
+Marking STINFO Docs
+-DVD ROM with case 
+-Presentation
+-Document
+-Engineering drawings
+Find them all to find out how to mark them!
+
+DVD ROM with case: 
+-Distribution Statement is placed on both the DVD and its case.
+
+Presentation:
+-A Distribution Statement and Export Control Warning Notice, if applicable, must be on each slide in a presentation
+
+Document:
+-Distribution Statements must be placed on a conspicuous location on the cover, title page, or on the front page. A Distribution Statement must appear on each printed page of a digitally stored document.
+
+Engineering drawings
+-Distribution Statement must be on all single-sheet drawings and associated lists, and on sheet one of multi-sheet documents. 
+
+Encrypt when sending STINFO files, consider using Army AMRDEC SAFE file Exchange
+-https://safe.apps.mil/
+
+6 types of IP rights are relevant when working with STINFO
+-Unlimited rights
+-Limited rights
+-Government purpose rights
+-Restricted rights
+-Specially negotiated rights, and
+-Small business innovation and research rights
+
+
+Disposing of Unlassified STINFO Docs
+-Paper documents - shredding or burning only 
+-Floppy disks - reformatting and breaking into four or more pieces
+-Hard drives - reformatting and sending to a recycling center » hard drives
+-CD-ROMS/DVDs - shredding or breaking into 4 or more pieces
+-Memory wands/flash drives - deleting files from memory and breaking into two or more pieces 
+-Magnetic tape - deleting the files and sending to a recycling center
