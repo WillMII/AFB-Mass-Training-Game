@@ -368,6 +368,7 @@
 "Assets/Glow.cs"
 "Assets/Glow2.cs"
 "Assets/GlowPaint.cs"
+"Assets/Selected.cs"
 "Assets/ShelfClue.cs"
 "Assets/Test.cs"
 "Assets/ToolbarClue.cs"
