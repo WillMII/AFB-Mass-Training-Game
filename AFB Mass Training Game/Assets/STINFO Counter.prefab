@@ -122,6 +122,8 @@ MonoBehaviour:
   TD: {fileID: 0}
   TDIP: {fileID: 0}
   Brief: {fileID: 0}
+  bookstack: {fileID: 0}
+  typesFound: {fileID: 0}
   text: {fileID: 2711490600842298105}
 --- !u!1 &8209770210653453855
 GameObject:
@@ -190,8 +192,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'STINFO Types Found: 0/7'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
+  m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -251,7 +253,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -66.892944, w: 0}
+  m_margin: {x: 0, y: 0, z: -87.29089, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
