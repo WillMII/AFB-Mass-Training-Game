@@ -65,19 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AGAIN
-
-    A) Information that relates to different states in the United
-    States
-
-    B) Information related to static technology
-
-    C) The guidelines
-    by which one should study the rules and regulations related to their specific
-    duty
-
-    D) Information related to experimental, developmental, or engineering
-    works'
+  m_text: "Which of these is NOT covered by STINFO\r?\nA) Technical Orders\r\nB)
+    Important Conversation Transcripts\r\nC) Engineering drawings\r\nD) Process Orders"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}

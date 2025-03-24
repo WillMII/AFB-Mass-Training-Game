@@ -16,6 +16,12 @@ public class SelectedD : MonoBehaviour
     //public Canvas answerCanvas;
     public GameObject next;
     public GameObject parent;
+
+    public GameObject nextA;
+    public GameObject nextB;
+    public GameObject nextC;
+    public GameObject nextD;
+
     
     //public Canvas questionCanvas;
     //public Canvas questionCanvas;
