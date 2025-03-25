@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7295846423247442639, guid: 99a04e474bd39a948a9567619dd55e98, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -158,13 +158,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9cc1c66a998684f95da32aa379203d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  text1: {fileID: 0}
+  text: {fileID: 2593701644466494841, guid: c933091646094264baf61b7d0d2175b2, type: 3}
+  text1: {fileID: 7295846423247442639, guid: 99a04e474bd39a948a9567619dd55e98, type: 3}
   correct: 0
-  counter: {fileID: 0}
-  questionCounter: {fileID: 0}
+  counter: {fileID: 7356570277937087434, guid: c8d53525a7223d44fa9e602c80a36c5d, type: 3}
+  questionCounter: {fileID: 9177318219114207612, guid: facc2fe7d38638046bf7493e91097b24, type: 3}
   next: {fileID: 6377123181969401908, guid: e65f2de7259747349a7ca613dc91d376, type: 3}
-  parent: {fileID: 0}
+  parent: {fileID: 2203950869843888959, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+  nextD: {fileID: 8346809894688189943, guid: 0e83c37371688b64da6a18ccb2930e0c, type: 3}
 --- !u!1 &3685413237056612101
 GameObject:
   m_ObjectHideFlags: 0

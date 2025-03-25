@@ -97,9 +97,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6377123181969401908, guid: c71f86bebf4f6c64ab1f4551c82caa2e, type: 3}
     - target: {fileID: 4118970379368664459, guid: a12f509663701a04585963efeead98e5, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 4823899901207025681, guid: 74ec0c1f27a65e7419195273cbc19361, type: 3}
+    - target: {fileID: 4118970379368664459, guid: a12f509663701a04585963efeead98e5, type: 3}
+      propertyPath: nextD
+      value: 
+      objectReference: {fileID: 1595413392075606827, guid: 6e2d0fd8923cb9d428ebee8899ced954, type: 3}
+    - target: {fileID: 4118970379368664459, guid: a12f509663701a04585963efeead98e5, type: 3}
       propertyPath: text1
       value: 
       objectReference: {fileID: 6377123181969401908, guid: e65f2de7259747349a7ca613dc91d376, type: 3}
+    - target: {fileID: 6050741190832232570, guid: a12f509663701a04585963efeead98e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6377123181969401908, guid: e65f2de7259747349a7ca613dc91d376, type: 3}
+    - target: {fileID: 6050741190832232570, guid: a12f509663701a04585963efeead98e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
