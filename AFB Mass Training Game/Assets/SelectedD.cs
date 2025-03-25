@@ -15,12 +15,13 @@ public class SelectedD : MonoBehaviour
     //public Canvas correctCanvas;
     //public Canvas answerCanvas;
     public GameObject next;
-    public GameObject parent;
-    private GameObject parentInstance;
+    private Keypad parent;
+    //private GameObject parentInstance;
     //public GameObject nextA;
     //public GameObject nextB;
     //public GameObject nextC;
     public GameObject nextD;
+    public Keypad getQuiz;
 
     
     //public Canvas questionCanvas;
@@ -32,6 +33,9 @@ public class SelectedD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject keypad = GameObject.Find("Keypad");
+        parent = keypad.GetComponent<Keypad>();
+        //parent = getQuiz.getInstance();
         /*
         if (alreadyInstantiated == false)
         {
@@ -57,15 +61,18 @@ public class SelectedD : MonoBehaviour
 
     public void OnClick()
     {
+        /*
         if (alreadyInstantiated == false)
         {
             parentInstance = Instantiate(parent);
             alreadyInstantiated = true;
         }
+        */
         //questionCanvas.gameObject.SetActive(true);
         //questionCounter.gameObject.SetActive(true);
         //correctCanvas.gameObject.SetActive(true);
         //answerCanvas.gameObject.SetActive(true);
+        
         questionCounter.text = (int.Parse(questionCounter.text) + 1).ToString();
 
         TMP_Text textT = text.GetComponent<TMP_Text>();
@@ -84,12 +91,12 @@ public class SelectedD : MonoBehaviour
             counter.text = (int.Parse(counter.text) + 1).ToString();
         }
         //Canvas.ForceUpdateCanvases();
-        GameObject textInstance = Instantiate(text1, parentInstance.transform);
+        GameObject textInstance = Instantiate(text1, parent.transform);
         //textInstance.transform.SetParent(parent.transform, false);
         GameObject.Destroy(textInstance);
-        GameObject nextText = Instantiate(next, parentInstance.transform);
+        GameObject nextText = Instantiate(next, parent.transform);
         //nextText.transform.SetParent(parent.transform, false);
-        GameObject dNext = Instantiate(nextD, parentInstance.transform);
+        GameObject dNext = Instantiate(nextD, parent.transform);
         //dNext.transform.SetParent(parent.transform, false);
         nextText.gameObject.SetActive(true);
     }

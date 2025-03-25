@@ -368,6 +368,7 @@
 "Assets/Glow.cs"
 "Assets/Glow2.cs"
 "Assets/GlowPaint.cs"
+"Assets/Keypad.cs"
 "Assets/SelectedA.cs"
 "Assets/SelectedB.cs"
 "Assets/SelectedC.cs"
