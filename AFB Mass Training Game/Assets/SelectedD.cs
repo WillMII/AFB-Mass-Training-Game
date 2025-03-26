@@ -111,15 +111,19 @@ public class SelectedD : MonoBehaviour
         //GameObject textInstance = Instantiate(text1, parent.transform);
         //textInstance.transform.SetParent(parent.transform, false);
         //GameObject.Destroy(textInstance);
-        GameObject nextText = Instantiate(next, parent.transform);
+        //GameObject nextText = Instantiate(next, parent.transform);
         Debug.Log("Next text instantiated");
         //nextText.transform.SetParent(parent.transform, false);
-        GameObject dNext = Instantiate(nextD, parent.transform);
+        //GameObject dNext = Instantiate(nextD, parent.transform);
         Debug.Log("dNext instantiated");
         //dNext.transform.SetParent(parent.transform, false);
-        nextText.gameObject.SetActive(true);
-        dNext.gameObject.SetActive(true);
+        text1.gameObject.SetActive(false);
+        itself.gameObject.SetActive(false);
+        next.gameObject.SetActive(true);
+        nextD.gameObject.SetActive(true);
+        
         //Debug.Log(text1.gameObject.name);
+        /*
         if (GameObject.Find("Text (TMP)") != null)
         {
             text1Instance = GameObject.Find("Text (TMP)");
@@ -131,7 +135,8 @@ public class SelectedD : MonoBehaviour
         {
             Destroy(text1Instance);
         }
-        
+        */
+
         //text1.gameObject.SetActive(false);
         /*
         if (text1 != null)
@@ -150,8 +155,8 @@ public class SelectedD : MonoBehaviour
             textF.gameObject.SetActive(false);
         }
         */
-        itself.gameObject.SetActive(false);
-        Canvas.ForceUpdateCanvases();
+        //itself.gameObject.SetActive(false);
+        //Canvas.ForceUpdateCanvases();
 
     }
 }

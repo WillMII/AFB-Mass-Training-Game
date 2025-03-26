@@ -33,7 +33,8 @@ public class Keypad : MonoBehaviour
 
     void OnMouseDown()
     {
-        quizInstance = Instantiate(Quiz.gameObject);
+        //quizInstance = Instantiate(Quiz.gameObject);
+        Quiz.SetActive(true);
     }
 
     public GameObject getInstance()
