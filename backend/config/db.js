@@ -37,47 +37,117 @@ db.connect(err => {
             }
             console.log(`Using database: ${databaseName}`);
 
-            // Ensure the Users table exists
+            // Create Users Table
             const createUsersTable = `
                 CREATE TABLE IF NOT EXISTS users (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    first_name VARCHAR(255) NOT NULL,
-                    last_name VARCHAR(255) NOT NULL,
-                    email VARCHAR(255) UNIQUE NOT NULL,
-                    squadron VARCHAR(255) DEFAULT NULL,
-                    flight ENUM('A', 'B', 'C', 'N/A') DEFAULT 'N/A',
-                    password_hash VARCHAR(255) NOT NULL
-                );
-            `;
-
-            db.query(createUsersTable, (err) => {
-                if (err) {
-                    console.error("Error creating Users table:", err);
-                } else {
-                    console.log("Users table is ready");
-                }
-            });
-
-            // Ensure the User Progress table exists
-            const createUserProgressTable = `
-                CREATE TABLE IF NOT EXISTS user_progress (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    user_id INT AUTO_INCREMENT PRIMARY KEY,
+                    email VARCHAR(100) UNIQUE NOT NULL,
                     first_name VARCHAR(50) NOT NULL,
                     last_name VARCHAR(50) NOT NULL,
-                    squadron VARCHAR(50) DEFAULT 'N/A',
-                    flight ENUM('A', 'B', 'C', 'N/A') DEFAULT 'N/A',
-                    module1 INT CHECK (module1 BETWEEN 0 AND 100) DEFAULT 0,
-                    module2 INT CHECK (module2 BETWEEN 0 AND 100) DEFAULT 0,
-                    module3 INT CHECK (module3 BETWEEN 0 AND 100) DEFAULT 0
+                    squadron VARCHAR(50) DEFAULT NULL,
+                    flight ENUM('A', 'B', 'C', 'N/A') DEFAULT 'N/A' NOT NULL,
+                    password_hash VARCHAR(255) NOT NULL,
+                    training_manager BOOLEAN DEFAULT FALSE NOT NULL
                 );
             `;
 
-            db.query(createUserProgressTable, (err) => {
-                if (err) {
-                    console.error("Error creating User Progress table:", err);
-                } else {
-                    console.log("User Progress table is ready");
-                }
+            // Create Modules Table
+            const createModulesTable = `
+                CREATE TABLE IF NOT EXISTS modules (
+                    module_id INT AUTO_INCREMENT PRIMARY KEY,
+                    name VARCHAR(100) NOT NULL,
+                    description TEXT NULL
+                );
+            `;
+
+            // Create Records Table
+            const createRecordsTable = `
+                CREATE TABLE IF NOT EXISTS records (
+                    records_id INT AUTO_INCREMENT PRIMARY KEY,
+                    user_id INT,
+                    module_id INT,
+                    completion_status BOOLEAN DEFAULT FALSE NOT NULL,
+                    FOREIGN KEY (user_id) REFERENCES users(user_id),
+                    FOREIGN KEY (module_id) REFERENCES modules(module_id)
+                );
+            `;
+
+            // Create Sessions Table
+            const createSessionsTable = `
+                CREATE TABLE IF NOT EXISTS sessions (
+                    sessions_id INT AUTO_INCREMENT PRIMARY KEY,
+                    user_id INT,
+                    session_token VARCHAR(255) UNIQUE NOT NULL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    expires_at TIMESTAMP NOT NULL,
+                    FOREIGN KEY (user_id) REFERENCES users(user_id)
+                );
+            `;
+
+            // Create Game Progress Table
+            const createGameProgressTable = `
+                CREATE TABLE IF NOT EXISTS game_progress (
+                    game_progress_id INT AUTO_INCREMENT PRIMARY KEY,
+                    user_id INT,
+                    module_id INT,
+                    stage INT NOT NULL,
+                    progress FLOAT DEFAULT 0.0,
+                    date_completed TIMESTAMP NULL,
+                    FOREIGN KEY (user_id) REFERENCES users(user_id),
+                    FOREIGN KEY (module_id) REFERENCES modules(module_id)
+                );
+            `;
+
+            // Create Clue Bank Table
+            const createClueBankTable = `
+                CREATE TABLE IF NOT EXISTS clue_bank (
+                    clue_id INT AUTO_INCREMENT PRIMARY KEY,
+                    module_id INT,
+                    clue_text TEXT NOT NULL,
+                    FOREIGN KEY (module_id) REFERENCES modules(module_id)
+                );
+            `;
+
+            // Create Quiz Question Bank Table
+            const createQuizQuestionBankTable = `
+                CREATE TABLE IF NOT EXISTS quiz_question_bank (
+                    question_id INT AUTO_INCREMENT PRIMARY KEY,
+                    module_id INT,
+                    question TEXT NOT NULL,
+                    answer TEXT NOT NULL,
+                    FOREIGN KEY (module_id) REFERENCES modules(module_id)
+                );
+            `;
+
+            // Execute table creation queries in order
+            const tables = [
+                createUsersTable,
+                createModulesTable,
+                createRecordsTable,
+                createSessionsTable,
+                createGameProgressTable,
+                createClueBankTable,
+                createQuizQuestionBankTable
+            ];
+
+            // Execute each table creation query in the `tables` array
+            tables.forEach((query, index) => {
+                db.query(query, (err) => {
+                    if (err) {
+                        console.error("Error creating table:", err);
+                    } else {
+                        const tableNames = [
+                            "users",
+                            "modules",
+                            "records",
+                            "sessions",
+                            "game_progress",
+                            "clue_bank",
+                            "quiz_question_bank"
+                        ];
+                        console.log(`'${tableNames[index]}' created.`);
+                    }
+                });
             });
         });
     });
