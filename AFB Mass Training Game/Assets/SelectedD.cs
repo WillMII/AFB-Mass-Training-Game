@@ -25,10 +25,10 @@ public class SelectedD : MonoBehaviour
     public Keypad getQuiz;
     public Button itself;
     private GameObject textF;
-
+    private GameObject text1Instance;
     //public Canvas questionCanvas;
     //public Canvas questionCanvas;
-    private bool alreadyInstantiated = false;
+    //private bool alreadyInstantiated = false;
     private bool alreadyClicked;
     private TMP_Text[] answerTexts;
     //private TMP_Text[] answerTexts;
@@ -119,16 +119,31 @@ public class SelectedD : MonoBehaviour
         //dNext.transform.SetParent(parent.transform, false);
         nextText.gameObject.SetActive(true);
         dNext.gameObject.SetActive(true);
+        //Debug.Log(text1.gameObject.name);
+        if (GameObject.Find("Text (TMP)") != null)
+        {
+            text1Instance = GameObject.Find("Text (TMP)");
+        } else if (GameObject.Find("Text 2") != null)
+        {
+            text1Instance = GameObject.Find("Text 2(Clone)");
+        }
+        if (text1Instance != null) 
+        {
+            Destroy(text1Instance);
+        }
+        
         //text1.gameObject.SetActive(false);
+        /*
         if (text1 != null)
         {
             text1.gameObject.SetActive(false);
         }
+        
         else
         {
             //Debug.LogError("text1 is null!");
         }
-
+        */
         /*
         if (textF != null)
         {
