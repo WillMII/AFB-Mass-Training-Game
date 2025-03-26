@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: text1
       value: 
       objectReference: {fileID: 6377123181969401908, guid: e31c997b5915f564bb9ae1fbc67f37f5, type: 3}
+    - target: {fileID: 6050741190832232570, guid: a12f509663701a04585963efeead98e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6377123181969401908, guid: e31c997b5915f564bb9ae1fbc67f37f5, type: 3}
+    - target: {fileID: 6050741190832232570, guid: a12f509663701a04585963efeead98e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

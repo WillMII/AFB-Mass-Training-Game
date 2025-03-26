@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class SelectedD : MonoBehaviour
@@ -8,22 +9,23 @@ public class SelectedD : MonoBehaviour
 
 
     public GameObject text;
-    public GameObject text1;
+    public TMP_Text text1;
     public bool correct;
     public TMP_Text counter;
     public TMP_Text questionCounter;
     //public Canvas correctCanvas;
     //public Canvas answerCanvas;
     public GameObject next;
-    private Keypad parent;
-    //private GameObject parentInstance;
+    private GameObject parent;
+    private Keypad parentK;
     //public GameObject nextA;
     //public GameObject nextB;
     //public GameObject nextC;
     public GameObject nextD;
     public Keypad getQuiz;
+    public Button itself;
+    private GameObject textF;
 
-    
     //public Canvas questionCanvas;
     //public Canvas questionCanvas;
     private bool alreadyInstantiated = false;
@@ -34,7 +36,20 @@ public class SelectedD : MonoBehaviour
     void Start()
     {
         GameObject keypad = GameObject.Find("Keypad");
-        parent = keypad.GetComponent<Keypad>();
+        parentK = keypad.GetComponent<Keypad>();
+        parent = parentK.getInstance();
+        /*
+        if (GameObject.Find("Text 2") != null && GameObject.Find("Text 2").GetComponent<TMP_Text>().gameObject.activeSelf == true)
+        {
+            textF = GameObject.Find("Text 2");
+
+        }
+        else if (GameObject.Find("Text 3") != null && GameObject.Find("Text 3").GetComponent<TMP_Text>().gameObject.activeSelf == true)
+        {
+            textF = GameObject.Find("Text 3");
+        }
+        */
+        //itself = GameObject.Find("D1").GetComponent<Button>();
         //parent = getQuiz.getInstance();
         /*
         if (alreadyInstantiated == false)
@@ -61,6 +76,8 @@ public class SelectedD : MonoBehaviour
 
     public void OnClick()
     {
+        
+        
         /*
         if (alreadyInstantiated == false)
         {
@@ -72,7 +89,7 @@ public class SelectedD : MonoBehaviour
         //questionCounter.gameObject.SetActive(true);
         //correctCanvas.gameObject.SetActive(true);
         //answerCanvas.gameObject.SetActive(true);
-        
+
         questionCounter.text = (int.Parse(questionCounter.text) + 1).ToString();
 
         TMP_Text textT = text.GetComponent<TMP_Text>();
@@ -91,13 +108,35 @@ public class SelectedD : MonoBehaviour
             counter.text = (int.Parse(counter.text) + 1).ToString();
         }
         //Canvas.ForceUpdateCanvases();
-        GameObject textInstance = Instantiate(text1, parent.transform);
+        //GameObject textInstance = Instantiate(text1, parent.transform);
         //textInstance.transform.SetParent(parent.transform, false);
-        GameObject.Destroy(textInstance);
+        //GameObject.Destroy(textInstance);
         GameObject nextText = Instantiate(next, parent.transform);
+        Debug.Log("Next text instantiated");
         //nextText.transform.SetParent(parent.transform, false);
         GameObject dNext = Instantiate(nextD, parent.transform);
+        Debug.Log("dNext instantiated");
         //dNext.transform.SetParent(parent.transform, false);
         nextText.gameObject.SetActive(true);
+        dNext.gameObject.SetActive(true);
+        //text1.gameObject.SetActive(false);
+        if (text1 != null)
+        {
+            text1.gameObject.SetActive(false);
+        }
+        else
+        {
+            //Debug.LogError("text1 is null!");
+        }
+
+        /*
+        if (textF != null)
+        {
+            textF.gameObject.SetActive(false);
+        }
+        */
+        itself.gameObject.SetActive(false);
+        Canvas.ForceUpdateCanvases();
+
     }
 }

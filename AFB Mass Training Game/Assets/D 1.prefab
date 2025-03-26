@@ -122,10 +122,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9435586581048138}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4118970379368664459}
+        m_TargetAssemblyTypeName: SelectedD, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -138,18 +138,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4118970379368664459}
-        m_TargetAssemblyTypeName: SelectedD, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -171,13 +159,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2593701644466494841, guid: c933091646094264baf61b7d0d2175b2, type: 3}
-  text1: {fileID: 7295846423247442639, guid: 99a04e474bd39a948a9567619dd55e98, type: 3}
+  text1: {fileID: 5538453595900144067, guid: 99a04e474bd39a948a9567619dd55e98, type: 3}
   correct: 0
   counter: {fileID: 7356570277937087434, guid: c8d53525a7223d44fa9e602c80a36c5d, type: 3}
   questionCounter: {fileID: 9177318219114207612, guid: facc2fe7d38638046bf7493e91097b24, type: 3}
   next: {fileID: 6377123181969401908, guid: e65f2de7259747349a7ca613dc91d376, type: 3}
   nextD: {fileID: 8346809894688189943, guid: 0e83c37371688b64da6a18ccb2930e0c, type: 3}
   getQuiz: {fileID: 1021557151415124181, guid: fd2b70889ae9b034c95f62955c1afb2f, type: 3}
+  itself: {fileID: 6050741190832232570}
 --- !u!1 &3685413237056612101
 GameObject:
   m_ObjectHideFlags: 0
