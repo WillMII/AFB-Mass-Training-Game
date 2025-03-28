@@ -130,6 +130,11 @@ app.get("/api/user-progress", (req, res) => {
     });
 });
 
+// for header user's name
+app.get("/api/user", authenticateUser, (req, res) => {
+    res.json({ firstName: req.session.user.firstName, lastName: req.session.user.lastName });
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
