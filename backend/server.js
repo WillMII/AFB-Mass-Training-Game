@@ -120,11 +120,23 @@ app.get("/api/home", authenticateUser, (req, res) => {
     res.json({ message: `Welcome, ${req.session.user.firstName}!` });
 });
 
-//user-progress route
+//user-progress route for displaying all trainees' progress
 app.get("/api/user-progress", (req, res) => {
-    db.query("SELECT * FROM user_progress", (err, results) => {
+    const sql = `
+        SELECT u.user_id, u.first_name, u.last_name, u.squadron, u.flight,
+               MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) AS module1,
+               MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) AS module2,
+               MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) AS module3
+        FROM users u
+        LEFT JOIN game_progress gp ON u.user_id = gp.user_id
+        LEFT JOIN modules m ON gp.module_id = m.module_id
+        GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight
+    `;
+
+    db.query(sql, (err, results) => {
         if (err) {
-            return res.status(500).json({ error: "Database query failed" });
+            console.error("Database error:", err.sqlMessage || err);
+            return res.status(500).json({ error: "Database query failed", details: err.sqlMessage || err });
         }
         res.json(results);
     });
