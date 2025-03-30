@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2424308707103222814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70,8 +70,8 @@ MonoBehaviour:
 
     A) Shredding
 
-    B) Deleting the files and sending to a
-    recycling center
+    B) Deleting the files and sending to a recycling
+    center
 
     C) Crushing and sending to landfill
 

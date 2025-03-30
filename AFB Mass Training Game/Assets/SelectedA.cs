@@ -1,39 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-public class Selected : MonoBehaviour
+public class SelectedA: MonoBehaviour
 {
 
 
-    public TMP_Text text;
+    public GameObject text;
+    public TMP_Text text1;
     public bool correct;
-    private TMP_Text counter;
-    public Canvas correctCanvas;
-    // Start is called before the first frame update
+    public TMP_Text counter;
+    public TMP_Text questionCounter;
+
+    public GameObject next;
+    private GameObject parent;
+    private Keypad parentK;
+
+    public GameObject nextA;
+    public GameObject nextB;
+    public GameObject nextC;
+    public GameObject nextD;
+    public GameObject currentB;
+    public GameObject currentC;
+    public GameObject currentD;
+    public Keypad getQuiz;
+    public Button itself;
+    private GameObject textF;
+    private GameObject text1Instance;
+
+    private bool alreadyClicked;
+    private TMP_Text[] answerTexts;
+
     void Start()
     {
-        counter = correctCanvas.GetComponentInChildren<TMP_Text>();
+        GameObject keypad = GameObject.Find("Keypad");
+        parentK = keypad.GetComponent<Keypad>();
+        parent = parentK.getInstance();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnClick()
     {
-        text.text = "A";
+
+
+
+
+        questionCounter.text = (int.Parse(questionCounter.text) + 1).ToString();
+
+        TMP_Text textT = text.GetComponent<TMP_Text>();
+        textT.text = "D";
+
         if (text.gameObject.name == "Answer 1")
         {
-            correct = false;
-            Debug.Log("Incorrect");
+            correct = true;
+            Debug.Log("Correct");
         }
         if (correct == true)
         {
             counter.text = (int.Parse(counter.text) + 1).ToString();
         }
+
+        Debug.Log("Next text instantiated");
+        //nextText.transform.SetParent(parent.transform, false);
+        //GameObject dNext = Instantiate(nextD, parent.transform);
+        Debug.Log("dNext instantiated");
+        //dNext.transform.SetParent(parent.transform, false);
+        text1.gameObject.SetActive(false);
+        itself.gameObject.SetActive(false);
+        currentB.gameObject.SetActive(false);
+        currentC.gameObject.SetActive(false);
+        currentD.gameObject.SetActive(false);
+        next.gameObject.SetActive(true);
+        nextA.gameObject.SetActive(true);
+        nextB.gameObject.SetActive(true);
+        nextC.gameObject.SetActive(true);
+        nextD.gameObject.SetActive(true);
+
+
     }
 }

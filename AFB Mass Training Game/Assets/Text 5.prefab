@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2424308707103222814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -72,8 +72,8 @@ MonoBehaviour:
 
     B) Sovereign Teachable INformation For Others
 
-    C) Statewide
-    Technological INFormation Orders
+    C) Statewide Technological
+    INFormation Orders
 
     D) Scientific and Technical INFOrmation'
   m_isRightToLeft: 0
