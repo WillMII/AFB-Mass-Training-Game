@@ -94,7 +94,10 @@ app.post("/api/login", async (req, res) => {
                 email: user.email,
                 firstName: user.first_name,
                 lastName: user.last_name,
-            };
+                squadron: user.squadron,
+                flight: user.flight,
+                training_manager: user.training_manager
+            };            
 
             res.status(200).json({
                 message: "Login successful",
@@ -142,10 +145,34 @@ app.get("/api/user-progress", (req, res) => {
     });
 });
 
-// for header user's name
+// for user's information
 app.get("/api/user", authenticateUser, (req, res) => {
-    res.json({ firstName: req.session.user.firstName, lastName: req.session.user.lastName });
+    const sql = "SELECT first_name, last_name, email, squadron, flight, training_manager FROM users WHERE email = ?";
+    
+    db.query(sql, [req.session.user.email], (err, results) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database query failed" });
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        const user = results[0];
+
+        res.json({
+            firstName: user.first_name,
+            lastName: user.last_name,
+            email: user.email,
+            squadron: user.squadron,
+            flight: user.flight,
+            isManager: user.isManager,
+        });
+    });
 });
+
+
 
 
 app.listen(PORT, () => {
