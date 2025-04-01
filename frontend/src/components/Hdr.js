@@ -23,7 +23,7 @@ const Hdr = () => {
                     <hr></hr>
                     <Nav className="me-auto">
                         <Nav.Link to={"/"} as={NavLink}>Home</Nav.Link>
-                        <Nav.Link to={"/user-progress"} as={NavLink}>Training Reports</Nav.Link>
+                        <Nav.Link to={"/user-progress"} as={NavLink}>User Progress</Nav.Link>
                         <Nav.Link to={"/user-management"} as={NavLink}>User Management</Nav.Link>
                     </Nav>
                     <Nav className='justify-content-end no-wrap'>
