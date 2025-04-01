@@ -1,156 +1,96 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Hdr from "../components/Hdr";
 import Footer from "../components/Footer";
-import { Container, Form, Button, InputGroup, Row, Col, Modal } from "react-bootstrap";
+import { Container, Form, Row, Col, Button } from "react-bootstrap";
 
 const Profile = () => {
   const [user, setUser] = useState({
-    firstName: "John",
-    lastName: "Doe",
-    email: "johndoe@email.com",
-    password: "password123",
-    squadron: "577th Squadron",
-    flight: "Flight A",
-    isManager: true,
+    firstName: "",
+    lastName: "",
+    email: "",
+    squadron: "",
+    flight: "",
+    training_manager: false, // Changed from isManager to training_manager
+    password: "",
   });
 
   const [editMode, setEditMode] = useState({
-    firstName: false,
-    lastName: false,
-    email: false,
-    password: false,
-    squadron: false,
-    flight: false,
-    isManager: false,
+    password: false, // Edit mode for password
   });
 
-  const [showPassword, setShowPassword] = useState(false);
+  // Fetch user data when component mounts
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/user", {
+          withCredentials: true,
+        });
+        setUser(response.data);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
 
-  const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
-  const flightOptions = ["A", "B", "C", "N/A"];
-  const [tempUser, setTempUser] = useState({ ...user });
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [tempIsManager, setTempIsManager] = useState(user.isManager);
+    fetchUserData();
+  }, []); // Empty dependency array means this runs once when the component mounts
 
-  const handleEdit = (field) => {
-    setTempUser({ ...user }); // Save the current state before editing
-    setEditMode({ ...editMode, [field]: true });
-  };
-
-  const handleSave = (field) => {
-    setEditMode({ ...editMode, [field]: false });
-  };
-
+  // Handle changes in form fields
   const handleChange = (e, field) => {
-    setUser({ ...user, [field]: e.target.value });
+    console.log(`Changed ${field}:`, e.target.value); // Log the change
+    setUser({
+      ...user,
+      [field]: e.target.value,
+    });
   };
 
+  // Toggle edit mode
+  const handleEdit = (field) => {
+    console.log(`Editing ${field}...`);
+    setEditMode({
+      ...editMode,
+      [field]: true,
+    });
+  };
+
+  // Cancel edit
   const handleCancel = (field) => {
-    setUser({ ...tempUser }); // Restore previous state
-    setEditMode({ ...editMode, [field]: false });
+    console.log(`Cancelled editing ${field}`);
+    setEditMode({
+      ...editMode,
+      [field]: false,
+    });
   };
 
-  const handleToggleManager = () => {
-    setTempIsManager(!user.isManager);
-    setShowConfirmModal(true);
-  };
-
-  const confirmToggleManager = () => {
-    setUser({ ...user, isManager: tempIsManager });
-    setShowConfirmModal(false);
+  // Save the changes
+  const handleSave = (field) => {
+    console.log(`Saving ${field}:`, user[field]); // Log the value to be saved
+    // Implement save logic here (e.g., make API call to save changes)
+    setEditMode({
+      ...editMode,
+      [field]: false,
+    });
   };
 
   return (
     <div className="d-flex flex-column min-vh-100">
       <Hdr />
       <Container className="flex-grow-1">
-        <div className="my-5">
-          <h2 className="text-primary text-decoration-underline">My Profile</h2>
-        </div>
+        <h2 className="text-primary text-decoration-underline my-5">My Profile</h2>
 
         {/* FIRST NAME */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            First Name
-          </Form.Label>
+          <Form.Label column sm="2">First Name</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="text"
-              disabled={!editMode.firstName}
-              value={user.firstName}
-              onChange={(e) => handleChange(e, "firstName")}
-            />
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.firstName ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("firstName")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("firstName")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("firstName")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.firstName} />
           </Col>
         </Form.Group>
 
         {/* LAST NAME */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            Last Name
-          </Form.Label>
+          <Form.Label column sm="2">Last Name</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="text"
-              disabled={!editMode.lastName}
-              value={user.lastName}
-              onChange={(e) => handleChange(e, "lastName")}
-            />
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.lastName ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("lastName")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("lastName")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("lastName")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.lastName} />
           </Col>
         </Form.Group>
 
@@ -158,39 +98,7 @@ const Profile = () => {
         <Form.Group as={Row} className="mb-3 align-items-center">
           <Form.Label column sm="2">Squadron</Form.Label>
           <Col sm="8">
-            <Form.Select disabled={!editMode.squadron} value={user.squadron} onChange={(e) => handleChange(e, "squadron")}>
-              {squadronOptions.map((squadron) => (
-                <option key={squadron} value={squadron}>{squadron}</option>
-              ))}
-            </Form.Select>
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.squadron ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("squadron")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("squadron")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("squadron")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.squadron} />
           </Col>
         </Form.Group>
 
@@ -198,90 +106,21 @@ const Profile = () => {
         <Form.Group as={Row} className="mb-3 align-items-center">
           <Form.Label column sm="2">Flight</Form.Label>
           <Col sm="8">
-            <Form.Select disabled={!editMode.flight} value={user.flight} onChange={(e) => handleChange(e, "flight")}>
-              {flightOptions.map((flight) => (
-                <option key={flight} value={flight}>{flight}</option>
-              ))}
-            </Form.Select>
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.flight ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("flight")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("flight")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("flight")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.flight} />
           </Col>
         </Form.Group>
 
         {/* EMAIL */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            Email
-          </Form.Label>
+          <Form.Label column sm="2">Email</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="text"
-              disabled={!editMode.email}
-              value={user.email}
-              onChange={(e) => handleChange(e, "email")}
-            />
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.email ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("email")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("email")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("email")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="email" disabled value={user.email} />
           </Col>
         </Form.Group>
 
         {/* PASSWORD */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            Password
-          </Form.Label>
+          <Form.Label column sm="2">Password</Form.Label>
           <Col sm="8">
             <Form.Control
               type="password"
@@ -320,37 +159,19 @@ const Profile = () => {
           </Col>
         </Form.Group>
 
-        <hr />
         {/* TRAINING MANAGER TOGGLE */}
         <Form.Group as={Row} className="mb-3 align-items-center">
           <Form.Label column sm="2">Training Manager</Form.Label>
           <Col sm="8">
-            <Form.Check 
+            <Form.Check
               type="switch"
-              id="isManager"
-              label={user.isManager ? "Enabled" : "Disabled"}
-              checked={user.isManager}
-              disabled={!user.isManager}
-              onChange={handleToggleManager}
+              id="training_manager"
+              label={user.training_manager ? "Enabled" : "Disabled"}
+              checked={user.training_manager}
+              disabled
             />
           </Col>
         </Form.Group>
-
-        {/* CONFIRMATION MODAL */}
-        <Modal show={showConfirmModal} onHide={() => setShowConfirmModal(false)} backdrop="static">
-          <Modal.Header closeButton>
-            <Modal.Title>Confirm Change</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Are you sure you want to change Training Manager privileges?</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowConfirmModal(false)}>
-              Cancel
-            </Button>
-            <Button variant="primary" onClick={confirmToggleManager}>
-              Confirm
-            </Button>
-          </Modal.Footer>
-        </Modal>
 
       </Container>
       <Footer />
