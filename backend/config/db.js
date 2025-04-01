@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 /*
 Manages MySQL connection, ensures the database & tables exist, and exports the connection for use in server.js.
 */
@@ -8,9 +10,9 @@ const databaseName = "Mass_Training_Database";
 
 // Create a connection without selecting a database first
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "your MySQL password", // your MySQL password
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
 });
 
 // Connect to MySQL and ensure the database exists

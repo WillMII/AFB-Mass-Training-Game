@@ -20,6 +20,11 @@ const AdminNav = ({ report }) => {
         // Implement filter logic
     };
 
+    const downloadPDF = () => {
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        window.open(`${apiUrl}/api/download-report`, "_blank");
+    };
+
     return (
         <>
             <Navbar className="justify-content-between">
@@ -29,7 +34,7 @@ const AdminNav = ({ report }) => {
                 </form>
                 <Nav className="justify-content-end">
                     {report ? (
-                        <Button variant="link" className="nav-link">
+                        <Button onClick={downloadPDF} variant="link" className="nav-link">
                             Print Report <i className="bi bi-file-earmark-arrow-down"></i>
                         </Button>
                     ) : null}

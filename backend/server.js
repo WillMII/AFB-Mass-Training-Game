@@ -5,6 +5,8 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const cors = require("cors");
 const db = require("./config/db");  // Import the database connection
+const pdfRoutes = require("./routes/pdfRoutes");  // Import the PDF routes
+
 
 const app = express();
 const PORT = 8000;
@@ -30,6 +32,9 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false }
 }));
+
+// === PDF Download Route ===
+app.use("/api", pdfRoutes);
 
 // Create Account Route
 app.post("/api/create-account", async (req, res) => {
