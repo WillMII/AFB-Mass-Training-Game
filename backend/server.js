@@ -99,7 +99,10 @@ app.post("/api/login", async (req, res) => {
                 email: user.email,
                 firstName: user.first_name,
                 lastName: user.last_name,
-            };
+                squadron: user.squadron,
+                flight: user.flight,
+                training_manager: user.training_manager
+            };            
 
             res.status(200).json({
                 message: "Login successful",
@@ -125,15 +128,56 @@ app.get("/api/home", authenticateUser, (req, res) => {
     res.json({ message: `Welcome, ${req.session.user.firstName}!` });
 });
 
-//user-progress route
+//user-progress route for displaying all trainees' progress
 app.get("/api/user-progress", (req, res) => {
-    db.query("SELECT * FROM user_progress", (err, results) => {
+    const sql = `
+        SELECT u.user_id, u.first_name, u.last_name, u.squadron, u.flight,
+               MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) AS module1,
+               MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) AS module2,
+               MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) AS module3
+        FROM users u
+        LEFT JOIN game_progress gp ON u.user_id = gp.user_id
+        LEFT JOIN modules m ON gp.module_id = m.module_id
+        GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight
+    `;
+
+    db.query(sql, (err, results) => {
         if (err) {
-            return res.status(500).json({ error: "Database query failed" });
+            console.error("Database error:", err.sqlMessage || err);
+            return res.status(500).json({ error: "Database query failed", details: err.sqlMessage || err });
         }
         res.json(results);
     });
 });
+
+// for user's information
+app.get("/api/user", authenticateUser, (req, res) => {
+    const sql = "SELECT first_name, last_name, email, squadron, flight, training_manager FROM users WHERE email = ?";
+    
+    db.query(sql, [req.session.user.email], (err, results) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database query failed" });
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        const user = results[0];
+
+        res.json({
+            firstName: user.first_name,
+            lastName: user.last_name,
+            email: user.email,
+            squadron: user.squadron,
+            flight: user.flight,
+            isManager: user.isManager,
+        });
+    });
+});
+
+
 
 
 app.listen(PORT, () => {
