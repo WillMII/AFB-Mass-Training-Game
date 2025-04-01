@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 17220
+  controlID: 72
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 17221
+  controlID: 73
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17189
+  controlID: 18
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -479,7 +479,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 1
       id: unity-search-toolbar
       index: 1
@@ -531,7 +531,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Light Settings
       index: 2
@@ -557,7 +557,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Cloth Constraints
       index: 3
@@ -570,7 +570,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Cloth Collisions
       index: 4
@@ -622,7 +622,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Occlusion Culling
       index: 5
@@ -635,7 +635,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Physics Debugger
       index: 6
@@ -648,7 +648,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Scene Visibility
       index: 7
@@ -661,7 +661,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Particles
       index: 8
@@ -788,17 +788,17 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_WindowGUID: 5ee1b0e2031587046aba8a077bad8902
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
+  m_OverrideSceneCullingMask: 0
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.1441507, y: 0.09748969, z: -0.5012137}
+    m_Target: {x: 452.1334, y: 243.05367, z: -0.36064246}
     speed: 2
-    m_Value: {x: 2.1441507, y: 0.09748969, z: -0.5012137}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -848,9 +848,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.280261
+    m_Target: 139.14168
     speed: 2
-    m_Value: 1.280261
+    m_Value: 11.853272
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -980,9 +980,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: e8afffff16b0ffff5cb1ffffd0bcffffa8bdffff96c2ffff82c4ffff12fbffff846100009c6100007c8a0000589c0000
+      m_SelectedIDs: fe7a0000
+      m_LastClickedID: 31486
+      m_ExpandedIDs: 26e0fffffe7a0000147b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1061,14 +1061,14 @@ MonoBehaviour:
   m_LastFolders: []
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\drblu\Documents\School\College\Classes\Spring 2025\CSEE
-    4911\Proj\AFB-Mass-Training-Game\AFB Mass Training Game
+    4911\Proj\AFB-Mass-Training-Game\AFB Mass Training Game 2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 628a0000
     m_LastClickedID: 35426
-    m_ExpandedIDs: ffffffff0000000074660000be6e0000c06e0000c26e0000c46e0000c66e0000c86e0000ca6e0000cc6e0000ce6e0000d06e0000d26e0000d46e0000d66e0000
+    m_ExpandedIDs: 000000007665000066670000686700006a6700006c6700006e67000070670000726700007467000076670000786700007a6700007c6700007e670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1093,10 +1093,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 2724}
+    scrollPos: {x: 0, y: 2686.4998}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000074660000be6e0000c06e0000c26e0000c46e0000c66e0000c86e0000ca6e0000cc6e0000ce6e0000d06e0000d26e0000d46e0000d66e0000
+    m_ExpandedIDs: ffffffff000000007665000066670000686700006a6700006c6700006e67000070670000726700007467000076670000786700007a6700007c6700007e670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
