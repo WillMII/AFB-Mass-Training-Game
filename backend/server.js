@@ -130,7 +130,8 @@ app.get("/api/home", authenticateUser, (req, res) => {
 
 //user-progress route for displaying all trainees' progress
 app.get("/api/user-progress", (req, res) => {
-    const sql = `
+    const { squadron, flight } = req.query;
+    let sql = `
         SELECT u.user_id, u.first_name, u.last_name, u.squadron, u.flight,
                MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) AS module1,
                MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) AS module2,
@@ -138,10 +139,22 @@ app.get("/api/user-progress", (req, res) => {
         FROM users u
         LEFT JOIN game_progress gp ON u.user_id = gp.user_id
         LEFT JOIN modules m ON gp.module_id = m.module_id
-        GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight
+        WHERE 1=1
     `;
 
-    db.query(sql, (err, results) => {
+    const queryParams = [];
+    
+    if (squadron) {
+        sql += " AND u.squadron = ?";
+        queryParams.push(squadron);
+    }
+    if (flight) {
+        sql += " AND u.flight = ?";
+        queryParams.push(flight);
+    }
+    sql += " GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight";
+
+    db.query(sql, queryParams, (err, results) => {
         if (err) {
             console.error("Database error:", err.sqlMessage || err);
             return res.status(500).json({ error: "Database query failed", details: err.sqlMessage || err });
@@ -176,7 +189,6 @@ app.get("/api/user", authenticateUser, (req, res) => {
         });
     });
 });
-
 
 
 

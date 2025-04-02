@@ -6,8 +6,8 @@ import Form from 'react-bootstrap/Form';
 const FilterMenu = ({ show, handleClose, applyFilters }) => {
     const [filters, setFilters] = useState([{ type: "", value: "" }]);
 
-    const squadronOptions = ["Squadron 1", "Squadron 2", "Squadron 3", "N/A"];
-    const flightOptions = ["Flight A", "Flight B", "Flight C", "N/A"];
+    const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
+    const flightOptions = ["A", "B", "C", "N/A"];
 
     const filterOptions = [
         { label: "First Name", value: "first_name" },
@@ -39,7 +39,14 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
     };
 
     const handleApplyFilters = () => {
-        applyFilters(filters);
+        const filterParams = filters
+            .filter(f => f.type && f.value) // Remove empty filters
+            .reduce((acc, filter) => {
+                acc[filter.type] = filter.value;
+                return acc;
+            }, {});
+
+        applyFilters(filterParams);
         handleClose();
     };
 
@@ -113,9 +120,14 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                                 />
                             )}
 
-                            <div onClick={() => handleRemoveFilter(index)}>
-                                <i class="bi bi-x-lg"></i>
-                            </div>
+                            {/* Remove filter button */}
+                            <button
+                                type="button"
+                                className="btn btn-link p-0 text-danger"
+                                onClick={() => handleRemoveFilter(index)}
+                            >
+                                <i className="bi bi-x-lg"></i>
+                            </button>
                         </div>
                     ))}
 
@@ -124,7 +136,7 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                             + Add Filter
                         </Button>
                         <Button variant="link" onClick={handleClearFilters} style={{ textDecoration: "none" }}>
-                        <i class="bi bi-x"></i> Clear All
+                            <i className="bi bi-x"></i> Clear All
                         </Button>
                     </div>
                     <div className="d-flex justify-content-center">
