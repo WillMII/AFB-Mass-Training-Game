@@ -519,7 +519,7 @@ MonoBehaviour:
     supervisor in their chain of command
 
     -(if discrimination) EEO Counselor
-    or HQ AFPC Cmplaint Hotline'
+    or HQ AFPC Complaint Hotline'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}

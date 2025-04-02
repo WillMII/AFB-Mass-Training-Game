@@ -13,7 +13,7 @@ public class ExitRoom : MonoBehaviour
     public ShelfClue printer;
     public ShelfClue pentagon;
     public ShelfClue box;
-    public CountingTypes counter;
+    public CountingTypes3 counter;
 
     private bool canExit;
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class ExitRoom : MonoBehaviour
 
     void OnMouseDown()
     {
-        canExit = STINFOPoster.getAlrInst() && planePoster.getAlrInst() && stickyNote.getAlrInst() && bookStack.getAlrClk() && printer.getAlrInst() && pentagon.getAlrInst() && box.getAlrInst() && counter.getNumFound() == 7;
+        canExit = STINFOPoster.getAlrInst() && planePoster.getAlrInst() && stickyNote.getAlrInst() && bookStack.getAlrClk() && printer.getAlrInst() && pentagon.getAlrInst() && box.getAlrInst() && counter.allFound();
         if (canExit)
         {
             SceneManager.LoadScene("Room2");
