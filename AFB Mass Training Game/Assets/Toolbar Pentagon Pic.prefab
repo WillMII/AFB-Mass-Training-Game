@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3142422711686595528}
   - component: {fileID: 7160566457932201679}
   - component: {fileID: 1869273282807432080}
-  - component: {fileID: 5551796676915571355}
   - component: {fileID: -2534718534576377717}
+  - component: {fileID: -2396929965807529777}
   m_Layer: 0
   m_Name: Toolbar Pentagon Pic
   m_TagString: Untagged
@@ -131,20 +131,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5551796676915571355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8824985038533242169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1393d8034631a004eaac80e292c7459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
-  clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
 --- !u!114 &-2534718534576377717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +146,17 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 40f53d8af76c970478ccdeb17eb58f5f, type: 3}
   lilShelf: {fileID: 8824985038533242169}
   toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
+--- !u!114 &-2396929965807529777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824985038533242169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d012699a05c6f42a64ea48ec4b9bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
+  clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
