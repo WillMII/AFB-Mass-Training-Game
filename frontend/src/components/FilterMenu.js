@@ -10,13 +10,13 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
     const flightOptions = ["A", "B", "C", "N/A"];
 
     const filterOptions = [
-        { label: "First Name", value: "first_name" },
-        { label: "Last Name", value: "last_name" },
+        // { label: "First Name", value: "first_name" },
+        // { label: "Last Name", value: "last_name" },
         { label: "Squadron", value: "squadron" },
         { label: "Flight", value: "flight" },
-        { label: "Module 1 Status", value: "module1" },
-        { label: "Module 2 Status", value: "module2" },
-        { label: "Module 3 Status", value: "module3" },
+        { label: "STINFO", value: "module1" },
+        { label: "Records Management", value: "module2" },
+        { label: "No FEAR Act", value: "module3" },
         { label: "All Modules", value: "all_modules" }
     ];
 
