@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import { Navbar } from 'react-bootstrap'
 import FilterMenu from './FilterMenu';
@@ -8,14 +8,23 @@ import Button from 'react-bootstrap/Button';
 const AdminNav = ({ report, setFilters }) => {
 
     const [showFilterMenu, setShowFilterMenu] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
 
     const handleCloseFilterMenu = () => setShowFilterMenu(false);
     const handleShowFilterMenu = () => setShowFilterMenu(true);
 
     const applyFilters = (filters) => {
-        console.log("Applied Filters:", filters);
-        setFilters(filters); // Pass filters back to Admin.js
+        setFilters(prev => ({ ...prev, ...filters }));
     };
+
+    const applySearch = () => {
+        console.log("Search Term:", searchTerm);
+        setFilters(prev => ({ ...prev, search: searchTerm }));
+    };
+
+    useEffect(() => {
+        applySearch();
+    }, [searchTerm]);
 
     const downloadPDF = () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
@@ -25,8 +34,19 @@ const AdminNav = ({ report, setFilters }) => {
     return (
         <>
             <Navbar className="justify-content-between">
-                <form className="d-flex" role="search">
-                    <input className="form-control me-2" type="search" placeholder="Search Users" aria-label="Search" />
+                <form className="d-flex" role="search"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        applySearch();
+                    }}>
+                    <input
+                        className="form-control me-2"
+                        type="search"
+                        placeholder="Search Users"
+                        aria-label="Search"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value) }
+                    />
                     <Button variant="outline-primary" type="submit">Search</Button>
                 </form>
                 <Nav className="justify-content-end">
