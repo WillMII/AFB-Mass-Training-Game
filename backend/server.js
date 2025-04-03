@@ -130,7 +130,7 @@ app.get("/api/home", authenticateUser, (req, res) => {
 
 //user-progress route for displaying all trainees' progress
 app.get("/api/user-progress", (req, res) => {
-    const { squadron, flight, module1Progress, module2Progress, module3Progress, all_modules } = req.query;
+    const { squadron, flight, search, module1Progress, module2Progress, module3Progress, all_modules } = req.query;
     let sql = `
         SELECT u.user_id, u.first_name, u.last_name, u.squadron, u.flight,
                MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) AS module1,
@@ -151,6 +151,10 @@ app.get("/api/user-progress", (req, res) => {
     if (flight) {
         sql += " AND u.flight = ?";
         queryParams.push(flight);
+    }
+    if (search) {
+        sql += " AND (u.first_name LIKE ? OR u.last_name LIKE ?)";
+        queryParams.push(`%${search}%`, `%${search}%`);
     }
 
     sql += " GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight";
