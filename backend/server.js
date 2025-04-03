@@ -130,7 +130,7 @@ app.get("/api/home", authenticateUser, (req, res) => {
 
 //user-progress route for displaying all trainees' progress
 app.get("/api/user-progress", (req, res) => {
-    const { squadron, flight, module1Progress, module2Progress, module3Progress } = req.query;
+    const { squadron, flight, module1Progress, module2Progress, module3Progress, all_modules } = req.query;
     let sql = `
         SELECT u.user_id, u.first_name, u.last_name, u.squadron, u.flight,
                MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) AS module1,
@@ -168,6 +168,18 @@ app.get("/api/user-progress", (req, res) => {
     if (module3Progress) {
         if (module3Progress === "complete") havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) = 100");
         if (module3Progress === "not_complete") havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) < 100");
+    }
+    if (all_modules) {
+        if (all_modules === "complete") {
+            havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) = 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) = 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) = 100");
+        }
+        if (all_modules === "not_complete") {
+            havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) < 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) < 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) < 100");
+        } 
     }
 
     if (havingConditions.length > 0) {
