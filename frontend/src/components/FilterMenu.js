@@ -108,7 +108,7 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                                 >
                                     <option value="">Select Status</option>
                                     <option value="complete">Complete</option>
-                                    <option value="incomplete">Incomplete</option>
+                                    <option value="not_complete">Not Complete</option>
                                 </Form.Select>
                             ) : (
                                 <Form.Control

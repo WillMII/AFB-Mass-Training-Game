@@ -130,7 +130,7 @@ app.get("/api/home", authenticateUser, (req, res) => {
 
 //user-progress route for displaying all trainees' progress
 app.get("/api/user-progress", (req, res) => {
-    const { squadron, flight } = req.query;
+    const { squadron, flight, module1Progress, module2Progress, module3Progress } = req.query;
     let sql = `
         SELECT u.user_id, u.first_name, u.last_name, u.squadron, u.flight,
                MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) AS module1,
@@ -151,6 +151,27 @@ app.get("/api/user-progress", (req, res) => {
     if (flight) {
         sql += " AND u.flight = ?";
         queryParams.push(flight);
+    }
+    if (module1Progress) {
+        if (module1Progress === "complete")
+            sql += " AND MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) = 100";
+        else if (module1Progress === "not_complete")
+            sql += " AND MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) < 100";
+        queryParams.push(module1Progress);
+    }
+    if (module2Progress) {
+        if (module2Progress === "complete")
+            sql += " AND MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) = 100";
+        else if (module2Progress === "not_complete")
+            sql += " AND MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) < 100";
+        queryParams.push(module2Progress);
+    }
+    if (module3Progress) {
+        if (module3Progress === "complete")
+            sql += " AND MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) = 100";
+        else if (module3Progress === "not_complete")
+            sql += " AND MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) < 100";
+        queryParams.push(module3Progress);
     }
     sql += " GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight";
 
