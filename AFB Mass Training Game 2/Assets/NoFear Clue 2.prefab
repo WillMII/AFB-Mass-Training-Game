@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 164.5, y: 111.2}
+  m_AnchoredPosition: {x: 208.2, y: 130.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9165248387966025988
@@ -511,20 +511,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Antidiscriminations laws and EEO
+  m_text: 'Search the room to find the different things covered under Antidiscriminations
+    laws to be reported to the Equal Employment Opportunity Office (EEO)
 
-    -Civil rights
+    -Civil
+    rights
 
     -Pregnancy
 
-    -Equal
-    pay
+    -Equal pay
 
     -Disabilities
 
     -Rehabilitation
 
-    -Genetic information'
+    -Genetic
+    information'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
