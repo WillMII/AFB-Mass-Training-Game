@@ -40,7 +40,7 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
 
     const handleApplyFilters = () => {
         const filterParams = filters
-            .filter(f => f.type && f.value) // Remove empty filters
+            .filter(f => f.type && f.value) //Remove empty filters
             .reduce((acc, filter) => {
                 acc[filter.type] = filter.value;
                 return acc;
