@@ -14,9 +14,9 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
         // { label: "Last Name", value: "last_name" },
         { label: "Squadron", value: "squadron" },
         { label: "Flight", value: "flight" },
-        { label: "STINFO", value: "module1" },
-        { label: "Records Management", value: "module2" },
-        { label: "No FEAR Act", value: "module3" },
+        { label: "STINFO", value: "module1Progress" },
+        { label: "Records Management", value: "module2Progress" },
+        { label: "No FEAR Act", value: "module3Progress" },
         { label: "All Modules", value: "all_modules" }
     ];
 
@@ -100,7 +100,7 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                                         </option>
                                     ))}
                                 </Form.Select>
-                            ) : ["module1", "module2", "module3", "all_modules"].includes(filter.type) ? (
+                            ) : ["module1Progress", "module2Progress", "module3Progress", "all_modules"].includes(filter.type) ? (
                                 <Form.Select
                                     value={filter.value}
                                     onChange={(e) => handleFilterChange(index, "value", e.target.value)}

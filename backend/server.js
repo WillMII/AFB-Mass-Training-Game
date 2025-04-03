@@ -152,28 +152,27 @@ app.get("/api/user-progress", (req, res) => {
         sql += " AND u.flight = ?";
         queryParams.push(flight);
     }
+
+    sql += " GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight";
+
+    // Add HAVING conditions based on module progress
+    let havingConditions = [];
     if (module1Progress) {
-        if (module1Progress === "complete")
-            sql += " AND MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) = 100";
-        else if (module1Progress === "not_complete")
-            sql += " AND MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) < 100";
-        queryParams.push(module1Progress);
+        if (module1Progress === "complete") havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) = 100");
+        if (module1Progress === "not_complete") havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) < 100");
     }
     if (module2Progress) {
-        if (module2Progress === "complete")
-            sql += " AND MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) = 100";
-        else if (module2Progress === "not_complete")
-            sql += " AND MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) < 100";
-        queryParams.push(module2Progress);
+        if (module2Progress === "complete") havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) = 100");
+        if (module2Progress === "not_complete") havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) < 100");
     }
     if (module3Progress) {
-        if (module3Progress === "complete")
-            sql += " AND MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) = 100";
-        else if (module3Progress === "not_complete")
-            sql += " AND MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) < 100";
-        queryParams.push(module3Progress);
+        if (module3Progress === "complete") havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) = 100");
+        if (module3Progress === "not_complete") havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) < 100");
     }
-    sql += " GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight";
+
+    if (havingConditions.length > 0) {
+        sql += " HAVING " + havingConditions.join(" AND ");
+    }
 
     db.query(sql, queryParams, (err, results) => {
         if (err) {
