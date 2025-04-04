@@ -159,20 +159,6 @@ const Profile = () => {
           </Col>
         </Form.Group>
 
-        {/* TRAINING MANAGER TOGGLE */}
-        <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">Training Manager</Form.Label>
-          <Col sm="8">
-            <Form.Check
-              type="switch"
-              id="training_manager"
-              label={user.training_manager ? "Enabled" : "Disabled"}
-              checked={user.training_manager}
-              disabled
-            />
-          </Col>
-        </Form.Group>
-
       </Container>
       <Footer />
     </div>
