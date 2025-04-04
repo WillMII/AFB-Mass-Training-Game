@@ -8,18 +8,20 @@ import Button from 'react-bootstrap/Button';
 const AdminNav = ({ report, setFilters }) => {
 
     const [showFilterMenu, setShowFilterMenu] = useState(false);
+    const [filterCount, setFilterCount] = useState(0);
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleCloseFilterMenu = () => setShowFilterMenu(false);
     const handleShowFilterMenu = () => setShowFilterMenu(true);
-
     const applyFilters = (filters) => {
-        setFilters(prev => ({ ...prev, ...filters }));
+        setFilters(filters);  
+        const count = Object.keys(filters).filter(val => val !== "").length;
+        setFilterCount(count);
     };
-
-    const applySearch = () => {
-        console.log("Search Term:", searchTerm);
-        setFilters(prev => ({ ...prev, search: searchTerm }));
+    const applySearch = () => setFilters(prev => ({ ...prev, search: searchTerm }));
+    const resetFilters = () => {
+        setFilters({});
+        setFilterCount(0);
     };
 
     useEffect(() => {
@@ -45,7 +47,7 @@ const AdminNav = ({ report, setFilters }) => {
                         placeholder="Search Users"
                         aria-label="Search"
                         value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value) }
+                        onChange={(e) => setSearchTerm(e.target.value)}
                     />
                     <Button variant="outline-primary" type="submit">Search</Button>
                 </form>
@@ -57,11 +59,25 @@ const AdminNav = ({ report, setFilters }) => {
                     ) : null}
                     <Button variant="link" className="nav-link" onClick={handleShowFilterMenu}>
                         Filters <i className="bi bi-funnel"></i>
+                        {filterCount > 0 &&
+                                <span
+                                className="badge bg-primary rounded-circle d-inline-flex align-items-center justify-content-center"
+                                style={{
+                                  width: "24px",
+                                  height: "24px",
+                                  fontWeight: "normal",
+                                  fontSize: "0.8rem",
+                                  marginLeft: "5px",
+                                }}
+                              >
+                                {filterCount}
+                              </span>
+                        }
                     </Button>
                 </Nav>
             </Navbar>
 
-            <FilterMenu show={showFilterMenu} handleClose={handleCloseFilterMenu} applyFilters={applyFilters} />
+            <FilterMenu show={showFilterMenu} handleClose={handleCloseFilterMenu} applyFilters={applyFilters} filterCount={filterCount} resetFilters={resetFilters} />
         </>
     )
 }

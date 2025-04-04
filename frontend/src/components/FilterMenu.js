@@ -3,7 +3,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-const FilterMenu = ({ show, handleClose, applyFilters }) => {
+const FilterMenu = ({ show, handleClose, applyFilters, resetFilters }) => {
     const [filters, setFilters] = useState([{ type: "", value: "" }]);
 
     const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
@@ -20,16 +20,26 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
         { label: "All Modules", value: "all_modules" }
     ];
 
-    const handleAddFilter = () => {
-        setFilters([...filters, { type: "", value: "" }]);
-    };
-
+    const handleAddFilter = () => setFilters([...filters, { type: "", value: "" }]);
     const handleClearFilters = () => {
         setFilters([{ type: "", value: "" }]);
-    };
-
+        resetFilters();
+    }
     const handleRemoveFilter = (index) => {
-        setFilters(filters.filter((_, i) => i !== index));
+        setFilters((prevFilters) => {
+            const updatedFilters = prevFilters.filter((_, i) => i !== index);
+    
+            // Convert filters to the correct format and pass to AdminNav
+            const filterParams = updatedFilters.reduce((acc, filter) => {
+                if (filter.type && filter.value) {
+                    acc[filter.type] = filter.value;
+                }
+                return acc;
+            }, {});
+    
+            applyFilters(filterParams); // Ensure filters update in AdminNav
+            return updatedFilters;
+        });
     };
 
     const handleFilterChange = (index, key, value) => {
@@ -45,7 +55,6 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                 acc[filter.type] = filter.value;
                 return acc;
             }, {});
-
         applyFilters(filterParams);
         handleClose();
     };
