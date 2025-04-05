@@ -15,7 +15,7 @@ C:/Users/drblu/Documents/School/College/Classes/Spring 2025/CSEE 4911/Proj/AFB-M
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63377
+50229
 Successfully changed project path to: C:/Users/drblu/Documents/School/College/Classes/Spring 2025/CSEE 4911/Proj/AFB-Mass-Training-Game/AFB Mass Training Game 2
 C:/Users/drblu/Documents/School/College/Classes/Spring 2025/CSEE 4911/Proj/AFB-Mass-Training-Game/AFB Mass Training Game 2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/drblu/Documents/School/College/Classes/Spring 2025/CSEE 4911/Proj/AFB-M
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [44300] Host "[IP] 172.20.16.1 [Port] 0 [Flags] 2 [Guid] 383460309 [EditorId] 383460309 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-2D8FPUCD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10848] Host "[IP] 192.168.50.91 [Port] 0 [Flags] 2 [Guid] 152441327 [EditorId] 152441327 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-2D8FPUCD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [44300] Host "[IP] 172.20.16.1 [Port] 0 [Flags] 2 [Guid] 383460309 [EditorId] 383460309 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-2D8FPUCD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10848] Host "[IP] 192.168.50.91 [Port] 0 [Flags] 2 [Guid] 152441327 [EditorId] 152441327 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-2D8FPUCD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 36.88 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2292.61 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -61,57 +61,57 @@ Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2060 with Max-Q Design (ID=0x1f12)
-    Vendor:   NVIDIA
-    VRAM:     5955 MB
-    Driver:   32.0.15.6636
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
+    Vendor:   ATI
+    VRAM:     7894 MB
+    Driver:   31.0.21921.1000
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013853 seconds.
-- Loaded All Assemblies, in  0.453 seconds
+Registered in 1.437118 seconds.
+- Loaded All Assemblies, in 21.497 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 384 ms
+Android Extension - Scanning For ADB Devices 1170 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.747 seconds
-Domain Reload Profiling: 1198ms
-	BeginReloadAssembly (161ms)
+- Finished resetting the current domain, in  2.446 seconds
+Domain Reload Profiling: 23939ms
+	BeginReloadAssembly (15218ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (70ms)
-	LoadAllAssembliesAndSetupDomain (171ms)
-		LoadAssemblies (158ms)
+	RebuildCommonClasses (1001ms)
+	RebuildNativeTypeToScriptingClass (33ms)
+	initialDomainReloadingComplete (1573ms)
+	LoadAllAssembliesAndSetupDomain (3667ms)
+		LoadAssemblies (15215ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (168ms)
-			TypeCache.Refresh (166ms)
-				TypeCache.ScanAssembly (150ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (3661ms)
+			TypeCache.Refresh (3657ms)
+				TypeCache.ScanAssembly (2770ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (747ms)
+	FinalizeReload (2447ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (687ms)
+		SetupLoadedEditorAssemblies (2284ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (522ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (1846ms)
+			SetLoadedEditorAssemblies (11ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (110ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (286ms)
+			ProcessInitializeOnLoadMethodAttributes (134ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -131,76 +131,54 @@ DirectoryNotFoundException: Could not find a part of the path "C:\Users\drblu\Do
 
 Symbol file LoadedFromMemory doesn't match image C:\Users\drblu\Documents\School\College\Classes\Spring 2025\CSEE 4911\Proj\AFB-Mass-Training-Game\AFB Mass Training Game 2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\drblu\Documents\School\College\Classes\Spring 2025\CSEE 4911\Proj\AFB-Mass-Training-Game\AFB Mass Training Game 2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.631 seconds
-Refreshing native plugins compatible for Editor in 5.71 ms, found 4 plugins.
+- Loaded All Assemblies, in 19.089 seconds
+Refreshing native plugins compatible for Editor in 22.41 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.880 seconds
-Domain Reload Profiling: 1505ms
-	BeginReloadAssembly (156ms)
+- Finished resetting the current domain, in  2.393 seconds
+Domain Reload Profiling: 21474ms
+	BeginReloadAssembly (370ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (21ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (381ms)
-		LoadAssemblies (277ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (80ms)
+	RebuildNativeTypeToScriptingClass (26ms)
+	initialDomainReloadingComplete (127ms)
+	LoadAllAssembliesAndSetupDomain (18478ms)
+		LoadAssemblies (16253ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (195ms)
-			TypeCache.Refresh (165ms)
-				TypeCache.ScanAssembly (148ms)
-			ScanForSourceGeneratedMonoScriptInfo (23ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (881ms)
+		AnalyzeDomain (2435ms)
+			TypeCache.Refresh (2340ms)
+				TypeCache.ScanAssembly (2170ms)
+			ScanForSourceGeneratedMonoScriptInfo (74ms)
+			ResolveRequiredComponents (18ms)
+	FinalizeReload (2394ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (693ms)
+		SetupLoadedEditorAssemblies (1915ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (72ms)
+			SetLoadedEditorAssemblies (14ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (78ms)
-			ProcessInitializeOnLoadAttributes (539ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (225ms)
+			ProcessInitializeOnLoadAttributes (1501ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
+			AfterProcessingInitializeOnLoad (16ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 6.13 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (19ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 18.37 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4071 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 65 unused Assets / (186.4 KB). Loaded Objects now: 4544.
 Memory consumption went from 220.6 MB to 220.4 MB.
-Total: 4.610500 ms (FindLiveObjects: 0.447000 ms CreateObjectMapping: 0.450800 ms MarkObjects: 3.511300 ms  DeleteObjects: 0.200000 ms)
+Total: 9.490600 ms (FindLiveObjects: 0.717000 ms CreateObjectMapping: 0.435800 ms MarkObjects: 7.796600 ms  DeleteObjects: 0.538700 ms)
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 25.99 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6 unused Assets / (165.2 KB). Loaded Objects now: 4544.
-Memory consumption went from 153.2 MB to 153.1 MB.
-Total: 8.074900 ms (FindLiveObjects: 0.833800 ms CreateObjectMapping: 0.706800 ms MarkObjects: 6.359700 ms  DeleteObjects: 0.173200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
@@ -217,201 +195,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 234771.897519 seconds.
-  path: Assets/NoFear Clue 2.prefab
-  artifactKey: Guid(8bf30b33ff969fb4aa8d619ec797fc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2.prefab using Guid(8bf30b33ff969fb4aa8d619ec797fc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8a46eefc25c9d5001e99872f985d1c4') in 0.257556 seconds
+  Time since last request: 1062.963438 seconds.
+  path: Assets/NoFear Counter 1.prefab
+  artifactKey: Guid(4d5c2c1fc2ccf1a458befa2963202550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NoFear Counter 1.prefab using Guid(4d5c2c1fc2ccf1a458befa2963202550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c6378e87530b67316f9d5425ccd835') in 0.170255 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
+Number of asset objects unloaded after import = 17
 ========================================================================
 Received Import Request.
-  Time since last request: 0.694555 seconds.
-  path: Assets/NoFear Clue 6.prefab
-  artifactKey: Guid(92d2ca1f66cd0814481c923948cb13d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 6.prefab using Guid(92d2ca1f66cd0814481c923948cb13d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd48ba9169775b9f07e354c73c0a0ffc4') in 0.026994 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 5.654026 seconds.
-  path: Assets/NoFear Clue 2-1.prefab
-  artifactKey: Guid(92d2ca1f66cd0814481c923948cb13d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1.prefab using Guid(92d2ca1f66cd0814481c923948cb13d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '118203fff6d1563fb902bf74ddc69541') in 0.028266 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 7.540505 seconds.
-  path: Assets/NoFear Clue 2-1 1.prefab
-  artifactKey: Guid(83443bc27bf4d3d479ac2c2664d87906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 1.prefab using Guid(83443bc27bf4d3d479ac2c2664d87906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90c7fc9eab13e90c642af1eee3b53b8c') in 0.024001 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 3.610050 seconds.
-  path: Assets/NoFear Clue 2-1 2.prefab
-  artifactKey: Guid(9d212749f3e9d1742b6b28ea080ffb70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 2.prefab using Guid(9d212749f3e9d1742b6b28ea080ffb70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91232d6e838e876c94ae330602b8679e') in 0.030811 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 0.671629 seconds.
-  path: Assets/NoFear Clue 2-1 3.prefab
-  artifactKey: Guid(f3a097bcaef308046ba69e01902d03ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 3.prefab using Guid(f3a097bcaef308046ba69e01902d03ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca7460b26e9f00bf72b6687cae3117a') in 0.024146 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 0.612314 seconds.
-  path: Assets/NoFear Clue 2-1 4.prefab
-  artifactKey: Guid(566aadcd5d28cd742a438e64a96f24f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 4.prefab using Guid(566aadcd5d28cd742a438e64a96f24f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e63236bb1a643a46a7223aad396945c') in 0.026739 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 0.403371 seconds.
-  path: Assets/NoFear Clue 2-1 5.prefab
-  artifactKey: Guid(92443655599480145b01ef325291db4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 5.prefab using Guid(92443655599480145b01ef325291db4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45fbe66a8a593fad78d119d5c2013152') in 0.024691 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 5.945159 seconds.
-  path: Assets/NoFear Clue 2-2.prefab
-  artifactKey: Guid(83443bc27bf4d3d479ac2c2664d87906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-2.prefab using Guid(83443bc27bf4d3d479ac2c2664d87906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1571c1cfa580187373f3f011d3aafbe1') in 0.025340 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 4.306499 seconds.
-  path: Assets/NoFear Clue 2-3.prefab
-  artifactKey: Guid(9d212749f3e9d1742b6b28ea080ffb70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-3.prefab using Guid(9d212749f3e9d1742b6b28ea080ffb70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e2fe8b647b09d410d7f9b353e257ea2') in 0.021990 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 8.037388 seconds.
-  path: Assets/NoFear Clue 2-4.prefab
-  artifactKey: Guid(f3a097bcaef308046ba69e01902d03ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-4.prefab using Guid(f3a097bcaef308046ba69e01902d03ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203127987167aed2d7070fce9fbfe9e9') in 0.025009 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 10.385285 seconds.
-  path: Assets/NoFear Clue 2-5.prefab
-  artifactKey: Guid(566aadcd5d28cd742a438e64a96f24f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-5.prefab using Guid(566aadcd5d28cd742a438e64a96f24f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76594214f78f58d4a84c3a5f113ce4ec') in 0.023505 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 6.701261 seconds.
-  path: Assets/NoFear Clue 2-6.prefab
-  artifactKey: Guid(92443655599480145b01ef325291db4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-6.prefab using Guid(92443655599480145b01ef325291db4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a39e9d4b2ca2955926582e89bde39ab') in 0.023917 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 301.635289 seconds.
-  path: Assets/NoFear Clue 2.prefab
-  artifactKey: Guid(8bf30b33ff969fb4aa8d619ec797fc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2.prefab using Guid(8bf30b33ff969fb4aa8d619ec797fc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a9c1fbfb7908b44b8c39c7586cb6ba0') in 0.025874 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 0.636153 seconds.
-  path: Assets/NoFear Clue 2-1.prefab
-  artifactKey: Guid(92d2ca1f66cd0814481c923948cb13d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1.prefab using Guid(92d2ca1f66cd0814481c923948cb13d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c39ececc04b27fb554f31a621db82e1b') in 0.023315 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 1.692458 seconds.
-  path: Assets/NoFear Clue 2-1 1.prefab
-  artifactKey: Guid(f3c1508c6c7f6ea419faeb5b2f9b9fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 1.prefab using Guid(f3c1508c6c7f6ea419faeb5b2f9b9fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8504ee4b43f0b2ab6044f1a80d024e9') in 0.023867 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 0.734380 seconds.
-  path: Assets/NoFear Clue 2-1 2.prefab
-  artifactKey: Guid(f174f03cbb62e444590bbb7a9b1c4f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 2.prefab using Guid(f174f03cbb62e444590bbb7a9b1c4f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6a95804bd14513882e08eaaa08ef5e3') in 0.023734 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 1.372442 seconds.
-  path: Assets/NoFear Clue 2-1 3.prefab
-  artifactKey: Guid(5774823a0e10c064ba39c254c82f1b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 3.prefab using Guid(5774823a0e10c064ba39c254c82f1b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d8dd2784ad5e04118ea74cc6288201') in 0.023188 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 0.353048 seconds.
-  path: Assets/NoFear Clue 2-1 4.prefab
-  artifactKey: Guid(16cf2a4ac2e3973418ddc936ed5f536c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 4.prefab using Guid(16cf2a4ac2e3973418ddc936ed5f536c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30ddce08bd07cf9a8349deef7df340b') in 0.024646 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 0.263928 seconds.
-  path: Assets/NoFear Clue 2-1 5.prefab
-  artifactKey: Guid(c5c6aea99ef6d7548b19dd9f647014ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-1 5.prefab using Guid(c5c6aea99ef6d7548b19dd9f647014ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb83ffb3a8093158f543eea0050b6503') in 0.022944 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 4.592074 seconds.
+  Time since last request: 35.660490 seconds.
   path: Assets/NoFear Clue 2-2.prefab
   artifactKey: Guid(f3c1508c6c7f6ea419faeb5b2f9b9fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-2.prefab using Guid(f3c1508c6c7f6ea419faeb5b2f9b9fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4077e02872be5d882034d330855af44b') in 0.023331 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 5.117849 seconds.
-  path: Assets/NoFear Clue 2-3.prefab
-  artifactKey: Guid(f174f03cbb62e444590bbb7a9b1c4f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-3.prefab using Guid(f174f03cbb62e444590bbb7a9b1c4f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2644972cb29e9fff5dd04ebe009aec0f') in 0.025124 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 4.435477 seconds.
-  path: Assets/NoFear Clue 2-4.prefab
-  artifactKey: Guid(5774823a0e10c064ba39c254c82f1b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-4.prefab using Guid(5774823a0e10c064ba39c254c82f1b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b256c4aad966e7db03d81931a4ab1d') in 0.023124 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 3.768249 seconds.
-  path: Assets/NoFear Clue 2-5.prefab
-  artifactKey: Guid(16cf2a4ac2e3973418ddc936ed5f536c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-5.prefab using Guid(16cf2a4ac2e3973418ddc936ed5f536c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68ea849d45820e746db2b37303c8edc4') in 0.025809 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
-========================================================================
-Received Import Request.
-  Time since last request: 4.446612 seconds.
-  path: Assets/NoFear Clue 2-6.prefab
-  artifactKey: Guid(c5c6aea99ef6d7548b19dd9f647014ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NoFear Clue 2-6.prefab using Guid(c5c6aea99ef6d7548b19dd9f647014ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96d41dd65429ed9691ad83f3bff455d6') in 0.023648 seconds
+Start importing Assets/NoFear Clue 2-2.prefab using Guid(f3c1508c6c7f6ea419faeb5b2f9b9fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de77ef44efca24cb6dc413b2fed0bb9e') in 0.191587 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 38
