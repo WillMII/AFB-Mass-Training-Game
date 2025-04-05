@@ -177,7 +177,44 @@ app.get("/api/user", authenticateUser, (req, res) => {
     });
 });
 
+//User-Management Page
+app.get("/api/user-list", (req, res) => {
+    const query = `
+      SELECT 
+        user_id AS id, first_name, last_name, squadron, flight, training_manager AS manager 
+      FROM users
+    `;
+    db.query(query, (err, results) => {
+      if (err) {
+        console.error("Error fetching user list:", err);
+        return res.status(500).json({ error: "Internal server error" });
+      }
+      res.json(results);
+    });
+  });
 
+// Update Manager Status Route
+  app.put("/api/update-manager-status", (req, res) => {
+    const { userId, newStatus } = req.body;
+  
+    if (!userId || typeof newStatus !== "boolean") {
+      return res.status(400).json({ error: "Invalid request. User ID and new status are required." });
+    }
+  
+    const sql = "UPDATE users SET training_manager = ? WHERE user_id = ?";
+    db.query(sql, [newStatus, userId], (err, result) => {
+      if (err) {
+        console.error("Database error:", err);
+        return res.status(500).json({ error: "Failed to update manager status" });
+      }
+  
+      if (result.affectedRows === 0) {
+        return res.status(404).json({ error: "User not found" });
+      }
+  
+      res.status(200).json({ message: "Manager status updated successfully" });
+    });
+  });
 
 
 app.listen(PORT, () => {
