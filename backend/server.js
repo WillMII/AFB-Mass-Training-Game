@@ -95,7 +95,7 @@ app.post("/api/login", async (req, res) => {
 
             // User authenticated successfully, create session (basic token logic)
             req.session.user = {
-                id: user.id,
+                id: user.user_id,
                 email: user.email,
                 firstName: user.first_name,
                 lastName: user.last_name,
@@ -215,6 +215,48 @@ app.get("/api/user-list", (req, res) => {
       res.status(200).json({ message: "Manager status updated successfully" });
     });
   });
+
+  // Update User Password Route
+  app.put("/api/user/password", authenticateUser, async (req, res) => {
+    const userId = req.session.user ? req.session.user.id : null;
+
+    // Check if userId is undefined or null
+    if (!userId) {
+        console.log("Error: User ID not found in session");
+        return res.status(400).json({ error: "User ID not found in session" });
+    }
+
+    const { password } = req.body;
+
+    if (!password) {
+        return res.status(400).json({ error: "Password is required" });
+    }
+
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        db.query(
+            "UPDATE users SET password_hash = ? WHERE user_id = ?",
+            [hashedPassword, userId],
+            (err, result) => {
+                if (err) {
+                    console.error("Error updating password:", err);
+                    return res.status(500).json({ error: "Database error" });
+                }
+
+                if (result.affectedRows === 0) {
+                    return res.status(404).json({ error: "User not found" });
+                }
+
+                res.status(200).json({ message: "Password updated successfully" });
+            }
+        );
+    } catch (error) {
+        console.error("Server error:", error);
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
 
 
 app.listen(PORT, () => {
