@@ -26,21 +26,21 @@ const FilterMenu = ({ show, handleClose, applyFilters, resetFilters }) => {
         resetFilters();
     }
     const handleRemoveFilter = (index) => {
-        setFilters((prevFilters) => {
-            const updatedFilters = prevFilters.filter((_, i) => i !== index);
-    
-            // Convert filters to the correct format and pass to AdminNav
-            const filterParams = updatedFilters.reduce((acc, filter) => {
-                if (filter.type && filter.value) {
-                    acc[filter.type] = filter.value;
-                }
-                return acc;
-            }, {});
-    
-            applyFilters(filterParams); // Ensure filters update in AdminNav
-            return updatedFilters;
-        });
-    };
+    setFilters((prevFilters) => {
+        const updatedFilters = prevFilters.filter((_, i) => i !== index);
+
+        // Convert filters to the correct format and pass to AdminNav
+        const filterParams = updatedFilters.reduce((acc, filter) => {
+            if (filter.type && filter.value) {
+                acc[filter.type] = filter.value;
+            }
+            return acc;
+        }, {});
+
+        applyFilters(filterParams); // Ensure filters update in AdminNav
+        return updatedFilters;
+    });
+};
 
     const handleFilterChange = (index, key, value) => {
         const updatedFilters = [...filters];
