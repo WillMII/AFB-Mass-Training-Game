@@ -7,13 +7,15 @@ import AdminNav from '../components/AdminNav';
 import UserTable from '../components/UserTable'
 
 const UserManagement = () => {
+  const [filters, setFilters] = useState({});
+  
   return (
     <div className="d-flex flex-column min-vh-100">
       <Hdr />
       <Container className="flex-grow-1">
         <div className='my-5'>
           <h2 className='text-primary text-decoration-underline'>User Management</h2>
-          <AdminNav/>
+          <AdminNav setFilters={setFilters}/>
           <UserTable/>
         </div>
       </Container>

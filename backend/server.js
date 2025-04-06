@@ -130,7 +130,8 @@ app.get("/api/home", authenticateUser, (req, res) => {
 
 //user-progress route for displaying all trainees' progress
 app.get("/api/user-progress", (req, res) => {
-    const sql = `
+    const { squadron, flight, search, module1Progress, module2Progress, module3Progress, all_modules } = req.query;
+    let sql = `
         SELECT u.user_id, u.first_name, u.last_name, u.squadron, u.flight,
                MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) AS module1,
                MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) AS module2,
@@ -138,10 +139,58 @@ app.get("/api/user-progress", (req, res) => {
         FROM users u
         LEFT JOIN game_progress gp ON u.user_id = gp.user_id
         LEFT JOIN modules m ON gp.module_id = m.module_id
-        GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight
+        WHERE 1=1
     `;
 
-    db.query(sql, (err, results) => {
+    const queryParams = [];
+    
+    if (squadron) {
+        sql += " AND u.squadron = ?";
+        queryParams.push(squadron);
+    }
+    if (flight) {
+        sql += " AND u.flight = ?";
+        queryParams.push(flight);
+    }
+    if (search) {
+        sql += " AND (u.first_name LIKE ? OR u.last_name LIKE ?)";
+        queryParams.push(`%${search}%`, `%${search}%`);
+    }
+
+    sql += " GROUP BY u.user_id, u.first_name, u.last_name, u.squadron, u.flight";
+
+    // Add HAVING conditions based on module progress
+    let havingConditions = [];
+    if (module1Progress) {
+        if (module1Progress === "complete") havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) = 100");
+        if (module1Progress === "not_complete") havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) < 100");
+    }
+    if (module2Progress) {
+        if (module2Progress === "complete") havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) = 100");
+        if (module2Progress === "not_complete") havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) < 100");
+    }
+    if (module3Progress) {
+        if (module3Progress === "complete") havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) = 100");
+        if (module3Progress === "not_complete") havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) < 100");
+    }
+    if (all_modules) {
+        if (all_modules === "complete") {
+            havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) = 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) = 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) = 100");
+        }
+        if (all_modules === "not_complete") {
+            havingConditions.push("MAX(CASE WHEN m.name = 'STINFO' THEN gp.progress ELSE 0 END) < 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'Records Management' THEN gp.progress ELSE 0 END) < 100");
+            havingConditions.push("MAX(CASE WHEN m.name = 'No FEAR Act' THEN gp.progress ELSE 0 END) < 100");
+        } 
+    }
+
+    if (havingConditions.length > 0) {
+        sql += " HAVING " + havingConditions.join(" AND ");
+    }
+
+    db.query(sql, queryParams, (err, results) => {
         if (err) {
             console.error("Database error:", err.sqlMessage || err);
             return res.status(500).json({ error: "Database query failed", details: err.sqlMessage || err });
@@ -256,7 +305,6 @@ app.get("/api/user-list", (req, res) => {
         res.status(500).json({ error: "Server error" });
     }
 });
-
 
 
 app.listen(PORT, () => {

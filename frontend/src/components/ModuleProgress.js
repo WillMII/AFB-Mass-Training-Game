@@ -15,7 +15,7 @@ const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
     
     return (
         <Row>
-            <Col sm>{title}</Col>
+            <Col sm={2}>{title}</Col>
             <Col sm={3}>
                 <ProgressBar now={progress} label={`${progress}%`} />
             </Col>
