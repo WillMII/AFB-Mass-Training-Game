@@ -16,7 +16,7 @@ const Admin = () => {
         <Container className="flex-grow-1">
           <div className='my-5'>
             <h2 className='text-primary text-decoration-underline'>User Progress Reports</h2>
-            <AdminNav report={"true"} setFilters={setFilters}/>
+            <AdminNav report={"true"} setFilters={setFilters} filter_mods={true}/>
             <ReportTable filters={filters}/>
           </div>
         </Container>

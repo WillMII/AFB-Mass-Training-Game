@@ -5,7 +5,7 @@ import { Navbar } from 'react-bootstrap'
 import FilterMenu from './FilterMenu';
 import Button from 'react-bootstrap/Button';
 
-const AdminNav = ({ report, setFilters }) => {
+const AdminNav = ({ report, setFilters, filter_mods, filter_manager }) => {
 
     const [showFilterMenu, setShowFilterMenu] = useState(false);
     const [filterCount, setFilterCount] = useState(0);
@@ -77,7 +77,15 @@ const AdminNav = ({ report, setFilters }) => {
                 </Nav>
             </Navbar>
 
-            <FilterMenu show={showFilterMenu} handleClose={handleCloseFilterMenu} applyFilters={applyFilters} filterCount={filterCount} resetFilters={resetFilters} />
+            <FilterMenu
+                show={showFilterMenu}
+                handleClose={handleCloseFilterMenu}
+                applyFilters={applyFilters}
+                filterCount={filterCount}
+                resetFilters={resetFilters}
+                filter_mods={filter_mods}
+                filter_manager={filter_manager}
+            />
         </>
     )
 }

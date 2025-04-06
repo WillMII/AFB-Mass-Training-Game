@@ -3,22 +3,29 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-const FilterMenu = ({ show, handleClose, applyFilters, resetFilters }) => {
+const FilterMenu = ({ show, handleClose, applyFilters, resetFilters, filter_mods, filter_manager }) => {
     const [filters, setFilters] = useState([{ type: "", value: "" }]);
 
     const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
     const flightOptions = ["A", "B", "C", "N/A"];
 
-    const filterOptions = [
-        // { label: "First Name", value: "first_name" },
-        // { label: "Last Name", value: "last_name" },
+    let filterOptions = [
         { label: "Squadron", value: "squadron" },
         { label: "Flight", value: "flight" },
-        { label: "STINFO", value: "module1Progress" },
-        { label: "Records Management", value: "module2Progress" },
-        { label: "No FEAR Act", value: "module3Progress" },
-        { label: "All Modules", value: "all_modules" }
     ];
+    if (filter_mods) {
+        filterOptions = filterOptions.concat([
+            { label: "STINFO", value: "module1Progress" },
+            { label: "Records Management", value: "module2Progress" },
+            { label: "No FEAR Act", value: "module3Progress" },
+            { label: "All Modules", value: "all_modules" }
+        ]);
+    }
+    if (filter_manager) {
+        filterOptions = filterOptions.concat([
+            { label: "Training Manager", value: "manager" }
+        ]);
+    }  
 
     const handleAddFilter = () => setFilters([...filters, { type: "", value: "" }]);
     const handleClearFilters = () => {
@@ -119,6 +126,16 @@ const FilterMenu = ({ show, handleClose, applyFilters, resetFilters }) => {
                                     <option value="complete">Complete</option>
                                     <option value="not_complete">Not Complete</option>
                                 </Form.Select>
+                            ) : filter.type === "manager" ? (
+                                <Form.Select
+                                    value={filter.value}
+                                    onChange={(e) => handleFilterChange(index, "value", e.target.value)}
+                                    className="me-2"
+                                >
+                                    <option value="">Select Training Manager Status</option>
+                                    <option value="true">Training Manager</option>
+                                    <option value="false">Not Training Manager</option>
+                                </Form.Select>
                             ) : (
                                 <Form.Control
                                     type="text"
@@ -129,7 +146,6 @@ const FilterMenu = ({ show, handleClose, applyFilters, resetFilters }) => {
                                 />
                             )}
 
-                            {/* Remove filter button */}
                             <button
                                 type="button"
                                 className="btn btn-link p-0 text-danger"

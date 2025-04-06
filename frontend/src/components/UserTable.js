@@ -11,6 +11,7 @@ const UserTable = ({ filters }) => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(filters).toString();
+    console.log("Query Params:", queryParams)
     fetch(`http://localhost:8000/api/user-list?${queryParams}`)
       .then((res) => res.json())
       .then((data) => setUsers(data))
