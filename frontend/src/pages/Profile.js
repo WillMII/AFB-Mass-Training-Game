@@ -2,7 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Hdr from "../components/Hdr";
 import Footer from "../components/Footer";
-import { Container, Form, Row, Col, Button } from "react-bootstrap";
+import {
+  Container,
+  Form,
+  Row,
+  Col,
+  Button,
+  Modal,
+  InputGroup
+} from "react-bootstrap";
 
 const Profile = () => {
   const [user, setUser] = useState({
@@ -11,15 +19,16 @@ const Profile = () => {
     email: "",
     squadron: "",
     flight: "",
-    training_manager: false, // Changed from isManager to training_manager
+    training_manager: false,
     password: "",
   });
 
-  const [editMode, setEditMode] = useState({
-    password: false, // Edit mode for password
-  });
+  const [showModal, setShowModal] = useState(false);
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [passwordLength, setPasswordLength] = useState(0); // Track password length for asterisks
 
-  // Fetch user data when component mounts
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -27,56 +36,50 @@ const Profile = () => {
           withCredentials: true,
         });
         setUser(response.data);
+
+        // Set initial password length to match the password field length
+        setPasswordLength(response.data.password ? response.data.password.length : 0);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
     };
 
     fetchUserData();
-  }, []); // Empty dependency array means this runs once when the component mounts
+  }, []);
 
-  // Handle changes in form fields
-  const handleChange = (e, field) => {
-    console.log(`Changed ${field}:`, e.target.value); // Log the change
-    setUser({
-      ...user,
-      [field]: e.target.value,
-    });
-  };
+  const handlePasswordChange = async () => {
+    if (newPassword !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
 
-  // Toggle edit mode
-  const handleEdit = (field) => {
-    console.log(`Editing ${field}...`);
-    setEditMode({
-      ...editMode,
-      [field]: true,
-    });
-  };
-
-  // Cancel edit
-  const handleCancel = (field) => {
-    console.log(`Cancelled editing ${field}`);
-    setEditMode({
-      ...editMode,
-      [field]: false,
-    });
-  };
-
-  // Save the changes
-  const handleSave = (field) => {
-    console.log(`Saving ${field}:`, user[field]); // Log the value to be saved
-    // Implement save logic here (e.g., make API call to save changes)
-    setEditMode({
-      ...editMode,
-      [field]: false,
-    });
+    try {
+      // Replace with your backend endpoint
+      await axios.put(
+        "http://localhost:8000/api/user/password",
+        { password: newPassword },
+        { withCredentials: true }
+      );
+      alert("Password updated successfully!");
+      setShowModal(false);
+      setNewPassword("");
+      setConfirmPassword("");
+      setShowPassword(false);
+      // Update password length after successful change
+      setPasswordLength(newPassword.length);
+    } catch (error) {
+      console.error("Error updating password:", error);
+      alert("Failed to update password.");
+    }
   };
 
   return (
     <div className="d-flex flex-column min-vh-100">
       <Hdr />
       <Container className="flex-grow-1">
-        <h2 className="text-primary text-decoration-underline my-5">My Profile</h2>
+        <h2 className="text-primary text-decoration-underline my-5">
+          My Profile
+        </h2>
 
         {/* FIRST NAME */}
         <Form.Group as={Row} className="mb-3 align-items-center">
@@ -118,63 +121,67 @@ const Profile = () => {
           </Col>
         </Form.Group>
 
-        {/* PASSWORD */}
+        {/* PASSWORD (Popup trigger) */}
         <Form.Group as={Row} className="mb-3 align-items-center">
           <Form.Label column sm="2">Password</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="password"
-              disabled={!editMode.password}
-              value={user.password}
-              onChange={(e) => handleChange(e, "password")}
-            />
+            {/* Display asterisks based on password length */}
+            <Form.Control type="password" disabled value={"*".repeat(passwordLength)} />
           </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.password ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("password")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("password")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("password")}
-              >
-                Edit
-              </Button>
-            )}
+          <Col sm="2">
+            <Button variant="link" onClick={() => setShowModal(true)}>
+              Change Password
+            </Button>
           </Col>
         </Form.Group>
-
-        {/* TRAINING MANAGER TOGGLE */}
-        <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">Training Manager</Form.Label>
-          <Col sm="8">
-            <Form.Check
-              type="switch"
-              id="training_manager"
-              label={user.training_manager ? "Enabled" : "Disabled"}
-              checked={user.training_manager}
-              disabled
-            />
-          </Col>
-        </Form.Group>
-
       </Container>
       <Footer />
+
+      {/* PASSWORD MODAL */}
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Change Password</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            {/* New Password */}
+            <Form.Group className="mb-3">
+              <Form.Label>New Password</Form.Label>
+              <InputGroup>
+                <Form.Control
+                  type={showPassword ? "text" : "password"}
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                />
+                <Button
+                  variant="outline-secondary"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "Hide" : "Show"}
+                </Button>
+              </InputGroup>
+            </Form.Group>
+
+            {/* Confirm Password */}
+            <Form.Group className="mb-3">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                type={showPassword ? "text" : "password"}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Cancel
+          </Button>
+          <Button variant="primary" onClick={handlePasswordChange}>
+            Save Password
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

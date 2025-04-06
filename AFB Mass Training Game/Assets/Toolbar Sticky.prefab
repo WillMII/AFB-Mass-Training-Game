@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5249613572101743600}
   - component: {fileID: 5882930641123067986}
   - component: {fileID: 2671816780645707290}
-  - component: {fileID: 3977670128444632836}
+  - component: {fileID: 835416851411635957}
   m_Layer: 0
   m_Name: Toolbar Sticky
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 34153b3a25295ef4490d59c97d7cabec, type: 3}
   lilShelf: {fileID: 3240219924669978507}
   toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
---- !u!114 &3977670128444632836
+--- !u!114 &835416851411635957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3240219924669978507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1393d8034631a004eaac80e292c7459b, type: 3}
+  m_Script: {fileID: 11500000, guid: 27d012699a05c6f42a64ea48ec4b9bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
