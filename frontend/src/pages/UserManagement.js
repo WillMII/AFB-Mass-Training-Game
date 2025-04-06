@@ -16,7 +16,7 @@ const UserManagement = () => {
         <div className='my-5'>
           <h2 className='text-primary text-decoration-underline'>User Management</h2>
           <AdminNav setFilters={setFilters}/>
-          <UserTable/>
+          <UserTable filters={filters}/>
         </div>
       </Container>
 
