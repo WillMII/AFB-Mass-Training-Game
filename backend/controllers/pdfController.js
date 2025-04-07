@@ -1,5 +1,5 @@
 const db = require("../config/db");
-const PDFDocument = require("pdfkit");
+const PDFDocument = require("pdfkit-table");
 
 exports.downloadReport = (req, res) => {
     const { squadron, flight, search, module1Progress, module2Progress, module3Progress, all_modules } = req.query;
@@ -61,27 +61,51 @@ exports.downloadReport = (req, res) => {
             return res.status(500).json({ error: "Database query failed", details: err.sqlMessage || err });
         }
 
-        // Set headers BEFORE streaming
+        //init document
+        let doc = new PDFDocument({ margin: 30, size: "A4" });
+
+        // Set headers for download
         res.setHeader("Content-Type", "application/pdf");
         res.setHeader("Content-Disposition", "attachment; filename=report.pdf");
 
-        const doc = new PDFDocument();
         doc.pipe(res);
 
-        doc.fontSize(16).text("User Report", { align: "center" }).moveDown();
+        // Header
+        doc.fontSize(16).text("User Report", { align: "center" });
+        doc.moveDown();
 
-        results.forEach(user => {
-            doc
-                .fontSize(12)
-                .text(`Name: ${user.first_name} ${user.last_name}`)
-                .text(`Squadron: ${user.squadron}`)
-                .text(`Flight: ${user.flight}`)
-                .text(`Module 1 Progress: ${user.module1}%`)
-                .text(`Module 2 Progress: ${user.module2}%`)
-                .text(`Module 3 Progress: ${user.module3}%`)
-                .moveDown();
-        });
+        (async function () {
+            const table = {
+                headers: [
+                    "#",
+                    "First Name",
+                    "Last Name",
+                    "Squadron",
+                    "Flight",
+                    "STINFO",
+                    "Records Management",
+                    "No FEAR Act",
+                ],
+                rows: results.map((user, index) => [
+                    index + 1,
+                    user.first_name,
+                    user.last_name,
+                    user.squadron,
+                    user.flight,
+                    `${user.module1}%`,
+                    `${user.module2}%`,
+                    `${user.module3}%`,
+                ]),
+            };
 
-        doc.end(); // Ends stream — PDF is sent
-    });
-};
+            await doc.table(table, {
+                prepareHeader: () => doc.font("Helvetica-Bold").fontSize(10),
+                prepareRow: (row, i) => doc.font("Helvetica").fontSize(10),
+            });
+
+            doc.end();
+        })(); // End of async function
+
+    }); // End of db.query
+
+} // End of downloadReport
