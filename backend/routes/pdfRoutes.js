@@ -1,9 +1,8 @@
 const express = require("express");
-const { generateReport, generateCertificate } = require("../controllers/pdfController");
-
 const router = express.Router();
+const pdfController = require("../controllers/pdfController");
 
-router.get("/download-report", generateReport);
-router.get("/download-certificate", generateCertificate);
+// This route will handle generating the PDF with filters
+router.get("/download-report", pdfController.downloadReport);
 
 module.exports = router;
