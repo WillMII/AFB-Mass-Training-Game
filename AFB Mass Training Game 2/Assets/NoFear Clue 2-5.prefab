@@ -196,7 +196,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8754829820355476042
 MonoBehaviour:
@@ -511,22 +511,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Search the room to find the different things covered under Antidiscriminations
-    laws to be reported to the Equal Employment Opportunity Office (EEO)
-
-    -Civil
-    rights
-
-    -Pregnancy
-
-    -Equal pay
-
-    -Disabilities
-
-    -Rehabilitation
-
-    -Genetic
-    information'
+  m_text: The Rehabilitation Act prohibits discrmination against a qualified person
+    with a disability in the federal government.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
