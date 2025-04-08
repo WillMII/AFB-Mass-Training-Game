@@ -4,17 +4,19 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-const UserTable = () => {
+const UserTable = ({ filters }) => {
   const [users, setUsers] = useState([]);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [tempUser, setTempUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/user-list")
+    const queryParams = new URLSearchParams(filters).toString();
+    console.log("Query Params:", queryParams)
+    fetch(`http://localhost:8000/api/user-list?${queryParams}`)
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error("Error fetching users:", err));
-  }, []);
+  }, [filters]);
 
   const handleToggleManager = (user) => {
     setTempUser(user);

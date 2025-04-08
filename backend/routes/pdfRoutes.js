@@ -1,9 +1,9 @@
 const express = require("express");
-const { generateReport, generateCertificate } = require("../controllers/pdfController");
-
 const router = express.Router();
+const pdfController = require("../controllers/pdfController");
+const certController = require("../controllers/certController");
 
-router.get("/download-report", generateReport);
-router.get("/download-certificate", generateCertificate);
+router.get("/download-report", pdfController.downloadReport);
+router.get("/download-certificate", certController.downloadCertificate);
 
 module.exports = router;

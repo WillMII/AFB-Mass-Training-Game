@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import temp from '../imgs/temp_img.png';
+import temp from '../imgs/Module1.png';
 
 const ModuleCard = ({ title, desc, due }) => {
     return (

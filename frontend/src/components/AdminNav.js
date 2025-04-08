@@ -5,7 +5,7 @@ import { Navbar } from 'react-bootstrap'
 import FilterMenu from './FilterMenu';
 import Button from 'react-bootstrap/Button';
 
-const AdminNav = ({ report, setFilters }) => {
+const AdminNav = ({ report, setFilters, filter_mods, filter_manager, active_filters }) => {
 
     const [showFilterMenu, setShowFilterMenu] = useState(false);
     const [filterCount, setFilterCount] = useState(0);
@@ -30,7 +30,15 @@ const AdminNav = ({ report, setFilters }) => {
 
     const downloadPDF = () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
-        window.open(`${apiUrl}/api/download-report`, "_blank");
+        const queryParams = new URLSearchParams();
+        for (const key in active_filters) {
+            if (active_filters[key]) {
+                queryParams.append(key, active_filters[key]);
+            }
+        }
+    
+        const fullUrl = `${apiUrl}/api/download-report?${queryParams.toString()}`;
+        window.open(fullUrl, "_blank");
     };
 
     return (
@@ -54,7 +62,7 @@ const AdminNav = ({ report, setFilters }) => {
                 <Nav className="justify-content-end">
                     {report ? (
                         <Button onClick={downloadPDF} variant="link" className="nav-link">
-                            Print Report <i className="bi bi-file-earmark-arrow-down"></i>
+                            Download Report <i className="bi bi-file-earmark-arrow-down"></i>
                         </Button>
                     ) : null}
                     <Button variant="link" className="nav-link" onClick={handleShowFilterMenu}>
@@ -77,7 +85,15 @@ const AdminNav = ({ report, setFilters }) => {
                 </Nav>
             </Navbar>
 
-            <FilterMenu show={showFilterMenu} handleClose={handleCloseFilterMenu} applyFilters={applyFilters} filterCount={filterCount} resetFilters={resetFilters} />
+            <FilterMenu
+                show={showFilterMenu}
+                handleClose={handleCloseFilterMenu}
+                applyFilters={applyFilters}
+                filterCount={filterCount}
+                resetFilters={resetFilters}
+                filter_mods={filter_mods}
+                filter_manager={filter_manager}
+            />
         </>
     )
 }

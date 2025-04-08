@@ -228,14 +228,38 @@ app.get("/api/user", authenticateUser, (req, res) => {
 
 //User-Management Page
 app.get("/api/user-list", (req, res) => {
-    const query = `
+    const { squadron, flight, manager, search } = req.query;
+    let query = `
       SELECT 
         user_id AS id, first_name, last_name, squadron, flight, training_manager AS manager 
       FROM users
+        WHERE 1=1
     `;
-    db.query(query, (err, results) => {
-      if (err) {
-        console.error("Error fetching user list:", err);
+
+    const queryParams = [];
+
+    if (squadron) {
+        query += " AND squadron = ?";
+        queryParams.push(squadron);
+    }
+    if (flight) {
+        query += " AND flight = ?";
+        queryParams.push(flight);
+    }
+    if (manager) {
+        query += " AND training_manager = ?";
+        queryParams.push(manager === "true" ? 1 : 0);
+    }
+    if (search) {
+        query += " AND (first_name LIKE ? OR last_name LIKE ?)";
+        queryParams.push(`%${search}%`, `%${search}%`);
+    }
+
+    query += " GROUP BY user_id, first_name, last_name, squadron, flight";
+
+    db.query(query, queryParams, (err, results) => {
+        if (err) {
+            console.error("Error fetching user list:", err);
         return res.status(500).json({ error: "Internal server error" });
       }
       res.json(results);

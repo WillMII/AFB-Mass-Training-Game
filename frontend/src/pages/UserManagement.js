@@ -15,8 +15,8 @@ const UserManagement = () => {
       <Container className="flex-grow-1">
         <div className='my-5'>
           <h2 className='text-primary text-decoration-underline'>User Management</h2>
-          <AdminNav setFilters={setFilters}/>
-          <UserTable/>
+          <AdminNav setFilters={setFilters} filter_manager={true}/>
+          <UserTable filters={filters}/>
         </div>
       </Container>
 
