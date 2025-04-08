@@ -10,7 +10,8 @@ const Hdr = () => {
     const [userName, setUserName] = useState("My Name");
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/user", { withCredentials: true })
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        axios.get(`${apiUrl}/api/user`, { withCredentials: true })
             .then(response => {
                 const { firstName, lastName } = response.data;
                 setUserName(`${firstName} ${lastName}`);

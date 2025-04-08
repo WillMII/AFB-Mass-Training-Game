@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import api from "../../api/axios";
 import "./Login.css";
 
 const Login = () => {
@@ -34,11 +35,11 @@ const Login = () => {
       const response = await fetch("http://localhost:8000/api/login", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            email: formData.email,
-            password: formData.password,
+          email: formData.email,
+          password: formData.password,
         }),
         credentials: "include", // Ensures cookies/sessions are sent
       });

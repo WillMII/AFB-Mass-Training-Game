@@ -8,6 +8,7 @@ const db = require("./config/db");  // Import the database connection
 const pdfRoutes = require("./routes/pdfRoutes");  // Import the PDF routes
 const { generateToken } = require("./utils/jwt");
 const authenticateToken = require("./middleware/auth");
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const PORT = 8000;
@@ -25,7 +26,7 @@ app.use(
 );
 
 app.use(express.json());
-
+app.use(cookieParser());
 
 app.use(session({
     secret: "your_secret_key",  // Replace with a strong secret
@@ -95,6 +96,11 @@ app.post("/api/login", async (req, res) => {
             }
            
             const token = generateToken(user);
+            res.cookie("token", token, {
+                httpOnly: true, // Prevents JavaScript access to the cookie
+                secure: process.env.NODE_ENV === 'production', // Set to true in production
+                maxAge: 3600000, // 1 hour
+            });
 
             res.status(200).json({
                 message: "Login successful",
@@ -107,14 +113,7 @@ app.post("/api/login", async (req, res) => {
     }
 });
 
-// Logout Route
-const authenticateUser = (req, res, next) => {
-    if (!req.session.user) {
-        return res.status(401).json({ error: "Unauthorized. Please log in." });
-    }
-    next();
-};
-
+//IS THIS EVER USED???
 // Home Route after login authenticated (successful login)
 app.get("/api/home", authenticateToken, (req, res) => {
     res.json({ message: `Welcome, ${req.session.user.firstName}!` });
@@ -194,7 +193,6 @@ app.get("/api/user-progress", (req, res) => {
 // for user's information
 app.get("/api/user", authenticateToken, (req, res) => {
     const sql = "SELECT first_name, last_name, email, squadron, flight, training_manager FROM users WHERE email = ?";
-    
     db.query(sql, [req.user.email], (err, results) => {
         if (err) {
             console.error("Database error:", err);
