@@ -5,6 +5,18 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
     
+    const downloadCertificate = async () => {
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        const params = new URLSearchParams({
+            name: "Emily Surname",
+            moduleName: "STINFO",
+            dateCompleted: "02/17/25",
+        });
+    
+        const fullUrl = `${apiUrl}/api/download-certificate?${params.toString()}`;
+        window.open(fullUrl, "_blank");
+    };    
+
     const getStatus = (progress) => {
         if (progress === 100) return { icon: "bi bi-check-circle text-success", label: "Complete" };
         if (progress === 0) return { icon: "bi bi-x-circle text-danger", label: "Not Started" };
@@ -24,7 +36,12 @@ const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
                 <i className={icon}></i> {label}
             </Col>
             <Col sm>{completed || <i class="bi bi-dash"></i>}</Col>
-            <Col sm>{certificate ? <a href="/">View Certificate</a> : <i class="bi bi-dash"></i>}</Col>         
+            <Col sm>
+                {certificate ? 
+                    <button className="btn btn-link p-0" onClick={downloadCertificate}>View Certificate</button> 
+                    : <i className="bi bi-dash"></i>
+                }
+            </Col>          
         </Row>
     )
 }
