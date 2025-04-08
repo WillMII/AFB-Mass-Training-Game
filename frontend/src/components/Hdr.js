@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../imgs/402_SWEG_Shield.png";
 
 const Hdr = () => {
     const [userName, setUserName] = useState("My Name");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
@@ -20,6 +21,16 @@ const Hdr = () => {
                 console.error("Error fetching user data:", error);
             });
     }, []);
+
+    const handleSignOut = () => {
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        
+        axios.post(`${apiUrl}/api/logout`, {}, { withCredentials: true })
+            .then(() => navigate("/login"))
+            .catch((error) => {
+                console.error("Error logging out:", error);
+            });
+    };
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -48,7 +59,7 @@ const Hdr = () => {
                                 <i className="bi bi-person-fill"></i> {userName}
                             </Nav.Link>
                         </div>
-                        <Nav.Link to={"/login"} as={NavLink} className="text-primary fw-medium">
+                        <Nav.Link onClick={handleSignOut} as={NavLink} className="text-primary fw-medium">
                             Sign Out
                         </Nav.Link>
                     </Nav>
