@@ -8,7 +8,7 @@ const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
     const downloadCertificate = async () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
         const params = new URLSearchParams({
-            name: "Emily Surname",
+            name: "Trainee Name",
             moduleName: "STINFO",
             dateCompleted: "02/17/25",
         });
