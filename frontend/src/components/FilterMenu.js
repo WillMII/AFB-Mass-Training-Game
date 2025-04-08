@@ -25,7 +25,7 @@ const FilterMenu = ({ show, handleClose, applyFilters, resetFilters, filter_mods
         filterOptions = filterOptions.concat([
             { label: "Training Manager", value: "manager" }
         ]);
-    }  
+    }
 
     const handleAddFilter = () => setFilters([...filters, { type: "", value: "" }]);
     const handleClearFilters = () => {
@@ -33,21 +33,27 @@ const FilterMenu = ({ show, handleClose, applyFilters, resetFilters, filter_mods
         resetFilters();
     }
     const handleRemoveFilter = (index) => {
-    setFilters((prevFilters) => {
-        const updatedFilters = prevFilters.filter((_, i) => i !== index);
-
-        // Convert filters to the correct format and pass to AdminNav
-        const filterParams = updatedFilters.reduce((acc, filter) => {
-            if (filter.type && filter.value) {
-                acc[filter.type] = filter.value;
+        setFilters((prevFilters) => {
+            if (prevFilters.length === 1) {
+                const resetFilter = [{ type: "", value: "" }];
+                applyFilters({});
+                return resetFilter;
             }
-            return acc;
-        }, {});
 
-        applyFilters(filterParams); // Ensure filters update in AdminNav
-        return updatedFilters;
-    });
-};
+            const updatedFilters = prevFilters.filter((_, i) => i !== index);
+
+            // Convert filters to the correct format and pass to AdminNav
+            const filterParams = updatedFilters.reduce((acc, filter) => {
+                if (filter.type && filter.value) {
+                    acc[filter.type] = filter.value;
+                }
+                return acc;
+            }, {});
+
+            applyFilters(filterParams); // Ensure filters update in AdminNav
+            return updatedFilters;
+        });
+    };
 
     const handleFilterChange = (index, key, value) => {
         const updatedFilters = [...filters];
@@ -137,18 +143,19 @@ const FilterMenu = ({ show, handleClose, applyFilters, resetFilters, filter_mods
                                     <option value="false">Not Training Manager</option>
                                 </Form.Select>
                             ) : (
-                                <Form.Control
+                                <Form.Select
                                     type="text"
+                                    disabled={!filter.type}
                                     value={filter.value}
                                     onChange={(e) => handleFilterChange(index, "value", e.target.value)}
-                                    placeholder="Enter value"
+                                    placeholder="Enter valsue"
                                     className="me-2"
                                 />
                             )}
 
                             <button
                                 type="button"
-                                className="btn btn-link p-0 text-danger"
+                                className="btn btn-link p-0 text-secondary"
                                 onClick={() => handleRemoveFilter(index)}
                             >
                                 <i className="bi bi-x-lg"></i>
