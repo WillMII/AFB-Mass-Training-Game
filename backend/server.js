@@ -6,7 +6,8 @@ const bcrypt = require("bcryptjs");
 const cors = require("cors");
 const db = require("./config/db");  // Import the database connection
 const pdfRoutes = require("./routes/pdfRoutes");  // Import the PDF routes
-
+const { generateToken } = require("./utils/jwt");
+const authenticateToken = require("./middleware/auth");
 
 const app = express();
 const PORT = 8000;
@@ -92,21 +93,12 @@ app.post("/api/login", async (req, res) => {
             if (!isMatch) {
                 return res.status(401).json({ error: "Invalid email or password" });
             }
-
-            // User authenticated successfully, create session (basic token logic)
-            req.session.user = {
-                id: user.user_id,
-                email: user.email,
-                firstName: user.first_name,
-                lastName: user.last_name,
-                squadron: user.squadron,
-                flight: user.flight,
-                training_manager: user.training_manager
-            };            
+           
+            const token = generateToken(user);
 
             res.status(200).json({
                 message: "Login successful",
-                user: req.session.user,
+                token
             });
         });
     } catch (error) {
@@ -124,7 +116,7 @@ const authenticateUser = (req, res, next) => {
 };
 
 // Home Route after login authenticated (successful login)
-app.get("/api/home", authenticateUser, (req, res) => {
+app.get("/api/home", authenticateToken, (req, res) => {
     res.json({ message: `Welcome, ${req.session.user.firstName}!` });
 });
 
@@ -200,10 +192,10 @@ app.get("/api/user-progress", (req, res) => {
 });
 
 // for user's information
-app.get("/api/user", authenticateUser, (req, res) => {
+app.get("/api/user", authenticateToken, (req, res) => {
     const sql = "SELECT first_name, last_name, email, squadron, flight, training_manager FROM users WHERE email = ?";
     
-    db.query(sql, [req.session.user.email], (err, results) => {
+    db.query(sql, [req.user.email], (err, results) => {
         if (err) {
             console.error("Database error:", err);
             return res.status(500).json({ error: "Database query failed" });
@@ -290,8 +282,8 @@ app.get("/api/user-list", (req, res) => {
   });
 
   // Update User Password Route
-  app.put("/api/user/password", authenticateUser, async (req, res) => {
-    const userId = req.session.user ? req.session.user.id : null;
+  app.put("/api/user/password", authenticateToken, async (req, res) => {
+    const userId = req.user ? req.user.id : null;
 
     // Check if userId is undefined or null
     if (!userId) {
