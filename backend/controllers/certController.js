@@ -8,7 +8,7 @@ exports.downloadCertificate = (req, res) => {
     res.setHeader("Content-Type", "application/pdf");
     res.setHeader(
         "Content-Disposition",
-        `attachment; filename=${name.replace(" ", "_")}_Certificate.pdf`
+        `attachment; filename=${name.replace(" ", "_")}_${moduleName.replace(" ", "_")}_Certificate.pdf`
     );
 
     doc.pipe(res);

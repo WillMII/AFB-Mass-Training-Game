@@ -10,7 +10,7 @@ const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
         const params = new URLSearchParams({
             name: "Trainee Name",
             moduleName: "STINFO",
-            dateCompleted: "02/17/25",
+            dateCompleted: "01/01/22",
         });
     
         const fullUrl = `${apiUrl}/api/download-certificate?${params.toString()}`;

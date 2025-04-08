@@ -62,7 +62,7 @@ const AdminNav = ({ report, setFilters, filter_mods, filter_manager, active_filt
                 <Nav className="justify-content-end">
                     {report ? (
                         <Button onClick={downloadPDF} variant="link" className="nav-link">
-                            Print Report <i className="bi bi-file-earmark-arrow-down"></i>
+                            Download Report <i className="bi bi-file-earmark-arrow-down"></i>
                         </Button>
                     ) : null}
                     <Button variant="link" className="nav-link" onClick={handleShowFilterMenu}>
