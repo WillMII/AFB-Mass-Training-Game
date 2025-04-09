@@ -1,37 +1,35 @@
-// src/components/ProtectedRoute.js or .tsx
 import React, { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
-import axios from "axios";
+import { useUser } from "../context/UserContext";
 
 const ProtectedRoute = ({ children, adminOnly = false }) => {
+    const { user } = useUser(); // Get user from context
     const [authChecked, setAuthChecked] = useState(false);
     const [isAuthorized, setIsAuthorized] = useState(false);
 
     useEffect(() => {
-        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
-        axios.get(`${apiUrl}/api/user`, { withCredentials: true })
-            .then(res => {
-                const user = res.data;
-                console.log("User data:", user);
-                if (adminOnly && user.training_manager !== 1) {
-                    setIsAuthorized(false);
-                } else {
-                    setIsAuthorized(true);
-                }
-            })
-            .catch(err => {
-                console.error("Auth check failed:", err);
+        // Check if user exists and if they have the required role
+        if (user) {
+            if (adminOnly && user.training_manager !== 1) {
                 setIsAuthorized(false);
-            })
-            .finally(() => {
-                setAuthChecked(true);
-            });
-    }, [adminOnly]);
+            } else {
+                setIsAuthorized(true);
+            }
+        } else {
+            setIsAuthorized(false);
+        }
+        setAuthChecked(true); // Done checking authorization
+    }, [adminOnly, user]);
 
-    if (!authChecked) return null;
+    if (!authChecked) return null; // Wait until authentication check is done
 
-    return isAuthorized ? children : <ErrorPage />;
+    if (!isAuthorized) {
+        // Redirect or show error if not authorized
+        return <ErrorPage />;
+    }
+
+    // If authorized, return the protected children components
+    return children;
 };
 
 export default ProtectedRoute;

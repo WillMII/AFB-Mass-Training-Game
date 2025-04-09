@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
     axios.get(`${apiUrl}/api/user`, { withCredentials: true })
       .then(res => setUser(res.data))
       .catch(() => setUser(null));
-  }, []);
+  }, [apiUrl]);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>

@@ -13,11 +13,12 @@ import UserManagement from "./pages/UserManagement";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { useUser } from "./context/UserContext";
+import { Navigate } from "react-router-dom";
 
 function App() {
 
   // Set User Context on Refresh
-  const { setUser } = useUser();
+  const { user, setUser } = useUser();
   useEffect(() => {
     const checkSession = async () => {
       try {
@@ -26,6 +27,7 @@ function App() {
         });
         if (response.ok) {
           const data = await response.json();
+          console.log("User data:", data);
           setUser(data);
         } else {
           setUser(null);
@@ -36,34 +38,50 @@ function App() {
     };
   
     checkSession();
-  }, []);
-  
+  }, [setUser]);
 
   return (
     <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create-account" element={<CreateAccount />} />
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/user-progress"
-            element={
+      <Routes>
+        <Route
+          path="/"
+          element={user ? <Home /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/create-account"
+          element={user ? <CreateAccount /> : <Navigate to="/login" />}
+        />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/user-progress"
+          element={
+            user ? (
               <ProtectedRoute adminOnly={true}>
                 <Admin />
               </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/user-management"
-            element={
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/user-management"
+          element={
+            user ? (
               <ProtectedRoute adminOnly={true}>
                 <UserManagement />
               </ProtectedRoute>
-            }
-          />
-          <Route path="/user-profile" element={<Profile />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/user-profile"
+          element={user ? <Profile /> : <Navigate to="/login" />}
+        />
+        <Route path="*" element={user ? <ErrorPage /> : <Navigate to="login" />} />
+      </Routes>
     </div>
   );
 }
