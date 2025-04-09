@@ -26,6 +26,7 @@ const Hdr = () => {
     };
 
     const userName = user ? `${user.firstName} ${user.lastName}` : "My Name";
+    const isTrainingManager = user?.training_manager == 1;
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -45,8 +46,12 @@ const Hdr = () => {
                     <hr />
                     <Nav className="me-auto">
                         <Nav.Link to={"/"} as={NavLink}>Home</Nav.Link>
-                        <Nav.Link to={"/user-progress"} as={NavLink}>User Progress</Nav.Link>
-                        <Nav.Link to={"/user-management"} as={NavLink}>User Management</Nav.Link>
+                        {isTrainingManager && (
+                            <>
+                                <Nav.Link to={"/user-progress"} as={NavLink}>User Progress</Nav.Link>
+                                <Nav.Link to={"/user-management"} as={NavLink}>User Management</Nav.Link>
+                            </>
+                        )}
                     </Nav>
                     <Nav className="justify-content-end no-wrap">
                         <div className="flex-wrap d-flex">
