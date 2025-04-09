@@ -1,24 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../imgs/402_SWEG_Shield.png";
+import { useUser } from "../context/UserContext";
 
 const Hdr = () => {
-    const [userName, setUserName] = useState("My Name");
+    const { user, setUser } = useUser();
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        axios.get("http://localhost:8000/api/user", { withCredentials: true })
-            .then(response => {
-                const { firstName, lastName } = response.data;
-                setUserName(`${firstName} ${lastName}`);
+    const handleSignOut = () => {
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        
+        axios.post(`${apiUrl}/api/logout`, {}, { withCredentials: true })
+            .then(() => {
+                setUser(null); // Clear user context
+                localStorage.removeItem("token"); // Clear token from local storage
+                navigate("/login"); // redirect to login page
             })
-            .catch(error => {
-                console.error("Error fetching user data:", error);
+            .catch((error) => {
+                console.error("Error logging out:", error);
             });
-    }, []);
+    };
+
+    const userName = user ? `${user.firstName} ${user.lastName}` : "My Name";
+    const isTrainingManager = user?.training_manager === 1;
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -38,8 +46,12 @@ const Hdr = () => {
                     <hr />
                     <Nav className="me-auto">
                         <Nav.Link to={"/"} as={NavLink}>Home</Nav.Link>
-                        <Nav.Link to={"/user-progress"} as={NavLink}>User Progress</Nav.Link>
-                        <Nav.Link to={"/user-management"} as={NavLink}>User Management</Nav.Link>
+                        {isTrainingManager && (
+                            <>
+                                <Nav.Link to={"/user-progress"} as={NavLink}>User Progress</Nav.Link>
+                                <Nav.Link to={"/user-management"} as={NavLink}>User Management</Nav.Link>
+                            </>
+                        )}
                     </Nav>
                     <Nav className="justify-content-end no-wrap">
                         <div className="flex-wrap d-flex">
@@ -47,7 +59,7 @@ const Hdr = () => {
                                 <i className="bi bi-person-fill"></i> {userName}
                             </Nav.Link>
                         </div>
-                        <Nav.Link to={"/login"} as={NavLink} className="text-primary fw-medium">
+                        <Nav.Link onClick={handleSignOut} as={NavLink} className="text-primary fw-medium">
                             Sign Out
                         </Nav.Link>
                     </Nav>

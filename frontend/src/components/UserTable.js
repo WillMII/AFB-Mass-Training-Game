@@ -11,8 +11,9 @@ const UserTable = ({ filters }) => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(filters).toString();
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
     console.log("Query Params:", queryParams)
-    fetch(`http://localhost:8000/api/user-list?${queryParams}`)
+    fetch(`${apiUrl}/api/user-list?${queryParams}`)
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error("Error fetching users:", err));

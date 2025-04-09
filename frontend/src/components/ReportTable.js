@@ -6,8 +6,9 @@ const ReportTable = ({ filters }) => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(filters).toString();
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
     console.log("Query Params:", queryParams)
-    fetch(`http://localhost:8000/api/user-progress?${queryParams}`)
+    fetch(`${apiUrl}/api/user-progress?${queryParams}`)
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.error("Error fetching user progress:", error));
