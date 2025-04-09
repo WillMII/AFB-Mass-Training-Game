@@ -1,6 +1,7 @@
 // src/components/ProtectedRoute.js or .tsx
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
+import ErrorPage from "../pages/ErrorPage";
 import axios from "axios";
 
 const ProtectedRoute = ({ children, adminOnly = false }) => {
@@ -12,11 +13,10 @@ const ProtectedRoute = ({ children, adminOnly = false }) => {
         axios.get(`${apiUrl}/api/user`, { withCredentials: true })
             .then(res => {
                 const user = res.data;
+                console.log("User data:", user);
                 if (adminOnly && user.training_manager !== 1) {
-                    console.log("User is not an admin");
                     setIsAuthorized(false);
                 } else {
-                    console.log("User is an admin");
                     setIsAuthorized(true);
                 }
             })
@@ -31,7 +31,7 @@ const ProtectedRoute = ({ children, adminOnly = false }) => {
 
     if (!authChecked) return null;
 
-    return isAuthorized ? children : <Navigate to="/login" replace />;
+    return isAuthorized ? children : <ErrorPage />;
 };
 
 export default ProtectedRoute;

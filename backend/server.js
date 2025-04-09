@@ -217,7 +217,7 @@ app.get("/api/user", authenticateToken, (req, res) => {
             email: user.email,
             squadron: user.squadron,
             flight: user.flight,
-            isManager: user.isManager,
+            training_manager: user.training_manager,
         });
     });
 });
