@@ -511,8 +511,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Disposing of Unlassified STINFO Docs\r\n-Paper documents - shredding or
-    burning only \r\n-Floppy disks - reformatting and breaking into four or more
+  m_text: "Disposing of Unclassified STINFO Docs\r\n-Paper documents - shredding
+    or burning only \r\n-Floppy disks - reformatting and breaking into four or more
     pieces\r\n-Hard drives - reformatting and sending to a recycling center \xBB
     hard drives\r\n-CD-ROMS/DVDs - shredding or breaking into 4 or more pieces\r\n-Memory
     wands/flash drives - deleting files from memory and breaking into two or more

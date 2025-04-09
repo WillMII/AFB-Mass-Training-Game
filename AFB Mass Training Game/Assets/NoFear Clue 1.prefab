@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 164.5, y: 111.2}
+  m_AnchoredPosition: {x: 208.3, y: 130.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9165248387966025988
@@ -511,9 +511,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No FEAR Act ensures the rights of employees, former employees, and applicants
-    for employment are protected under federal antidiscrimination, relaiation, and
-    whistleblower laws.
+  m_text: Search the room to find whom the No FEAR Act ensures the rights of under
+    federal antidiscrimination, retaliation, and whistleblower laws.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
