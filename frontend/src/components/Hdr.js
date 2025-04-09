@@ -5,22 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../imgs/402_SWEG_Shield.png";
+import { useUser } from "../context/UserContext";
 
 const Hdr = () => {
-    const [userName, setUserName] = useState("My Name");
+    const { user } = useUser();
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
-        axios.get(`${apiUrl}/api/user`, { withCredentials: true })
-            .then(response => {
-                const { firstName, lastName } = response.data;
-                setUserName(`${firstName} ${lastName}`);
-            })
-            .catch(error => {
-                console.error("Error fetching user data:", error);
-            });
-    }, []);
 
     const handleSignOut = () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
@@ -31,6 +20,8 @@ const Hdr = () => {
                 console.error("Error logging out:", error);
             });
     };
+
+    const userName = user ? `${user.firstName} ${user.lastName}` : "My Name";
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
