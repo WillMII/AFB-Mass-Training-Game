@@ -8,14 +8,18 @@ import logo from "../imgs/402_SWEG_Shield.png";
 import { useUser } from "../context/UserContext";
 
 const Hdr = () => {
-    const { user } = useUser();
+    const { user, setUser } = useUser();
     const navigate = useNavigate();
 
     const handleSignOut = () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
         
         axios.post(`${apiUrl}/api/logout`, {}, { withCredentials: true })
-            .then(() => navigate("/login"))
+            .then(() => {
+                setUser(null); // Clear user context
+                localStorage.removeItem("token"); // Clear token from local storage
+                navigate("/login"); // redirect to login page
+            })
             .catch((error) => {
                 console.error("Error logging out:", error);
             });

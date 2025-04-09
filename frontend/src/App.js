@@ -11,12 +11,36 @@ import Admin from './pages/Admin';
 import Profile from "./pages/Profile";
 import UserManagement from "./pages/UserManagement";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { UserProvider } from './context/UserContext';
+import { useEffect } from "react";
+import { useUser } from "./context/UserContext";
 
 function App() {
+
+  // Set User Context on Refresh
+  const { setUser } = useUser();
+  useEffect(() => {
+    const checkSession = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/user", {
+          credentials: "include",
+        });
+        if (response.ok) {
+          const data = await response.json();
+          setUser(data);
+        } else {
+          setUser(null);
+        }
+      } catch (err) {
+        console.error("Failed to load user:", err);
+      }
+    };
+  
+    checkSession();
+  }, []);
+  
+
   return (
     <div>
-      <UserProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create-account" element={<CreateAccount />} />
@@ -40,7 +64,6 @@ function App() {
           <Route path="/user-profile" element={<Profile />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
-      </ UserProvider>
     </div>
   );
 }
