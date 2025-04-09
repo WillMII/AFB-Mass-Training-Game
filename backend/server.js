@@ -330,6 +330,42 @@ app.get("/api/user-list", (req, res) => {
     }
 });
 
+// Route to get progress for the Progress Center
+app.get("/api/progress-center", authenticateUser, (req, res) => {
+    const userId = req.session.user.id;  // Retrieve userId from session (assuming user is authenticated)
+    
+    if (!userId) {
+        return res.status(401).json({ error: "User not authenticated" });
+    }
+
+    const sql = `
+        SELECT m.name AS module_name, gp.progress, gp.stage, gp.date_completed
+        FROM game_progress gp
+        JOIN modules m ON gp.module_id = m.module_id
+        WHERE gp.user_id = ?
+        ORDER BY gp.module_id, gp.stage;
+    `;
+    
+    db.query(sql, [userId], (err, results) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database error" });
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ message: "User progress not found" });
+        }
+
+        // Add hardcoded certificate value
+        const modifiedResults = results.map(row => ({
+            ...row,
+            certificate: 'CertificateName'  // Replace 'CertificateName' with the desired static value
+        }));
+
+        res.json(modifiedResults);
+    });
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
