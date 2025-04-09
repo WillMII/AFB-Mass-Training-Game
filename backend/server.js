@@ -113,6 +113,12 @@ app.post("/api/login", async (req, res) => {
     }
 });
 
+// Logout endpoint
+app.post('/api/logout', (req, res) => {
+    res.clearCookie('token', { httpOnly: true, secure: process.env.NODE_ENV === 'production' });
+    res.status(200).json({ message: 'Logged out successfully' });
+});
+
 //IS THIS EVER USED???
 // Home Route after login authenticated (successful login)
 app.get("/api/home", authenticateToken, (req, res) => {
