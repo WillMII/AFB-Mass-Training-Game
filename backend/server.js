@@ -327,9 +327,9 @@ app.get("/api/user-list", (req, res) => {
 });
 
 // Route to get progress for the Progress Center
-app.get("/api/progress-center", authenticateUser, (req, res) => {
-    const userId = req.session.user.id;  // Retrieve userId from session (assuming user is authenticated)
-    
+app.get("/api/progress-center", authenticateToken, (req, res) => {
+    const userId = req.user.id;  // Now using decoded token data from authenticateToken
+
     if (!userId) {
         return res.status(401).json({ error: "User not authenticated" });
     }
@@ -355,7 +355,7 @@ app.get("/api/progress-center", authenticateUser, (req, res) => {
         // Add hardcoded certificate value
         const modifiedResults = results.map(row => ({
             ...row,
-            certificate: 'CertificateName'  // Replace 'CertificateName' with the desired static value
+            certificate: 'CertificateName'  // Replace if dynamic later
         }));
 
         res.json(modifiedResults);

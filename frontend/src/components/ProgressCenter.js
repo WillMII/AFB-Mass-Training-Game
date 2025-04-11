@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import axios from 'axios'; // Make sure to install axios
+import axios from 'axios';
 import ModuleProgress from './ModuleProgress';
+
+// This function formats the date string to MM/DD/YYYY format
+const formatDate = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    if (isNaN(date)) return '';
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const dd = String(date.getDate()).padStart(2, '0');
+    const yyyy = date.getFullYear();
+    return `${mm}/${dd}/${yyyy}`;
+};
 
 const ProgressCenter = () => {
     const [userProgress, setUserProgress] = useState([]);
@@ -52,8 +63,14 @@ const ProgressCenter = () => {
                     key={index}
                     title={module.module_name}
                     progress={module.progress}
-                    completed={module.progress === 100}
-                    certificate={module.certificate}
+                    completed={
+                        module.date_completed
+                            ? formatDate(module.date_completed)
+                            : module.progress === 100
+                            ? 'Completed (no date recorded)'
+                            : ''
+                    }
+                    certificate={module.progress === 100 ? "View Certificate" : ""}
                 />
             ))}
         </div>
