@@ -32,7 +32,7 @@ label {
   font-size: 14px;
 }
 
-/* input[type="text"],
+input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
@@ -42,7 +42,7 @@ select {
   border-radius: 20px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-} */
+}
 
 .login-input {
   width: 100%;
@@ -94,15 +94,11 @@ button:hover {
   flex: 0 1 48%; /*dropdowns taking up space*/
 }
 
-select {
-  color: gray;
-}
-
-select option[value=""] {
+select:invalid {
   color: grey;
 }
 
-select:invalid {
+.select-placeholder {
   color: grey;
 }
 
@@ -131,4 +127,8 @@ select:invalid {
 .login-link:hover {
   color: rgb(25, 14, 140);
   text-decoration: underline;
+}
+
+.select-option-placeholder {
+  color: grey;
 }

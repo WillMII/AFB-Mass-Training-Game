@@ -27,6 +27,7 @@ const Profile = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [passwordLength, setPasswordLength] = useState(0); // Track password length for asterisks
 
   useEffect(() => {
@@ -155,7 +156,7 @@ const Profile = () => {
                   onChange={(e) => setNewPassword(e.target.value)}
                 />
                 <Button
-                  variant="outline-secondary"
+                  variant="outline-secondary rounded-end-pill"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? "Hide" : "Show"}
@@ -166,11 +167,19 @@ const Profile = () => {
             {/* Confirm Password */}
             <Form.Group className="mb-3">
               <Form.Label>Confirm Password</Form.Label>
+              <InputGroup>
               <Form.Control
-                type={showPassword ? "text" : "password"}
+                type={showConfirmPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
+              <Button
+                variant="outline-secondary rounded-end-pill"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? "Hide" : "Show"}
+              </Button>
+              </InputGroup>
             </Form.Group>
           </Form>
         </Modal.Body>

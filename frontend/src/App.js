@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount/CreateAccount";
 import Login from "./components/Login/Login";
-// import "./App.css";
+import "./App.css";
 import "./custom.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorPage from './pages/ErrorPage';
@@ -14,10 +14,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { useUser } from "./context/UserContext";
 import { Navigate } from "react-router-dom";
+import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
-
-  // Set User Context on Refresh
   const { user, setUser } = useUser();
   const [loading, setLoading] = React.useState(true);
 
@@ -40,13 +39,20 @@ function App() {
         setLoading(false);
       }
     };
-  
+
     checkSession();
   }, [setUser]);
 
   if (loading) {
-    return <div>Loading...</div>; // You can make this prettier later
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <Spinner animation="border" role="status">
+          <span className="text-primaryvisually-hidden">Loading...</span>
+        </Spinner>
+      </div>
+    );
   }
+
   return (
     <div>
       <Routes>
@@ -56,7 +62,7 @@ function App() {
         />
         <Route
           path="/create-account"
-          element={user ? <CreateAccount /> : <Navigate to="/login" />}
+          element={<CreateAccount />}
         />
         <Route path="/login" element={<Login />} />
         <Route

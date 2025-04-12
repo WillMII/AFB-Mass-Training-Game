@@ -69,7 +69,7 @@ app.post("/api/create-account", async (req, res) => {
 
 // Login Route
 app.post("/api/login", async (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, rememberMe } = req.body;
 
     if (!email || !password) {
         return res.status(400).json({ error: "Email and password are required" });
@@ -95,7 +95,7 @@ app.post("/api/login", async (req, res) => {
                 return res.status(401).json({ error: "Invalid email or password" });
             }
            
-            const token = generateToken(user);
+            const token = generateToken(user, rememberMe ? "7d" : "1h");
             res.cookie("token", token, {
                 httpOnly: true, // Prevents JavaScript access to the cookie
                 secure: process.env.NODE_ENV === 'production', // Set to true in production
