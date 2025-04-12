@@ -49,7 +49,7 @@ function App() {
         />
         <Route
           path="/create-account"
-          element={user ? <CreateAccount /> : <Navigate to="/login" />}
+          element=<CreateAccount />
         />
         <Route path="/login" element={<Login />} />
         <Route

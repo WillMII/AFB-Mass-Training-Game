@@ -39,6 +39,7 @@ const Login = () => {
         {
           email: formData.email,
           password: formData.password,
+          rememberMe: formData.rememberMe,
         },
         {
           withCredentials: true, // Include cookies in request

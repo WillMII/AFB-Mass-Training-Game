@@ -186,7 +186,7 @@ const CreateAccount = () => {
             Create Account
           </button>
 
-          <div class="form-group-remember">
+          <div className="form-group-remember remember-me">
             <input
               type="checkbox"
               id="rememberMe"
