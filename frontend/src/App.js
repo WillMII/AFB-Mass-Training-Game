@@ -20,7 +20,6 @@ function App() {
   const { user, setUser } = useUser();
   const [loading, setLoading] = React.useState(true);
 
-  // Set User Context on Refresh
   useEffect(() => {
     const checkSession = async () => {
       try {
@@ -29,7 +28,6 @@ function App() {
         });
         if (response.ok) {
           const data = await response.json();
-          console.log("User data:", data);
           setUser(data);
         } else {
           setUser(null);
@@ -38,7 +36,7 @@ function App() {
         console.error("Failed to load user:", err);
         setUser(null);
       } finally {
-        setLoading(false); // important
+        setLoading(false);
       }
     };
 
@@ -54,7 +52,6 @@ function App() {
       </div>
     );
   }
-
 
   return (
     <div>
