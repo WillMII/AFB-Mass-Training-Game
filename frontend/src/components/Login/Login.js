@@ -92,26 +92,6 @@ const Login = () => {
             className="login-input"
           />
         </div>
-        {/* <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <InputGroup>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Enter password"
-              className="login-input"
-            />
-            <Button
-              variant="outline-secondary rounded-end-pill"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? "Hide" : "Show"}
-            </Button>
-          </InputGroup>
-        </div> */}
         <Form.Group className="mb-3">
           <Form.Label>Password</Form.Label>
           <InputGroup>
