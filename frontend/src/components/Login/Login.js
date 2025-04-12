@@ -49,13 +49,13 @@ const Login = () => {
         alert("Login successful!");
         const token = response.data.token; // Assuming response contains token
         localStorage.setItem("token", token); // Store token in local storage
+        console.log("Token:", token);
 
         const userResponse = await axios.get("http://localhost:8000/api/user", {
           withCredentials: true, 
         });
 
         if (userResponse.status === 200) {
-          // Now that you have the user data, update the context
           setUser(userResponse.data); // Assuming the user data is in response.data
           navigate("/"); // Redirect to dashboard (change later)
 

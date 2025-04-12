@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { useUser } from '../context/UserContext';
 
 const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
+    const { user, setUser } = useUser();
     
     const downloadCertificate = async () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        const name = `${user.firstName} ${user.lastName}`;
+        const moduleName = title;
+        const dateCompleted = completed;
+
         const params = new URLSearchParams({
-            name: "Trainee Name",
-            moduleName: "STINFO",
-            dateCompleted: "01/01/22",
+            name,
+            moduleName,
+            dateCompleted,
         });
     
         const fullUrl = `${apiUrl}/api/download-certificate?${params.toString()}`;
