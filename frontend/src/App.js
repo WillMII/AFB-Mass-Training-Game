@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount/CreateAccount";
 import Login from "./components/Login/Login";
-// import "./App.css";
+import "./App.css";
 import "./custom.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorPage from './pages/ErrorPage';
@@ -14,11 +14,13 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { useUser } from "./context/UserContext";
 import { Navigate } from "react-router-dom";
+import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
+  const { user, setUser } = useUser();
+  const [loading, setLoading] = React.useState(true);
 
   // Set User Context on Refresh
-  const { user, setUser } = useUser();
   useEffect(() => {
     const checkSession = async () => {
       try {
@@ -34,11 +36,25 @@ function App() {
         }
       } catch (err) {
         console.error("Failed to load user:", err);
+        setUser(null);
+      } finally {
+        setLoading(false); // important
       }
     };
-  
+
     checkSession();
   }, [setUser]);
+
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <Spinner animation="border" role="status" variant="primary">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
+    );
+  }
+
 
   return (
     <div>
@@ -49,7 +65,7 @@ function App() {
         />
         <Route
           path="/create-account"
-          element=<CreateAccount />
+          element={<CreateAccount />}
         />
         <Route path="/login" element={<Login />} />
         <Route
