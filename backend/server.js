@@ -329,19 +329,23 @@ app.get("/api/user-list", (req, res) => {
 // Route to get progress for the Progress Center
 app.get("/api/progress-center", authenticateToken, (req, res) => {
     const userId = req.user.id;  // Now using decoded token data from authenticateToken
+    console.log("Fetching progress for user ID:", userId);
 
     if (!userId) {
         return res.status(401).json({ error: "User not authenticated" });
     }
 
     const sql = `
-        SELECT m.name AS module_name, gp.progress, gp.stage, gp.date_completed
-        FROM game_progress gp
-        JOIN modules m ON gp.module_id = m.module_id
-        WHERE gp.user_id = ?
-        ORDER BY gp.module_id, gp.stage;
+        SELECT m.module_id, m.name AS module_name, 
+            IFNULL(gp.progress, 0) AS progress, 
+            IFNULL(gp.stage, 0) AS stage, 
+            gp.date_completed
+        FROM modules m
+        LEFT JOIN game_progress gp 
+            ON m.module_id = gp.module_id AND gp.user_id = ?
+        ORDER BY m.module_id, gp.stage;
     `;
-    
+
     db.query(sql, [userId], (err, results) => {
         if (err) {
             console.error("Database error:", err);
@@ -349,6 +353,7 @@ app.get("/api/progress-center", authenticateToken, (req, res) => {
         }
 
         if (results.length === 0) {
+            console.log("No progress found for user ID:", userId);
             return res.status(404).json({ message: "User progress not found" });
         }
 
@@ -357,6 +362,7 @@ app.get("/api/progress-center", authenticateToken, (req, res) => {
             ...row,
             certificate: 'CertificateName'  // Replace if dynamic later
         }));
+        console.log("Fetched progress data:", modifiedResults);
 
         res.json(modifiedResults);
     });

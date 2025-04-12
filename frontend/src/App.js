@@ -19,6 +19,8 @@ function App() {
 
   // Set User Context on Refresh
   const { user, setUser } = useUser();
+  const [loading, setLoading] = React.useState(true);
+
   useEffect(() => {
     const checkSession = async () => {
       try {
@@ -27,19 +29,24 @@ function App() {
         });
         if (response.ok) {
           const data = await response.json();
-          console.log("User data:", data);
           setUser(data);
         } else {
           setUser(null);
         }
       } catch (err) {
         console.error("Failed to load user:", err);
+        setUser(null);
+      } finally {
+        setLoading(false);
       }
     };
   
     checkSession();
   }, [setUser]);
 
+  if (loading) {
+    return <div>Loading...</div>; // You can make this prettier later
+  }
   return (
     <div>
       <Routes>
