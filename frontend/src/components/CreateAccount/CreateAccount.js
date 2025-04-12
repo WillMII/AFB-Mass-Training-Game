@@ -126,7 +126,7 @@ const CreateAccount = () => {
                 name="squadron"
                 value={formData.squadron}
                 onChange={handleChange}
-                class="login-input"
+                className={`login-input ${formData.squadron === "" ? "select-placeholder" : ""}`}
               >
                 <option value="" disabled hidden>
                   Select Squadron
@@ -144,7 +144,7 @@ const CreateAccount = () => {
                 name="flight"
                 value={formData.flight}
                 onChange={handleChange}
-                class="login-input"
+                className={`login-input ${formData.flight === "" ? "select-placeholder" : ""}`}
               >
                 <option value="" disabled hidden>
                   Select Flight
