@@ -48,8 +48,8 @@ function App() {
   if (loading) {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100">
-        <Spinner animation="border" role="status" variant="primary">
-          <span className="visually-hidden">Loading...</span>
+        <Spinner animation="border" role="status">
+          <span className="text-primaryvisually-hidden">Loading...</span>
         </Spinner>
       </div>
     );
