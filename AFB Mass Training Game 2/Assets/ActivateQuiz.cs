@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ActivatQuiz : MonoBehaviour
+public class ActivateQuiz : MonoBehaviour
 {
 
     public List<CountingTypes4> counters;
