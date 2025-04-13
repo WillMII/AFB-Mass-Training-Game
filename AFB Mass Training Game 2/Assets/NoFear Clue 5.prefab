@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211.6, y: 129.7}
+  m_AnchoredPosition: {x: 210, y: 156}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9165248387966025988
@@ -511,38 +511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '13 prohibited personnel practices:
-
-    -discrimination
-
-    -Inappropriate
-    recommendations
-
-    -Coercing political activity
-
-    -obstructing competition
-
-    -Influencing
-    withdrawal from competition
-
-    -Unfair advantage
-
-    -Nepotism
-
-    -whistleblower
-    retaliation
-
-    -other retaliation
-
-    -other discrimination
-
-    -veterans
-    preference
-
-    -violating rules that implement a merit system principle
-
-    -imposing
-    nondisclosure agreement that doesn''t allow whistleblowing'
+  m_text: Search the room to find the 13 prohibited personnel practices.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
@@ -569,8 +538,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11
-  m_fontSizeBase: 11
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -605,7 +574,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -123.97101, y: -88.647156, z: -69.73627, w: -42.252457}
+  m_margin: {x: -161.67766, y: -122.16423, z: -105.34822, w: -74.722084}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

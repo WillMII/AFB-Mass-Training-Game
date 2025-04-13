@@ -70,7 +70,7 @@ public class Selected10 : MonoBehaviour
         else if (answer == "B 10")
         {
             textT.text = "B";
-            correct = true;
+            
 
         }
         else if (answer == "C 10")
@@ -80,7 +80,7 @@ public class Selected10 : MonoBehaviour
         else if (answer == "D 10 Variant")
         {
             textT.text = "D";
-            
+            correct = true;
 
         }
         //textT.text = "D";

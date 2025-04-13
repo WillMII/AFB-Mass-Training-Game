@@ -67,10 +67,11 @@ public class Selected1 : MonoBehaviour
         } else if (answer == "C 1")
         {
             textT.text = "C";
+            correct = true;
         } else if (answer == "D 1")
         {
             textT.text = "D";
-            correct = true;
+            
         }
         //textT.text = "D";
         /*

@@ -61,12 +61,13 @@ public class Selected9 : MonoBehaviour
         if (answer == "A 9 Variant")
         {
             textT.text = "A";
+            correct = true;
 
         }
         else if (answer == "B 9")
         {
             textT.text = "B";
-            correct = true;
+            
 
         }
         /*

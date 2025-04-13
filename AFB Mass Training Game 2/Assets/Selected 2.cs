@@ -65,7 +65,7 @@ public class Selected2 : MonoBehaviour
         else if (answer == "B 2")
         {
             textT.text = "B";
-            correct = true;
+            
         }
         else if (answer == "C 2")
         {
@@ -74,7 +74,8 @@ public class Selected2 : MonoBehaviour
         else if (answer == "D 2 Variant")
         {
             textT.text = "D";
-            
+            correct = true;
+
         }
         //textT.text = "D";
         /*

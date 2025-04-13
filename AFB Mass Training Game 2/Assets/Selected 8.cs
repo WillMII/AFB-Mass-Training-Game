@@ -66,13 +66,13 @@ public class Selected8 : MonoBehaviour
         else if (answer == "B 8")
         {
             textT.text = "B";
-
+            correct = true;
 
         }
         else if (answer == "C 8")
         {
             textT.text = "C";
-            correct = true;
+            
         }
         else if (answer == "D 8 Variant")
         {
