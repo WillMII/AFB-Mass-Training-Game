@@ -2,9 +2,21 @@ void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : Unity.Burst.LowLevel.BurstCompilerService
 
+		//System.Boolean Unity.Burst.LowLevel.BurstCompilerService::LoadBurstLibrary(System.String)
+		void Register_Unity_Burst_LowLevel_BurstCompilerService_LoadBurstLibrary();
+		Register_Unity_Burst_LowLevel_BurstCompilerService_LoadBurstLibrary();
+
 		//System.Int32 Unity.Burst.LowLevel.BurstCompilerService::CompileAsyncDelegateMethod(System.Object,System.String)
 		void Register_Unity_Burst_LowLevel_BurstCompilerService_CompileAsyncDelegateMethod();
 		Register_Unity_Burst_LowLevel_BurstCompilerService_CompileAsyncDelegateMethod();
+
+		//System.String Unity.Burst.LowLevel.BurstCompilerService::GetDisassembly(System.Reflection.MethodInfo,System.String)
+		void Register_Unity_Burst_LowLevel_BurstCompilerService_GetDisassembly();
+		Register_Unity_Burst_LowLevel_BurstCompilerService_GetDisassembly();
+
+		//System.UInt32 Unity.Burst.LowLevel.BurstCompilerService::GetCurrentExecutionMode()
+		void Register_Unity_Burst_LowLevel_BurstCompilerService_GetCurrentExecutionMode();
+		Register_Unity_Burst_LowLevel_BurstCompilerService_GetCurrentExecutionMode();
 
 		//System.Void Unity.Burst.LowLevel.BurstCompilerService::Log(System.Void*,Unity.Burst.LowLevel.BurstCompilerService/BurstLogType,System.Byte*,System.Byte*,System.Int32)
 		void Register_Unity_Burst_LowLevel_BurstCompilerService_Log();
@@ -13,6 +25,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void Unity.Burst.LowLevel.BurstCompilerService::RuntimeLog(System.Void*,Unity.Burst.LowLevel.BurstCompilerService/BurstLogType,System.Byte*,System.Byte*,System.Int32)
 		void Register_Unity_Burst_LowLevel_BurstCompilerService_RuntimeLog();
 		Register_Unity_Burst_LowLevel_BurstCompilerService_RuntimeLog();
+
+		//System.Void Unity.Burst.LowLevel.BurstCompilerService::SetCurrentExecutionMode(System.UInt32)
+		void Register_Unity_Burst_LowLevel_BurstCompilerService_SetCurrentExecutionMode();
+		Register_Unity_Burst_LowLevel_BurstCompilerService_SetCurrentExecutionMode();
 
 		//System.Void* Unity.Burst.LowLevel.BurstCompilerService::GetAsyncCompiledAsyncDelegateMethod(System.Int32)
 		void Register_Unity_Burst_LowLevel_BurstCompilerService_GetAsyncCompiledAsyncDelegateMethod();
@@ -25,6 +41,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : Unity.Burst.LowLevel.BurstCompilerService
 
 	//Start Registrations for type : Unity.Collections.LowLevel.Unsafe.UnsafeUtility
+
+		//System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::GetScriptingTypeFlags(System.Type)
+		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_GetScriptingTypeFlags();
+		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_GetScriptingTypeFlags();
 
 		//System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::LeakErase(System.IntPtr,Unity.Collections.LeakCategory)
 		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_LeakErase();
@@ -53,6 +73,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemCpyStride(System.Void*,System.Int32,System.Void*,System.Int32,System.Int32,System.Int32)
 		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemCpyStride();
 		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemCpyStride();
+
+		//System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemMove(System.Void*,System.Void*,System.Int64)
+		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemMove();
+		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemMove();
 
 		//System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemSet(System.Void*,System.Byte,System.Int64)
 		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemSet();
@@ -193,6 +217,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.Animator::get_hasBoundPlayables()
 		void Register_UnityEngine_Animator_get_hasBoundPlayables();
 		Register_UnityEngine_Animator_get_hasBoundPlayables();
+
+		//System.Int32 UnityEngine.Animator::StringToHash(System.String)
+		void Register_UnityEngine_Animator_StringToHash();
+		Register_UnityEngine_Animator_StringToHash();
 
 		//System.Void UnityEngine.Animator::ResetTriggerString(System.String)
 		void Register_UnityEngine_Animator_ResetTriggerString();
@@ -934,6 +962,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_TryGetComponentInternal();
 		Register_UnityEngine_GameObject_TryGetComponentInternal();
 
+		//UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
+		void Register_UnityEngine_GameObject_Find();
+		Register_UnityEngine_GameObject_Find();
+
 		//UnityEngine.Transform UnityEngine.GameObject::get_transform()
 		void Register_UnityEngine_GameObject_get_transform();
 		Register_UnityEngine_GameObject_get_transform();
@@ -1082,6 +1114,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIClip_GetMatrix_Injected();
 		Register_UnityEngine_GUIClip_GetMatrix_Injected();
 
+		//System.Void UnityEngine.GUIClip::GetTopRect_Injected(UnityEngine.Rect&)
+		void Register_UnityEngine_GUIClip_GetTopRect_Injected();
+		Register_UnityEngine_GUIClip_GetTopRect_Injected();
+
 		//System.Void UnityEngine.GUIClip::Internal_Pop()
 		void Register_UnityEngine_GUIClip_Internal_Pop();
 		Register_UnityEngine_GUIClip_Internal_Pop();
@@ -1097,6 +1133,14 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GUIClip::SetMatrix_Injected(UnityEngine.Matrix4x4&)
 		void Register_UnityEngine_GUIClip_SetMatrix_Injected();
 		Register_UnityEngine_GUIClip_SetMatrix_Injected();
+
+		//System.Void UnityEngine.GUIClip::Unclip_Vector2_Injected(UnityEngine.Vector2&,UnityEngine.Vector2&)
+		void Register_UnityEngine_GUIClip_Unclip_Vector2_Injected();
+		Register_UnityEngine_GUIClip_Unclip_Vector2_Injected();
+
+		//System.Void UnityEngine.GUIClip::get_topmostRect_Injected(UnityEngine.Rect&)
+		void Register_UnityEngine_GUIClip_get_topmostRect_Injected();
+		Register_UnityEngine_GUIClip_get_topmostRect_Injected();
 
 		//System.Void UnityEngine.GUIClip::get_visibleRect_Injected(UnityEngine.Rect&)
 		void Register_UnityEngine_GUIClip_get_visibleRect_Injected();
@@ -1317,6 +1361,14 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.Input::CheckDisabled()
 		void Register_UnityEngine_Input_CheckDisabled();
 		Register_UnityEngine_Input_CheckDisabled();
+
+		//System.Boolean UnityEngine.Input::GetKeyDownInt(UnityEngine.KeyCode)
+		void Register_UnityEngine_Input_GetKeyDownInt();
+		Register_UnityEngine_Input_GetKeyDownInt();
+
+		//System.Boolean UnityEngine.Input::GetKeyInt(UnityEngine.KeyCode)
+		void Register_UnityEngine_Input_GetKeyInt();
+		Register_UnityEngine_Input_GetKeyInt();
 
 		//System.Boolean UnityEngine.Input::GetMouseButton(System.Int32)
 		void Register_UnityEngine_Input_GetMouseButton();
@@ -1786,6 +1838,14 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_MonoBehaviour_IsObjectMonoBehaviour();
 		Register_UnityEngine_MonoBehaviour_IsObjectMonoBehaviour();
 
+		//System.Boolean UnityEngine.MonoBehaviour::get_useGUILayout()
+		void Register_UnityEngine_MonoBehaviour_get_useGUILayout();
+		Register_UnityEngine_MonoBehaviour_get_useGUILayout();
+
+		//System.String UnityEngine.MonoBehaviour::GetScriptClassName()
+		void Register_UnityEngine_MonoBehaviour_GetScriptClassName();
+		Register_UnityEngine_MonoBehaviour_GetScriptClassName();
+
 		//System.Void UnityEngine.MonoBehaviour::CancelInvoke(UnityEngine.MonoBehaviour,System.String)
 		void Register_UnityEngine_MonoBehaviour_CancelInvoke();
 		Register_UnityEngine_MonoBehaviour_CancelInvoke();
@@ -1806,6 +1866,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_MonoBehaviour_StopAllCoroutines();
 		Register_UnityEngine_MonoBehaviour_StopAllCoroutines();
 
+		//System.Void UnityEngine.MonoBehaviour::StopCoroutine(System.String)
+		void Register_UnityEngine_MonoBehaviour_StopCoroutine();
+		Register_UnityEngine_MonoBehaviour_StopCoroutine();
+
 		//System.Void UnityEngine.MonoBehaviour::StopCoroutineFromEnumeratorManaged(System.Collections.IEnumerator)
 		void Register_UnityEngine_MonoBehaviour_StopCoroutineFromEnumeratorManaged();
 		Register_UnityEngine_MonoBehaviour_StopCoroutineFromEnumeratorManaged();
@@ -1813,6 +1877,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.MonoBehaviour::StopCoroutineManaged(UnityEngine.Coroutine)
 		void Register_UnityEngine_MonoBehaviour_StopCoroutineManaged();
 		Register_UnityEngine_MonoBehaviour_StopCoroutineManaged();
+
+		//System.Void UnityEngine.MonoBehaviour::set_useGUILayout(System.Boolean)
+		void Register_UnityEngine_MonoBehaviour_set_useGUILayout();
+		Register_UnityEngine_MonoBehaviour_set_useGUILayout();
 
 		//UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutineManaged(System.String,System.Object)
 		void Register_UnityEngine_MonoBehaviour_StartCoroutineManaged();
@@ -2497,6 +2565,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Sprite
 
 	//Start Registrations for type : UnityEngine.SpriteRenderer
+
+		//System.Void UnityEngine.SpriteRenderer::set_sprite(UnityEngine.Sprite)
+		void Register_UnityEngine_SpriteRenderer_set_sprite();
+		Register_UnityEngine_SpriteRenderer_set_sprite();
 
 		//UnityEngine.Sprite UnityEngine.SpriteRenderer::get_sprite()
 		void Register_UnityEngine_SpriteRenderer_get_sprite();

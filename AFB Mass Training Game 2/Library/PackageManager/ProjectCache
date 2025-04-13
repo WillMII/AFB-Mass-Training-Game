@@ -6,7 +6,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638795036511711619
+      ticks: 638801775172557221
     m_Hash: 156587631
   m_LockFileStatus:
     m_FilePath: C:/Users/drblu/Documents/School/College/Classes/Spring 2025/CSEE
@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638795036511771625
+      ticks: 638801775172567232
     m_Hash: 1318677425
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -4011,10 +4011,12 @@ m_ResolvedPackages:
     - 1.1.6
     - 1.1.7
     - 1.1.8
+    - 1.1.9
     - 1.2.0
     - 1.2.1
     - 1.2.2
     - 1.2.3
+    - 1.2.4
     compatible:
     - 1.0.0
     - 1.0.1
@@ -4027,6 +4029,7 @@ m_ResolvedPackages:
     - 1.1.6
     - 1.1.7
     - 1.1.8
+    - 1.1.9
     recommended: 1.0.1
     deprecated: []
   dependencies:
@@ -4705,6 +4708,8 @@ m_ResolvedPackages:
     - 1.8.17
     - 1.8.18
     - 1.8.19
+    - 1.8.20
+    - 1.8.21
     compatible:
     - 1.8.7
     - 1.8.8
@@ -4719,7 +4724,9 @@ m_ResolvedPackages:
     - 1.8.17
     - 1.8.18
     - 1.8.19
-    recommended: 1.8.19
+    - 1.8.20
+    - 1.8.21
+    recommended: 1.8.21
     deprecated: []
   dependencies:
   - name: com.unity.mathematics

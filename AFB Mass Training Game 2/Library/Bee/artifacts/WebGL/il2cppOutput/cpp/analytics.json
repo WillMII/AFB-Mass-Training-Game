@@ -1,6 +1,6 @@
 {
   "DataTable": {
-    "attribute_total_count_eager_static_constructor": 17,
+    "attribute_total_count_eager_static_constructor": 80,
     "attribute_total_count_set_option": 0,
     "attribute_total_count_generate_into_own_cpp_file": 0,
     "attribute_total_count_ignore_by_deep_profiler": 20,
@@ -9,11 +9,11 @@
     "option_jobs": 16,
     "option_debug_assembly_name_count": 0,
     "option_additional_cpp_count": 0,
-    "option_emit_null_checks": true,
-    "option_enable_stacktrace": true,
+    "option_emit_null_checks": false,
+    "option_enable_stacktrace": false,
     "option_enable_deep_profiler": false,
     "option_enable_stats": false,
-    "option_enable_array_bounds_check": true,
+    "option_enable_array_bounds_check": false,
     "option_enable_divide_by_zero_check": false,
     "option_emit_comments": false,
     "option_disable_generic_sharing": false,
@@ -23,9 +23,7 @@
       "EnableInlining"
     ],
     "option_file_generation_option": [],
-    "option_generics_option": [
-      "EnableFullSharing"
-    ],
+    "option_generics_option": [],
     "option_feature": [],
     "option_diagnostic_option": [],
     "option_convert_to_cpp": true,
