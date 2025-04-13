@@ -26,7 +26,7 @@ public class Selected10 : MonoBehaviour
     public GameObject currentB;
     public GameObject currentC;
     public GameObject currentD;
-    public Keypad getQuiz;
+    //public Keypad getQuiz;
     public GameObject finishText;
     public GameObject failText;
     
@@ -40,9 +40,9 @@ public class Selected10 : MonoBehaviour
 
     void Start()
     {
-        GameObject keypad = GameObject.Find("Keypad");
-        parentK = keypad.GetComponent<Keypad>();
-        parent = parentK.getInstance();
+        //GameObject keypad = GameObject.Find("Keypad");
+        //parentK = keypad.GetComponent<Keypad>();
+        //parent = parentK.getInstance();
 
     }
 
@@ -70,7 +70,7 @@ public class Selected10 : MonoBehaviour
         else if (answer == "B 10")
         {
             textT.text = "B";
-            correct = true;
+            
 
         }
         else if (answer == "C 10")
@@ -80,7 +80,7 @@ public class Selected10 : MonoBehaviour
         else if (answer == "D 10 Variant")
         {
             textT.text = "D";
-            
+            correct = true;
 
         }
         //textT.text = "D";
@@ -128,5 +128,11 @@ public class Selected10 : MonoBehaviour
              finishText.gameObject.SetActive(true);
         }
 
+
+    }
+
+    public bool didPass()
+    {
+        return passed;
     }
 }

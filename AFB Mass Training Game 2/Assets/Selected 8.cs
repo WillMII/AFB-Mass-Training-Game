@@ -26,7 +26,7 @@ public class Selected8 : MonoBehaviour
     public GameObject currentB;
     public GameObject currentC;
     public GameObject currentD;
-    public Keypad getQuiz;
+    //public Keypad getQuiz;
     
     private GameObject textF;
     private GameObject text1Instance;
@@ -36,9 +36,9 @@ public class Selected8 : MonoBehaviour
 
     void Start()
     {
-        GameObject keypad = GameObject.Find("Keypad");
-        parentK = keypad.GetComponent<Keypad>();
-        parent = parentK.getInstance();
+        //GameObject keypad = GameObject.Find("Keypad");
+        //parentK = keypad.GetComponent<Keypad>();
+        //parent = parentK.getInstance();
 
     }
 
@@ -66,13 +66,13 @@ public class Selected8 : MonoBehaviour
         else if (answer == "B 8")
         {
             textT.text = "B";
-
+            correct = true;
 
         }
         else if (answer == "C 8")
         {
             textT.text = "C";
-            correct = true;
+            
         }
         else if (answer == "D 8 Variant")
         {

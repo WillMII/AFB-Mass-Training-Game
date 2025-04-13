@@ -26,7 +26,7 @@ public class Selected7 : MonoBehaviour
     public GameObject currentB;
     public GameObject currentC;
     public GameObject currentD;
-    public Keypad getQuiz;
+    //public Keypad getQuiz;
     
     private GameObject textF;
     private GameObject text1Instance;
@@ -36,9 +36,9 @@ public class Selected7 : MonoBehaviour
 
     void Start()
     {
-        GameObject keypad = GameObject.Find("Keypad");
-        parentK = keypad.GetComponent<Keypad>();
-        parent = parentK.getInstance();
+        //GameObject keypad = GameObject.Find("Keypad");
+        //parentK = keypad.GetComponent<Keypad>();
+        //parent = parentK.getInstance();
 
     }
 

@@ -1646,7 +1646,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_UiScaleMode: 0
+=======
+  m_UiScaleMode: 1
+>>>>>>> Will's-New-Branch
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1902,7 +1906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 859e768638ed83d409cb00fee729a53e, type: 3}
-  mini: {fileID: 6038738836658088276, guid: d45a0614b6f6b9f41a56ea0e6d265d15, type: 3}
+  mini: {fileID: 56012925045845230, guid: 739cb125dbff42242bcc36681373f4a7, type: 3}
   toolbar: {fileID: 255792517}
   activateStarter: {fileID: 1574584762}
   activateEnder: {fileID: 1245857995}
@@ -2008,6 +2012,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1796231589686607641, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2102270484145508680, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2092,13 +2100,33 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2711490600842298105, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711490600842298105, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+      propertyPath: m_margin.z
+      value: -0.7484284
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711490600842298105, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3958833793951101939, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 427.7637
+      value: 275.0419
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958833793951101939, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 48.9819
       objectReference: {fileID: 0}
     - target: {fileID: 3958833793951101939, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 58.41211
+      value: 262.47577
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958833793951101939, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 170.98093
       objectReference: {fileID: 0}
     - target: {fileID: 6377491724588624081, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
       propertyPath: ED
@@ -2242,7 +2270,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 370, y: -215}
+=======
+  m_AnchoredPosition: {x: 296, y: -170}
+>>>>>>> Will's-New-Branch
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348917191
@@ -2416,7 +2448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 71d101a911039eb478b323147cf6d85f, type: 3}
-  mini: {fileID: 2672931445162132102, guid: aaa60e19fb0cf5e46acf736a4e98f32d, type: 3}
+  mini: {fileID: 7897677988887383260, guid: 8b3b7d64374a5f94aacefb655b9e7f06, type: 3}
   toolbar: {fileID: 255792517}
   activateStarter: {fileID: 1574584762}
   activateEnder: {fileID: 1245857995}
@@ -3098,7 +3130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 8785921fc74645a4a86d1a50f37f692d, type: 3}
-  mini: {fileID: 8934938253450200488, guid: 7409deb70b4964b4a93e46cc30a3545b, type: 3}
+  mini: {fileID: 8447430498149856683, guid: cacb6c0a7c9779a4399553dd2ced44d2, type: 3}
   toolbar: {fileID: 255792517}
   clueCounter: {fileID: 1245857995}
 --- !u!1 &1601011634

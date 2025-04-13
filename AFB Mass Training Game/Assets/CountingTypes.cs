@@ -96,7 +96,10 @@ public class CountingTypes : MonoBehaviour
     {
         return numFound;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Will's-New-Branch
     public bool allFound()
     {
         return numFound == 7;

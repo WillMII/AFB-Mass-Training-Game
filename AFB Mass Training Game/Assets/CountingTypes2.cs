@@ -66,7 +66,7 @@ public class CountingTypes2 : MonoBehaviour
                 }
                 */
 
-                text.text = "STINFO Types Found: " + numFound + "/4";
+                text.text = "Marking Rules Found: " + numFound + "/4";
             }
             else
             {

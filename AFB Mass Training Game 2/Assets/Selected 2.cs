@@ -26,7 +26,7 @@ public class Selected2 : MonoBehaviour
     public GameObject currentB;
     public GameObject currentC;
     public GameObject currentD;
-    public Keypad getQuiz;
+    //public Keypad getQuiz;
     
     private GameObject textF;
     private GameObject text1Instance;
@@ -36,9 +36,9 @@ public class Selected2 : MonoBehaviour
 
     void Start()
     {
-        GameObject keypad = GameObject.Find("Keypad");
-        parentK = keypad.GetComponent<Keypad>();
-        parent = parentK.getInstance();
+        //GameObject keypad = GameObject.Find("Keypad");
+        //parentK = keypad.GetComponent<Keypad>();
+        //parent = parentK.getInstance();
 
     }
 
@@ -65,7 +65,7 @@ public class Selected2 : MonoBehaviour
         else if (answer == "B 2")
         {
             textT.text = "B";
-            correct = true;
+            
         }
         else if (answer == "C 2")
         {
@@ -74,7 +74,8 @@ public class Selected2 : MonoBehaviour
         else if (answer == "D 2 Variant")
         {
             textT.text = "D";
-            
+            correct = true;
+
         }
         //textT.text = "D";
         /*

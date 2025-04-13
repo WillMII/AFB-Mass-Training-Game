@@ -65,19 +65,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'What is STINFO?
+  m_text: 'What is the primary purpose of the No-Fear Act?
 
-    A) Information that relates to different states in
-    the United States
+    A) To outline disciplinary
+    actions that Federal Agencies can use for anti-discrimination and whisteblower
+    protection laws
 
-    B) Information related to static technology
+    B)
 
-    C) The
-    guidelines by which one should study the rules and regulations related to their
-    specific duty
+    C)
 
-    D) Information related to experimental, developmental, or
-    engineering works'
+    D)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}

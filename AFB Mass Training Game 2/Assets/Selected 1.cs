@@ -16,7 +16,7 @@ public class Selected1 : MonoBehaviour
 
     public GameObject next;
     private GameObject parent;
-    private Keypad parentK;
+    private ActivateQuiz parentAQ;
 
     public GameObject nextA;
     public GameObject nextB;
@@ -26,7 +26,7 @@ public class Selected1 : MonoBehaviour
     public GameObject currentB;
     public GameObject currentC;
     public GameObject currentD;
-    public Keypad getQuiz;
+    //public Keypad getQuiz;
     
     private GameObject textF;
     private GameObject text1Instance;
@@ -36,9 +36,9 @@ public class Selected1 : MonoBehaviour
 
     void Start()
     {
-        GameObject keypad = GameObject.Find("Keypad");
-        parentK = keypad.GetComponent<Keypad>();
-        parent = parentK.getInstance();
+        //GameObject activateQuiz = GameObject.Find("Padlock");
+        //parentAQ = activateQuiz.GetComponent<ActivateQuiz>();
+        //parent = parentAQ.getInstance();
 
     }
 
@@ -67,10 +67,11 @@ public class Selected1 : MonoBehaviour
         } else if (answer == "C 1")
         {
             textT.text = "C";
+            correct = true;
         } else if (answer == "D 1")
         {
             textT.text = "D";
-            correct = true;
+            
         }
         //textT.text = "D";
         /*
