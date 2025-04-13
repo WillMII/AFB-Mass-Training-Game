@@ -362,6 +362,29 @@ app.get("/api/progress-center", authenticateToken, (req, res) => {
     });
 });
 
+//delete account
+app.post("/api/user/delete", authenticateToken, (req, res) => {
+    const userId = req.user.id;  // Now using decoded token data from authenticateToken
+    console.log("User ID from token:", userId);  // debug
+
+    if (!userId) {
+        return res.status(401).json({ error: "User not authenticated" });
+    }
+
+    const sql = "DELETE FROM users WHERE user_id = ?";
+    db.query(sql, [userId], (err, result) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database error" });
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.status(200).json({ message: "Account deleted successfully" });
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
