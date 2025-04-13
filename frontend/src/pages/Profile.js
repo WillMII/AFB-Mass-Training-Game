@@ -29,6 +29,8 @@ const Profile = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [passwordLength, setPasswordLength] = useState(0); // Track password length for asterisks
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -74,6 +76,21 @@ const Profile = () => {
       alert("Failed to update password.");
     }
   };
+
+  const handleDeleteAccount = async () => {
+    try {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+      await axios.delete(`${apiUrl}/api/user/delete`, { withCredentials: true });
+      alert("Account deleted successfully.");
+      localStorage.removeItem("token");
+      setShowDeleteModal(false);
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Error deleting account:", error);
+      alert("Failed to delete account.");
+    }
+  };
+  
 
   return (
     <div className="d-flex flex-column min-vh-100">
@@ -136,6 +153,10 @@ const Profile = () => {
             </Button>
           </Col>
         </Form.Group>
+        <hr />
+
+
+        <Button variant="danger" onClick={() => setShowDeleteModal(true)}>Delete Account</Button>
       </Container>
       <Footer />
 
@@ -192,6 +213,24 @@ const Profile = () => {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirm Account Deletion</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Are you sure you want to delete your account? This action is permanent and cannot be undone.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={handleDeleteAccount}>
+            Delete My Account
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </div>
   );
 };
