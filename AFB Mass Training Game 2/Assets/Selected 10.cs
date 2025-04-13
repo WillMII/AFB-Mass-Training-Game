@@ -128,5 +128,11 @@ public class Selected10 : MonoBehaviour
              finishText.gameObject.SetActive(true);
         }
 
+
+    }
+
+    public bool didPass()
+    {
+        return passed;
     }
 }
