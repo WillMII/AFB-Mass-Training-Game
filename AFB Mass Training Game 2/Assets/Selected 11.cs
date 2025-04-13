@@ -22,7 +22,7 @@ public class Selected11 : MonoBehaviour
     public GameObject nextC;
     public GameObject nextD;
     public GameObject tryAgain;
-    public Keypad getQuiz;
+    //public Keypad getQuiz;
 
     public GameObject Answer1;
     public GameObject Answer2;
@@ -45,9 +45,9 @@ public class Selected11 : MonoBehaviour
 
     void Start()
     {
-        GameObject keypad = GameObject.Find("Keypad");
-        parentK = keypad.GetComponent<Keypad>();
-        parent = parentK.getInstance();
+        //GameObject keypad = GameObject.Find("Keypad");
+        //parentK = keypad.GetComponent<Keypad>();
+        //parent = parentK.getInstance();
 
     }
 

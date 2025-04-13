@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: aca0fb413e59dcd4e87361b874d9313f, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 2577232984465498577, guid: 95874508dc2ba0f41927e790b5529c2f, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &64891042
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: cda149a1029716840920feee7b0e7eb2, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 2699098642151553489, guid: 6f0b3f69a64e7814d853cb2f39e2e358, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &229116119
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 1c47d26976305a54f96e24a8941ac1b1, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 2661387706545161759, guid: e9415eec68ed5154195a168679a4a36a, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &374530550
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: fa6a38e587775e044b7f48d4540e664f, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 2579771418315402161, guid: c1268ee59bf423c4fb23e2b8d49898cf, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &548331415
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 25e92d7524c98c64fa95777954834de0, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 3222008616507843683, guid: 8fc933b51db7fe0489b9f5f4483be551, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &876246611
@@ -3061,6 +3061,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7314325624056884787, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7361483344399864912, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3386,7 +3390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: edbb3d46f70452e4697a6a7623541277, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 5456535666962773427, guid: 031880c6d1d0a9647afe1a5b53bcd9b3, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &1004720351
@@ -3562,7 +3566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 5e3c2da78bc22524a9acbff8c1d1b8fd, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 4258954740104893954, guid: 590405f2dfaa95e469decca3ab52826a, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &1008658470
@@ -4110,7 +4114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 18f47cda8f51c2046a406ec3ca91b0bf, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 7896350308277229175, guid: 81a1497443fe55048bb373f177b6c4cb, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &1061766412
@@ -4371,7 +4375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 3737664b428c1d042aead19af8f67426, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 3825398463058614872, guid: 6764c8aca5d3107429ab1b2f52942469, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &1178386112
@@ -4653,7 +4657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: f096512e0919e8e41960a904213988cd, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 6784773526607243033, guid: 168c65284a79dcd4ba3a2977e34e5b08, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &1316402094
@@ -5518,7 +5522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 9ac0475833dcc0144bdd7c3a04872431, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 3795597460628464240, guid: e01ba1a6f17685f438a33ff770ca2972, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &1534159332
@@ -6275,7 +6279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: ad4b0ef006f742a45849ae6152b11dc2, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  mini: {fileID: 2761569368450598486, guid: 544a7b792c02cd145ab97a0bd64cbccd, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
 --- !u!114 &1983389281
