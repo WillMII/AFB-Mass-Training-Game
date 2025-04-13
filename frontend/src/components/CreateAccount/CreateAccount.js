@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./CreateAccount.css";
 import { useNavigate } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Container, InputGroup, Button, Form } from "react-bootstrap";
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +14,8 @@ const CreateAccount = () => {
     confirmPassword: "",
     rememberMe: false,
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
   const flightOptions = ["A", "B", "C", "N/A"];
@@ -126,7 +128,7 @@ const CreateAccount = () => {
                 name="squadron"
                 value={formData.squadron}
                 onChange={handleChange}
-                class="login-input"
+                className={`login-input ${formData.squadron === "" ? "select-placeholder" : ""}`}
               >
                 <option value="" disabled hidden>
                   Select Squadron
@@ -144,7 +146,7 @@ const CreateAccount = () => {
                 name="flight"
                 value={formData.flight}
                 onChange={handleChange}
-                class="login-input"
+                className={`login-input ${formData.flight === "" ? "select-placeholder" : ""}`}
               >
                 <option value="" disabled hidden>
                   Select Flight
@@ -156,37 +158,51 @@ const CreateAccount = () => {
             </div>
           </div>
 
-          <div class="form-group">
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Enter password"
-              class="login-input"
-            />
-          </div>
+          <Form.Group className="mb-3">
+            <Form.Label htmlFor="password">Password:</Form.Label>
+            <InputGroup>
+              <Form.Control
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Enter password"
+              />
+              <Button
+                className="btn btn-outline-secondary rounded-end-pill btn-light"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </Button>
+            </InputGroup>
+          </Form.Group>
 
-          <div class="form-group">
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              placeholder="Confirm password"
-              class="login-input"
-            />
-          </div>
+          <Form.Group className="mb-3">
+            <Form.Label htmlFor="confirmPassword">Confirm Password:</Form.Label>
+            <InputGroup>
+              <Form.Control
+                type={showConfirmPassword ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                placeholder="Confirm Password"
+              />
+              <Button
+                className="btn btn-outline-secondary rounded-end-pill btn-light"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? "Hide" : "Show"}
+              </Button>
+            </InputGroup>
+          </Form.Group>
 
           <button type="submit" class="btn btn-primary login-button">
             Create Account
           </button>
 
-          <div class="form-group-remember">
+          <div className="form-group-remember remember-me">
             <input
               type="checkbox"
               id="rememberMe"

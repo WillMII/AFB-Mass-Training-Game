@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import axios from "axios";
+import { useUser } from "../../context/UserContext";
+import { InputGroup, Button, Form } from "react-bootstrap";
 
 const Login = () => {
   const navigate = useNavigate(); // Initialize navigate function
+  const { setUser } = useUser();
+  const [showPassword, setShowPassword] = useState(false);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -31,26 +36,37 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
+      const response = await axios.post(
+        "http://localhost:8000/api/login",
+        {
+          email: formData.email,
+          password: formData.password,
+          rememberMe: formData.rememberMe,
         },
-        body: JSON.stringify({
-            email: formData.email,
-            password: formData.password,
-        }),
-        credentials: "include", // Ensures cookies/sessions are sent
-      });
+        {
+          withCredentials: true, // Include cookies in request
+        }
+      );
 
-      const data = await response.json();
-
-      if (response.ok) {
+      if (response.status === 200) {
         alert("Login successful!");
-        localStorage.setItem("user", JSON.stringify(data.user)); // Store user session
-        navigate("/"); // Redirect to dashboard (change later)
+        const token = response.data.token; // Assuming response contains token
+        localStorage.setItem("token", token); // Store token in local storage
+        console.log("Token:", token);
+
+        const userResponse = await axios.get("http://localhost:8000/api/user", {
+          withCredentials: true,
+        });
+
+        if (userResponse.status === 200) {
+          setUser(userResponse.data); // Assuming the user data is in response.data
+          navigate("/"); // Redirect to dashboard (change later)
+
+        } else {
+          setError("Error fetching user data.");
+        }
       } else {
-        setError(data.error || "Login failed. Please try again.");
+        setError(response.data.error || "Login failed. Please try again.");
       }
     } catch (error) {
       console.error("Error logging in:", error);
@@ -60,7 +76,7 @@ const Login = () => {
 
   return (
     <div className="login-form-container">
-      <form onSubmit={handleSubmit} className="login-form">
+      <Form onSubmit={handleSubmit} className="login-form">
         <h1>Log In</h1>
         <hr className="blue-line" />
         {error && <p className="error-message">{error}</p>} {/* Display error message */}
@@ -76,23 +92,32 @@ const Login = () => {
             className="login-input"
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            placeholder="Enter password"
-            className="login-input"
-          />
-        </div>
+        <Form.Group className="mb-3">
+          <Form.Label>Password</Form.Label>
+          <InputGroup>
+            <Form.Control
+              type={showPassword ? "text" : "password"}
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Enter password"
+              // className="login-input"
+            />
+            <Button
+              className="btn btn-outline-secondary rounded-end-pill btn-light"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </Button>
+          </InputGroup>
+        </Form.Group>
         <button type="submit" className="btn btn-primary login-button">
           Log In
         </button>
         <div className="login-options">
           <div className="remember-me">
+
             <input
               type="checkbox"
               id="rememberMe"
@@ -112,7 +137,7 @@ const Login = () => {
             Don't have an account? <Link to="/create-account">Create Account</Link>
           </p>
         </div>
-      </form>
+      </Form>
     </div>
   );
 };

@@ -3,33 +3,56 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-const FilterMenu = ({ show, handleClose, applyFilters }) => {
+const FilterMenu = ({ show, handleClose, applyFilters, resetFilters, filter_mods, filter_manager }) => {
     const [filters, setFilters] = useState([{ type: "", value: "" }]);
 
-    const squadronOptions = ["Squadron 1", "Squadron 2", "Squadron 3", "N/A"];
-    const flightOptions = ["Flight A", "Flight B", "Flight C", "N/A"];
+    const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
+    const flightOptions = ["A", "B", "C", "N/A"];
 
-    const filterOptions = [
-        { label: "First Name", value: "first_name" },
-        { label: "Last Name", value: "last_name" },
+    let filterOptions = [
         { label: "Squadron", value: "squadron" },
         { label: "Flight", value: "flight" },
-        { label: "Module 1 Status", value: "module1" },
-        { label: "Module 2 Status", value: "module2" },
-        { label: "Module 3 Status", value: "module3" },
-        { label: "All Modules", value: "all_modules" }
     ];
+    if (filter_mods) {
+        filterOptions = filterOptions.concat([
+            { label: "STINFO", value: "module1Progress" },
+            { label: "Records Management", value: "module2Progress" },
+            { label: "No FEAR Act", value: "module3Progress" },
+            { label: "All Modules", value: "all_modules" }
+        ]);
+    }
+    if (filter_manager) {
+        filterOptions = filterOptions.concat([
+            { label: "Training Manager", value: "manager" }
+        ]);
+    }
 
-    const handleAddFilter = () => {
-        setFilters([...filters, { type: "", value: "" }]);
-    };
-
+    const handleAddFilter = () => setFilters([...filters, { type: "", value: "" }]);
     const handleClearFilters = () => {
         setFilters([{ type: "", value: "" }]);
-    };
-
+        resetFilters();
+    }
     const handleRemoveFilter = (index) => {
-        setFilters(filters.filter((_, i) => i !== index));
+        setFilters((prevFilters) => {
+            if (prevFilters.length === 1) {
+                const resetFilter = [{ type: "", value: "" }];
+                applyFilters({});
+                return resetFilter;
+            }
+
+            const updatedFilters = prevFilters.filter((_, i) => i !== index);
+
+            // Convert filters to the correct format and pass to AdminNav
+            const filterParams = updatedFilters.reduce((acc, filter) => {
+                if (filter.type && filter.value) {
+                    acc[filter.type] = filter.value;
+                }
+                return acc;
+            }, {});
+
+            applyFilters(filterParams); // Ensure filters update in AdminNav
+            return updatedFilters;
+        });
     };
 
     const handleFilterChange = (index, key, value) => {
@@ -39,7 +62,13 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
     };
 
     const handleApplyFilters = () => {
-        applyFilters(filters);
+        const filterParams = filters
+            .filter(f => f.type && f.value) //Remove empty filters
+            .reduce((acc, filter) => {
+                acc[filter.type] = filter.value;
+                return acc;
+            }, {});
+        applyFilters(filterParams);
         handleClose();
     };
 
@@ -93,7 +122,7 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                                         </option>
                                     ))}
                                 </Form.Select>
-                            ) : ["module1", "module2", "module3", "all_modules"].includes(filter.type) ? (
+                            ) : ["module1Progress", "module2Progress", "module3Progress", "all_modules"].includes(filter.type) ? (
                                 <Form.Select
                                     value={filter.value}
                                     onChange={(e) => handleFilterChange(index, "value", e.target.value)}
@@ -101,21 +130,36 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                                 >
                                     <option value="">Select Status</option>
                                     <option value="complete">Complete</option>
-                                    <option value="incomplete">Incomplete</option>
+                                    <option value="not_complete">Not Complete</option>
                                 </Form.Select>
-                            ) : (
-                                <Form.Control
-                                    type="text"
+                            ) : filter.type === "manager" ? (
+                                <Form.Select
                                     value={filter.value}
                                     onChange={(e) => handleFilterChange(index, "value", e.target.value)}
-                                    placeholder="Enter value"
+                                    className="me-2"
+                                >
+                                    <option value="">Select Training Manager Status</option>
+                                    <option value="true">Training Manager</option>
+                                    <option value="false">Not Training Manager</option>
+                                </Form.Select>
+                            ) : (
+                                <Form.Select
+                                    type="text"
+                                    disabled={!filter.type}
+                                    value={filter.value}
+                                    onChange={(e) => handleFilterChange(index, "value", e.target.value)}
+                                    placeholder="Enter valsue"
                                     className="me-2"
                                 />
                             )}
 
-                            <div onClick={() => handleRemoveFilter(index)}>
-                                <i class="bi bi-x-lg"></i>
-                            </div>
+                            <button
+                                type="button"
+                                className="btn btn-link p-0 text-secondary"
+                                onClick={() => handleRemoveFilter(index)}
+                            >
+                                <i className="bi bi-x-lg"></i>
+                            </button>
                         </div>
                     ))}
 
@@ -124,7 +168,7 @@ const FilterMenu = ({ show, handleClose, applyFilters }) => {
                             + Add Filter
                         </Button>
                         <Button variant="link" onClick={handleClearFilters} style={{ textDecoration: "none" }}>
-                        <i class="bi bi-x"></i> Clear All
+                            <i className="bi bi-x"></i> Clear All
                         </Button>
                     </div>
                     <div className="d-flex justify-content-center">

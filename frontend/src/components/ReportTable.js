@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 
-const ReportTable = () => {
+const ReportTable = ({ filters }) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/user-progress")
+    const queryParams = new URLSearchParams(filters).toString();
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+    console.log("Query Params:", queryParams)
+    fetch(`${apiUrl}/api/user-progress?${queryParams}`)
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.error("Error fetching user progress:", error));
-  }, []);
+  }, [filters]);
 
   const getStatusIcon = (progress) => {
     if (progress === 100) return <i className="bi bi-check-circle text-success"></i>;

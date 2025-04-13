@@ -1,156 +1,101 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Hdr from "../components/Hdr";
 import Footer from "../components/Footer";
-import { Container, Form, Button, InputGroup, Row, Col, Modal } from "react-bootstrap";
+import {
+  Container,
+  Form,
+  Row,
+  Col,
+  Button,
+  Modal,
+  InputGroup
+} from "react-bootstrap";
 
 const Profile = () => {
   const [user, setUser] = useState({
-    firstName: "John",
-    lastName: "Doe",
-    email: "johndoe@email.com",
-    password: "password123",
-    squadron: "577th Squadron",
-    flight: "Flight A",
-    isManager: true,
+    firstName: "",
+    lastName: "",
+    email: "",
+    squadron: "",
+    flight: "",
+    training_manager: false,
+    password: "",
   });
 
-  const [editMode, setEditMode] = useState({
-    firstName: false,
-    lastName: false,
-    email: false,
-    password: false,
-    squadron: false,
-    flight: false,
-    isManager: false,
-  });
-
+  const [showModal, setShowModal] = useState(false);
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [passwordLength, setPasswordLength] = useState(0); // Track password length for asterisks
 
-  const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
-  const flightOptions = ["A", "B", "C", "N/A"];
-  const [tempUser, setTempUser] = useState({ ...user });
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [tempIsManager, setTempIsManager] = useState(user.isManager);
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+        const response = await axios.get(`${apiUrl}/api/user`, {
+          withCredentials: true,
+        });
+        setUser(response.data);
 
-  const handleEdit = (field) => {
-    setTempUser({ ...user }); // Save the current state before editing
-    setEditMode({ ...editMode, [field]: true });
-  };
+        // Set initial password length to match the password field length
+        setPasswordLength(response.data.password ? response.data.password.length : 0);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
 
-  const handleSave = (field) => {
-    setEditMode({ ...editMode, [field]: false });
-  };
+    fetchUserData();
+  }, []);
 
-  const handleChange = (e, field) => {
-    setUser({ ...user, [field]: e.target.value });
-  };
+  const handlePasswordChange = async () => {
+    if (newPassword !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
 
-  const handleCancel = (field) => {
-    setUser({ ...tempUser }); // Restore previous state
-    setEditMode({ ...editMode, [field]: false });
-  };
-
-  const handleToggleManager = () => {
-    setTempIsManager(!user.isManager);
-    setShowConfirmModal(true);
-  };
-
-  const confirmToggleManager = () => {
-    setUser({ ...user, isManager: tempIsManager });
-    setShowConfirmModal(false);
+    try {
+      // Replace with your backend endpoint
+      await axios.put(
+        "http://localhost:8000/api/user/password",
+        { password: newPassword },
+        { withCredentials: true }
+      );
+      alert("Password updated successfully!");
+      setShowModal(false);
+      setNewPassword("");
+      setConfirmPassword("");
+      setShowPassword(false);
+      // Update password length after successful change
+      setPasswordLength(newPassword.length);
+    } catch (error) {
+      console.error("Error updating password:", error);
+      alert("Failed to update password.");
+    }
   };
 
   return (
     <div className="d-flex flex-column min-vh-100">
       <Hdr />
       <Container className="flex-grow-1">
-        <div className="my-5">
-          <h2 className="text-primary text-decoration-underline">My Profile</h2>
-        </div>
+        <h2 className="text-primary text-decoration-underline my-5">
+          My Profile
+        </h2>
 
         {/* FIRST NAME */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            First Name
-          </Form.Label>
+          <Form.Label column sm="2">First Name</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="text"
-              disabled={!editMode.firstName}
-              value={user.firstName}
-              onChange={(e) => handleChange(e, "firstName")}
-            />
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.firstName ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("firstName")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("firstName")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("firstName")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.firstName} />
           </Col>
         </Form.Group>
 
         {/* LAST NAME */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            Last Name
-          </Form.Label>
+          <Form.Label column sm="2">Last Name</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="text"
-              disabled={!editMode.lastName}
-              value={user.lastName}
-              onChange={(e) => handleChange(e, "lastName")}
-            />
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.lastName ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("lastName")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("lastName")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("lastName")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.lastName} />
           </Col>
         </Form.Group>
 
@@ -158,39 +103,7 @@ const Profile = () => {
         <Form.Group as={Row} className="mb-3 align-items-center">
           <Form.Label column sm="2">Squadron</Form.Label>
           <Col sm="8">
-            <Form.Select disabled={!editMode.squadron} value={user.squadron} onChange={(e) => handleChange(e, "squadron")}>
-              {squadronOptions.map((squadron) => (
-                <option key={squadron} value={squadron}>{squadron}</option>
-              ))}
-            </Form.Select>
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.squadron ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("squadron")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("squadron")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("squadron")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.squadron} />
           </Col>
         </Form.Group>
 
@@ -198,162 +111,87 @@ const Profile = () => {
         <Form.Group as={Row} className="mb-3 align-items-center">
           <Form.Label column sm="2">Flight</Form.Label>
           <Col sm="8">
-            <Form.Select disabled={!editMode.flight} value={user.flight} onChange={(e) => handleChange(e, "flight")}>
-              {flightOptions.map((flight) => (
-                <option key={flight} value={flight}>{flight}</option>
-              ))}
-            </Form.Select>
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.flight ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("flight")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("flight")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("flight")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="text" disabled value={user.flight} />
           </Col>
         </Form.Group>
 
         {/* EMAIL */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            Email
-          </Form.Label>
+          <Form.Label column sm="2">Email</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="text"
-              disabled={!editMode.email}
-              value={user.email}
-              onChange={(e) => handleChange(e, "email")}
-            />
-          </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.email ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("email")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("email")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("email")}
-              >
-                Edit
-              </Button>
-            )}
+            <Form.Control type="email" disabled value={user.email} />
           </Col>
         </Form.Group>
 
-        {/* PASSWORD */}
+        {/* PASSWORD (Popup trigger) */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">
-            Password
-          </Form.Label>
+          <Form.Label column sm="2">Password</Form.Label>
           <Col sm="8">
-            <Form.Control
-              type="password"
-              disabled={!editMode.password}
-              value={user.password}
-              onChange={(e) => handleChange(e, "password")}
-            />
+            {/* Display asterisks based on password length */}
+            <Form.Control type="password" disabled value={"*".repeat(passwordLength)} />
           </Col>
-          <Col sm="2" className="d-flex justify-content-between">
-            {editMode.password ? (
-              <>
-                <Button
-                  variant="link"
-                  className="nav-link text-primary"
-                  onClick={() => handleSave("password")}
-                >
-                  Save
-                </Button>
-                <Button
-                  variant="link"
-                  className="nav-link"
-                  onClick={() => handleCancel("password")}
-                >
-                  Cancel
-                </Button>
-              </>
-            ) : (
-              <Button
-                variant="link"
-                className="nav-link text-primary"
-                onClick={() => handleEdit("password")}
-              >
-                Edit
-              </Button>
-            )}
+          <Col sm="2">
+            <Button variant="link" onClick={() => setShowModal(true)}>
+              Change Password
+            </Button>
           </Col>
         </Form.Group>
-
-        <hr />
-        {/* TRAINING MANAGER TOGGLE */}
-        <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">Training Manager</Form.Label>
-          <Col sm="8">
-            <Form.Check 
-              type="switch"
-              id="isManager"
-              label={user.isManager ? "Enabled" : "Disabled"}
-              checked={user.isManager}
-              disabled={!user.isManager}
-              onChange={handleToggleManager}
-            />
-          </Col>
-        </Form.Group>
-
-        {/* CONFIRMATION MODAL */}
-        <Modal show={showConfirmModal} onHide={() => setShowConfirmModal(false)} backdrop="static">
-          <Modal.Header closeButton>
-            <Modal.Title>Confirm Change</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Are you sure you want to change Training Manager privileges?</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowConfirmModal(false)}>
-              Cancel
-            </Button>
-            <Button variant="primary" onClick={confirmToggleManager}>
-              Confirm
-            </Button>
-          </Modal.Footer>
-        </Modal>
-
       </Container>
       <Footer />
+
+      {/* PASSWORD MODAL */}
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Change Password</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            {/* New Password */}
+            <Form.Group className="mb-3">
+              <Form.Label>New Password</Form.Label>
+              <InputGroup>
+                <Form.Control
+                  type={showPassword ? "text" : "password"}
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                />
+                <Button
+                  variant="outline-secondary rounded-end-pill"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "Hide" : "Show"}
+                </Button>
+              </InputGroup>
+            </Form.Group>
+
+            {/* Confirm Password */}
+            <Form.Group className="mb-3">
+              <Form.Label>Confirm Password</Form.Label>
+              <InputGroup>
+              <Form.Control
+                type={showConfirmPassword ? "text" : "password"}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+              <Button
+                variant="outline-secondary rounded-end-pill"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? "Hide" : "Show"}
+              </Button>
+              </InputGroup>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Cancel
+          </Button>
+          <Button variant="primary" onClick={handlePasswordChange}>
+            Save Password
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
