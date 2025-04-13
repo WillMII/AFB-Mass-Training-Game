@@ -28,7 +28,6 @@ const Profile = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [passwordLength, setPasswordLength] = useState(0); // Track password length for asterisks
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
 
@@ -40,9 +39,6 @@ const Profile = () => {
           withCredentials: true,
         });
         setUser(response.data);
-
-        // Set initial password length to match the password field length
-        setPasswordLength(response.data.password ? response.data.password.length : 0);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
@@ -69,8 +65,6 @@ const Profile = () => {
       setNewPassword("");
       setConfirmPassword("");
       setShowPassword(false);
-      // Update password length after successful change
-      setPasswordLength(newPassword.length);
     } catch (error) {
       console.error("Error updating password:", error);
       alert("Failed to update password.");
@@ -91,7 +85,7 @@ const Profile = () => {
       alert("Failed to delete account.");
     }
   };
-  
+
 
   return (
     <div className="d-flex flex-column min-vh-100">
@@ -143,16 +137,13 @@ const Profile = () => {
 
         {/* PASSWORD (Popup trigger) */}
         <Form.Group as={Row} className="mb-3 align-items-center">
-          <Form.Label column sm="2">Password</Form.Label>
-          <Col sm="8">
-            {/* Display asterisks based on password length */}
-            <Form.Control type="password" disabled value={"*".repeat(passwordLength)} />
-          </Col>
           <Col sm="2">
-            <Button variant="link" onClick={() => setShowModal(true)}>
+            <Button variant="secondary" onClick={() => setShowModal(true)}>
               Change Password
             </Button>
           </Col>
+          <Col sm="8"></Col>
+          <Col sm="2"></Col>
         </Form.Group>
         <hr />
 
@@ -190,17 +181,17 @@ const Profile = () => {
             <Form.Group className="mb-3">
               <Form.Label>Confirm Password</Form.Label>
               <InputGroup>
-              <Form.Control
-                type={showConfirmPassword ? "text" : "password"}
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-              <Button
-                variant="outline-secondary rounded-end-pill"
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              >
-                {showConfirmPassword ? "Hide" : "Show"}
-              </Button>
+                <Form.Control
+                  type={showConfirmPassword ? "text" : "password"}
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+                <Button
+                  variant="outline-secondary rounded-end-pill"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                >
+                  {showConfirmPassword ? "Hide" : "Show"}
+                </Button>
               </InputGroup>
             </Form.Group>
           </Form>
