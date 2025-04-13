@@ -96,5 +96,9 @@ public class CountingTypes : MonoBehaviour
     {
         return numFound;
     }
+    public bool allFound()
+    {
+        return numFound == 7;
+    }
 }
 
