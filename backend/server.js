@@ -400,6 +400,36 @@ app.delete("/api/user/delete", authenticateToken, (req, res) => {
     });
 });
 
+app.delete("/api/users/delete", authenticateToken, (req, res) => {
+    const userId = req.body.userId;
+  
+    if (!userId) return res.status(400).json({ error: "User ID is required" });
+  
+    // Delete user game progress
+    const deleteProgress = "DELETE FROM game_progress WHERE user_id = ?";
+    db.query(deleteProgress, [userId], (err, result) => {
+      if (err) {
+        console.error("Database error (game_progress):", err);
+        return res.status(500).json({ error: "Database error" });
+      }
+  
+      // Continue to delete user even if no progress was found
+      const deleteUser = "DELETE FROM users WHERE user_id = ?";
+      db.query(deleteUser, [userId], (err, result) => {
+        if (err) {
+          console.error("Database error (users):", err);
+          return res.status(500).json({ error: "Database error" });
+        }
+  
+        if (result.affectedRows === 0) {
+          return res.status(404).json({ error: "User not found" });
+        }
+  
+        res.status(200).json({ message: "Account deleted successfully" });
+      });
+    });
+  });
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

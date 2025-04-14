@@ -73,7 +73,6 @@ const Profile = () => {
 
   const handleDeleteAccount = async () => {
     try {
-      console.log("Deleting account...");
       const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
       await axios.delete(`${apiUrl}/api/user/delete`, { withCredentials: true });
       alert("Account deleted successfully.");
