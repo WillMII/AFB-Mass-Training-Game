@@ -43,10 +43,6 @@ app.use("/api", pdfRoutes);
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-
 // Create Account Route
 app.post("/api/create-account", async (req, res) => {
     console.log("Received request:", req.body);  // debug
