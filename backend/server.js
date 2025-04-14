@@ -373,19 +373,15 @@ app.delete("/api/user/delete", authenticateToken, (req, res) => {
         return res.status(401).json({ error: "User not authenticated" });
     }
 
-    let sql = "DELETE FROM game_progress WHERE user_id = ?";
-    db.query(sql, [userId], (err, result) => {
+    const deleteProgress = "DELETE FROM game_progress WHERE user_id = ?";
+    db.query(deleteProgress, [userId], (err, result) => {
         if (err) {
             console.error("Database error:", err);
             return res.status(500).json({ error: "Database error" });
         }
-
-        if (result.affectedRows === 0) {
-            return res.status(404).json({ error: "User progress not found" });
-        }
     });
 
-    sql = "DELETE FROM users WHERE user_id = ?";
+    const sql = "DELETE FROM users WHERE user_id = ?";
     db.query(sql, [userId], (err, result) => {
         if (err) {
             console.error("Database error:", err);
