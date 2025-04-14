@@ -38,6 +38,11 @@ app.use(session({
 // === PDF Download Route ===
 app.use("/api", pdfRoutes);
 
+
+// Serve static files from the 'public' directory
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Create Account Route
 app.post("/api/create-account", async (req, res) => {
     console.log("Received request:", req.body);  // debug
