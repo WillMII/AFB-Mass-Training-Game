@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638801799490000000
-    m_Hash: 156587631
+      ticks: 638801967230375355
+    m_Hash: 1702956360
   m_LockFileStatus:
     m_FilePath: C:/Users/drblu/Documents/AFB-Mass-Training-Game/AFB Mass Training
       Game 2/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638801799490000000
-    m_Hash: 1318677425
+      ticks: 638801967230375355
+    m_Hash: 991312680
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
