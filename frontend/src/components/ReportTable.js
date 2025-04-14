@@ -22,7 +22,7 @@ const ReportTable = ({ filters }) => {
 
   return (
     <div className="my-4">
-      <Table striped bordered hover>
+      <Table striped hover responsive className="align-middle">
         <thead>
           <tr>
             <th></th>
