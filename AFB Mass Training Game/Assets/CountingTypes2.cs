@@ -89,9 +89,4 @@ public class CountingTypes2 : MonoBehaviour
     {
         return numFound;
     }
-
-    public bool allFound()
-    {
-        return numFound == 4;
-    }
 }

@@ -879,6 +879,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264125634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 250489381519958704, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+  m_PrefabInstance: {fileID: 145568612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbff5eec681d37468264139fc267269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &309071221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6663569424042168078, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
@@ -1646,11 +1657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  m_UiScaleMode: 0
-=======
   m_UiScaleMode: 1
->>>>>>> Will's-New-Branch
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1830,6 +1837,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 811821335990869470, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
   m_PrefabInstance: {fileID: 145568612}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1100100577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5453571851184200782, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+  m_PrefabInstance: {fileID: 145568612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100100576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbff5eec681d37468264139fc267269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1130333564 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7886852257708632474, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
@@ -1892,7 +1910,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  activate: {fileID: 1143938119}
 --- !u!114 &1143938122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,8 +1925,6 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 859e768638ed83d409cb00fee729a53e, type: 3}
   mini: {fileID: 56012925045845230, guid: 739cb125dbff42242bcc36681373f4a7, type: 3}
   toolbar: {fileID: 255792517}
-  activateStarter: {fileID: 1574584762}
-  activateEnder: {fileID: 1245857995}
 --- !u!65 &1143938123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2270,11 +2285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 370, y: -215}
-=======
   m_AnchoredPosition: {x: 296, y: -170}
->>>>>>> Will's-New-Branch
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348917191
@@ -2434,7 +2445,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  activate: {fileID: 1374786582}
 --- !u!114 &1374786585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2450,8 +2460,6 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 71d101a911039eb478b323147cf6d85f, type: 3}
   mini: {fileID: 7897677988887383260, guid: 8b3b7d64374a5f94aacefb655b9e7f06, type: 3}
   toolbar: {fileID: 255792517}
-  activateStarter: {fileID: 1574584762}
-  activateEnder: {fileID: 1245857995}
 --- !u!65 &1374786586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2711,6 +2719,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8718775399313740888, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
   m_PrefabInstance: {fileID: 145568612}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1404186819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1051991994087918771, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+  m_PrefabInstance: {fileID: 145568612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbff5eec681d37468264139fc267269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1416007053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,7 +3041,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  activate: {fileID: 1574584754}
 --- !u!65 &1574584758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3133,6 +3151,17 @@ MonoBehaviour:
   mini: {fileID: 8447430498149856683, guid: cacb6c0a7c9779a4399553dd2ced44d2, type: 3}
   toolbar: {fileID: 255792517}
   clueCounter: {fileID: 1245857995}
+--- !u!114 &1589214343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1040407449764648684, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+  m_PrefabInstance: {fileID: 145568612}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbff5eec681d37468264139fc267269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1601011634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,7 +3213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  activate: {fileID: 1601011634}
 --- !u!114 &1601011637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3200,8 +3228,6 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 355ffaf62bb98624b871d5e1f5dcc2f2, type: 3}
   mini: {fileID: 6716222235301702230, guid: f3fc951c9b785604b9cf6863cb7182aa, type: 3}
   toolbar: {fileID: 255792517}
-  activateStarter: {fileID: 1574584762}
-  activateEnder: {fileID: 1245857995}
 --- !u!65 &1601011638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3497,6 +3523,10 @@ MonoBehaviour:
   counter: {fileID: 1245857996}
   finishText: {fileID: 2203950869843888959, guid: 7b576e59a5d834e4091968752f114907, type: 3}
   Keypad: {fileID: 1725007390}
+  A10: {fileID: 1404186819}
+  B10: {fileID: 1589214343}
+  C10: {fileID: 264125634}
+  D10: {fileID: 1100100577}
 --- !u!114 &1751026425 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1873043438411972032, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
@@ -3659,8 +3689,6 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: a67a279a5201e58438ce11e17e100b40, type: 3}
   mini: {fileID: 0}
   toolbar: {fileID: 0}
-  activateStarter: {fileID: 0}
-  activateEnder: {fileID: 0}
 --- !u!114 &1775160243
 MonoBehaviour:
   m_ObjectHideFlags: 0

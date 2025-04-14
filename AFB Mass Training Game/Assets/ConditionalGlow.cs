@@ -64,7 +64,6 @@ public class ConditionalGlow : MonoBehaviour
 
     void OnMouseDown()
     {
-
         alreadyClicked = true;
         //Destroy(plane);
         //.Log("Over");

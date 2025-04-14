@@ -3,11 +3,7 @@ sceneSetups:
   isLoaded: 1
   isActive: 1
   isSubScene: 0
-<<<<<<< HEAD
-- path: Assets/Room1.unity
-=======
 - path: Assets/No Fear Room 2.unity
->>>>>>> Will's-New-Branch
   isLoaded: 0
   isActive: 0
   isSubScene: 0

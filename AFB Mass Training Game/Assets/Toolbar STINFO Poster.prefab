@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5964705190292957545}
   - component: {fileID: 4932018254655269565}
   - component: {fileID: 7090751332765110078}
-  - component: {fileID: -7963646813130961332}
+  - component: {fileID: 2237309111041419350}
   m_Layer: 0
   m_Name: Toolbar STINFO Poster
   m_TagString: Untagged
@@ -146,7 +146,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: facdb6fea8334b24aa8320f01274f873, type: 3}
   lilShelf: {fileID: 2221071507338389571}
   toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
---- !u!114 &-7963646813130961332
+--- !u!114 &2237309111041419350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2221071507338389571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d012699a05c6f42a64ea48ec4b9bb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 1393d8034631a004eaac80e292c7459b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}

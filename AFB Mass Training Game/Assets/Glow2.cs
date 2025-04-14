@@ -10,9 +10,6 @@ public class Glow2 : MonoBehaviour
     //public Material door;
     public Material tinted;
     public Material clear;
-    public GameObject activate;
-    private ShelfClue shelfA;
-    private ActivateClue actA;
     //public var yellow;
     // Start is called before the first frame update
     void Start()
@@ -21,8 +18,6 @@ public class Glow2 : MonoBehaviour
         Material[] materials = renderer.materials;
         materials[1] = clear;
         renderer.materials = materials;
-
-        
     }
 
     // Update is called once per frame
@@ -65,23 +60,7 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (activate.GetComponent<ShelfClue>() != null)
-        {
-            shelfA = activate.GetComponent<ShelfClue>();
-        }
-        else
-        {
-            actA = activate.GetComponent<ActivateClue>();
-        }
-        if (shelfA != null && shelfA.getAlrInst() == true)
-        {
-            alreadyClicked = true;
-        }
-        else if (actA != null && actA.getAlrInst() == true)
-        {
-            alreadyClicked = true;
-        }
-
+        alreadyClicked = true;
         //Destroy(plane);
         //.Log("Over");
         //GameObject().Destroy;

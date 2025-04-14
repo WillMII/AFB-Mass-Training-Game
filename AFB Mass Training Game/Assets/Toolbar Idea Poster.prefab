@@ -8,15 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 6199757385924067353}
-  - component: {fileID: 5593543438078042462}
-  - component: {fileID: 7455782769064729875}
-  - component: {fileID: 6911861792500844063}
-  - component: {fileID: 6580282474354175543}
-  - component: {fileID: 2013570981480172348}
-  - component: {fileID: -4677572636323723737}
-=======
   - component: {fileID: 953918642472244168}
   - component: {fileID: 4110136489340924813}
   - component: {fileID: 4296677209670117767}
@@ -24,7 +15,6 @@ GameObject:
   - component: {fileID: 280466614828699724}
   - component: {fileID: 3306362152365192912}
   - component: {fileID: 3897335223076803010}
->>>>>>> Will's-New-Branch
   m_Layer: 0
   m_Name: Toolbar Idea Poster
   m_TagString: Untagged
@@ -141,28 +131,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &2013570981480172348
-=======
 --- !u!114 &3306362152365192912
->>>>>>> Will's-New-Branch
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 2672931445162132102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d77f73f916ebf1489e9572e0b625e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 71d101a911039eb478b323147cf6d85f, type: 3}
-  lilShelf: {fileID: 2672931445162132102}
-  toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
---- !u!114 &-4677572636323723737
-=======
   m_GameObject: {fileID: 7897677988887383260}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -173,23 +147,15 @@ MonoBehaviour:
   mini: {fileID: 2672931445162132102, guid: aaa60e19fb0cf5e46acf736a4e98f32d, type: 3}
   toolbar: {fileID: 0}
 --- !u!114 &3897335223076803010
->>>>>>> Will's-New-Branch
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 2672931445162132102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d012699a05c6f42a64ea48ec4b9bb8, type: 3}
-=======
   m_GameObject: {fileID: 7897677988887383260}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1393d8034631a004eaac80e292c7459b, type: 3}
->>>>>>> Will's-New-Branch
   m_Name: 
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}

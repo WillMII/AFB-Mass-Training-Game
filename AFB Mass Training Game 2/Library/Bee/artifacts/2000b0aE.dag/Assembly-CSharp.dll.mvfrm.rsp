@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Library\Bee\artifacts\mvdfrm\Unity.2D.Animation.Editor.ref.dll_E5224B7F0A871AB1.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.2D.Animation.Runtime.ref.dll_7A5B4E3637A927EA.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.2D.Aseprite.Common.ref.dll_59ED2BA84E96F690.mvfrm
@@ -26,7 +25,6 @@ Library\Bee\artifacts\mvdfrm\Unity.InternalAPIEngineBridge.001.ref.dll_4AE4A5CD7
 Library\Bee\artifacts\mvdfrm\Unity.Mathematics.Editor.ref.dll_64944B6DD477E1FD.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Mathematics.ref.dll_9B4CF66C9079F0F4.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.PlasticSCM.Editor.ref.dll_9B6D9940AFF80C3C.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.Rider.Editor.ref.dll_BB682F4C994978A9.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TextMeshPro.Editor.ref.dll_E01181B6C057CE40.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TextMeshPro.ref.dll_3701448EC0EF5C81.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Timeline.Editor.ref.dll_05875DFCD7CD8938.mvfrm
@@ -42,8 +40,6 @@ Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.State.ref.dll_255AEA40301341C
 Library\Bee\artifacts\mvdfrm\Unity.VisualStudio.Editor.ref.dll_7E7DD2F3C2805153.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.UI.ref.dll_BDC26BE24454476F.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEngine.UI.ref.dll_7A28423D4A766FDA.mvfrm
-=======
->>>>>>> Will's-New-Branch
 Library\Bee\artifacts\mvdfrm\UnityEditor.CoreModule.dll_8580568FFFA0965E.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.DeviceSimulatorModule.dll_B47B37A4239FD7C3.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.DiagnosticsModule.dll_561E3725C93BE151.mvfrm
@@ -126,10 +122,6 @@ Library\Bee\artifacts\mvdfrm\UnityEngine.XRModule.dll_6556E2638A6A1D74.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Android.Gradle.dll_B40B985808EE0F46.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Android.GradleProject.dll_8EB2DBA763C756CF.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Android.Types.dll_4FD1C3A0744EF656.mvfrm
-<<<<<<< HEAD
 Library\Bee\artifacts\mvdfrm\UnityEngine.WebGLModule.dll_B7B7164109200BAD.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Collections.LowLevel.ILSupport.dll_2E40CE80E145E521.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.Antlr3.Runtime.dll_6B5854E2366B9BC5.mvfrm
-=======
-Library\Bee\artifacts\mvdfrm\UnityEngine.WebGLModule.dll_B7B7164109200BAD.mvfrm
->>>>>>> Will's-New-Branch

@@ -511,7 +511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Briefings can be covered by STINFO, if they contain information pertaining
+  m_text: Yes! Briefings can be covered by STINFO, if they contain information pertaining
     to the other things covered by STINFO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}

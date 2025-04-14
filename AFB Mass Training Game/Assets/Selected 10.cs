@@ -129,4 +129,9 @@ public class Selected10 : MonoBehaviour
         }
 
     }
+
+    public bool didPass()
+    {
+        return passed;
+    }
 }
