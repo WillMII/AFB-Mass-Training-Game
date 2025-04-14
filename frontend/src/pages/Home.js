@@ -19,13 +19,13 @@ const Home = () => {
       title: "Records Management", 
       desc: "Enables complete, accurate and objective accounting of the Air Force's activities to the general public.", 
       due: "05/01/2025",
-      trainingBuildUrl: null // update build URL
+      trainingBuildUrl: "http://localhost:8000/module2Build/index.html" 
     },
     { 
       title: "No FEAR Act", 
       desc: "The No FEAR Act prohibits discrimination and retaliation in the workplace", 
       due: "05/01/2025",
-      trainingBuildUrl: null // update build URL
+      trainingBuildUrl: "http://localhost:8000/module1Build/index.html" 
     },
   ];
 
