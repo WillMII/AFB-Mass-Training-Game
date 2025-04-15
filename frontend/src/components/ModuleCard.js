@@ -2,10 +2,9 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import temp from '../imgs/Module1.png';
 import './Component.css';
 
-const ModuleCard = ({ title, desc, due, trainingBuildUrl }) => {
+const ModuleCard = ({ title, desc, due, trainingBuildUrl, img }) => {
   // Button click handler: open the training build if provided.
   const handleOpenTraining = () => {
     if (trainingBuildUrl) {
@@ -20,7 +19,7 @@ const ModuleCard = ({ title, desc, due, trainingBuildUrl }) => {
 
   return (
     <Card className="card d-flex flex-column mb-3" style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={temp} />
+      <Card.Img variant="top" src={img} />
       <Card.Body className="d-flex flex-column">
         <Card.Title>{title}</Card.Title>
         <Card.Text>
