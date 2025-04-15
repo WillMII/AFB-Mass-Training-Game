@@ -369,6 +369,7 @@
 "Assets/DestroyParent.cs"
 "Assets/ExitRoom.cs"
 "Assets/ExitRoom2.cs"
+"Assets/ExitRoomRecords.cs"
 "Assets/Glow.cs"
 "Assets/Glow2.cs"
 "Assets/GlowPaint.cs"

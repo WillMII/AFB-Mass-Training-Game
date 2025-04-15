@@ -115,6 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff059a9366b2a3f43bb44b9fc9b1de76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts: []
+  start: {fileID: 0}
+  text: {fileID: 0}
+  typesFound: {fileID: 0}
 --- !u!1 &8209770210653453855
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29, y: 200}
+  m_AnchoredPosition: {x: -267, y: -190}
   m_SizeDelta: {x: 368.9395, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6564212234299468933
@@ -180,7 +184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'STINFO Types Found: 0/7'
+  m_text: 'Life Cycle Parts Found  Found: 0/6'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
@@ -207,8 +211,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -243,7 +247,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -87.29089, w: 0}
+  m_margin: {x: 0, y: 0, z: -87.29089, w: 4.887497}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
