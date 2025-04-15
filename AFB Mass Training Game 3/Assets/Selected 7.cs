@@ -72,11 +72,12 @@ public class Selected7 : MonoBehaviour
         else if (answer == "C 7")
         {
             textT.text = "C";
-            correct = true;
+            
         }
         else if (answer == "D 7 Variant")
         {
             textT.text = "D";
+            correct = true;
 
 
         }

@@ -61,12 +61,12 @@ public class Selected8 : MonoBehaviour
         if (answer == "A 8 Variant")
         {
             textT.text = "A";
-
+            correct = true;
         }
         else if (answer == "B 8")
         {
             textT.text = "B";
-            correct = true;
+            
 
         }
         else if (answer == "C 8")

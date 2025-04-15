@@ -61,6 +61,7 @@ public class Selected6 : MonoBehaviour
         if (answer == "A 6 Variant")
         {
             textT.text = "A";
+            correct = true;
 
         }
         else if (answer == "B 6")
@@ -76,7 +77,7 @@ public class Selected6 : MonoBehaviour
         else if (answer == "D 6 Variant")
         {
             textT.text = "D";
-            correct = true;
+            
 
 
         }

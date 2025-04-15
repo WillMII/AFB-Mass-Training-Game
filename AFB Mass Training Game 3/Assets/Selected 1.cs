@@ -61,13 +61,14 @@ public class Selected1 : MonoBehaviour
         if (answer == "A 1")
         {
             textT.text = "A";
+            correct = true;
         } else if (answer == "B 1")
         {
             textT.text = "B";
         } else if (answer == "C 1")
         {
             textT.text = "C";
-            correct = true;
+            
         } else if (answer == "D 1")
         {
             textT.text = "D";

@@ -61,7 +61,8 @@ public class Selected4 : MonoBehaviour
         if (answer == "A 4 Variant")
         {
             textT.text = "A";
-            
+            correct = true;
+
         }
         else if (answer == "B 4")
         {
@@ -75,7 +76,7 @@ public class Selected4 : MonoBehaviour
         else if (answer == "D 4 Variant")
         {
             textT.text = "D";
-            correct = true;
+            
 
         }
         //textT.text = "D";

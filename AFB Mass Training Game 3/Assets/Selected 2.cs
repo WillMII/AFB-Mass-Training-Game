@@ -70,11 +70,12 @@ public class Selected2 : MonoBehaviour
         else if (answer == "C 2")
         {
             textT.text = "C";
+            correct = true;
         }
         else if (answer == "D 2 Variant")
         {
             textT.text = "D";
-            correct = true;
+            
 
         }
         //textT.text = "D";
