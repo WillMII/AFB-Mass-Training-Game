@@ -372,7 +372,7 @@ app.get("/api/progress-center", authenticateToken, (req, res) => {
 
 //delete account
 app.delete("/api/user/delete", authenticateToken, (req, res) => {
-    const userId = req.user.id;  // Now using decoded token data from authenticateToken
+    const userId = req.user.id;
 
     if (!userId) {
         return res.status(401).json({ error: "User not authenticated" });
@@ -430,6 +430,30 @@ app.delete("/api/users/delete", authenticateToken, (req, res) => {
       });
     });
   });
+
+app.put("/api/users/update", authenticateToken, async (req, res) => {
+    const userId = req.user.id;
+    const { firstName, lastName, email, squadron, flight } = req.body;
+
+    if (!userId) {
+        return res.status(400).json({ error: "User ID is required." });
+    }
+
+    const sql = `
+        UPDATE users 
+        SET first_name = ?, last_name = ?, email = ?, squadron = ?, flight = ?
+        WHERE user_id = ?
+        `;
+    db.query(sql, [firstName, lastName, email, squadron, flight, userId], (err, result) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database error." });
+        }
+
+        res.status(200).json({ message: "Profile updated successfully." });
+    });
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

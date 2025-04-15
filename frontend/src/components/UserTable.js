@@ -103,8 +103,9 @@ const UserTable = ({ filters }) => {
               <Form.Check 
                 type="switch"
                 id={`manager-switch-${user.id}`}
-                label=""
+                // label=""
                 checked={user.manager}
+                className="my-0 py-0"
                 onChange={() => handleToggleManager(user)}
                 />
               </td>
