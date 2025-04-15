@@ -511,15 +511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Yes, those are the personnel violations should be reported to:
-
-    -their
-    supervisor
-
-    -another supervisor in their chain of command
-
-    -(if discrimination)
-    EEO Counselor or HQ AFPC Complaint Hotline'
+  m_text: Yes, those are different examples of records.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
@@ -546,8 +538,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
