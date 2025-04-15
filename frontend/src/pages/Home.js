@@ -5,6 +5,9 @@ import Hdr from '../components/Hdr';
 import ProgressCenter from '../components/ProgressCenter';
 import ModuleCard from '../components/ModuleCard';
 import Footer from '../components/Footer';
+import module1Image from '../imgs/Module1.png';
+import module2Image from '../imgs/Module2.png';
+import module3Image from '../imgs/Module3.png';
 
 const Home = () => {
   // Provide the training build URL for STINFO and (optionally) others if available.
@@ -13,19 +16,22 @@ const Home = () => {
       title: "STINFO", 
       desc: "STINFO stands for Scientific and Technical INFOrmation. STINFO is information related to experimental, developmental, or engineering works", 
       due: "05/01/2025",
-      trainingBuildUrl: "http://localhost:8000/module1Build/index.html" 
+      trainingBuildUrl: "http://localhost:8000/module1Build/index.html",
+      img: module1Image,
     },
     { 
       title: "Records Management", 
       desc: "Enables complete, accurate and objective accounting of the Air Force's activities to the general public.", 
       due: "05/01/2025",
-      trainingBuildUrl: "http://localhost:8000/module2Build/index.html" 
+      trainingBuildUrl: "http://localhost:8000/module2Build/index.html",
+      img: module2Image,
     },
     { 
       title: "No FEAR Act", 
       desc: "The No FEAR Act prohibits discrimination and retaliation in the workplace", 
       due: "05/01/2025",
-      trainingBuildUrl: "http://localhost:8000/module1Build/index.html" 
+      trainingBuildUrl: "http://localhost:8000/module1Build/index.html",
+      img: module3Image,
     },
   ];
 
@@ -48,6 +54,7 @@ const Home = () => {
                   desc={module.desc} 
                   due={module.due}
                   trainingBuildUrl={module.trainingBuildUrl}
+                  img={module.img}
                 />
               ))}
             </div>
