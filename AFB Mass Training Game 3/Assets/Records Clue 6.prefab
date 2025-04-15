@@ -515,7 +515,7 @@ MonoBehaviour:
     information. The number of litigation hold/record searches involving the Air
     Force continues to increase. Therefore, you may be involved in a search for responsive
     information, to include records in your workspace, government desktop/laptop
-    computer, and government email accounts.\r"
+    computer, and government email accounts (eDiscovery).\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
