@@ -511,12 +511,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Air Force Record Life Cycle
+  m_text: 'Search the Room to Find the Parts of the Air Force Record Life Cycle!
 
     -Creation/Receipt
 
-    -Maintenance and
-    use
+    -Maintenance
+    and use
 
     -Disposition'
   m_isRightToLeft: 0

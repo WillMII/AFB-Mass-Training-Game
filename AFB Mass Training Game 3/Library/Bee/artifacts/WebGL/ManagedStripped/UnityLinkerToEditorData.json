@@ -36,8 +36,7 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -51,8 +50,7 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -89,8 +87,7 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -109,7 +106,9 @@
           },
           {
             "name": "Cubemap",
-            "scenes": [],
+            "scenes": [
+              "Assets/Records Room 1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -128,8 +127,7 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -143,8 +141,7 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -170,15 +167,16 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 1,
             "icon": null
           },
           {
             "name": "Light",
-            "scenes": [],
+            "scenes": [
+              "Assets/Records Room 1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -197,8 +195,7 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -212,8 +209,7 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -221,8 +217,7 @@
           {
             "name": "Mesh",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -230,8 +225,7 @@
           {
             "name": "MeshFilter",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -239,8 +233,7 @@
           {
             "name": "MeshRenderer",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -248,8 +241,7 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -263,8 +255,7 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -272,8 +263,7 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -305,8 +295,7 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -320,8 +309,7 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -353,8 +341,7 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -374,8 +361,7 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -389,8 +375,7 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -409,20 +394,14 @@
           },
           {
             "name": "Texture",
-            "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
             "name": "Texture2D",
-            "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -580,8 +559,7 @@
           {
             "name": "BoxCollider",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -595,8 +573,7 @@
           {
             "name": "MeshCollider",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -749,8 +726,7 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -793,8 +769,7 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -808,8 +783,7 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/No Fear Room 2.unity",
-              "Assets/No Fear Room.unity"
+              "Assets/Records Room 1.unity"
             ],
             "dependencyType": 0,
             "icon": null
