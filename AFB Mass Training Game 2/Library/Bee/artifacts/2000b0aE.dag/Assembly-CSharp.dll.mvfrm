@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ICharacterDataProvider
 UnityEditor
 U2D
@@ -53,8 +52,6 @@ UnityEditor
 AdvancedRuleOverrideTile
 UnityEngine
 RuleOverrideTile
-=======
->>>>>>> Will's-New-Branch
 AssetModificationProcessor
 
 Sysroot

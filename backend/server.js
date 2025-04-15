@@ -38,6 +38,11 @@ app.use(session({
 // === PDF Download Route ===
 app.use("/api", pdfRoutes);
 
+
+// Serve static files from the 'public' directory
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Create Account Route
 app.post("/api/create-account", async (req, res) => {
     console.log("Received request:", req.body);  // debug
@@ -329,7 +334,6 @@ app.get("/api/user-list", (req, res) => {
 // Route to get progress for the Progress Center
 app.get("/api/progress-center", authenticateToken, (req, res) => {
     const userId = req.user.id;  // Now using decoded token data from authenticateToken
-    console.log("Fetching progress for user ID:", userId);
 
     if (!userId) {
         return res.status(401).json({ error: "User not authenticated" });
@@ -353,7 +357,6 @@ app.get("/api/progress-center", authenticateToken, (req, res) => {
         }
 
         if (results.length === 0) {
-            console.log("No progress found for user ID:", userId);
             return res.status(404).json({ message: "User progress not found" });
         }
 
@@ -362,9 +365,92 @@ app.get("/api/progress-center", authenticateToken, (req, res) => {
             ...row,
             certificate: 'CertificateName'  // Replace if dynamic later
         }));
-        console.log("Fetched progress data:", modifiedResults);
 
         res.json(modifiedResults);
+    });
+});
+
+//delete account
+app.delete("/api/user/delete", authenticateToken, (req, res) => {
+    const userId = req.user.id;
+
+    if (!userId) {
+        return res.status(401).json({ error: "User not authenticated" });
+    }
+
+    const deleteProgress = "DELETE FROM game_progress WHERE user_id = ?";
+    db.query(deleteProgress, [userId], (err, result) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database error" });
+        }
+    });
+
+    const sql = "DELETE FROM users WHERE user_id = ?";
+    db.query(sql, [userId], (err, result) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database error" });
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.status(200).json({ message: "Account deleted successfully" });
+    });
+});
+
+app.delete("/api/users/delete", authenticateToken, (req, res) => {
+    const userId = req.body.userId;
+  
+    if (!userId) return res.status(400).json({ error: "User ID is required" });
+  
+    // Delete user game progress
+    const deleteProgress = "DELETE FROM game_progress WHERE user_id = ?";
+    db.query(deleteProgress, [userId], (err, result) => {
+      if (err) {
+        console.error("Database error (game_progress):", err);
+        return res.status(500).json({ error: "Database error" });
+      }
+  
+      // Continue to delete user even if no progress was found
+      const deleteUser = "DELETE FROM users WHERE user_id = ?";
+      db.query(deleteUser, [userId], (err, result) => {
+        if (err) {
+          console.error("Database error (users):", err);
+          return res.status(500).json({ error: "Database error" });
+        }
+  
+        if (result.affectedRows === 0) {
+          return res.status(404).json({ error: "User not found" });
+        }
+  
+        res.status(200).json({ message: "Account deleted successfully" });
+      });
+    });
+  });
+
+app.put("/api/users/update", authenticateToken, async (req, res) => {
+    const userId = req.user.id;
+    const { firstName, lastName, email, squadron, flight } = req.body;
+
+    if (!userId) {
+        return res.status(400).json({ error: "User ID is required." });
+    }
+
+    const sql = `
+        UPDATE users 
+        SET first_name = ?, last_name = ?, email = ?, squadron = ?, flight = ?
+        WHERE user_id = ?
+        `;
+    db.query(sql, [firstName, lastName, email, squadron, flight, userId], (err, result) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ error: "Database error." });
+        }
+
+        res.status(200).json({ message: "Profile updated successfully." });
     });
 });
 

@@ -3,11 +3,13 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import axios from 'axios';
 
 const UserTable = ({ filters }) => {
   const [users, setUsers] = useState([]);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [tempUser, setTempUser] = useState(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(filters).toString();
@@ -22,6 +24,11 @@ const UserTable = ({ filters }) => {
   const handleToggleManager = (user) => {
     setTempUser(user);
     setShowConfirmModal(true);
+  };
+
+  const handleDeleteAccount = (user) => {
+    setTempUser(user);
+    setShowDeleteModal(true);
   };
 
   const confirmToggleManager = () => {
@@ -52,17 +59,36 @@ const UserTable = ({ filters }) => {
       });
   };
 
+  const confirmDeleteAccount = async () => {
+    if (!tempUser) return;
+
+    try {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+      await axios.delete(`${apiUrl}/api/users/delete`, { 
+        withCredentials: true,
+        data: { userId: tempUser.id },
+      });
+      alert("Account deleted successfully.");
+      setUsers((prev) => prev.filter((u) => u.id !== tempUser.id));
+      setShowDeleteModal(false);
+    } catch (error) {
+      console.error("Error deleting account:", error);
+      alert("Failed to delete account.");
+    }
+  };
+
   return (
     <div className="my-4">
-      <Table striped bordered hover>
+      <Table striped hover responsive className="align-middle">
         <thead>
           <tr>
-            <th></th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Squadron</th>
-            <th>Flight</th>
-            <th>Manager Status</th>
+            <th ></th>
+            <th >First Name</th>
+            <th >Last Name</th>
+            <th >Squadron</th>
+            <th >Flight</th>
+            <th >Manager Status</th>
+            <th >Delete User</th>
           </tr>
         </thead>
         <tbody>
@@ -77,10 +103,16 @@ const UserTable = ({ filters }) => {
               <Form.Check 
                 type="switch"
                 id={`manager-switch-${user.id}`}
-                label=""
+                // label=""
                 checked={user.manager}
+                className="my-0 py-0"
                 onChange={() => handleToggleManager(user)}
                 />
+              </td>
+              <td>
+                <Button variant="link" className="text-danger px-0" onClick={() => handleDeleteAccount(user)}>
+                  Delete User
+                </Button>
               </td>
             </tr>
           ))}
@@ -104,6 +136,24 @@ const UserTable = ({ filters }) => {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirm User Account Deletion</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Are you sure you want to delete the account for <strong>{tempUser?.first_name} {tempUser?.last_name}</strong>? This action is permanent and cannot be undone.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={confirmDeleteAccount}>
+            Delete Account
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </div>
   );
 };

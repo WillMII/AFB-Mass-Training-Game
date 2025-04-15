@@ -44,6 +44,15 @@ select {
   box-sizing: border-box;
 }
 
+.profile-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 .login-input {
   width: 100%;
   padding: 10px;

@@ -8,15 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4805655806298827495}
-  - component: {fileID: 4838211914540393914}
-  - component: {fileID: 8662268631980439966}
-  - component: {fileID: 8336874681644777315}
-  - component: {fileID: 8999269462890068718}
-  - component: {fileID: -6845103850171262734}
-  - component: {fileID: 2596370350037193696}
-=======
   - component: {fileID: 709764038538765166}
   - component: {fileID: 5757474461079016436}
   - component: {fileID: 5933056226891416131}
@@ -24,7 +15,6 @@ GameObject:
   - component: {fileID: 6067807231146533912}
   - component: {fileID: 8007972721087677656}
   - component: {fileID: 9137613598168547586}
->>>>>>> Will's-New-Branch
   m_Layer: 0
   m_Name: Toolbar Box
   m_TagString: Untagged
@@ -141,9 +131,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &-6845103850171262734
-=======
 --- !u!114 &8007972721087677656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +146,6 @@ MonoBehaviour:
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
 --- !u!114 &9137613598168547586
->>>>>>> Will's-New-Branch
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,17 +160,3 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 40f53d8af76c970478ccdeb17eb58f5f, type: 3}
   lilShelf: {fileID: 4642115173058747375}
   toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
---- !u!114 &2596370350037193696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443973711970553562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d012699a05c6f42a64ea48ec4b9bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
-  clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}

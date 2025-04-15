@@ -4,18 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Room1.unity
-    guid: 621b372463e12f34e80bf71fc07f249d
+    path: Assets/No Fear Room.unity
+    guid: 1a7c39c416e616c4b94f7d382d4116b9
   - enabled: 1
-    path: Assets/Room2.unity
-    guid: 3d394e1dfe687164c8292fbc6d4649a4
-=======
-  m_Scenes: []
->>>>>>> Will's-New-Branch
+    path: Assets/No Fear Room 2.unity
+    guid: 76f9b5bd9075cf94b98f975caa87ddb4
   m_configObjects: {}

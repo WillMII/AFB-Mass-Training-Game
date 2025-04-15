@@ -8,15 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 2280936213434705379}
-  - component: {fileID: 3773791118665740193}
-  - component: {fileID: 1082946280219078489}
-  - component: {fileID: 4198249564547430450}
-  - component: {fileID: 7013730940746653557}
-  - component: {fileID: 3305703465114329207}
-  - component: {fileID: -3279862244345478063}
-=======
   - component: {fileID: 6858545224854761253}
   - component: {fileID: 1483148885412619161}
   - component: {fileID: 909629516982117320}
@@ -24,7 +15,6 @@ GameObject:
   - component: {fileID: 5318396154214278221}
   - component: {fileID: 3971637939299856675}
   - component: {fileID: 8679785534489740603}
->>>>>>> Will's-New-Branch
   m_Layer: 0
   m_Name: Toolbar Keyboard
   m_TagString: Untagged
@@ -141,9 +131,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &3305703465114329207
-=======
 --- !u!114 &3971637939299856675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +146,6 @@ MonoBehaviour:
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
 --- !u!114 &8679785534489740603
->>>>>>> Will's-New-Branch
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,26 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d77f73f916ebf1489e9572e0b625e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  canvas: {fileID: 2203950869843888959, guid: 8785921fc74645a4a86d1a50f37f692d, type: 3}
-  lilShelf: {fileID: 8934938253450200488}
-  toolbar: {fileID: 9023521586217403329, guid: e92dfd1c27cc9be49b6440b5aaec1e1e, type: 3}
---- !u!114 &-3279862244345478063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8934938253450200488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d012699a05c6f42a64ea48ec4b9bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
-  clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-=======
   canvas: {fileID: 2203950869843888959, guid: 0756861a1a500504db345b8c263b7ad9, type: 3}
   lilShelf: {fileID: 0}
   toolbar: {fileID: 0}
->>>>>>> Will's-New-Branch
