@@ -36,7 +36,8 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -50,7 +51,8 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -87,7 +89,8 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -107,7 +110,8 @@
           {
             "name": "Cubemap",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -127,7 +131,8 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -141,7 +146,8 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -167,7 +173,8 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -175,7 +182,8 @@
           {
             "name": "Light",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -195,7 +203,8 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -209,7 +218,8 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -217,7 +227,8 @@
           {
             "name": "Mesh",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -225,7 +236,8 @@
           {
             "name": "MeshFilter",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -233,7 +245,8 @@
           {
             "name": "MeshRenderer",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -241,7 +254,8 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -255,7 +269,8 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -263,7 +278,8 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -295,7 +311,8 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -309,7 +326,8 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -341,7 +359,8 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -361,7 +380,8 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -375,7 +395,8 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -559,7 +580,8 @@
           {
             "name": "BoxCollider",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -573,7 +595,8 @@
           {
             "name": "MeshCollider",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -726,7 +749,8 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -769,7 +793,8 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -783,7 +808,8 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Records Room 1.unity"
+              "Assets/Records Room 1.unity",
+              "Assets/Records Room 2.unity"
             ],
             "dependencyType": 0,
             "icon": null

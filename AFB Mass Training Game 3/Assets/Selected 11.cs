@@ -73,9 +73,7 @@ public class Selected11 : MonoBehaviour
         //GameObject dNext = Instantiate(nextD, parent.transform);
         //Debug.Log("dNext instantiated");
         //dNext.transform.SetParent(parent.transform, false);
-        text1.gameObject.SetActive(false);
         
-        tryAgain.gameObject.SetActive(false);
         TMP_Text textA1 = Answer1.GetComponent<TMP_Text>();
         TMP_Text textA2 = Answer2.GetComponent<TMP_Text>();
         TMP_Text textA3 = Answer3.GetComponent<TMP_Text>();
@@ -102,6 +100,9 @@ public class Selected11 : MonoBehaviour
         nextB.gameObject.SetActive(true);
         nextC.gameObject.SetActive(true);
         nextD.gameObject.SetActive(true);
+        text1.gameObject.SetActive(false);
+
+        tryAgain.gameObject.SetActive(false);
 
     }
 }
