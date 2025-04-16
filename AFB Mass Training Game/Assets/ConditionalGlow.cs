@@ -14,10 +14,12 @@ public class ConditionalGlow : MonoBehaviour
     // Start is called before the first frame update
     public ActivateClue script;
     bool go = false;
+    private Renderer renderer;
+    private Material[] materials;
     void Start()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        Material[] materials = renderer.materials;
+        renderer = GetComponent<Renderer>();
+        materials = renderer.materials;
         materials[1] = clear;
         renderer.materials = materials;
         bool go = script.getAlrClk();
@@ -35,8 +37,8 @@ public class ConditionalGlow : MonoBehaviour
         Debug.Log(go);
         if (!alreadyClicked && go)
         {
-            Renderer renderer = GetComponent<Renderer>();
-            Material[] materials = renderer.materials;
+            renderer = GetComponent<Renderer>();
+            materials = renderer.materials;
             materials[1] = tinted;
             renderer.materials = materials;
             //Destroy(plane);
@@ -55,8 +57,8 @@ public class ConditionalGlow : MonoBehaviour
     void OnMouseExit()
     {
         //Debug.Log("Off");
-        Renderer renderer = GetComponent<Renderer>();
-        Material[] materials = renderer.materials;
+        renderer = GetComponent<Renderer>();
+        materials = renderer.materials;
         materials[1] = clear;
         renderer.materials = materials;
     }
@@ -64,7 +66,11 @@ public class ConditionalGlow : MonoBehaviour
 
     void OnMouseDown()
     {
-        alreadyClicked = true;
+        if (materials[1] == tinted)
+        {
+            alreadyClicked = true;
+        }
+        
         //Destroy(plane);
         //.Log("Over");
         //GameObject().Destroy;
