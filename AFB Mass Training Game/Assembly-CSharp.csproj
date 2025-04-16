@@ -58,25 +58,40 @@
     <Analyzer Include="D:\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Selected 2.cs" />
     <Compile Include="Assets\GlowPaint.cs" />
     <Compile Include="Assets\Glow2.cs" />
+    <Compile Include="Assets\Selected 3.cs" />
+    <Compile Include="Assets\ExitRoomMod1.cs" />
+    <Compile Include="Assets\Selected 8.cs" />
+    <Compile Include="Assets\AllFound.cs" />
     <Compile Include="Assets\SelectedA.cs" />
+    <Compile Include="Assets\Selected 6.cs" />
     <Compile Include="Assets\DestroyParent.cs" />
     <Compile Include="Assets\ShelfClue.cs" />
     <Compile Include="Assets\ExitRoom2.cs" />
     <Compile Include="Assets\Clue2.cs" />
+    <Compile Include="Assets\Selected 11.cs" />
     <Compile Include="Assets\ConditionalGlow.cs" />
+    <Compile Include="Assets\LoadRoom1.cs" />
     <Compile Include="Assets\Keypad.cs" />
+    <Compile Include="Assets\Selected 9.cs" />
     <Compile Include="Assets\Test.cs" />
     <Compile Include="Assets\CluePart.cs" />
+    <Compile Include="Assets\Selected 1.cs" />
     <Compile Include="Assets\SelectedD.cs" />
     <Compile Include="Assets\Glow.cs" />
+    <Compile Include="Assets\Selected 7.cs" />
     <Compile Include="Assets\ExitRoom.cs" />
     <Compile Include="Assets\CountingTypes.cs" />
     <Compile Include="Assets\SelectedB.cs" />
+    <Compile Include="Assets\CountingTypes3.cs" />
+    <Compile Include="Assets\Selected 5.cs" />
+    <Compile Include="Assets\Selected 10.cs" />
     <Compile Include="Assets\SelectedC.cs" />
     <Compile Include="Assets\ToolbarClue.cs" />
     <Compile Include="Assets\CountingTypes2.cs" />
+    <Compile Include="Assets\Selected 4.cs" />
     <Compile Include="Assets\ActivateClue.cs" />
   </ItemGroup>
   <ItemGroup>
