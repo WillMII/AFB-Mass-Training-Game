@@ -464,6 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  counter: {fileID: 144974874}
 --- !u!114 &205663592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +480,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 40f53d8af76c970478ccdeb17eb58f5f, type: 3}
   mini: {fileID: 7186243648986008759, guid: e3934cfb7f96a0a418b078d23a16c738, type: 3}
   toolbar: {fileID: 1981270362}
+  counter: {fileID: 144974874}
 --- !u!65 &205663593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -656,6 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  counter: {fileID: 144974874}
 --- !u!114 &403099487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +674,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 1a5f8bc594e2d0541a6833df4d134bb0, type: 3}
   mini: {fileID: 4642115173058747375, guid: 88267a892552ad343bded84ac103fd15, type: 3}
   toolbar: {fileID: 1981270362}
+  counter: {fileID: 144974874}
 --- !u!65 &403099488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1399,6 +1403,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+--- !u!1 &829948766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8209770210653453855, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+  m_PrefabInstance: {fileID: 829948765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &837824658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +1574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  counter: {fileID: 144974874}
 --- !u!114 &1118465483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,6 +1590,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 34153b3a25295ef4490d59c97d7cabec, type: 3}
   mini: {fileID: 7929279717433784402, guid: 14269f48799a50c4c8da509f107f58ff, type: 3}
   toolbar: {fileID: 1981270362}
+  counter: {fileID: 829948766}
 --- !u!64 &1118465484
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1704,6 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  counter: {fileID: 144974874}
 --- !u!114 &1162257798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1719,6 +1731,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 40f53d8af76c970478ccdeb17eb58f5f, type: 3}
   mini: {fileID: 3075282393140463190, guid: 6043c1d1f57e5ff4297cd2c2bfc5e80d, type: 3}
   toolbar: {fileID: 1981270362}
+  counter: {fileID: 144974874}
 --- !u!65 &1162257799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1864,6 +1877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  counter: {fileID: 144974874}
 --- !u!114 &1197860119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,6 +1893,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 30e6717aacd4cec46b86b831b2658646, type: 3}
   mini: {fileID: 7548951613064121064, guid: 06dd6281f9644fb40af1add98d01cb5a, type: 3}
   toolbar: {fileID: 1981270362}
+  counter: {fileID: 144974874}
 --- !u!65 &1197860120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2141,6 +2156,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: a67a279a5201e58438ce11e17e100b40, type: 3}
   mini: {fileID: 0}
   toolbar: {fileID: 0}
+  counter: {fileID: 0}
 --- !u!1 &1274406545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,6 +2799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  counter: {fileID: 144974874}
 --- !u!65 &1722559513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2977,6 +2994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  counter: {fileID: 144974874}
 --- !u!114 &1781373188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2992,6 +3010,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: facdb6fea8334b24aa8320f01274f873, type: 3}
   mini: {fileID: 2221071507338389571, guid: f46b49724e3cbe84f842eaf6c51337fc, type: 3}
   toolbar: {fileID: 1981270362}
+  counter: {fileID: 144974874}
 --- !u!65 &1781373189
 BoxCollider:
   m_ObjectHideFlags: 0

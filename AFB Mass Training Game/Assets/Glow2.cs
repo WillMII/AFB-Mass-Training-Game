@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Glow2 : MonoBehaviour
 {
@@ -10,14 +11,20 @@ public class Glow2 : MonoBehaviour
     //public Material door;
     public Material tinted;
     public Material clear;
+    private GameObject counter;
+    private TMP_Text text;
+    private Renderer renderer;
+    private Material[] materials;
     //public var yellow;
     // Start is called before the first frame update
     void Start()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        Material[] materials = renderer.materials;
+        counter = GameObject.Find("STINFO Counter");
+        renderer = GetComponent<Renderer>();
+        materials = renderer.materials;
         materials[1] = clear;
         renderer.materials = materials;
+        text = counter.GetComponentInChildren<TMP_Text>();
     }
 
     // Update is called once per frame
@@ -29,10 +36,10 @@ public class Glow2 : MonoBehaviour
     void OnMouseEnter()
     {
         
-        if (!alreadyClicked)
+        if (!alreadyClicked && text.text == "")
         {
-            Renderer renderer = GetComponent<Renderer>();
-            Material[] materials = renderer.materials;
+            renderer = GetComponent<Renderer>();
+            materials = renderer.materials;
             materials[1] = tinted;
             renderer.materials = materials;
             //Destroy(plane);
@@ -51,8 +58,8 @@ public class Glow2 : MonoBehaviour
     void OnMouseExit()
     {
         //Debug.Log("Off");
-        Renderer renderer = GetComponent<Renderer>();
-        Material[] materials = renderer.materials;
+        renderer = GetComponent<Renderer>();
+        materials = renderer.materials;
         materials[1] = clear;
         renderer.materials = materials;
     }
@@ -60,7 +67,11 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseDown()
     {
-        alreadyClicked = true;
+        if (materials[1] == tinted)
+        {
+            alreadyClicked = true;
+        }
+        
         //Destroy(plane);
         //.Log("Over");
         //GameObject().Destroy;
