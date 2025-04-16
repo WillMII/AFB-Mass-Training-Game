@@ -1925,6 +1925,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 859e768638ed83d409cb00fee729a53e, type: 3}
   mini: {fileID: 56012925045845230, guid: 739cb125dbff42242bcc36681373f4a7, type: 3}
   toolbar: {fileID: 255792517}
+  counter: {fileID: 1245857995}
 --- !u!65 &1143938123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2460,6 +2461,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 71d101a911039eb478b323147cf6d85f, type: 3}
   mini: {fileID: 7897677988887383260, guid: 8b3b7d64374a5f94aacefb655b9e7f06, type: 3}
   toolbar: {fileID: 255792517}
+  counter: {fileID: 1245857995}
 --- !u!65 &1374786586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3228,6 +3230,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 355ffaf62bb98624b871d5e1f5dcc2f2, type: 3}
   mini: {fileID: 6716222235301702230, guid: f3fc951c9b785604b9cf6863cb7182aa, type: 3}
   toolbar: {fileID: 255792517}
+  counter: {fileID: 1245857995}
 --- !u!65 &1601011638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3689,6 +3692,7 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: a67a279a5201e58438ce11e17e100b40, type: 3}
   mini: {fileID: 0}
   toolbar: {fileID: 0}
+  counter: {fileID: 0}
 --- !u!114 &1775160243
 MonoBehaviour:
   m_ObjectHideFlags: 0

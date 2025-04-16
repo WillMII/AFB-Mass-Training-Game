@@ -19,7 +19,14 @@ public class Glow2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        counter = GameObject.Find("STINFO Counter");
+        if (GameObject.Find("STINFO Counter") != null)
+        {
+            counter = GameObject.Find("STINFO Counter");
+        } else
+        {
+            counter = GameObject.Find("STINFO Counter 2");
+        }
+        
         renderer = GetComponent<Renderer>();
         materials = renderer.materials;
         materials[1] = clear;

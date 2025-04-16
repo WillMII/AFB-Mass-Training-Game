@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8669326679888963544}
   - component: {fileID: 2053447184165874235}
   - component: {fileID: 2081843217101648579}
-  - component: {fileID: 6847045234630296820}
   - component: {fileID: 2772486465027000230}
+  - component: {fileID: -1925646696603634885}
   m_Layer: 0
   m_Name: Toolbar Trash Can
   m_TagString: Untagged
@@ -131,21 +131,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6847045234630296820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56012925045845230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3dd0ada0b642c94d87fb41f69bf2c98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 859e768638ed83d409cb00fee729a53e, type: 3}
-  mini: {fileID: 6038738836658088276, guid: d45a0614b6f6b9f41a56ea0e6d265d15, type: 3}
-  toolbar: {fileID: 0}
 --- !u!114 &2772486465027000230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +145,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+--- !u!114 &-1925646696603634885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56012925045845230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d77f73f916ebf1489e9572e0b625e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2203950869843888959, guid: 859e768638ed83d409cb00fee729a53e, type: 3}
+  lilShelf: {fileID: 56012925045845230}
+  toolbar: {fileID: 0}
