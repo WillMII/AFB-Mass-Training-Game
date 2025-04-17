@@ -1,21 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-
-
-
-public class CluePartNoCanvas : MonoBehaviour
+public class CluePartNoCanvas: MonoBehaviour
 {
-    //private int foundNum;
-    private bool alreadyClicked;
-    public ActivateClue starter;
-    
+    private bool alreadyInstantiated = false;
+    public GameObject canvas;
+    public GameObject mini;
+    public GameObject toolbar;
+    public GameObject clueCounter;
+    public List<GameObject> counters;
+    private TMP_Text[] texts;
+    public ActivateClue actClue;
 
+    private bool alreadyClicked;
     // Start is called before the first frame update
     void Start()
     {
-        alreadyClicked = false;
+        texts = new TMP_Text[counters.Count];
+        for (int i = 0; i < counters.Count; i++)
+        {
+            texts[i] = counters[i].GetComponentInChildren<TMP_Text>();
+        }
+        //Destroy(canvas.gameObject);
+        //canvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,14 +33,40 @@ public class CluePartNoCanvas : MonoBehaviour
 
     }
 
-
     void OnMouseDown()
     {
-        if (!alreadyClicked && starter.getAlrClk())
+        bool countersEmpty = true;
+        for (int i = 0; i < counters.Count; i++)
         {
-            alreadyClicked = true;
-            
+            if (texts[i].text != "" && !(counters[i].GetComponentInChildren<CountingTypes3>().allFound()))
+            {
+                countersEmpty = false;
+                break;
+            }
         }
+        if (!alreadyClicked && countersEmpty && actClue.getAlrClk())
+        {
+            Debug.Log("Down");
+            Debug.Log(getAlrClk());
+            Instantiate(canvas.gameObject);
+            if (!alreadyInstantiated)
+            {
+                Instantiate(mini.gameObject, toolbar.transform);
+                //Instantiate(clueCounter.gameObject);
+
+                alreadyInstantiated = true;
+
+            }
+
+            canvas.gameObject.SetActive(true);
+            Debug.Log(alreadyInstantiated);
+            alreadyClicked = true;
+        }
+    }
+
+    public bool getAlrInst()
+    {
+        return alreadyInstantiated;
     }
 
     public bool getAlrClk()

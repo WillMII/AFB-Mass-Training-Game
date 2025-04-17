@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Glow2 : MonoBehaviour
 {
@@ -10,12 +11,28 @@ public class Glow2 : MonoBehaviour
     //public Material door;
     public Material tinted;
     public Material clear;
+    private Renderer renderer;
+    private Material[] materials;
+    private GameObject[] counters = new GameObject[3];
     //public var yellow;
     // Start is called before the first frame update
     void Start()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        Material[] materials = renderer.materials;
+
+        if (GameObject.Find("Records Counter") != null)
+        {
+            counters[0] = GameObject.Find("Records Counter");
+        }
+        if (GameObject.Find("Records Counter 2") != null)
+        {
+            counters[1] = GameObject.Find("Records Counter 2");
+        }
+        if (GameObject.Find("Records Counter 3") != null)
+        {
+            counters[2] = GameObject.Find("Records Counter 3");
+        }
+        renderer = GetComponent<Renderer>();
+        materials = renderer.materials;
         materials[1] = clear;
         renderer.materials = materials;
     }
@@ -28,11 +45,22 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseEnter()
     {
-        
-        if (!alreadyClicked)
+        bool countersEmpty = true;
+        for (int i = 0; i < counters.Length; i++)
         {
-            Renderer renderer = GetComponent<Renderer>();
-            Material[] materials = renderer.materials;
+            if (counters[i] != null)
+            {
+                if (counters[i].GetComponentInChildren<TMP_Text>().text != "" && !(counters[i].GetComponentInChildren<CountingTypes3>().allFound()))
+                {
+                    countersEmpty = false;
+                    break;
+                }
+            }
+        }
+        if (!alreadyClicked && countersEmpty)
+        {
+            renderer = GetComponent<Renderer>();
+            materials = renderer.materials;
             materials[1] = tinted;
             renderer.materials = materials;
             //Destroy(plane);
@@ -51,8 +79,8 @@ public class Glow2 : MonoBehaviour
     void OnMouseExit()
     {
         //Debug.Log("Off");
-        Renderer renderer = GetComponent<Renderer>();
-        Material[] materials = renderer.materials;
+        renderer = GetComponent<Renderer>();
+        materials = renderer.materials;
         materials[1] = clear;
         renderer.materials = materials;
     }
@@ -60,7 +88,10 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseDown()
     {
-        alreadyClicked = true;
+        if (materials[1] == tinted)
+        {
+            alreadyClicked = true;
+        }
         //Destroy(plane);
         //.Log("Over");
         //GameObject().Destroy;

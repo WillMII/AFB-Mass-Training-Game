@@ -891,6 +891,8 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 6b1c49bee4469a346b8e310c6f5a3ccc, type: 3}
   mini: {fileID: 4702561189377131201, guid: 68bb97e03e99344479acb481039f8b13, type: 3}
   toolbar: {fileID: 514111592}
+  counters:
+  - {fileID: 1702530749}
 --- !u!114 &922547214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2546,6 +2548,8 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: cc5caac26028e87429e46562d47ad262, type: 3}
   mini: {fileID: 400776677045950547, guid: e77e3793f8db72441bcc17ddb14c097e, type: 3}
   toolbar: {fileID: 514111592}
+  counters:
+  - {fileID: 1702530749}
 --- !u!114 &1177844461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4000,6 +4004,7 @@ MonoBehaviour:
   mini: {fileID: 5265119798967951455, guid: d3d9b6350d7cd49449c0118addeecd79, type: 3}
   toolbar: {fileID: 514111592}
   clueCounter: {fileID: 1702530749}
+  counters: []
 --- !u!114 &2146124228
 MonoBehaviour:
   m_ObjectHideFlags: 0

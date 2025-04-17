@@ -464,7 +464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  counter: {fileID: 144974874}
 --- !u!114 &205663592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,7 +657,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  counter: {fileID: 144974874}
 --- !u!114 &403099487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,7 +1572,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  counter: {fileID: 144974874}
 --- !u!114 &1118465483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,7 +1712,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  counter: {fileID: 144974874}
 --- !u!114 &1162257798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,7 +1873,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  counter: {fileID: 144974874}
 --- !u!114 &1197860119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2799,7 +2794,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  counter: {fileID: 144974874}
 --- !u!65 &1722559513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2994,7 +2988,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
-  counter: {fileID: 144974874}
 --- !u!114 &1781373188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3272,7 +3265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54655035343958282, guid: 9408a5809e9d7c947b931d8265a794bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 54655035343958282, guid: 9408a5809e9d7c947b931d8265a794bb, type: 3}
       propertyPath: m_LocalRotation.w

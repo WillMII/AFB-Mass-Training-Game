@@ -10,9 +10,16 @@ public class ShelfClue : MonoBehaviour
     public GameObject mini;
     public GameObject toolbar;
     private bool alreadyClicked;
+    public List<GameObject> counters;
+    private TMP_Text[] texts;
     // Start is called before the first frame update
     void Start()
     {
+        texts = new TMP_Text[counters.Count];
+        for (int i = 0; i < counters.Count; i++)
+        {
+            texts[i] = counters[i].GetComponentInChildren<TMP_Text>();
+        }
         //Destroy(canvas.gameObject);
         //canvas.SetActive(false);
     }
@@ -25,7 +32,17 @@ public class ShelfClue : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!alreadyClicked)
+        
+        bool countersEmpty = true;
+        for (int i = 0; i < counters.Count; i++)
+        {
+            if (texts[i].text != "" && !(counters[i].GetComponentInChildren<CountingTypes3>().allFound()))
+            {
+                countersEmpty = false;
+                break;
+            }
+        }
+        if (!alreadyClicked && countersEmpty)
         {
             Debug.Log("Down");
             Instantiate(canvas.gameObject);

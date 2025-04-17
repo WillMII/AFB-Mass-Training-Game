@@ -2251,6 +2251,9 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 2bc5201d4d4332c4589118225c15d587, type: 3}
   mini: {fileID: 4825411431010600555, guid: c48fc53a11964f24ea5e75959f887dbe, type: 3}
   toolbar: {fileID: 747812784}
+  counters:
+  - {fileID: 239846641}
+  - {fileID: 2009655371}
 --- !u!114 &962860566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,6 +2822,9 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 33a6d750333171747b53667aff522530, type: 3}
   mini: {fileID: 1881078785610407904, guid: fcf94527deac23c40845c4717303a694, type: 3}
   toolbar: {fileID: 747812784}
+  counters:
+  - {fileID: 239846641}
+  - {fileID: 2009655371}
 --- !u!114 &1142217813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2980,6 +2986,8 @@ MonoBehaviour:
   mini: {fileID: 2421024058642411516, guid: 2056201a0a9a3e3469706e8a821c6a17, type: 3}
   toolbar: {fileID: 747812784}
   clueCounter: {fileID: 2009655371}
+  counters:
+  - {fileID: 239846641}
 --- !u!114 &1180248963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3668,6 +3676,8 @@ MonoBehaviour:
   mini: {fileID: 4621187773044640424, guid: 490b794c3e37a1f448bf99a71173ee90, type: 3}
   toolbar: {fileID: 747812784}
   clueCounter: {fileID: 239846641}
+  counters:
+  - {fileID: 2009655371}
 --- !u!114 &1814650127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4177,6 +4187,9 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 237e3f0fd9fa8174fb578e30edcf9565, type: 3}
   mini: {fileID: 8679870125308546499, guid: 556ade1799375b34da6694bcc0603647, type: 3}
   toolbar: {fileID: 747812784}
+  counters:
+  - {fileID: 239846641}
+  - {fileID: 2009655371}
 --- !u!114 &2091949877
 MonoBehaviour:
   m_ObjectHideFlags: 0

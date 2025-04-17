@@ -1291,7 +1291,7 @@ Transform:
   m_GameObject: {fileID: 427173729}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000115958646, y: 0.70710677, z: -0.7071068, w: -0.00011595883}
-  m_LocalPosition: {x: -1.17, y: 2.14, z: -1}
+  m_LocalPosition: {x: -1.17, y: 2.14, z: -5}
   m_LocalScale: {x: 0.25860748, y: 0, z: 0.1780636}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1858,6 +1858,9 @@ MonoBehaviour:
   mini: {fileID: 8242578541988467833, guid: a9055b4506d5c6e4f8588430aaabfd55, type: 3}
   toolbar: {fileID: 1478873958}
   clueCounter: {fileID: 252971126}
+  counters:
+  - {fileID: 1756913871}
+  - {fileID: 187195294}
 --- !u!114 &920311741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2150,6 +2153,10 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 6ffb9c8ae21dc3c4f9c5c6e529979862, type: 3}
   mini: {fileID: 1879818568459899302, guid: eb512231957f5e442839b850e8e67ab8, type: 3}
   toolbar: {fileID: 1478873958}
+  counters:
+  - {fileID: 1756913871}
+  - {fileID: 187195294}
+  - {fileID: 252971126}
 --- !u!114 &1063274306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,6 +2303,9 @@ MonoBehaviour:
   mini: {fileID: 3406047580286118788, guid: ae091bf6d513d344b9f9d6bfc84bc22a, type: 3}
   toolbar: {fileID: 1478873958}
   clueCounter: {fileID: 187195294}
+  counters:
+  - {fileID: 1756913871}
+  - {fileID: 252971126}
 --- !u!114 &1129489992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2632,6 +2642,9 @@ MonoBehaviour:
   mini: {fileID: 751581305444855538, guid: 77ec3ba6f1c3fc34cbcda8d68b41337b, type: 3}
   toolbar: {fileID: 1478873958}
   clueCounter: {fileID: 1756913871}
+  counters:
+  - {fileID: 187195294}
+  - {fileID: 252971126}
 --- !u!114 &1188362629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3538,8 +3551,8 @@ GameObject:
   - component: {fileID: 1528766786}
   - component: {fileID: 1528766785}
   - component: {fileID: 1528766784}
-  - component: {fileID: 1528766789}
   - component: {fileID: 1528766790}
+  - component: {fileID: 1528766791}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -3556,7 +3569,7 @@ Transform:
   m_GameObject: {fileID: 1528766780}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000115958646, y: 0.70710677, z: -0.7071068, w: -0.00011595883}
-  m_LocalPosition: {x: -0.0115, y: 0.4158, z: 0.33333334}
+  m_LocalPosition: {x: -0.0115, y: 0.4158, z: -5}
   m_LocalScale: {x: 0.13196646, y: 0, z: 0.07953719}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3656,20 +3669,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528766780}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1528766789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528766780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1393d8034631a004eaac80e292c7459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
-  clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
 --- !u!114 &1528766790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3684,6 +3683,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starter: {fileID: 1188362628}
   canvas: {fileID: 2203950869843888959, guid: 61bc0760e4bd6f046aaaf5fc7a73e9e4, type: 3}
+--- !u!114 &1528766791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528766780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c66c16748ebf234db174442ff2393dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
+  clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  script: {fileID: 1188362628}
 --- !u!114 &1529459075 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2711490600842298105, guid: 4d5c2c1fc2ccf1a458befa2963202550, type: 3}

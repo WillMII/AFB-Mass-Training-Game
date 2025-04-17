@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 64891044}
   - component: {fileID: 64891043}
   - component: {fileID: 64891042}
-  - component: {fileID: 64891040}
   - component: {fileID: 64891047}
   m_Layer: 0
   m_Name: Gavel
@@ -161,22 +160,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &64891040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64891038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: aca0fb413e59dcd4e87361b874d9313f, type: 3}
-  mini: {fileID: 2577232984465498577, guid: 95874508dc2ba0f41927e790b5529c2f, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &64891042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +281,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: aca0fb413e59dcd4e87361b874d9313f, type: 3}
+  mini: {fileID: 2577232984465498577, guid: 95874508dc2ba0f41927e790b5529c2f, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &229116115
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +301,6 @@ GameObject:
   - component: {fileID: 229116121}
   - component: {fileID: 229116120}
   - component: {fileID: 229116119}
-  - component: {fileID: 229116117}
   - component: {fileID: 229116124}
   m_Layer: 0
   m_Name: Money
@@ -337,22 +324,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &229116117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229116115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: cda149a1029716840920feee7b0e7eb2, type: 3}
-  mini: {fileID: 2699098642151553489, guid: 6f0b3f69a64e7814d853cb2f39e2e358, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &229116119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +445,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: cda149a1029716840920feee7b0e7eb2, type: 3}
+  mini: {fileID: 2699098642151553489, guid: 6f0b3f69a64e7814d853cb2f39e2e358, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1001 &247715444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -895,7 +871,6 @@ GameObject:
   - component: {fileID: 374530552}
   - component: {fileID: 374530551}
   - component: {fileID: 374530550}
-  - component: {fileID: 374530548}
   - component: {fileID: 374530555}
   m_Layer: 0
   m_Name: Vote
@@ -919,22 +894,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &374530548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374530546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 1c47d26976305a54f96e24a8941ac1b1, type: 3}
-  mini: {fileID: 2661387706545161759, guid: e9415eec68ed5154195a168679a4a36a, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &374530550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: 1c47d26976305a54f96e24a8941ac1b1, type: 3}
+  mini: {fileID: 2661387706545161759, guid: e9415eec68ed5154195a168679a4a36a, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &418062955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1388,6 @@ GameObject:
   - component: {fileID: 548331417}
   - component: {fileID: 548331416}
   - component: {fileID: 548331415}
-  - component: {fileID: 548331413}
   - component: {fileID: 548331420}
   m_Layer: 0
   m_Name: Mailbox
@@ -1448,22 +1411,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &548331413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548331411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: fa6a38e587775e044b7f48d4540e664f, type: 3}
-  mini: {fileID: 2579771418315402161, guid: c1268ee59bf423c4fb23e2b8d49898cf, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &548331415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,7 +1532,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: fa6a38e587775e044b7f48d4540e664f, type: 3}
+  mini: {fileID: 2579771418315402161, guid: c1268ee59bf423c4fb23e2b8d49898cf, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!114 &579467816 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5453571851184200782, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
@@ -2024,7 +1976,6 @@ GameObject:
   - component: {fileID: 876246613}
   - component: {fileID: 876246612}
   - component: {fileID: 876246611}
-  - component: {fileID: 876246609}
   - component: {fileID: 876246616}
   m_Layer: 0
   m_Name: Dog Tags
@@ -2048,22 +1999,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 67.705, y: -90, z: 90}
---- !u!114 &876246609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876246607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 25e92d7524c98c64fa95777954834de0, type: 3}
-  mini: {fileID: 3222008616507843683, guid: 8fc933b51db7fe0489b9f5f4483be551, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &876246611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2185,7 +2120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: 25e92d7524c98c64fa95777954834de0, type: 3}
+  mini: {fileID: 3222008616507843683, guid: 8fc933b51db7fe0489b9f5f4483be551, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &884579900
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3338,6 @@ GameObject:
   - component: {fileID: 1004720353}
   - component: {fileID: 1004720352}
   - component: {fileID: 1004720351}
-  - component: {fileID: 1004720349}
   - component: {fileID: 1004720356}
   m_Layer: 0
   m_Name: Podium
@@ -3422,22 +3361,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &1004720349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004720347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: edbb3d46f70452e4697a6a7623541277, type: 3}
-  mini: {fileID: 5456535666962773427, guid: 031880c6d1d0a9647afe1a5b53bcd9b3, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &1004720351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3559,7 +3482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: edbb3d46f70452e4697a6a7623541277, type: 3}
+  mini: {fileID: 5456535666962773427, guid: 031880c6d1d0a9647afe1a5b53bcd9b3, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &1008658466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,7 +3502,6 @@ GameObject:
   - component: {fileID: 1008658472}
   - component: {fileID: 1008658471}
   - component: {fileID: 1008658470}
-  - component: {fileID: 1008658468}
   - component: {fileID: 1008658475}
   m_Layer: 0
   m_Name: Whistle
@@ -3598,22 +3525,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &1008658468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008658466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 5e3c2da78bc22524a9acbff8c1d1b8fd, type: 3}
-  mini: {fileID: 4258954740104893954, guid: 590405f2dfaa95e469decca3ab52826a, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &1008658470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,7 +3646,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: 5e3c2da78bc22524a9acbff8c1d1b8fd, type: 3}
+  mini: {fileID: 4258954740104893954, guid: 590405f2dfaa95e469decca3ab52826a, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!114 &1023164339 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 250489381519958704, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
@@ -3921,6 +3837,7 @@ MonoBehaviour:
   mini: {fileID: 751581305444855538, guid: 77ec3ba6f1c3fc34cbcda8d68b41337b, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
+  counters: []
 --- !u!114 &1052398517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4173,6 +4090,7 @@ MonoBehaviour:
   mini: {fileID: 7896350308277229175, guid: 81a1497443fe55048bb373f177b6c4cb, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
+  counters: []
 --- !u!114 &1061766412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4294,7 +4212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: 18f47cda8f51c2046a406ec3ca91b0bf, type: 3}
+  mini: {fileID: 7896350308277229175, guid: 81a1497443fe55048bb373f177b6c4cb, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &1083268980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,7 +4317,6 @@ GameObject:
   - component: {fileID: 1178386114}
   - component: {fileID: 1178386113}
   - component: {fileID: 1178386112}
-  - component: {fileID: 1178386110}
   - component: {fileID: 1178386117}
   m_Layer: 0
   m_Name: Stop
@@ -4418,22 +4340,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &1178386110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178386108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 3737664b428c1d042aead19af8f67426, type: 3}
-  mini: {fileID: 3825398463058614872, guid: 6764c8aca5d3107429ab1b2f52942469, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &1178386112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4555,7 +4461,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: 3737664b428c1d042aead19af8f67426, type: 3}
+  mini: {fileID: 3825398463058614872, guid: 6764c8aca5d3107429ab1b2f52942469, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &1211345076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4676,7 +4587,6 @@ GameObject:
   - component: {fileID: 1316402096}
   - component: {fileID: 1316402095}
   - component: {fileID: 1316402094}
-  - component: {fileID: 1316402092}
   - component: {fileID: 1316402099}
   m_Layer: 0
   m_Name: Hammer
@@ -4700,22 +4610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 121.634995, y: -90, z: 90}
---- !u!114 &1316402092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316402090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: f096512e0919e8e41960a904213988cd, type: 3}
-  mini: {fileID: 6784773526607243033, guid: 168c65284a79dcd4ba3a2977e34e5b08, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &1316402094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4837,7 +4731,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: f096512e0919e8e41960a904213988cd, type: 3}
+  mini: {fileID: 6784773526607243033, guid: 168c65284a79dcd4ba3a2977e34e5b08, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &1326666579
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,7 +4853,6 @@ GameObject:
   - component: {fileID: 1362398285}
   - component: {fileID: 1362398284}
   - component: {fileID: 1362398283}
-  - component: {fileID: 1362398281}
   - component: {fileID: 1362398288}
   m_Layer: 0
   m_Name: Scale
@@ -4978,22 +4876,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &1362398281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362398279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 830e48d96c2ae354c88fa59413c03cc4, type: 3}
-  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &1362398283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5115,7 +4997,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: 830e48d96c2ae354c88fa59413c03cc4, type: 3}
+  mini: {fileID: 5466076593457938735, guid: 3baf72f34391b2a4a8fe55f46714bc50, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!114 &1372168905 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1040407449764648684, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
@@ -5563,7 +5450,6 @@ GameObject:
   - component: {fileID: 1534159334}
   - component: {fileID: 1534159333}
   - component: {fileID: 1534159332}
-  - component: {fileID: 1534159330}
   - component: {fileID: 1534159337}
   m_Layer: 0
   m_Name: Bonsai
@@ -5587,22 +5473,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &1534159330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534159328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: 9ac0475833dcc0144bdd7c3a04872431, type: 3}
-  mini: {fileID: 3795597460628464240, guid: e01ba1a6f17685f438a33ff770ca2972, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &1534159332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5724,7 +5594,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: 9ac0475833dcc0144bdd7c3a04872431, type: 3}
+  mini: {fileID: 3795597460628464240, guid: e01ba1a6f17685f438a33ff770ca2972, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &1584122410
 GameObject:
   m_ObjectHideFlags: 0
@@ -6320,7 +6195,6 @@ GameObject:
   - component: {fileID: 1983389283}
   - component: {fileID: 1983389282}
   - component: {fileID: 1983389281}
-  - component: {fileID: 1983389279}
   - component: {fileID: 1983389286}
   m_Layer: 0
   m_Name: Whiteboard
@@ -6344,22 +6218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 809392415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.981}
---- !u!114 &1983389279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983389277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063f8757f9c5bf344afac94a69c24b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: ad4b0ef006f742a45849ae6152b11dc2, type: 3}
-  mini: {fileID: 2761569368450598486, guid: 544a7b792c02cd145ab97a0bd64cbccd, type: 3}
-  toolbar: {fileID: 646391745}
-  clueCounter: {fileID: 247715446}
 --- !u!114 &1983389281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6481,7 +6339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167c89dbf764204cbc64d9cd50027fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starter: {fileID: 1052398516}
+  canvas: {fileID: 2203950869843888959, guid: ad4b0ef006f742a45849ae6152b11dc2, type: 3}
+  mini: {fileID: 2761569368450598486, guid: 544a7b792c02cd145ab97a0bd64cbccd, type: 3}
+  toolbar: {fileID: 646391745}
+  clueCounter: {fileID: 247715446}
+  counters: []
+  actClue: {fileID: 1052398516}
 --- !u!1 &1990856329
 GameObject:
   m_ObjectHideFlags: 0
