@@ -796,9 +796,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 380.22775, y: 167.13168, z: -3.9571304}
+    m_Target: {x: 419.60815, y: 160.87991, z: 2.0876093}
     speed: 2
-    m_Value: {x: 380.22775, y: 167.13168, z: -3.9571304}
+    m_Value: {x: 697.87616, y: 251.5969, z: 3.057836}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -848,9 +848,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 318.56488
+    m_Target: 377.20816
     speed: 2
-    m_Value: 318.56488
+    m_Value: 236.9411
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -982,21 +982,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_ExpandedIDs: 5274ffffa674ffff147bffff167cffffce95ffff2296ffff8c9cffff8a9dffff90a4ffffe4a4ffff4eabffff4cacffff08b7ffff5cb7ffffe6bdffffe8beffffc4ddffff18deffff9ee4ffff9ce5ffff6af2ffff2cf3ffff12fbffff14fbffff4886000058860000ce860000048800005a880000ec8c0000388d00000a9900001a990000c69a000088a3000098a3000044a5000044af000022b50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: NoFear Counter 2
+        m_OriginalName: NoFear Counter 2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 39178
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -1093,24 +1093,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 4}
+    scrollPos: {x: 0, y: 3236}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff0000000058640000226800002468000026680000286800002a6800002c6800002e680000306800003268000034680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: NoFear Clue 4-1 1
+      m_OriginalName: NoFear Clue 4-1 1
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 27114
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0

@@ -19,7 +19,7 @@ public class LoadRoom1 : MonoBehaviour
 
     public void OnClick()
     {
-        SceneManager.LoadScene("Room1");
+        SceneManager.LoadScene("Records Room 1");
     }
 
 }
