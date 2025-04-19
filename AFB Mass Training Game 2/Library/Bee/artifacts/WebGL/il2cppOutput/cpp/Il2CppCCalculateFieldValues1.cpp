@@ -224,6 +224,7 @@ struct ExecuteInEditModeU5BU5D_t57196F1483600AD3B95D1452158E1E10864B12A2;
 struct FileReadTypeU5BU5D_t746DE731BB9F92898AC1C857338FB0C0BDCC32F8;
 struct FontWeightPairU5BU5D_t76E8DB55C81EEBEFA2E6D1D3E3B3EA1FB4C4954F;
 struct GUIStyleU5BU5D_t1BA4BCF4D4D32DF07E9B84F1750D964DF33B0FEC;
+struct GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF;
 struct GlyphU5BU5D_t345CEC8703A6C650639C40DB7D35269A2D467FC5;
 struct GlyphMarshallingStructU5BU5D_t9424A4B1FAAD615472A9346208026B1B9E22069E;
 struct GlyphPairAdjustmentRecordU5BU5D_tD5DD2A739A4CA745E7F28ECCB2CD0BD0A65A38F7;
@@ -235,6 +236,7 @@ struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
 struct LineInfoU5BU5D_t37598F2175B291797270D1161DC29B6296FB169D;
 struct LinkInfoU5BU5D_tB7EB23E47AF29CCBEC884F9D0DB95BC97F62AE51;
+struct MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D;
 struct MaterialReferenceU5BU5D_t4A9B88114E223BD96CE5121053664023CE2DE07E;
 struct MeshInfoU5BU5D_t3DF8B75BF4A213334EED197AD25E432212894AC6;
 struct NativeByteArrayU5BU5D_t1C3504697C198E0B82B37316F8521BD6F0884616;
@@ -377,6 +379,7 @@ struct RegexRunner_t4D255CE33E7985A04AF21F0B57984D6C65615B3B;
 struct RegexRunnerFactory_t72373B672C7D8785F63516DDD88834F286AF41E7;
 struct RenderPipeline_t3AF1E2046D27ABCEBA2279770AADA9F531073E69;
 struct RenderPipelineAsset_t5F9BF815BF931E1314B184E7F9070FB649C7054E;
+struct Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF;
 struct ResolveEventHandler_t3CE88268E672E41B1B55E01587AFBCFB85044692;
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
 struct ScriptableRuntimeReflectionSystemWrapper_t5E4ABCD6EBCCBC665EFFD6A654A6355D5744F924;
@@ -10021,6 +10024,8 @@ struct ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___mini;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___toolbar;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___clueCounter;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___counters;
+	TMP_TextU5BU5D_t12384CBAF397196B9A7886087BDC8C19D800C24F* ___texts;
 	bool ___alreadyClicked;
 };
 struct ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -10062,8 +10067,15 @@ struct CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B  : public MonoBehaviou
 };
 struct CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	bool ___alreadyInstantiated;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvas;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___mini;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___toolbar;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___clueCounter;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___counters;
+	TMP_TextU5BU5D_t12384CBAF397196B9A7886087BDC8C19D800C24F* ___texts;
+	ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111* ___actClue;
 	bool ___alreadyClicked;
-	ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111* ___starter;
 };
 struct ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -10073,6 +10085,8 @@ struct ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921  : public MonoB
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___clear;
 	ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111* ___script;
 	bool ___go;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___renderer;
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___materials;
 };
 struct CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -10162,6 +10176,9 @@ struct Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B  : public MonoBehaviour_t
 	bool ___alreadyClicked;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___tinted;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___clear;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___renderer;
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___materials;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___counters;
 };
 struct GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -10547,6 +10564,8 @@ struct ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123  : public MonoBehavio
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___mini;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___toolbar;
 	bool ___alreadyClicked;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___counters;
+	TMP_TextU5BU5D_t12384CBAF397196B9A7886087BDC8C19D800C24F* ___texts;
 };
 struct SpriteLibrary_t32495C516B205B3CCD9376BD3AC4CC5A76E89036  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -14942,9 +14961,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4409[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4410[2] = 
 {
 	static_cast<int32_t>(offsetof(LigatureSubstitutionRecord_t8660DC6B1D65C655D698216F72BFB3C85DDCAB94, ___m_ComponentGlyphIDs)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(LigatureSubstitutionRecord_t8660DC6B1D65C655D698216F72BFB3C85DDCAB94, ___m_LigatureGlyphID)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4412[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4412[8] = 
 {
-	static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___canvas)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___mini)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___toolbar)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___clueCounter)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___alreadyClicked)),};
+	static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___canvas)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___mini)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___toolbar)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___clueCounter)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___counters)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___texts)),static_cast<int32_t>(offsetof(ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111, ___alreadyClicked)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4413[8] = 
 {
 	static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___counters)),static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___clues)),static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___quiz)),static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___countersComp)),static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___cluesComp)),static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___canExitCounters)),static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___canExitClues)),static_cast<int32_t>(offsetof(ActivateQuiz_tAE7FC1965388B81A10584CA175C3DE2A3407559C, ___canExit)),};
@@ -14957,12 +14976,12 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4415[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4416[3] = 
 {
 	static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___alreadyClicked)),static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___starter)),static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___canvas)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4417[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4417[9] = 
 {
-	static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___alreadyClicked)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___starter)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4418[6] = 
+	static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___canvas)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___mini)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___toolbar)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___clueCounter)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___counters)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___texts)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___actClue)),static_cast<int32_t>(offsetof(CluePartNoCanvas_tE2D5ADDF25C19D2C5760D83ADFC95AFE641B793A, ___alreadyClicked)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4418[8] = 
 {
-	static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___startColor)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___alreadyClicked)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___tinted)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___clear)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___script)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___go)),};
+	static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___startColor)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___alreadyClicked)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___tinted)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___clear)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___script)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___go)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___renderer)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___materials)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4419[14] = 
 {
 	static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___TO)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___PO)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___ED)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___SW)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___TD)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___TDIP)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___Brief)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___bookstack)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___typesFound)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___found)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___text)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___numFound)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___i)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___alreadyInstantiated)),};
@@ -14984,9 +15003,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4425[8] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4426[3] = 
 {
 	static_cast<int32_t>(offsetof(Glow_tE656F76DC8941F7C188C863939630342D6FE5E18, ___startColor)),static_cast<int32_t>(offsetof(Glow_tE656F76DC8941F7C188C863939630342D6FE5E18, ___tinted)),static_cast<int32_t>(offsetof(Glow_tE656F76DC8941F7C188C863939630342D6FE5E18, ___clear)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4427[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4427[7] = 
 {
-	static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___startColor)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___alreadyClicked)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___tinted)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___clear)),};
+	static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___startColor)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___alreadyClicked)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___tinted)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___clear)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___renderer)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___materials)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___counters)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4428[4] = 
 {
 	static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___startColor)),static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___alreadyClicked)),static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___tinted)),static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___clear)),};
@@ -15038,9 +15057,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4444[21] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4445[21] = 
 {
 	static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___text)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___text1)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___correct)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___counter)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___questionCounter)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___next)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___parent)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___parentK)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextA)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextB)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextC)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextD)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___currentA)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___currentB)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___currentC)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___getQuiz)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___itself)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___textF)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___text1Instance)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___alreadyClicked)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___answerTexts)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4446[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4446[7] = 
 {
-	static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___canvas)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___mini)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___toolbar)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyClicked)),};
+	static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___canvas)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___mini)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___toolbar)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyClicked)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___counters)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___texts)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4447[2] = 
 {
 	static_cast<int32_t>(offsetof(Test_tE08E78D2148871B8D08F758019DD90BE185E5B2D, ___newMaterial)),static_cast<int32_t>(offsetof(Test_tE08E78D2148871B8D08F758019DD90BE185E5B2D, ___materialIndex)),};

@@ -117,6 +117,7 @@ extern void SelectedC__ctor_mF95EE1A5FD0ED28B114810E8E3A110E2B8E522BA (void);
 extern void SelectedD_Start_mC02602A09C4A41A64198925ABF343AC96E051D4C (void);
 extern void SelectedD_OnClick_m09B79B2A2D18B5B2102AA56DD0FBED1486C9D811 (void);
 extern void SelectedD__ctor_m057A107BC8F700430281DB7EB1B21C23AB7FF36E (void);
+extern void ShelfClue_Start_m475D0782F7C8F21B7A52702F4791C9B7EDA443B1 (void);
 extern void ShelfClue_OnMouseDown_m3D59D1739CC0AA1EC36A0EF273FE7AD38BE47041 (void);
 extern void ShelfClue_getAlrInst_m456D6748701A80D77859126E1125800D1FB0960D (void);
 extern void ShelfClue__ctor_mB8BD96A6A45F01FCF37951969D5481F2FC013D67 (void);
@@ -125,7 +126,7 @@ extern void Test_Start_mA902842AF55C0A063D71F22B280F28BF0FB01497 (void);
 extern void Test__ctor_mB84DF4A3888723C395E76E3879FDFB8AA1EFEDCB (void);
 extern void ToolbarClue_OnMouseDown_m85FFED2EA893D3B21389BA50195F0E061630AF76 (void);
 extern void ToolbarClue__ctor_mC3CA52F8422D1972FD7D0299970CCFEA88FE0963 (void);
-static Il2CppMethodPointer s_methodPointers[113] = 
+static Il2CppMethodPointer s_methodPointers[114] = 
 {
 	ActivateClue_OnMouseDown_m03A5C462219CCD3F1AD151BE7DF44EFEF13461AB,
 	ActivateClue_getAlrInst_m380B52B2F7C9E839B2DF540AC21222865D9C72F3,
@@ -232,6 +233,7 @@ static Il2CppMethodPointer s_methodPointers[113] =
 	SelectedD_Start_mC02602A09C4A41A64198925ABF343AC96E051D4C,
 	SelectedD_OnClick_m09B79B2A2D18B5B2102AA56DD0FBED1486C9D811,
 	SelectedD__ctor_m057A107BC8F700430281DB7EB1B21C23AB7FF36E,
+	ShelfClue_Start_m475D0782F7C8F21B7A52702F4791C9B7EDA443B1,
 	ShelfClue_OnMouseDown_m3D59D1739CC0AA1EC36A0EF273FE7AD38BE47041,
 	ShelfClue_getAlrInst_m456D6748701A80D77859126E1125800D1FB0960D,
 	ShelfClue__ctor_mB8BD96A6A45F01FCF37951969D5481F2FC013D67,
@@ -241,7 +243,7 @@ static Il2CppMethodPointer s_methodPointers[113] =
 	ToolbarClue_OnMouseDown_m85FFED2EA893D3B21389BA50195F0E061630AF76,
 	ToolbarClue__ctor_mC3CA52F8422D1972FD7D0299970CCFEA88FE0963,
 };
-static const int32_t s_InvokerIndices[113] = 
+static const int32_t s_InvokerIndices[114] = 
 {
 	1422,
 	1332,
@@ -349,6 +351,7 @@ static const int32_t s_InvokerIndices[113] =
 	1422,
 	1422,
 	1422,
+	1422,
 	1332,
 	1422,
 	1422,
@@ -361,7 +364,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	113,
+	114,
 	s_methodPointers,
 	0,
 	NULL,

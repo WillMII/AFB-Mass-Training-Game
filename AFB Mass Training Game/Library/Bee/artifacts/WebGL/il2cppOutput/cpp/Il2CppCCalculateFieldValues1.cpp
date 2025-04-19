@@ -78,6 +78,7 @@ struct GlyphRectU5BU5D_t494B690215E3F3F42B6F216930A461256CE2CC70;
 struct GroupU5BU5D_t9924453EAB39E5BC350475A536C5C7093F9A04A9;
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D;
 struct NativeByteArrayU5BU5D_t1C3504697C198E0B82B37316F8521BD6F0884616;
 struct SpriteRendererU5BU5D_t0DEDE77D607814DC56F5AC6D7D80AA5A342ABF28;
 struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
@@ -137,6 +138,7 @@ struct RegexCode_tA23175D9DA02AD6A79B073E10EC5D225372ED6C7;
 struct RegexNode_tF9909B4015A9F5644B5772AB476ABCF721593360;
 struct RegexRunner_t4D255CE33E7985A04AF21F0B57984D6C65615B3B;
 struct RegexRunnerFactory_t72373B672C7D8785F63516DDD88834F286AF41E7;
+struct Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF;
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
 struct Selected10_tA021734A84AD40A6C1231ED260296CC3A52C0722;
 struct ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123;
@@ -10348,6 +10350,8 @@ struct ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921  : public MonoB
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___clear;
 	ActivateClue_t21FCE89D96F12C4EDF77493076F3F497956E8111* ___script;
 	bool ___go;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___renderer;
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___materials;
 };
 struct CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -10437,6 +10441,10 @@ struct Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B  : public MonoBehaviour_t
 	bool ___alreadyClicked;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___tinted;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___clear;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___counter;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___text;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___renderer;
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___materials;
 };
 struct GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -10832,6 +10840,8 @@ struct ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123  : public MonoBehavio
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___canvas;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___mini;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___toolbar;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___counter;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___text;
 	bool ___alreadyClicked;
 };
 struct SpriteSkin_t0C4FB56E1C7E0661763D759BE4E40B281F5997A1  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -12102,9 +12112,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3385[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3386[3] = 
 {
 	static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___alreadyClicked)),static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___starter)),static_cast<int32_t>(offsetof(CluePart_t3CAC433FBCF5D968B6D7499F7507E49DFB94A19B, ___canvas)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3387[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3387[8] = 
 {
-	static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___startColor)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___alreadyClicked)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___tinted)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___clear)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___script)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___go)),};
+	static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___startColor)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___alreadyClicked)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___tinted)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___clear)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___script)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___go)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___renderer)),static_cast<int32_t>(offsetof(ConditionalGlow_tD1A50C7FCDCBB765F249CF4CEA71B391CB665921, ___materials)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3388[14] = 
 {
 	static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___TO)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___PO)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___ED)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___SW)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___TD)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___TDIP)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___Brief)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___bookstack)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___typesFound)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___found)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___text)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___numFound)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___i)),static_cast<int32_t>(offsetof(CountingTypes_t085A157A07EDC536636C0FFD34497B3B588217D5, ___alreadyInstantiated)),};
@@ -12126,9 +12136,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3394[7] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3395[3] = 
 {
 	static_cast<int32_t>(offsetof(Glow_tE656F76DC8941F7C188C863939630342D6FE5E18, ___startColor)),static_cast<int32_t>(offsetof(Glow_tE656F76DC8941F7C188C863939630342D6FE5E18, ___tinted)),static_cast<int32_t>(offsetof(Glow_tE656F76DC8941F7C188C863939630342D6FE5E18, ___clear)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3396[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3396[8] = 
 {
-	static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___startColor)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___alreadyClicked)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___tinted)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___clear)),};
+	static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___startColor)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___alreadyClicked)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___tinted)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___clear)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___counter)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___text)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___renderer)),static_cast<int32_t>(offsetof(Glow2_tFCC02FB93EC5D4F7D7E08A31E7DC0B8B48AE586B, ___materials)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3397[4] = 
 {
 	static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___startColor)),static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___alreadyClicked)),static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___tinted)),static_cast<int32_t>(offsetof(GlowPaint_t0D66724752636764A69D3AE0BDA948071754E31C, ___clear)),};
@@ -12180,9 +12190,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3413[21] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3414[21] = 
 {
 	static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___text)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___text1)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___correct)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___counter)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___questionCounter)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___next)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___parent)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___parentK)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextA)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextB)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextC)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___nextD)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___currentA)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___currentB)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___currentC)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___getQuiz)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___itself)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___textF)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___text1Instance)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___alreadyClicked)),static_cast<int32_t>(offsetof(SelectedD_t805BE1989450485CDC4A5244CA224F87B50ED9CB, ___answerTexts)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3415[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3415[7] = 
 {
-	static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___canvas)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___mini)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___toolbar)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyClicked)),};
+	static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyInstantiated)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___canvas)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___mini)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___toolbar)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___counter)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___text)),static_cast<int32_t>(offsetof(ShelfClue_t62A8CCE79E0A2B6ED4804990AFB09A694DF8A123, ___alreadyClicked)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3416[2] = 
 {
 	static_cast<int32_t>(offsetof(Test_tE08E78D2148871B8D08F758019DD90BE185E5B2D, ___newMaterial)),static_cast<int32_t>(offsetof(Test_tE08E78D2148871B8D08F758019DD90BE185E5B2D, ___materialIndex)),};

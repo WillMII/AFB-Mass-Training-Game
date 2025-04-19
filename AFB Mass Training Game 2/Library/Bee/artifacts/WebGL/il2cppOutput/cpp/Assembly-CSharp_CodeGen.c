@@ -38,6 +38,7 @@ extern void CluePart__ctor_m58D8B4C372C019FCCEB7A7EB4ADA0FA0BFB9202E (void);
 extern void CluePartNoCanvas_Start_m05836C7E57FA9B6A5A3C854FC5A5F840C069061C (void);
 extern void CluePartNoCanvas_Update_mCBA1AB3B500A5E229BEFB0632FB0BCF44D548C50 (void);
 extern void CluePartNoCanvas_OnMouseDown_mD44FAAAE54FEE8025D1550EBB406B5CA347CA367 (void);
+extern void CluePartNoCanvas_getAlrInst_m56BF33905B16149050D9AEEEA82DEC4772EB687D (void);
 extern void CluePartNoCanvas_getAlrClk_m64F1666429FD25A4412C4587F82FEE9159E1C0A2 (void);
 extern void CluePartNoCanvas__ctor_mA1DEDF30F99EC269445CBB4E179DF9A65FAA30D9 (void);
 extern void ConditionalGlow_Start_m2AA0BC96D321F4A92F51E5ADBD6C1FD3BC3BA581 (void);
@@ -176,7 +177,7 @@ extern void ToolbarClue_OnMouseDown_m85FFED2EA893D3B21389BA50195F0E061630AF76 (v
 extern void ToolbarClue__ctor_mC3CA52F8422D1972FD7D0299970CCFEA88FE0963 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[164] = 
+static Il2CppMethodPointer s_methodPointers[165] = 
 {
 	ActivateClue_Start_mC888B78587DD51D6B2D7B38BAAFEA680B6F90B68,
 	ActivateClue_Update_mDA3C723B17D83001D35DCE9922C8AC7CED23983C,
@@ -204,6 +205,7 @@ static Il2CppMethodPointer s_methodPointers[164] =
 	CluePartNoCanvas_Start_m05836C7E57FA9B6A5A3C854FC5A5F840C069061C,
 	CluePartNoCanvas_Update_mCBA1AB3B500A5E229BEFB0632FB0BCF44D548C50,
 	CluePartNoCanvas_OnMouseDown_mD44FAAAE54FEE8025D1550EBB406B5CA347CA367,
+	CluePartNoCanvas_getAlrInst_m56BF33905B16149050D9AEEEA82DEC4772EB687D,
 	CluePartNoCanvas_getAlrClk_m64F1666429FD25A4412C4587F82FEE9159E1C0A2,
 	CluePartNoCanvas__ctor_mA1DEDF30F99EC269445CBB4E179DF9A65FAA30D9,
 	ConditionalGlow_Start_m2AA0BC96D321F4A92F51E5ADBD6C1FD3BC3BA581,
@@ -343,7 +345,7 @@ static Il2CppMethodPointer s_methodPointers[164] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[164] = 
+static const int32_t s_InvokerIndices[165] = 
 {
 	5326,
 	5326,
@@ -371,6 +373,7 @@ static const int32_t s_InvokerIndices[164] =
 	5326,
 	5326,
 	5326,
+	5145,
 	5145,
 	5326,
 	5326,
@@ -514,7 +517,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	164,
+	165,
 	s_methodPointers,
 	0,
 	NULL,

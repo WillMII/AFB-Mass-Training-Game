@@ -28,7 +28,6 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -38,7 +37,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -391,42 +389,42 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: LoadRoom1
     methodName: OnClick
   - assembly: Assembly-CSharp
     fullTypeName: Selected1
     methodName: OnClick
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   sceneClasses:
     Assets/Room1.unity:
     - Class: 1
@@ -458,45 +456,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16578}
+      Script: {instanceID: 16608}
     - Class: 114
-      Script: {instanceID: 16580}
+      Script: {instanceID: 16610}
     - Class: 114
-      Script: {instanceID: 16632}
+      Script: {instanceID: 16662}
     - Class: 114
-      Script: {instanceID: 17154}
+      Script: {instanceID: 17184}
     - Class: 114
-      Script: {instanceID: 17354}
+      Script: {instanceID: 17384}
     - Class: 114
-      Script: {instanceID: 17490}
+      Script: {instanceID: 17520}
     - Class: 114
-      Script: {instanceID: 17880}
+      Script: {instanceID: 17910}
     - Class: 114
-      Script: {instanceID: 18136}
+      Script: {instanceID: 18166}
     - Class: 114
-      Script: {instanceID: 18348}
+      Script: {instanceID: 18378}
     - Class: 114
-      Script: {instanceID: 18466}
+      Script: {instanceID: 18496}
     - Class: 114
-      Script: {instanceID: 18502}
+      Script: {instanceID: 18532}
     - Class: 114
-      Script: {instanceID: 19772}
+      Script: {instanceID: 19802}
     - Class: 114
-      Script: {instanceID: 20092}
+      Script: {instanceID: 20122}
     - Class: 114
-      Script: {instanceID: 20094}
+      Script: {instanceID: 20124}
     - Class: 114
-      Script: {instanceID: 21010}
+      Script: {instanceID: 21040}
     - Class: 114
-      Script: {instanceID: 21952}
+      Script: {instanceID: 21982}
     - Class: 114
-      Script: {instanceID: 22360}
+      Script: {instanceID: 22390}
     - Class: 114
-      Script: {instanceID: 23108}
+      Script: {instanceID: 23138}
     - Class: 114
-      Script: {instanceID: 23206}
+      Script: {instanceID: 23236}
     - Class: 114
-      Script: {instanceID: 23582}
+      Script: {instanceID: 23612}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -543,65 +541,65 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16578}
+      Script: {instanceID: 16608}
     - Class: 114
-      Script: {instanceID: 16580}
+      Script: {instanceID: 16610}
     - Class: 114
-      Script: {instanceID: 16632}
+      Script: {instanceID: 16662}
     - Class: 114
-      Script: {instanceID: 16820}
+      Script: {instanceID: 16850}
     - Class: 114
-      Script: {instanceID: 17020}
+      Script: {instanceID: 17050}
     - Class: 114
-      Script: {instanceID: 17154}
+      Script: {instanceID: 17184}
     - Class: 114
-      Script: {instanceID: 17490}
+      Script: {instanceID: 17520}
     - Class: 114
-      Script: {instanceID: 17880}
+      Script: {instanceID: 17910}
     - Class: 114
-      Script: {instanceID: 18064}
+      Script: {instanceID: 18094}
     - Class: 114
-      Script: {instanceID: 18136}
+      Script: {instanceID: 18166}
     - Class: 114
-      Script: {instanceID: 18224}
+      Script: {instanceID: 18254}
     - Class: 114
-      Script: {instanceID: 18348}
+      Script: {instanceID: 18378}
     - Class: 114
-      Script: {instanceID: 18520}
+      Script: {instanceID: 18550}
     - Class: 114
-      Script: {instanceID: 19482}
+      Script: {instanceID: 19512}
     - Class: 114
-      Script: {instanceID: 20092}
+      Script: {instanceID: 20122}
     - Class: 114
-      Script: {instanceID: 20442}
+      Script: {instanceID: 20472}
     - Class: 114
-      Script: {instanceID: 21010}
+      Script: {instanceID: 21040}
     - Class: 114
-      Script: {instanceID: 21224}
+      Script: {instanceID: 21254}
     - Class: 114
-      Script: {instanceID: 21370}
+      Script: {instanceID: 21400}
     - Class: 114
-      Script: {instanceID: 21402}
+      Script: {instanceID: 21432}
     - Class: 114
-      Script: {instanceID: 21582}
+      Script: {instanceID: 21612}
     - Class: 114
-      Script: {instanceID: 21952}
+      Script: {instanceID: 21982}
     - Class: 114
-      Script: {instanceID: 22118}
+      Script: {instanceID: 22148}
     - Class: 114
-      Script: {instanceID: 22282}
+      Script: {instanceID: 22312}
     - Class: 114
-      Script: {instanceID: 22360}
+      Script: {instanceID: 22390}
     - Class: 114
-      Script: {instanceID: 22744}
+      Script: {instanceID: 22774}
     - Class: 114
-      Script: {instanceID: 23058}
+      Script: {instanceID: 23088}
     - Class: 114
-      Script: {instanceID: 23108}
+      Script: {instanceID: 23138}
     - Class: 114
-      Script: {instanceID: 23206}
+      Script: {instanceID: 23236}
     - Class: 114
-      Script: {instanceID: 23582}
+      Script: {instanceID: 23612}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1613,7 +1611,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 951b0dc6f60e9095fc0f5c4c77969de0
+      Hash: 718762eede471919e98ec4bbe777e9ac
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ShelfClue
