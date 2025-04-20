@@ -4,11 +4,14 @@ import "./Login.css";
 import axios from "axios";
 import { useUser } from "../../context/UserContext";
 import { InputGroup, Button, Form } from "react-bootstrap";
+import ForgotPasswordModal from "../ForgotPasswordModal"; // Import the modal component
 
 const Login = () => {
   const navigate = useNavigate(); // Initialize navigate function
   const { setUser } = useUser();
   const [showPassword, setShowPassword] = useState(false);
+
+  const [showForgotModal, setShowForgotModal] = useState(false);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -75,70 +78,79 @@ const Login = () => {
   };
 
   return (
-    <div className="login-form-container">
-      <Form onSubmit={handleSubmit} className="login-form">
-        <h1>Log In</h1>
-        <hr className="blue-line" />
-        {error && <p className="error-message">{error}</p>} {/* Display error message */}
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter Air Force email"
-            className="login-input"
-          />
-        </div>
-        <Form.Group className="mb-3">
-          <Form.Label>Password</Form.Label>
-          <InputGroup>
-            <Form.Control
-              type={showPassword ? "text" : "password"}
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Enter password"
-              // className="login-input"
-            />
-            <Button
-              className="btn btn-outline-secondary rounded-end-pill btn-light"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? "Hide" : "Show"}
-            </Button>
-          </InputGroup>
-        </Form.Group>
-        <button type="submit" className="btn btn-primary login-button">
-          Log In
-        </button>
-        <div className="login-options">
-          <div className="remember-me">
-
+    <>
+      <div className="login-form-container">
+        <Form onSubmit={handleSubmit} className="login-form">
+          <h1>Log In</h1>
+          <hr className="blue-line" />
+          {error && <p className="error-message">{error}</p>} {/* Display error message */}
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
             <input
-              type="checkbox"
-              id="rememberMe"
-              name="rememberMe"
-              checked={formData.rememberMe}
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
+              placeholder="Enter Air Force email"
+              className="login-input"
             />
-            <label htmlFor="rememberMe">Remember Me</label>
           </div>
-          <a href="#" className="forgot-password">  {/*filler link...change later when creating forgot-pwd page*/}
-            Forgot Password?
-          </a>
-        </div>
-        <hr className="blue-line" />
-        <div className="register-option">
-          <p>
-            Don't have an account? <Link to="/create-account">Create Account</Link>
-          </p>
-        </div>
-      </Form>
-    </div>
+          <Form.Group className="mb-3">
+            <Form.Label>Password</Form.Label>
+            <InputGroup>
+              <Form.Control
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Enter password"
+              // className="login-input"
+              />
+              <Button
+                className="btn btn-outline-secondary rounded-end-pill btn-light"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </Button>
+            </InputGroup>
+          </Form.Group>
+          <button type="submit" className="btn btn-primary login-button">
+            Log In
+          </button>
+          <div className="login-options">
+            <div className="remember-me">
+
+              <input
+                type="checkbox"
+                id="rememberMe"
+                name="rememberMe"
+                checked={formData.rememberMe}
+                onChange={handleChange}
+              />
+              <label htmlFor="rememberMe">Remember Me</label>
+            </div>
+            <Link
+              className="forgot-password"
+              onClick={(e) => {
+                setShowForgotModal(true)
+              }}
+            >
+              Forgot Password?
+            </Link>
+            {showForgotModal && <ForgotPasswordModal onClose={() => setShowForgotModal(false)} />}
+
+          </div>
+          <hr className="blue-line" />
+          <div className="register-option">
+            <p>
+              Don't have an account? <Link to="/create-account">Create Account</Link>
+            </p>
+          </div>
+        </Form>
+      </div>
+    </>
   );
 };
 
