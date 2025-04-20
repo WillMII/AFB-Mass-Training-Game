@@ -36,7 +36,8 @@ const sendResetEmail = async (email, resetLink) => {
         subject: "Mass Training Password Reset Link",
         html: `
             <p>Hello,</p>
-            <p>You requested a password reset. Click below to reset your password:</p>
+            <p>You requested a password reset to your AFB Mass Training account associated with this email address. 
+                Click below to reset your password:</p>
             <a href="${resetLink}">${resetLink}</a>
             <p>This link expires in 15 minutes.</p>
         `
