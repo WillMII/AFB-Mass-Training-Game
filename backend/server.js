@@ -9,6 +9,7 @@ const pdfRoutes = require("./routes/pdfRoutes");  // Import the PDF routes
 const { generateToken } = require("./utils/jwt");
 const authenticateToken = require("./middleware/auth");
 const cookieParser = require('cookie-parser');
+const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 const PORT = 8000;
@@ -37,6 +38,8 @@ app.use(session({
 
 // === PDF Download Route ===
 app.use("/api", pdfRoutes);
+
+app.use("/api", authRoutes);
 
 
 // Serve static files from the 'public' directory

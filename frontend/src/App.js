@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Admin from './pages/Admin';
 import Profile from "./pages/Profile";
 import UserManagement from "./pages/UserManagement";
+import ResetPasswordPage from "./pages/ResetPassword";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { useUser } from "./context/UserContext";
@@ -93,6 +94,7 @@ function App() {
           path="/user-profile"
           element={user ? <Profile /> : <Navigate to="/login" />}
         />
+        <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
         <Route path="*" element={user ? <ErrorPage /> : <Navigate to="login" />} />
       </Routes>
     </div>
