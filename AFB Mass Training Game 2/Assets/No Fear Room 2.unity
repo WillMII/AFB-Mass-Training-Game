@@ -3255,6 +3255,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -26.565
       objectReference: {fileID: 0}
+    - target: {fileID: 5250235068246895498, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_text
+      value: Select an answer to gain  progress to exit. If at least 70% of answers
+        are correct, door is succesfully unlocked and you can exit the room.
+      objectReference: {fileID: 0}
     - target: {fileID: 5284315252292966378, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
       propertyPath: m_IsActive
       value: 0
