@@ -2,7 +2,7 @@ const PDFDocument = require("pdfkit");
 const path = require("path");
 
 exports.downloadCertificate = (req, res) => {
-    const { name, moduleName, dateCompleted, squadronImage } = req.query;
+    const { name, moduleName, dateCompleted } = req.query;
 
     const doc = new PDFDocument({ layout: "landscape", margin: 50 });
     res.setHeader("Content-Type", "application/pdf");
