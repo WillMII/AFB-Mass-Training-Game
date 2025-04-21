@@ -511,7 +511,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yes, those are examples of ESI
+  m_text: "Yes, those are examples of ESI\n-E-mails\r\n-Voicemails\r\n-Instant messages\r\n-Audio
+    files and other types of digital data\r\nStored data on:\r\n\t-  Handheld devices
+    and backup tapes \r\n\t-  External hard disk drives\r\n\t-  CDs, DVDs, and old
+    computers"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 645c906367908e948aa658581469d9cd, type: 2}
   m_sharedMaterial: {fileID: -3215045186702282449, guid: 645c906367908e948aa658581469d9cd, type: 2}
@@ -538,14 +541,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
-  m_fontSizeBase: 38
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

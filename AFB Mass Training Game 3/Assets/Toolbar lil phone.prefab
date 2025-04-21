@@ -157,6 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d77f73f916ebf1489e9572e0b625e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 2203950869843888959, guid: b038e9ed942eae34591977aff386b9cd, type: 3}
+  canvas: {fileID: 2203950869843888959, guid: b40162f79505d2f4f8e5da90d499093a, type: 3}
   lilShelf: {fileID: 5265119798967951455}
   toolbar: {fileID: 0}

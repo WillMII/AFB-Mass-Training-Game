@@ -4229,7 +4229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2203950869843888959, guid: 126c685ba0c318247acfb6ab61efe09e, type: 3}
-  mini: {fileID: 751581305444855538, guid: 77ec3ba6f1c3fc34cbcda8d68b41337b, type: 3}
+  mini: {fileID: 1004104924668153739, guid: f8645f3468004f54aaf2d67963151148, type: 3}
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
   counters: []
