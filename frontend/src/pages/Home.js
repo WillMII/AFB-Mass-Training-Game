@@ -13,13 +13,6 @@ const Home = () => {
   // Provide the training build URL for STINFO and (optionally) others if available.
   const modules = [
     { 
-      title: "Records Management", 
-      desc: "Enables complete, accurate and objective accounting of the Air Force's activities to the general public.", 
-      due: "05/01/2025",
-      trainingBuildUrl: "http://localhost:8000/recordsmgmt/index.html",
-      img: module2Image,
-    },
-    { 
       title: "STINFO", 
       desc: "STINFO stands for Scientific and Technical INFOrmation. STINFO is information related to experimental, developmental, or engineering works", 
       due: "05/01/2025",
@@ -32,6 +25,13 @@ const Home = () => {
       due: "05/01/2025",
       trainingBuildUrl: "http://localhost:8000/nofear/index.html",
       img: module3Image,
+    },
+    { 
+      title: "Records Management", 
+      desc: "Enables complete, accurate and objective accounting of the Air Force's activities to the general public.", 
+      due: "05/01/2025",
+      trainingBuildUrl: "http://localhost:8000/recordsmgmt/index.html",
+      img: module2Image,
     },
   ];
 
