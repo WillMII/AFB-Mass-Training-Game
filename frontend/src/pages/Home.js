@@ -30,7 +30,7 @@ const Home = () => {
       title: "No FEAR Act", 
       desc: "The No FEAR Act prohibits discrimination and retaliation in the workplace", 
       due: "05/01/2025",
-      trainingBuildUrl: "http://localhost:8000/module1Build/index.html",
+      trainingBuildUrl: "http://localhost:8000/module3Build/index.html",
       img: module3Image,
     },
   ];
