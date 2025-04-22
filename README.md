@@ -13,7 +13,6 @@ A web-based training platform designed for Warner Robins Air Force Base to trans
 - **Frontend:** React.js
 - **Backend:** Node.js + Express
 - **Database:** MySQL
-- **Authentication:** JSON Web Tokens (JWT)
 
 ## Installation & Setup & Setup
 1. **Clone the repository**
