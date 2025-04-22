@@ -9,12 +9,13 @@ A web-based training platform designed for Warner Robins Air Force Base to trans
 - **Responsive UI:** Built with React.js components for a seamless user experience
 
 ## Tech Stack
+- **Game Engine:** Unity (C#)
 - **Frontend:** React.js
 - **Backend:** Node.js + Express
 - **Database:** MySQL
 - **Authentication:** JSON Web Tokens (JWT)
 
-## Installation & Setup
+## Installation & Setup & Setup
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-org/afb-mass-training-game.git
@@ -60,14 +61,64 @@ A web-based training platform designed for Warner Robins Air Force Base to trans
 - `GET /api/download-certificate` — Download completion certificate PDF
 
 ## Database Schema (High-Level)
-- **Users** (`user_id`, `email`, `first_name`, `last_name`, `hashed_password`, `training_manager`)
-- **Modules** (`module_id`, `name`, `description`)
-- **Records** (`records_id`, `user_id`, `module_id`, `completion_status`, `date_completed`)
-- **Certificates** (`certificate_id`, `user_id`, `module_id`, `issued_date`)
 
-## Contributing
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -m "Add new feature"`)
-4. Push to branch (`git push origin feature/new-feature`)
-5. Open a pull request
+**Users Table:**
+| Column Name      | Data Type              | Constraints                                  |
+|------------------|------------------------|----------------------------------------------|
+| user_id          | INT                    | PRIMARY KEY, AUTO_INCREMENT                  |
+| email            | VARCHAR(100)           | UNIQUE, NOT NULL                             |
+| first_name       | VARCHAR(50)            | NOT NULL                                     |
+| last_name        | VARCHAR(50)            | NOT NULL                                     |
+| squadron         | VARCHAR(50)            | NULLABLE                                     |
+| flight           | ENUM('A', 'B', 'C', 'N/A') | DEFAULT 'N/A', NOT NULL               |
+| password_hash    | VARCHAR(255)           | NOT NULL                                     |
+| training_manager | BOOLEAN                | DEFAULT FALSE, NOT NULL                      |
+
+**Modules Table:**
+| Column Name | Data Type    | Constraints                |
+|-------------|--------------|----------------------------|
+| module_id   | INT          | PRIMARY KEY, AUTO_INCREMENT|
+| name        | VARCHAR(100) | NOT NULL                   |
+| description | TEXT         | NULLABLE                   |
+
+**Records Table:**
+| Column Name       | Data Type | Constraints                              |
+|-------------------|-----------|------------------------------------------|
+| records_id        | INT       | PRIMARY KEY, AUTO_INCREMENT              |
+| user_id           | INT       | FOREIGN KEY REFERENCES users(user_id)    |
+| module_id         | INT       | FOREIGN KEY REFERENCES modules(module_id)|
+| completion_status | BOOLEAN   | DEFAULT FALSE, NOT NULL                 |
+
+**Sessions Table:**
+| Column Name   | Data Type   | Constraints                                  |
+|---------------|-------------|----------------------------------------------|
+| sessions_id   | INT         | PRIMARY KEY, AUTO_INCREMENT                  |
+| user_id       | INT         | FOREIGN KEY REFERENCES users(user_id)        |
+| session_token | VARCHAR(255)| UNIQUE, NOT NULL                             |
+| created_at    | TIMESTAMP   | DEFAULT CURRENT_TIMESTAMP                   |
+| expires_at    | TIMESTAMP   | NOT NULL                                     |
+
+**Game Progress Table:**
+| Column Name      | Data Type | Constraints                                |
+|------------------|-----------|--------------------------------------------|
+| game_progress_id | INT       | PRIMARY KEY, AUTO_INCREMENT                |
+| user_id          | INT       | FOREIGN KEY REFERENCES users(user_id)      |
+| module_id        | INT       | FOREIGN KEY REFERENCES modules(module_id)  |
+| stage            | INT       | NOT NULL                                   |
+| progress         | FLOAT     | DEFAULT 0.0                                |
+| date_completed   | TIMESTAMP | NULLABLE                                   |
+
+**Clue Bank Table:**
+| Column Name | Data Type | Constraints                                  |
+|-------------|-----------|----------------------------------------------|
+| clue_id     | INT       | PRIMARY KEY, AUTO_INCREMENT                  |
+| module_id   | INT       | FOREIGN KEY REFERENCES modules(module_id)    |
+| clue_text   | TEXT      | NOT NULL                                     |
+
+**Quiz Question Bank Table:**
+| Column Name | Data Type | Constraints                                          |
+|-------------|-----------|------------------------------------------------------|
+| question_id | INT       | PRIMARY KEY, AUTO_INCREMENT                          |
+| module_id   | INT       | FOREIGN KEY REFERENCES modules(module_id)            |
+| question    | TEXT      | NOT NULL                                             |
+| answer      | TEXT      | NOT NULL                                             |
