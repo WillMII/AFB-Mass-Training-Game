@@ -10,7 +10,6 @@ const Admin = () => {
   const [filters, setFilters] = useState({});
 
   return (
-    <>
       <div className="d-flex flex-column min-vh-100">
         <Hdr />
         <Container className="flex-grow-1">
@@ -23,8 +22,6 @@ const Admin = () => {
 
         <Footer />
       </div>
-
-    </>
   )
 }
 

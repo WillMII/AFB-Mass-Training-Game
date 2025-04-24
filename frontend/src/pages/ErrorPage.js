@@ -1,17 +1,32 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import Hdr from "../components/Hdr";
+import React from 'react';
+import { Button, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import Hdr from '../components/Hdr';
+import Footer from '../components/Footer';
 
 const ErrorPage = () => {
+  const navigate = useNavigate();
+
   return (
-    <>
+    <div className="d-flex flex-column min-vh-100">
       <Hdr />
-      <Container className="d-flex flex-column justify-content-center align-items-center vh-100">
-        <h2>Invalid Link</h2>
-        <h3>Please double-check your spelling or link</h3>
-      </Container>
-    </>
+      <div className="flex-grow-1 d-flex align-items-center justify-content-center px-3">
+        <Container className="text-center">
+          <h1 className="display-1 fw-bold text-primary">404</h1>
+          <p className="fs-3">
+            <span className="text-primary">Oops!</span> Page not found.
+          </p>
+          <p className="lead">
+            The page you’re looking for doesn’t exist or has been moved.
+          </p>
+          <Button variant="primary" onClick={() => navigate('/')}>
+            Go Home
+          </Button>
+        </Container>
+      </div>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default ErrorPage;
