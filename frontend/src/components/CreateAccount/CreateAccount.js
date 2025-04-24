@@ -17,7 +17,7 @@ const CreateAccount = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
+  const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581st Squadron", "Directorate", "N/A"];
   const flightOptions = ["A", "B", "C", "N/A"];
 
   const handleChange = (e) => {
