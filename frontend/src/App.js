@@ -59,7 +59,11 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={user ? <Home /> : <Navigate to="/login" />}
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/create-account"
@@ -69,33 +73,36 @@ function App() {
         <Route
           path="/user-progress"
           element={
-            user ? (
-              <ProtectedRoute adminOnly={true}>
-                <Admin />
-              </ProtectedRoute>
-            ) : (
-              <Navigate to="/login" />
-            )
+            <ProtectedRoute adminOnly={true}>
+              <Admin />
+            </ProtectedRoute>
           }
         />
         <Route
           path="/user-management"
           element={
-            user ? (
-              <ProtectedRoute adminOnly={true}>
-                <UserManagement />
-              </ProtectedRoute>
-            ) : (
-              <Navigate to="/login" />
-            )
+            <ProtectedRoute adminOnly={true}>
+              <UserManagement />
+            </ProtectedRoute>
           }
         />
         <Route
           path="/user-profile"
-          element={user ? <Profile /> : <Navigate to="/login" />}
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
         />
         <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
-        <Route path="*" element={user ? <ErrorPage /> : <Navigate to="login" />} />
+        <Route
+          path="*"
+          element={
+            <ProtectedRoute>
+              <ErrorPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </div>
   );
