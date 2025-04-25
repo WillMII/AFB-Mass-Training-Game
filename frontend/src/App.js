@@ -14,11 +14,10 @@ import ResetPasswordPage from "./pages/ResetPassword";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { useUser } from "./context/UserContext";
-import { Navigate } from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
-  const { user, setUser } = useUser();
+  const { setUser } = useUser();
   const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
@@ -98,9 +97,7 @@ function App() {
         <Route
           path="*"
           element={
-            <ProtectedRoute>
               <ErrorPage />
-            </ProtectedRoute>
           }
         />
       </Routes>
