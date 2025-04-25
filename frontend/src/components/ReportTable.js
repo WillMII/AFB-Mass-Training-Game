@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
-import Pagination from "react-bootstrap/Pagination";
 import PaginationNav from "./PaginationNav";
 
 const ReportTable = ({ filters }) => {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [usersPerPage, setUsersPerPage] = useState(10);
+  const [usersPerPage, setUsersPerPage] = useState(20);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(filters).toString();

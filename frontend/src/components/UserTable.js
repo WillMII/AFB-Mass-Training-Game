@@ -4,9 +4,12 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import axios from 'axios';
+import PaginationNav from "./PaginationNav";
 
 const UserTable = ({ filters }) => {
   const [users, setUsers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage, setUsersPerPage] = useState(20);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [tempUser, setTempUser] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -20,6 +23,12 @@ const UserTable = ({ filters }) => {
       .then((data) => setUsers(data))
       .catch((err) => console.error("Error fetching users:", err));
   }, [filters]);
+
+  // Pagination logic
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
+  const totalPages = Math.ceil(users.length / usersPerPage);
 
   const handleToggleManager = (user) => {
     setTempUser(user);
@@ -64,7 +73,7 @@ const UserTable = ({ filters }) => {
 
     try {
       const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
-      await axios.delete(`${apiUrl}/api/users/delete`, { 
+      await axios.delete(`${apiUrl}/api/users/delete`, {
         withCredentials: true,
         data: { userId: tempUser.id },
       });
@@ -92,7 +101,7 @@ const UserTable = ({ filters }) => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => (
+          {currentUsers.map((user, index) => (
             <tr key={user.id}>
               <td>{index + 1}</td>
               <td>{user.first_name}</td>
@@ -100,13 +109,13 @@ const UserTable = ({ filters }) => {
               <td>{user.squadron}</td>
               <td>{user.flight}</td>
               <td>
-              <Form.Check 
-                type="switch"
-                id={`manager-switch-${user.id}`}
-                // label=""
-                checked={user.manager}
-                className="my-0 py-0"
-                onChange={() => handleToggleManager(user)}
+                <Form.Check
+                  type="switch"
+                  id={`manager-switch-${user.id}`}
+                  // label=""
+                  checked={user.manager}
+                  className="my-0 py-0"
+                  onChange={() => handleToggleManager(user)}
                 />
               </td>
               <td>
@@ -118,6 +127,14 @@ const UserTable = ({ filters }) => {
           ))}
         </tbody>
       </Table>
+      <PaginationNav
+          users={users}
+          totalPages={totalPages}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+          setUsersPerPage={setUsersPerPage}
+          usersPerPage={usersPerPage}
+        />
 
       <Modal show={showConfirmModal} onHide={() => setShowConfirmModal(false)}>
         <Modal.Header closeButton>
