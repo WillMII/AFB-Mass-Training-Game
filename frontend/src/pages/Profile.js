@@ -2,15 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Hdr from "../components/Hdr";
 import Footer from "../components/Footer";
-import {
-  Container,
-  Form,
-  Row,
-  Col,
-  Button,
-  Modal,
-  InputGroup
-} from "react-bootstrap";
+import { Container, Form, Row, Col, Button, Modal, InputGroup } from "react-bootstrap";
 
 const Profile = () => {
   const [user, setUser] = useState({
@@ -45,21 +37,21 @@ const Profile = () => {
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
-    };
+    }; // fetchUserData
 
     fetchUserData();
   }, []);
 
   const handlePasswordChange = async () => {
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
     if (newPassword !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
     try {
-      // Replace with your backend endpoint
       await axios.put(
-        "http://localhost:8000/api/user/password",
+        `${apiUrl}api/user/password`,
         { password: newPassword },
         { withCredentials: true }
       );
@@ -229,12 +221,11 @@ const Profile = () => {
           </Col>
         </Form.Group>
 
-        {/* PASSWORD (Popup trigger) */}
+        {/* PASSWORD (trigger Popup) */}
         <Button variant="secondary" onClick={() => setShowModal(true)}>
               Change Password
             </Button>
         <hr />
-
 
         <Button variant="danger" onClick={() => setShowDeleteModal(true)}>Delete Account</Button>
         </div>
@@ -285,6 +276,8 @@ const Profile = () => {
             </Form.Group>
           </Form>
         </Modal.Body>
+        
+        {/* MODAL FOOTER */}
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowModal(false)}>
             Cancel
@@ -295,6 +288,7 @@ const Profile = () => {
         </Modal.Footer>
       </Modal>
 
+      {/* DELETE ACCOUNT MODAL */}
       <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered>
         <Modal.Header closeButton>
           <Modal.Title>Confirm Account Deletion</Modal.Title>
@@ -302,6 +296,8 @@ const Profile = () => {
         <Modal.Body>
           Are you sure you want to delete your account? This action is permanent and cannot be undone.
         </Modal.Body>
+        
+        {/* MODAL FOOTER */}
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
             Cancel

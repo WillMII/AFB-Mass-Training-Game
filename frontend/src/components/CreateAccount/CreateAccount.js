@@ -17,7 +17,7 @@ const CreateAccount = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581th Squadron", "Directorate", "N/A"];
+  const squadronOptions = ["577th Squadron", "578th Squadron", "579th Squadron", "580th Squadron", "581st Squadron", "Directorate", "N/A"];
   const flightOptions = ["A", "B", "C", "N/A"];
 
   const handleChange = (e) => {
@@ -30,6 +30,7 @@ const CreateAccount = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
 
     // Basic validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.password || !formData.confirmPassword) {
@@ -43,7 +44,7 @@ const CreateAccount = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/create-account", {
+      const response = await fetch(`${apiUrl}/api/create-account`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

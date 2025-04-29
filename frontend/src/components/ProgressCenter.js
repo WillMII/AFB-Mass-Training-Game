@@ -22,10 +22,11 @@ const ProgressCenter = () => {
 
     useEffect(() => {
         // Fetch user progress when component mounts
+        const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
         const fetchUserProgress = async () => {
             try {
                 // Get user progress from the new API route
-                const response = await axios.get('http://localhost:8000/api/progress-center', { withCredentials: true });
+                const response = await axios.get(`${apiUrl}/api/progress-center`, { withCredentials: true });
                 
                 if (response.data && response.data.length) {
                     setUserProgress(response.data);

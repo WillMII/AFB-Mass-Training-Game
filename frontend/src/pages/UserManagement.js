@@ -19,7 +19,6 @@ const UserManagement = () => {
           <UserTable filters={filters}/>
         </div>
       </Container>
-
       <Footer />
     </div>
   )
