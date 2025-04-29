@@ -12,9 +12,10 @@ const ForgotPasswordModal = ({ onClose }) => {
     setMessage("");
     setError("");
 
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/forgot-password",
+        `${apiUrl}/api/forgot-password`,
         { email },
         { withCredentials: true }
       );

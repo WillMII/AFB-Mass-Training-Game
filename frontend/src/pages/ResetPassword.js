@@ -15,6 +15,7 @@ const ResetPasswordPage = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = async (e) => {
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
     if (password !== confirmPassword) {
         alert("Passwords do not match!");
         return;
@@ -26,7 +27,7 @@ const ResetPasswordPage = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/reset-password/${token}`,
+        `${apiUrl}/api/reset-password/${token}`,
         { password },
         { withCredentials: true }
       );

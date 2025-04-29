@@ -30,6 +30,7 @@ const CreateAccount = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
 
     // Basic validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.password || !formData.confirmPassword) {
@@ -43,7 +44,7 @@ const CreateAccount = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/create-account", {
+      const response = await fetch(`${apiUrl}/api/create-account`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

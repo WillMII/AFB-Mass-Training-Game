@@ -37,12 +37,13 @@ const Profile = () => {
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
-    };
+    }; // fetchUserData
 
     fetchUserData();
   }, []);
 
   const handlePasswordChange = async () => {
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
     if (newPassword !== confirmPassword) {
       alert("Passwords do not match!");
       return;
@@ -50,7 +51,7 @@ const Profile = () => {
 
     try {
       await axios.put(
-        "http://localhost:8000/api/user/password",
+        `${apiUrl}api/user/password`,
         { password: newPassword },
         { withCredentials: true }
       );
