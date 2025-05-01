@@ -5,13 +5,10 @@ import Card from 'react-bootstrap/Card';
 import './Component.css';
 
 const ModuleCard = ({ title, desc, due, trainingBuildUrl, img }) => {
-  // Button click handler: open the training build if provided.
   const handleOpenTraining = () => {
     if (trainingBuildUrl) {
       // open in a new window/tab
       window.open(trainingBuildUrl, '_blank');
-      // ...or redirect the current window [TBD WE SHOULD DECIDE!!!]
-      // window.location.href = trainingBuildUrl;
     } else {
       alert("Training is not available for this module.");
     }
