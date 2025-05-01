@@ -105,17 +105,17 @@ React app will open at **http://localhost:3000**.
 ## API Overview
 
 | Method | Endpoint                     | Description                                   |
-| ------ | ---------------------------- | --------------------------------------------- |
-| POST   | `/api/create-account`        | Register a new user                           |
-| POST   | `/api/login`                 | Authenticate and receive JWT cookie           |
-| POST   | `/api/logout`                | Clear the auth cookie (log out)               |
-| GET    | `/api/user`                  | Retrieve current user profile                 |
-| GET    | `/api/user-progress`         | Fetch all users’ progress (manager view)      |
-| GET    | `/api/progress-center`       | Fetch modules and progress for logged-in user |
-| GET    | `/api/download-certificate`  | Download completion certificate PDF           |
-| DELETE | `/api/user/delete`           | Delete current user account                   |
-| PUT    | `/api/update-manager-status` | Update a user’s `training_manager` flag       |
-| PUT    | `/api/user/password`         | Update current user’s password                |
+------ | ---------------------------- | --------------------------------------------- |
+| POST   | /api/create-account        | Register a new user                           |
+| POST   | /api/login                 | Authenticate and receive JWT cookie           |
+| POST   | /api/logout                | Clear the auth cookie (log out)               |
+| GET    | /api/user                  | Retrieve current user profile                 |
+| GET    | /api/user-progress         | Fetch all users’ progress (manager view)      |
+| GET    | /api/progress-center       | Fetch modules and progress for logged-in user |
+| GET    | /api/download-certificate  | Download completion certificate PDF           |
+| DELETE | /api/user/delete           | Delete current user account                   |
+| PUT    | /api/update-manager-status | Update a user’s training_manager flag       |
+| PUT    | /api/user/password         | Update current user’s password                |
 
 ---
 
