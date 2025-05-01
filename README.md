@@ -209,6 +209,6 @@ A component-based JavaScript library for building interactive user interfaces. R
 A popular CSS framework that provides responsive grid layouts and pre-styled components (buttons, cards, navbars). We use the React-Bootstrap library to integrate those styles directly into our React components, speeding up UI development and ensuring consistency.
 
 **Unity (WebGL)**
-Our game engine for the interactive escape-room modules. We build each training scenario in Unity and export a lightweight **WebGL** build that runs in the browser. Unity handles graphics, physics, and input, letting us focus on quiz logic and immersive puzzles.
+Our game engine for the interactive escape-room modules. We build each training scenario in Unity and export a lightweight **WebGL** build that runs in the browser.
 
 ---
