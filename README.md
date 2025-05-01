@@ -212,3 +212,10 @@ A popular CSS framework that provides responsive grid layouts and pre-styled com
 Our game engine for the interactive escape-room modules. We build each training scenario in Unity and export a lightweight **WebGL** build that runs in the browser.
 
 ---
+
+## Playing the Game
+- Select the desired module from the module selection page on the website
+- Follow the instructions from within the game to complete
+- Collect completion certificate from module selection page when a particular module has been completed
+
+---
