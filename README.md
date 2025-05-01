@@ -43,7 +43,7 @@ A web-based training platform designed for Warner Robins Air Force Base to trans
 2. **Backend**
    ```bash
    cd backend
-   npm start
+   node server.js
    ```
 3. **Frontend**
    ```bash
