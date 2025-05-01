@@ -194,7 +194,7 @@ React app will open at **http://localhost:3000**.
 ## Technology Overview
 
 **MySQL**
-A relational database system. We store users, modules, progress records, and quiz/clue data in structured tables and leverage SQL to query them efficiently.
+A relational database system. We store users, modules, progress records, and other data in structured tables and leverage SQL to query them efficiently.
 
 **Node.js**
 A JavaScript runtime built on Chrome’s V8 engine. We use Node for our backend server because it lets us write our API in JavaScript, handle asynchronous I/O easily, and share code patterns with the frontend.
