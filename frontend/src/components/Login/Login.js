@@ -107,7 +107,6 @@ const Login = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Enter password"
-              // className="login-input"
               />
               <Button
                 className="btn btn-outline-secondary rounded-end-pill btn-light"

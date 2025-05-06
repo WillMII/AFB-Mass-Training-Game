@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import { Navbar } from 'react-bootstrap'
 import FilterMenu from './FilterMenu';
@@ -18,7 +18,9 @@ const AdminNav = ({ report, setFilters, filter_mods, filter_manager, active_filt
         const count = Object.keys(filters).filter(val => val !== "").length;
         setFilterCount(count);
     };
-    const applySearch = () => setFilters(prev => ({ ...prev, search: searchTerm }));
+    const applySearch = useCallback(() => {
+        setFilters(prev => ({ ...prev, search: searchTerm }));
+    }, [searchTerm, setFilters]);    
     const resetFilters = () => {
         setFilters({});
         setFilterCount(0);
@@ -26,7 +28,7 @@ const AdminNav = ({ report, setFilters, filter_mods, filter_manager, active_filt
 
     useEffect(() => {
         applySearch();
-    }, [searchTerm]);
+    }, [applySearch]);
 
     const downloadPDF = () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";

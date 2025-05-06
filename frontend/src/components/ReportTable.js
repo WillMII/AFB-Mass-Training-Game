@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
+import PaginationNav from "./PaginationNav";
 
 const ReportTable = ({ filters }) => {
   const [users, setUsers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage, setUsersPerPage] = useState(20);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(filters).toString();
@@ -20,6 +23,12 @@ const ReportTable = ({ filters }) => {
     return <i className="bi bi-clock text-warning"></i>;
   };
 
+  // Pagination logic
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
+  const totalPages = Math.ceil(users.length / usersPerPage);
+
   return (
     <div className="my-4">
       <Table striped hover responsive className="align-middle">
@@ -36,9 +45,9 @@ const ReportTable = ({ filters }) => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => (
+          {currentUsers.map((user, index) => (
             <tr key={user.id}>
-              <td>{index + 1}</td>
+              <td>{indexOfFirstUser + index + 1}</td>
               <td>{user.first_name}</td>
               <td>{user.last_name}</td>
               <td>{user.squadron}</td>
@@ -50,6 +59,15 @@ const ReportTable = ({ filters }) => {
           ))}
         </tbody>
       </Table>
+      <PaginationNav 
+        users={users} 
+        totalPages={totalPages} 
+        setCurrentPage={setCurrentPage} 
+        currentPage={currentPage}
+        setUsersPerPage={setUsersPerPage}
+        usersPerPage={usersPerPage}
+      />
+
     </div>
   );
 };

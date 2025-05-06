@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useUser } from '../context/UserContext';
 
 const ModuleProgress = ({ title, progress, due, completed, certificate }) => {
-    const { user, setUser } = useUser();
+    const { user } = useUser();
     
     const downloadCertificate = async () => {
         const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
