@@ -9,12 +9,14 @@ public class Glow2 : MonoBehaviour
     private bool alreadyClicked;
     //public GameObject plane;
     //public Material door;
+    public int clueID;
     public Material tinted;
     public Material clear;
     private GameObject counter;
     private TMP_Text text;
     private Renderer renderer;
     private Material[] materials;
+    
     //public var yellow;
     // Start is called before the first frame update
     void Start()
@@ -42,8 +44,8 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseEnter()
     {
-        
-        if (!alreadyClicked && text.text == "")
+        //if (!alreadyClicked && text.text == "")
+        if (!alreadyClicked && text.text == "" && (DBManager.cluesClicked[clueID - 1] != 1))
         {
             renderer = GetComponent<Renderer>();
             materials = renderer.materials;

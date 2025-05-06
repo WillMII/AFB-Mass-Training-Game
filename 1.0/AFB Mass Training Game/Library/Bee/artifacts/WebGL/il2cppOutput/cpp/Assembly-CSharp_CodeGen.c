@@ -126,7 +126,14 @@ extern void Test_Start_mA902842AF55C0A063D71F22B280F28BF0FB01497 (void);
 extern void Test__ctor_mB84DF4A3888723C395E76E3879FDFB8AA1EFEDCB (void);
 extern void ToolbarClue_OnMouseDown_m85FFED2EA893D3B21389BA50195F0E061630AF76 (void);
 extern void ToolbarClue__ctor_mC3CA52F8422D1972FD7D0299970CCFEA88FE0963 (void);
-static Il2CppMethodPointer s_methodPointers[114] = 
+extern void WebTest_Start_m26208D38F5182AF5E1B65C972CB61CBC889CF252 (void);
+extern void WebTest__ctor_m5C0295D446B0800DD401331646739341A7156B09 (void);
+extern void U3CStartU3Ed__0__ctor_mC2680902DFA71DFAB9AE40379373C4DF5BF08F94 (void);
+extern void U3CStartU3Ed__0_System_IDisposable_Dispose_mC8D2BE3CA1B6C46DC795E115EC9690E45FBD6BD0 (void);
+extern void U3CStartU3Ed__0_MoveNext_m45933CF297977190C27543411E58C2ABF0AF1E7C (void);
+extern void U3CStartU3Ed__0_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB7D240FDB80695CFC54877CDF20B35EEDF2E125 (void);
+extern void U3CStartU3Ed__0_System_Collections_IEnumerator_get_Current_mCAC2526577325A1F022DCD8CFECDE08F025AEBAA (void);
+static Il2CppMethodPointer s_methodPointers[121] = 
 {
 	ActivateClue_OnMouseDown_m03A5C462219CCD3F1AD151BE7DF44EFEF13461AB,
 	ActivateClue_getAlrInst_m380B52B2F7C9E839B2DF540AC21222865D9C72F3,
@@ -242,8 +249,15 @@ static Il2CppMethodPointer s_methodPointers[114] =
 	Test__ctor_mB84DF4A3888723C395E76E3879FDFB8AA1EFEDCB,
 	ToolbarClue_OnMouseDown_m85FFED2EA893D3B21389BA50195F0E061630AF76,
 	ToolbarClue__ctor_mC3CA52F8422D1972FD7D0299970CCFEA88FE0963,
+	WebTest_Start_m26208D38F5182AF5E1B65C972CB61CBC889CF252,
+	WebTest__ctor_m5C0295D446B0800DD401331646739341A7156B09,
+	U3CStartU3Ed__0__ctor_mC2680902DFA71DFAB9AE40379373C4DF5BF08F94,
+	U3CStartU3Ed__0_System_IDisposable_Dispose_mC8D2BE3CA1B6C46DC795E115EC9690E45FBD6BD0,
+	U3CStartU3Ed__0_MoveNext_m45933CF297977190C27543411E58C2ABF0AF1E7C,
+	U3CStartU3Ed__0_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB7D240FDB80695CFC54877CDF20B35EEDF2E125,
+	U3CStartU3Ed__0_System_Collections_IEnumerator_get_Current_mCAC2526577325A1F022DCD8CFECDE08F025AEBAA,
 };
-static const int32_t s_InvokerIndices[114] = 
+static const int32_t s_InvokerIndices[121] = 
 {
 	1422,
 	1332,
@@ -359,12 +373,19 @@ static const int32_t s_InvokerIndices[114] =
 	1422,
 	1422,
 	1422,
+	1369,
+	1422,
+	1236,
+	1422,
+	1332,
+	1369,
+	1369,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	114,
+	121,
 	s_methodPointers,
 	0,
 	NULL,

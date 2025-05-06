@@ -22,6 +22,7 @@ public class CountingTypes : MonoBehaviour
     public TMP_Text text;
     private int numFound;
     private int i;
+    public bool alreadyCompleted = false;
 
     private bool alreadyInstantiated;
 
@@ -39,11 +40,20 @@ public class CountingTypes : MonoBehaviour
         //text = this.gameObject.GetComponent<TMP_Text>();
         numFound = 0;
         alreadyInstantiated = false;
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (DBManager.multipartCluesCompleted[0] == 1)
+        {
+            alreadyInstantiated = true;
+            alreadyCompleted = true;
+            numFound = 7;
+        }
+
         if (numFound < 7)
         {
             if (bookstack.getAlrClk())

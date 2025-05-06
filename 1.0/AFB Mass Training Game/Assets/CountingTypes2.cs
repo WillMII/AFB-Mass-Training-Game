@@ -21,6 +21,7 @@ public class CountingTypes2 : MonoBehaviour
     private int i;
 
     private bool alreadyInstantiated;
+    private bool alreadyCompleted;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,13 @@ public class CountingTypes2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (DBManager.multipartCluesCompleted[1] == 1)
+        {
+            alreadyInstantiated = true;
+            alreadyCompleted = true;
+            numFound = 4;
+        }
+
         if (numFound < 4)
         {
             if (keyboard.getAlrClk())

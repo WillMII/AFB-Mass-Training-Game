@@ -514,6 +514,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Application_InvokeOnBeforeRender_mBD6251514
 IL2CPP_EXTERN_C const RuntimeMethod* Application_OpenURL_mE748FA4D503715DEE12BCA4BDD8A5305AE41DB89_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Application__cctor_m5B1DED32A96960B4E37EA614575B6366BCDFD549_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Application_add_onBeforeRender_mEE8925294C807AD08FA0FF35D4C663E098510394_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Application_get_absoluteURL_m7B3AC06DEEC40D224CF33271EC046368A9EC8FAD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Application_get_isBatchMode_mDE2DA11B2DAC8D8239BACD75A56A6EE6BAA4DC36_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Application_get_isEditor_mEAC51E3ACE6DCE438087FB14BD75A3C219D354D0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Application_get_isFocused_mFEEC52E355AA7AAA6B7250520CA544D80BE77524_RuntimeMethod_var;
@@ -6442,7 +6443,7 @@ IL_000e:
 		int32_t L_10 = ___1_charsLen;
 		NullCheck(L_8);
 		String_t* L_11;
-		L_11 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(30, L_8, L_9, 0, L_10);
+		L_11 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34, L_8, L_9, 0, L_10);
 		V_2 = L_11;
 		goto IL_0034;
 	}
@@ -8841,6 +8842,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Application_get_isBatchMode_mDE2DA11B2DA
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Application_get_isBatchMode_mDE2DA11B2DAC8D8239BACD75A56A6EE6BAA4DC36_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_isBatchMode()");
 	bool icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Application_get_absoluteURL_m7B3AC06DEEC40D224CF33271EC046368A9EC8FAD (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Application_get_absoluteURL_m7B3AC06DEEC40D224CF33271EC046368A9EC8FAD_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	StackTraceSentry _stackTraceSentry(Application_get_absoluteURL_m7B3AC06DEEC40D224CF33271EC046368A9EC8FAD_RuntimeMethod_var);
+	typedef String_t* (*Application_get_absoluteURL_m7B3AC06DEEC40D224CF33271EC046368A9EC8FAD_ftn) ();
+	static Application_get_absoluteURL_m7B3AC06DEEC40D224CF33271EC046368A9EC8FAD_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_get_absoluteURL_m7B3AC06DEEC40D224CF33271EC046368A9EC8FAD_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_absoluteURL()");
+	String_t* icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_OpenURL_mE748FA4D503715DEE12BCA4BDD8A5305AE41DB89 (String_t* ___0_url, const RuntimeMethod* method) 

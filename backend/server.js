@@ -17,6 +17,29 @@ const PORT = 8000;
 const session = require("express-session"); // Import express-session for session management
 
 // Middleware
+
+
+const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000'
+];
+
+
+
+const corsOptions = {
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Unauthorized by CORS'));
+        }
+    },
+    credentials: true,
+    methods: "GET,POST,PUT,DELETE,OPTIONS",
+    allowedHeaders: ["Content-Type", "Authorization"]
+}
+/*
 app.use(
     cors({
         origin: "http://localhost:3000", // Allow frontend origin
@@ -25,6 +48,9 @@ app.use(
         allowedHeaders: "Content-Type,Authorization", // Allowed headers
     })
 );
+*/
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 app.use(cookieParser());
@@ -33,7 +59,10 @@ app.use(session({
     secret: "your_secret_key",  // Replace with a strong secret
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }
+    cookie: { 
+        httpOnly: true,
+        sameSite: 'lax',
+        secure: false }
 }));
 
 // === PDF Download Route ===

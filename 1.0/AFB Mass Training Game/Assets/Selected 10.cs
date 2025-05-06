@@ -98,6 +98,7 @@ public class Selected10 : MonoBehaviour
         if (int.Parse(counter.text) >= 7)
         {
             passed = true;
+            DBManager.quizCompleted = 1;
         } else
         {
             passed = false;

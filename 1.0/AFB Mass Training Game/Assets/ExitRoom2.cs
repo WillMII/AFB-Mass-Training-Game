@@ -38,7 +38,13 @@ public class ExitRoom2 : MonoBehaviour
 
     void OnMouseDown()
     {
-        canExit = A10.didPass() || B10.didPass() || C10.didPass() || D10.didPass();
+        if (DBManager.quizCompleted == 1)
+        {
+            canExit = true;
+            Debug.Log("This is being reached!");
+        } else { 
+            canExit = A10.didPass() || B10.didPass() || C10.didPass() || D10.didPass();
+        }
         //canExit = Keyboard.getAlrClk() && safe.getAlrInst() && ideaPoster.getAlrInst() && trashCan.getAlrInst() && counter.getNumFound() == 4;
         if (canExit)
         {

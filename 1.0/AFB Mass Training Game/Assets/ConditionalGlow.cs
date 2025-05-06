@@ -13,6 +13,7 @@ public class ConditionalGlow : MonoBehaviour
     //public var yellow;
     // Start is called before the first frame update
     public ActivateClue script;
+    public int starterClueID;
     bool go = false;
     private Renderer renderer;
     private Material[] materials;
@@ -28,6 +29,32 @@ public class ConditionalGlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (starterClueID == 4)
+        {
+            if ((DBManager.multipartCluesCompleted[0] == 1) || alreadyClicked)
+            {
+                alreadyClicked = true;
+            }
+            else
+            {
+                alreadyClicked = false;
+            }
+        }
+        else if (starterClueID == 8)
+        {
+            if ((DBManager.multipartCluesCompleted[1] == 1) || alreadyClicked)
+            {
+                alreadyClicked = true;
+            }
+            else
+            {
+                alreadyClicked = false;
+            }
+        }
+        else
+        {
+            alreadyClicked = false;
+        }
         //go = script.getAlrClk();
     }
 

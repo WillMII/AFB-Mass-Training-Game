@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1393d8034631a004eaac80e292c7459b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clueID: 7
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
 --- !u!114 &9137613598168547586

@@ -63,6 +63,7 @@ const Login = () => {
 
         if (userResponse.status === 200) {
           setUser(userResponse.data); // Assuming the user data is in response.data
+          console.log("userResponseReturned!");
           navigate("/"); // Redirect to dashboard (change later)
 
         } else {
