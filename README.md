@@ -135,7 +135,8 @@ EMAIL_HOST=
 EMAIL_PORT=
 EMAIL_USER=
 EMAIL_PASS=
-EMAIL_SECURE= // true or false![image](https://github.com/user-attachments/assets/70fbd714-fa05-4aaf-aa04-84d6c3fd5b53)
+EMAIL_SECURE= // true or false
+```
 
 
 ---
