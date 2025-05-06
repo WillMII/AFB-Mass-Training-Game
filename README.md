@@ -41,6 +41,12 @@ DB_USER=your_mysql_user
 DB_PASS=your_mysql_password
 DB_NAME=afb_training
 JWT_SECRET=your_jwt_secret
+
+EMAIL_HOST=
+EMAIL_PORT=
+EMAIL_USER=
+EMAIL_PASS=
+EMAIL_SECURE= // true or false
 ```
 
 ### 3. Install Dependencies
@@ -99,6 +105,38 @@ cd frontend
 npm start
 ```
 React app will open at **http://localhost:3000**.
+
+---
+
+## Email Configuration (Password Reset Feature)
+
+This app includes functionality to send password reset emails. By default, it uses [Ethereal Email](https://ethereal.email) to simulate sending emails during development.
+
+### Using Ethereal for Testing
+
+No real email setup is needed for development. The reset email preview will appear in your terminal logs.
+
+**To test:**
+1. Run the backend.
+2. Submit the "Forgot Password" form.
+3. In the backend terminal, look for a `Preview URL`.
+4. Open the link in your browser to view the email and test the password reset process.
+
+> This is only for simulation. The email is not actually delivered to an inbox.
+
+---
+
+### Production Email Setup 
+
+To enable real emails, configure the following environment variables in a `.env` file:
+
+```env
+EMAIL_HOST=
+EMAIL_PORT=
+EMAIL_USER=
+EMAIL_PASS=
+EMAIL_SECURE= // true or false![image](https://github.com/user-attachments/assets/70fbd714-fa05-4aaf-aa04-84d6c3fd5b53)
+
 
 ---
 
