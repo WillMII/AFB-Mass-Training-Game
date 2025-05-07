@@ -390,6 +390,7 @@
 "Assets/ShelfClue.cs"
 "Assets/Test.cs"
 "Assets/ToolbarClue.cs"
+"Assets/UserData.cs"
 "Assets/WebTest.cs"
 -langversion:9.0
 

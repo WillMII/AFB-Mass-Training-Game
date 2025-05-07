@@ -21,7 +21,7 @@ public class CountingTypes2 : MonoBehaviour
     private int i;
 
     private bool alreadyInstantiated;
-    private bool alreadyCompleted;
+    private bool alreadyCompleted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -86,6 +86,7 @@ public class CountingTypes2 : MonoBehaviour
             if (!alreadyInstantiated)
             {
                 Instantiate(typesFound.gameObject);
+                DBManager.multipartCluesCompleted[1] = 1;
                 alreadyInstantiated = true;
             }
             text.text = "";

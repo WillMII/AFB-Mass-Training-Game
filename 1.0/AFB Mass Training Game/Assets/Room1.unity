@@ -1588,18 +1588,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 809084906}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1297661111}
         m_TargetAssemblyTypeName: DBManagerScript, Assembly-CSharp
         m_MethodName: callSaveData
@@ -2116,6 +2104,10 @@ PrefabInstance:
       propertyPath: typesFound
       value: 
       objectReference: {fileID: 2203950869843888959, guid: 08050d96907ecd1499356a6722fb378e, type: 3}
+    - target: {fileID: 6377491724588624081, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
+      propertyPath: multiPartClueNum
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7096688446290938115, guid: 33cb9c56d7743c54cadc3574a09689b6, type: 3}
       propertyPath: m_Name
       value: STINFO Counter

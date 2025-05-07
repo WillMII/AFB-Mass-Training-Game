@@ -13,6 +13,7 @@ public static class DBManager
     public static int[] cluesClicked = new int[11];
     public static int[] multipartCluesCompleted = new int[2];
     public static int quizCompleted;
+    public static string timeCompleted = "";
 
     public static float calculateProgress()
     {
@@ -28,9 +29,15 @@ public static class DBManager
             numberOfCluesClickedOrCompleted += multipartCluesCompleted[i];
         } // for
 
-        float totalClues = 12.0F;
-
-        return (numberOfCluesClickedOrCompleted / totalClues);
+        
+        float totalClues = 14.0F;
+        if (quizCompleted == 1 ){
+            return 100.0F;
+        } else
+        {
+            return ((numberOfCluesClickedOrCompleted / totalClues) * 100);
+        }
+        
 
     }
 

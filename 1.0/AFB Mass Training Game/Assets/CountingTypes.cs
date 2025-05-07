@@ -15,6 +15,7 @@ public class CountingTypes : MonoBehaviour
     public CluePart TDIP;
     public CluePart Brief;
     public ActivateClue bookstack;
+    public int multiPartClueNum;
 
     public GameObject typesFound;
 
@@ -95,6 +96,7 @@ public class CountingTypes : MonoBehaviour
             if (!alreadyInstantiated)
             {
                 Instantiate(typesFound.gameObject);
+                DBManager.multipartCluesCompleted[multiPartClueNum - 1] = 1;
                 alreadyInstantiated = true;
             }
             text.text = "";

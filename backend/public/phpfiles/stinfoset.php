@@ -1,4 +1,9 @@
 <?php
+
+header("Access-Control-Allow-Origin: http://localhost:8000"); // or "*" for open access
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
     $conn = mysqli_connect('127.0.0.1', 'root', 'password', 'mass_training_database', 3306);
 
     if ($conn->connect_error) {

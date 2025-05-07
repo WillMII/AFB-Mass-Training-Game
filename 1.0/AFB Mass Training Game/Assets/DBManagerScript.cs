@@ -13,6 +13,11 @@ public class DBManagerScript : MonoBehaviour
         Debug.Log("DBManagerScript");
     }
 
+    void Update()
+    {
+  
+    }
+
     public void callLoadInData()
     {
         
@@ -54,9 +59,20 @@ public class DBManagerScript : MonoBehaviour
 
     IEnumerator loadInData()
     {
+        UnityWebRequest request = UnityWebRequest.Get("http://localhost:8000/api/user");
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            string json = request.downloadHandler.text;
+            UserData user = JsonUtility.FromJson<UserData>(json);
+            Debug.Log("Email: " + user.email);
+            DBManager.userEmail = user.email;
+        }
+
+
         WWWForm form = new WWWForm();
-        DBManager.userEmail = "test@gmail.com";
-        form.AddField("email", "test@gmail.com");
+        form.AddField("email", DBManager.userEmail);
         UnityWebRequest www = UnityWebRequest.Post("http://localhost:8001/phpfiles/stinfoget.php", form);
         yield return www.SendWebRequest();
         if (www.downloadHandler.text[0] == '0')
@@ -66,6 +82,11 @@ public class DBManagerScript : MonoBehaviour
             Debug.Log("User ID: " + response[1]);
             DBManager.userID = int.Parse(response[1]);
             int multipartClueNum = 0;
+            Debug.Log("Response Length: " + response.Length);
+            for (int i = 0; i < response.Length; i++)
+            {
+                Debug.Log(i + ": " + response[i]);
+            }
             for (int i = 2; i < response.Length; i++)
             {
                 Debug.Log("Column " + (i - 1) + ": " + response[i]);
@@ -77,6 +98,7 @@ public class DBManagerScript : MonoBehaviour
                 // If the index is on the quizCompletion
                 } else if (i == (response.Length - 1))
                 {
+                    Debug.Log("response " + i + ": "+ response[i]);
                     DBManager.quizCompleted = int.Parse(response[i]);
                 // If the index is one of the cluesClicked
                 } else
@@ -116,7 +138,8 @@ public class DBManagerScript : MonoBehaviour
         form.AddField("clue9clicked", DBManager.cluesClicked[8]);
         form.AddField("clue10clicked", DBManager.cluesClicked[9]);
         form.AddField("clue11clicked", DBManager.cluesClicked[10]);
-        form.AddField("quizCompleted", DBManager.quizCompleted);
+        form.AddField("quizcompleted", DBManager.quizCompleted);
+        //form.AddField("quizCompleted", DBManager.quizCompleted);
 
         UnityWebRequest www = UnityWebRequest.Post("http://localhost:8001/phpfiles/stinfoset.php", form);
         yield return www.SendWebRequest();
@@ -128,6 +151,25 @@ public class DBManagerScript : MonoBehaviour
         {
             Debug.Log("Gave Save error. Error #" + www.downloadHandler.text);
         }
+        // Sends data to game_progress database
+        WWWForm progressForm = new WWWForm();
+        progressForm.AddField("user_id", DBManager.userID);
+        progressForm.AddField("module_id", 1);
+        progressForm.AddField("progress", DBManager.calculateProgress().ToString());
+        progressForm.AddField("date_complete", DBManager.timeCompleted);
+        progressForm.AddField("stage", 1);
+
+        UnityWebRequest progressWWW = UnityWebRequest.Post("http://localhost:8001/phpfiles/stinfoprogress.php", progressForm);
+        yield return progressWWW.SendWebRequest();
+        if (progressWWW.downloadHandler.text[0] == '0')
+        {
+            Debug.Log("Game added to game_progress!");
+        }
+        else
+        {
+            Debug.Log("Gave Save error. Error #" + progressWWW.downloadHandler.text);
+        }
+
         Debug.Log("DBManagerScript is being reached!");
 
     }

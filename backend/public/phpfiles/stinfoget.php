@@ -1,6 +1,11 @@
 <?php
 //session_start();
 
+header("Access-Control-Allow-Origin: http://localhost:8000"); // or "*" for open access
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
 $conn = mysqli_connect('127.0.0.1', 'root', 'password', 'mass_training_database', 3306);
 
 if ($conn->connect_error) {
@@ -22,20 +27,20 @@ if (mysqli_num_rows($check) == 0) {
 }
 // Forgive me if any php pros see this, I am only a novice.
 $data = mysqli_fetch_assoc($check);
-$clue1clicked = $data["clue1clicked"];
-$clue2clicked = $data["clue2clicked"];
-$clue3clicked = $data["clue3clicked"];
-$clue4clicked = $data["clue4clicked"];
-$clue4completed = $data["clue4completed"];
-$clue5clicked = $data["clue5clicked"];
-$clue6clicked = $data["clue6clicked"];
-$clue7clicked = $data["clue7clicked"];
-$clue8clicked = $data["clue8clicked"];
-$clue8completed = $data["clue8completed"];
-$clue9clicked = $data["clue9clicked"];
-$clue10clicked = $data["clue10clicked"];
-$clue11clicked = $data["clue11clicked"];
-$quizcompleted = $data["quizCompleted"];
+$clue1clicked = (int)$data["clue1clicked"];
+$clue2clicked = (int)$data["clue2clicked"];
+$clue3clicked = (int)$data["clue3clicked"];
+$clue4clicked = (int)$data["clue4clicked"];
+$clue4completed = (int)$data["clue4completed"];
+$clue5clicked = (int)$data["clue5clicked"];
+$clue6clicked = (int)$data["clue6clicked"];
+$clue7clicked = (int)$data["clue7clicked"];
+$clue8clicked = (int)$data["clue8clicked"];
+$clue8completed = (int)$data["clue8completed"];
+$clue9clicked = (int)$data["clue9clicked"];
+$clue10clicked = (int)$data["clue10clicked"];
+$clue11clicked = (int)$data["clue11clicked"];
+$quizcompleted = (int)$data["quizcompleted"];
 
 echo "0\t" . $userid . "\t" .  $clue1clicked . "\t" . $clue2clicked . "\t" . $clue3clicked . "\t" . $clue4clicked . "\t" . $clue4completed . "\t" . $clue5clicked . "\t" . $clue6clicked . "\t" . $clue7clicked . "\t" . $clue8clicked . "\t" . $clue8completed . "\t" . $clue9clicked . "\t" . $clue10clicked . "\t" . $clue11clicked . "\t" . $quizcompleted;
 

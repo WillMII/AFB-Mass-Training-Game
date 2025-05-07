@@ -311,6 +311,8 @@
 "Assets/CountingTypes.cs"
 "Assets/CountingTypes2.cs"
 "Assets/CountingTypes3.cs"
+"Assets/DBManager.cs"
+"Assets/DBManagerScript.cs"
 "Assets/DestroyParent.cs"
 "Assets/ExitRoom.cs"
 "Assets/ExitRoom2.cs"
@@ -338,6 +340,7 @@
 "Assets/ShelfClue.cs"
 "Assets/Test.cs"
 "Assets/ToolbarClue.cs"
+"Assets/UserData.cs"
 "Assets/WebTest.cs"
 -langversion:9.0
 
