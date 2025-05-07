@@ -270,6 +270,6 @@ Our game engine for the interactive escape-room modules. We build each training 
 - Change to Final Build mode (File -> Build Settings -> Uncheck Develoment Build)
 - Set to Correct Resolution (Edit -> Project Settings -> Player -> Under WebGL tab, set width and height to 1200 and 576 respectively)
 - Import Text Mesh Pro (needed text files) if Necessary ((Edit -> Project Settings -> TextMeshPro -> Import TMP Essentials)
-- Any missing default Unity libraries or package files can be dound under Window -> Package Manager, and selecting Unity Registry from the packages dropdown
+- Any missing default Unity libraries or package files can be found under Window -> Package Manager, and selecting Unity Registry from the packages dropdown
 
 ---
