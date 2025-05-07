@@ -8,6 +8,7 @@ public class DBManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if (this != null && gameObject.activeInHierarchy)
             StartCoroutine(loadInData());
         Debug.Log("DBManagerScript");
@@ -15,18 +16,18 @@ public class DBManagerScript : MonoBehaviour
 
     void Update()
     {
-  
+        //callLoadInData();
     }
 
     public void callLoadInData()
     {
-        
+
 
         //UnityWebRequest request = UnityWebRequest.Get("Test");
 
         // Below is the test code used to test if the game will react a specific way or not.
         /*
-        int[] testClueArray = new int[11];
+        int[] testClueArray = new int[18];
         testClueArray[0] = 1;
         testClueArray[1] = 1;
         testClueArray[2] = 1;
@@ -34,14 +35,25 @@ public class DBManagerScript : MonoBehaviour
         testClueArray[4] = 1;
         testClueArray[5] = 1;
         testClueArray[6] = 1;
-        testClueArray[7] = 1;
-        testClueArray[8] = 1;
-        testClueArray[9] = 1;
-        testClueArray[10] = 1;
+        testClueArray[7] = 0;
+        testClueArray[8] = 0;
+        testClueArray[9] = 0;
+        testClueArray[10] = 0;
+        testClueArray[11] = 0;
+        testClueArray[12] = 0;
+        testClueArray[13] = 0;
+        testClueArray[14] = 0;
+        testClueArray[15] = 0;
+        testClueArray[16] = 0;
+        testClueArray[17] = 0;
 
-        int[] testMultiPartClueArray = new int[2];
+
+        int[] testMultiPartClueArray = new int[4];
         testMultiPartClueArray[0] = 1;
         testMultiPartClueArray[1] = 1;
+        testMultiPartClueArray[2] = 1;
+        testMultiPartClueArray[3] = 0;
+
 
         for (int i = 0; i < testClueArray.Length; i++)
         {
@@ -52,11 +64,11 @@ public class DBManagerScript : MonoBehaviour
         {
             DBManager.multipartCluesCompleted[i] = testMultiPartClueArray[i];
         }
-
+        
         DBManager.quizCompleted = 1;
         */
     }
-
+    
     IEnumerator loadInData()
     {
         UnityWebRequest request = UnityWebRequest.Get("http://localhost:8000/api/user");
@@ -73,7 +85,7 @@ public class DBManagerScript : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("email", DBManager.userEmail);
-        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8001/phpfiles/stinfoget.php", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8001/phpfiles/nofearget.php", form);
         yield return www.SendWebRequest();
         if (www.downloadHandler.text[0] == '0')
         {
@@ -91,7 +103,7 @@ public class DBManagerScript : MonoBehaviour
             {
                 Debug.Log("Column " + (i - 1) + ": " + response[i]);
                 // If the index is one of the multipartclueCompletion
-                if (i == 6 || i == 10)
+                if (i == 3 || i == 5 || i == 8 || i == 10)
                 {
                     DBManager.multipartCluesCompleted[multipartClueNum] = int.Parse(response[i]);
                     multipartClueNum++;
@@ -123,25 +135,35 @@ public class DBManagerScript : MonoBehaviour
 
     IEnumerator saveData()
     {
+        Debug.Log("Save Data Called!");
         WWWForm form = new WWWForm();
         form.AddField("email", DBManager.userEmail);
         form.AddField("clue1clicked", DBManager.cluesClicked[0]);
+        form.AddField("clue1completed", DBManager.multipartCluesCompleted[0]);
         form.AddField("clue2clicked", DBManager.cluesClicked[1]);
+        form.AddField("clue2completed", DBManager.multipartCluesCompleted[1]);
         form.AddField("clue3clicked", DBManager.cluesClicked[2]);
         form.AddField("clue4clicked", DBManager.cluesClicked[3]);
-        form.AddField("clue4completed", DBManager.multipartCluesCompleted[0]);
+        form.AddField("clue4completed", DBManager.multipartCluesCompleted[2]);
         form.AddField("clue5clicked", DBManager.cluesClicked[4]);
+        form.AddField("clue5completed", DBManager.multipartCluesCompleted[3]);
         form.AddField("clue6clicked", DBManager.cluesClicked[5]);
         form.AddField("clue7clicked", DBManager.cluesClicked[6]);
         form.AddField("clue8clicked", DBManager.cluesClicked[7]);
-        form.AddField("clue8completed", DBManager.multipartCluesCompleted[1]);
         form.AddField("clue9clicked", DBManager.cluesClicked[8]);
         form.AddField("clue10clicked", DBManager.cluesClicked[9]);
         form.AddField("clue11clicked", DBManager.cluesClicked[10]);
+        form.AddField("clue12clicked", DBManager.cluesClicked[11]);
+        form.AddField("clue13clicked", DBManager.cluesClicked[12]);
+        form.AddField("clue14clicked", DBManager.cluesClicked[13]);
+        form.AddField("clue15clicked", DBManager.cluesClicked[14]);
+        form.AddField("clue16clicked", DBManager.cluesClicked[15]);
+        form.AddField("clue17clicked", DBManager.cluesClicked[16]);
+        form.AddField("clue18clicked", DBManager.cluesClicked[17]);
         form.AddField("quizcompleted", DBManager.quizCompleted);
         //form.AddField("quizCompleted", DBManager.quizCompleted);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8001/phpfiles/stinfoset.php", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8001/phpfiles/nofearset.php", form);
         yield return www.SendWebRequest();
         if (www.downloadHandler.text[0] == '0')
         {
@@ -154,12 +176,12 @@ public class DBManagerScript : MonoBehaviour
         // Sends data to game_progress database
         WWWForm progressForm = new WWWForm();
         progressForm.AddField("user_id", DBManager.userID);
-        progressForm.AddField("module_id", 1);
+        progressForm.AddField("module_id", 2);
         progressForm.AddField("progress", DBManager.calculateProgress().ToString());
         progressForm.AddField("date_complete", DBManager.timeCompleted);
         progressForm.AddField("stage", 1);
 
-        UnityWebRequest progressWWW = UnityWebRequest.Post("http://localhost:8001/phpfiles/stinfoprogress.php", progressForm);
+        UnityWebRequest progressWWW = UnityWebRequest.Post("http://localhost:8001/phpfiles/nofearprogress.php", progressForm);
         yield return progressWWW.SendWebRequest();
         if (progressWWW.downloadHandler.text[0] == '0')
         {
@@ -173,4 +195,6 @@ public class DBManagerScript : MonoBehaviour
         Debug.Log("DBManagerScript is being reached!");
 
     }
+    
+    
 }

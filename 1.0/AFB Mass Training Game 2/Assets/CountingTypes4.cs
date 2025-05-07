@@ -13,6 +13,7 @@ public class CountingTypes4 : MonoBehaviour
     private int numFound;
     private bool alreadyInstantiated;
     public GameObject typesFound;
+    public int clueIDAssociatedWith;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,15 @@ public class CountingTypes4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (clueIDAssociatedWith == 5)
+        {
+            if (DBManager.multipartCluesCompleted[3] == 1)
+            {
+                numFound = parts.Count;
+                alreadyInstantiated = true;
+            }
+        }
         if (numFound < parts.Count)
         {
             if (start.getAlrClk())
@@ -58,8 +68,13 @@ public class CountingTypes4 : MonoBehaviour
         {
             if (!alreadyInstantiated)
             {
-                Instantiate(typesFound.gameObject);
-                alreadyInstantiated = true;
+                if (clueIDAssociatedWith == 5)
+                {
+                    Instantiate(typesFound.gameObject);
+                    alreadyInstantiated = true;
+                    DBManager.multipartCluesCompleted[3] = 1;
+                }
+                
             }
             text.text = "";
         }

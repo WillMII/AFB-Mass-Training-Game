@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 
 public class CountingTypes3 : MonoBehaviour
 {
@@ -30,10 +30,30 @@ public class CountingTypes3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (clueIDAssociatedWith == 4)
+        {
+            if (DBManager.multipartCluesCompleted[2] == 1)
+            {
+                numFound = parts.Count;
+                alreadyInstantiated = true;
+            }
+        }
+        else {
+            if (DBManager.multipartCluesCompleted[clueIDAssociatedWith - 1] == 1)
+            {
+                numFound = parts.Count;
+                alreadyInstantiated = true;
+            }
+        }
+        
+        {
+
+        }
         if (numFound < parts.Count)
         {
             if (start.getAlrClk())
             {
+                DBManager.cluesClicked[clueIDAssociatedWith - 1] = 1;
                 for (int i = 0; i < parts.Count; i++)
                 {
                     found[i] = parts[i].getAlrClk();
@@ -62,12 +82,12 @@ public class CountingTypes3 : MonoBehaviour
                 Instantiate(typesFound.gameObject);
                 if (clueIDAssociatedWith == 1)
                 {
-                    DBManager.multipartCluesCompleted[1] = 1;
+                    DBManager.multipartCluesCompleted[0] = 1;
                 } else if (clueIDAssociatedWith == 2) {
-                    DBManager.multipartCluesCompleted[2] = 1;
+                    DBManager.multipartCluesCompleted[1] = 1;
                 } else if (clueIDAssociatedWith == 4)
                 {
-                    DBManager.multipartCluesCompleted[4] = 1;
+                    DBManager.multipartCluesCompleted[2] = 1;
                 }
                 
                 alreadyInstantiated = true;

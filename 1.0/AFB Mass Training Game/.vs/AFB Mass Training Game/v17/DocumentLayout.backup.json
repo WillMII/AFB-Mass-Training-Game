@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\countingtypes2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\countingtypes2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\activateclue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\activateclue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|c:\\users\\chris\\onedrive\\desktop\\csee 4910\\projectrepository\\afb-mass-training-game\\1.0\\afb mass training game\\assets\\dbmanagerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\dbmanagerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\dbmanagerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\selected 10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\selected 10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\glow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\glow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\keypad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\keypad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|c:\\users\\chris\\onedrive\\desktop\\csee 4910\\projectrepository\\afb-mass-training-game\\1.0\\afb mass training game\\assets\\countingtypes2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\countingtypes2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\selected 10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\selected 10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\cluepart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\cluepart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|c:\\users\\chris\\onedrive\\desktop\\csee 4910\\projectrepository\\afb-mass-training-game\\1.0\\afb mass training game\\assets\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\activateclue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\activateclue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\exitroom2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\exitroom2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\assets\\glow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{424C8F95-F5C7-2FA1-EE2B-F1363094E637}|Assembly-CSharp.csproj|solutionrelative:assets\\glow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "UserData.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\UserData.cs",
               "RelativeDocumentMoniker": "Assets\\UserData.cs",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Keypad.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\Keypad.cs",
               "RelativeDocumentMoniker": "Assets\\Keypad.cs",
@@ -80,20 +80,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "DBManagerScript.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\DBManagerScript.cs",
               "RelativeDocumentMoniker": "Assets\\DBManagerScript.cs",
               "ToolTip": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\DBManagerScript.cs",
               "RelativeToolTip": "Assets\\DBManagerScript.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAIwD8AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAD8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T14:17:04.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Selected 10.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\Selected 10.cs",
               "RelativeDocumentMoniker": "Assets\\Selected 10.cs",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CountingTypes2.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\CountingTypes2.cs",
               "RelativeDocumentMoniker": "Assets\\CountingTypes2.cs",
@@ -119,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ExitRoom2.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\ExitRoom2.cs",
               "RelativeDocumentMoniker": "Assets\\ExitRoom2.cs",
@@ -131,33 +131,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ActivateClue.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\ActivateClue.cs",
               "RelativeDocumentMoniker": "Assets\\ActivateClue.cs",
               "ToolTip": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\ActivateClue.cs",
               "RelativeToolTip": "Assets\\ActivateClue.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T21:05:32.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CluePart.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\CluePart.cs",
               "RelativeDocumentMoniker": "Assets\\CluePart.cs",
               "ToolTip": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\CluePart.cs",
               "RelativeToolTip": "Assets\\CluePart.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T21:05:17.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "Glow2.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\Glow2.cs",
               "RelativeDocumentMoniker": "Assets\\Glow2.cs",
@@ -165,11 +165,12 @@
               "RelativeToolTip": "Assets\\Glow2.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAcwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T07:45:19.729Z"
+              "WhenOpened": "2025-05-01T07:45:19.729Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "DBManager.cs",
               "DocumentMoniker": "C:\\Users\\chris\\OneDrive\\Desktop\\CSEE 4910\\ProjectRepository\\AFB-Mass-Training-Game\\1.0\\AFB Mass Training Game\\Assets\\DBManager.cs",
               "RelativeDocumentMoniker": "Assets\\DBManager.cs",

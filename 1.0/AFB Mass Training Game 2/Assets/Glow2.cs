@@ -13,6 +13,7 @@ public class Glow2 : MonoBehaviour
     public Material clear;
     private Renderer renderer;
     private Material[] materials;
+    public int clueID;
     private GameObject[] counters = new GameObject[3];
     //public var yellow;
     // Start is called before the first frame update
@@ -45,6 +46,10 @@ public class Glow2 : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if (DBManager.cluesClicked[clueID - 1] == 1)
+        {
+            alreadyClicked = true;
+        }
         bool countersEmpty = true;
         for (int i = 0; i < counters.Length; i++)
         {
