@@ -258,3 +258,18 @@ Our game engine for the interactive escape-room modules. We build each training 
 - Collect completion certificate from module selection page when a particular module has been completed
 
 ---
+
+## Creating a New Build
+- To create a new, final, non-developmental build of the each of the Modules, open the Unity Project and under File and select Build Settings
+- Uncheck "Developmental Build" if currently checked and click "Build"
+- For further instructions and problem solving, check below
+
+---
+## Unity Settings for Modification
+- Change Build Mode to WebGL (File -> Build Settings -> Set Platform to WebGL)
+- Change to Final Build mode (File -> Build Settings -> Uncheck Develoment Build)
+- Set to Correct Resolution (Edit -> Project Settings -> Player -> Under WebGL tab, set width and height to 1200 and 576 respectively)
+- Import Text Mesh Pro (needed text files) if Necessary ((Edit -> Project Settings -> TextMeshPro -> Import TMP Essentials)
+- Any missing default Unity libraries or package files can be dound under Window -> Package Manager, and selecting Unity Registry from the packages dropdown
+
+---
