@@ -12,6 +12,7 @@ public class ActivateClue : MonoBehaviour
     public GameObject clueCounter;
     public List<GameObject> counters;
     private TMP_Text[] texts;
+    public int clueID;
 
 
     private bool alreadyClicked;

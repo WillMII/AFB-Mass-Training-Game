@@ -11,6 +11,7 @@ public class ShelfClue : MonoBehaviour
     public GameObject toolbar;
     private bool alreadyClicked;
     public List<GameObject> counters;
+    public int clueID;
     private TMP_Text[] texts;
     // Start is called before the first frame update
     void Start()

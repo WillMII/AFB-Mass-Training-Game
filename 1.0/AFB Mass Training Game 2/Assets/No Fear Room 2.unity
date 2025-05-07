@@ -4233,6 +4233,7 @@ MonoBehaviour:
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
   counters: []
+  clueID: 5
 --- !u!114 &1052398517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4486,6 +4487,7 @@ MonoBehaviour:
   toolbar: {fileID: 646391745}
   clueCounter: {fileID: 247715446}
   counters: []
+  clueID: 0
 --- !u!114 &1061766412
 MonoBehaviour:
   m_ObjectHideFlags: 0
