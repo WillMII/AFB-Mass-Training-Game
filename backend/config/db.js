@@ -121,6 +121,76 @@ db.connect(err => {
                 );
             `;
 
+            const createSTINFOProgressTable = `
+                CREATE TABLE IF NOT EXISTS stinfoprogress (
+                    email varchar(100) NOT NULL,
+                    clue1clicked tinyint DEFAULT '0',
+                    clue2clicked tinyint DEFAULT '0',
+                    clue3clicked tinyint DEFAULT '0',
+                    clue4clicked tinyint DEFAULT '0',
+                    clue4completed tinyint DEFAULT '0',
+                    clue5clicked tinyint DEFAULT '0',
+                    clue6clicked tinyint DEFAULT '0',
+                    clue7clicked tinyint DEFAULT '0',
+                    clue8clicked tinyint DEFAULT '0',
+                    clue8completed tinyint DEFAULT '0',
+                    clue9clicked tinyint DEFAULT '0',
+                    clue10clicked tinyint DEFAULT '0',
+                    clue11clicked tinyint DEFAULT '0',
+                    quizcompleted tinyint DEFAULT '0',
+                    PRIMARY KEY (email)
+                );
+            `;
+
+            const createNoFearProgressTable = `
+                CREATE TABLE IF NOT EXISTS nofearprogress (
+                    email varchar(100) NOT NULL,
+                    clue1clicked tinyint DEFAULT '0',
+                    clue1completed tinyint DEFAULT '0',
+                    clue2clicked tinyint DEFAULT '0',
+                    clue2completed tinyint DEFAULT '0',
+                    clue3clicked tinyint DEFAULT '0',
+                    clue4clicked tinyint DEFAULT '0',
+                    clue4completed tinyint DEFAULT '0',
+                    clue5clicked tinyint DEFAULT '0',
+                    clue5completed tinyint DEFAULT '0',
+                    clue6clicked tinyint DEFAULT '0',
+                    clue7clicked tinyint DEFAULT '0',
+                    clue8clicked tinyint DEFAULT '0',
+                    clue9clicked tinyint DEFAULT '0',
+                    clue10clicked tinyint DEFAULT '0',
+                    clue11clicked tinyint DEFAULT '0',
+                    clue12clicked tinyint DEFAULT '0',
+                    clue13clicked tinyint DEFAULT '0',
+                    clue14clicked tinyint DEFAULT '0',
+                    clue15clicked tinyint DEFAULT '0',
+                    clue16clicked tinyint DEFAULT '0',
+                    clue17clicked tinyint DEFAULT '0',
+                    clue18clicked tinyint DEFAULT '0',
+                    quizcompleted tinyint DEFAULT '0',
+                    PRIMARY KEY (email)
+                );
+            `;
+
+            const createRecordsProgressTable = 
+                `CREATE TABLE IF NOT EXISTS nofearprogress (
+                    email varchar(100) NOT NULL,
+                    clue1clicked tinyint DEFAULT '0',
+                    clue2clicked tinyint DEFAULT '0',
+                    clue2completed tinyint DEFAULT '0',
+                    clue3clicked tinyint DEFAULT '0',
+                    clue4clicked tinyint DEFAULT '0',
+                    clue4completed tinyint DEFAULT '0',
+                    clue5clicked tinyint DEFAULT '0',
+                    clue6clicked tinyint DEFAULT '0',
+                    clue7clicked tinyint DEFAULT '0',
+                    clue8clicked tinyint DEFAULT '0',
+                    clue8completed tinyint DEFAULT '0',
+                    quizcompleted tinyint DEFAULT '0',
+                    PRIMARY KEY (email)
+                );
+            `;
+
             // Execute table creation queries in order
             const tables = [
                 createUsersTable,
@@ -129,7 +199,10 @@ db.connect(err => {
                 createSessionsTable,
                 createGameProgressTable,
                 createClueBankTable,
-                createQuizQuestionBankTable
+                createQuizQuestionBankTable,
+                createSTINFOProgressTable,
+                createNoFearProgressTable,
+                createRecordsProgressTable
             ];
 
             // Execute each table creation query in the `tables` array
@@ -145,7 +218,10 @@ db.connect(err => {
                             "sessions",
                             "game_progress",
                             "clue_bank",
-                            "quiz_question_bank"
+                            "quiz_question_bank",
+                            "stinfo_progress",
+                            "no_fear_progress",
+                            "records_progress"
                         ];
                         console.log(`'${tableNames[index]}' created.`);
                     }
