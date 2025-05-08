@@ -65,8 +65,6 @@ npm install react-bootstrap bootstrap
 > import 'bootstrap/dist/css/bootstrap.min.css';
 > ```
 
----
-
 #### php
 
 1. Install php from php website.
@@ -77,6 +75,8 @@ npm install react-bootstrap bootstrap
 6. Click **New**
 7. Add in path to unzipped folder
 8. Select **OK**
+
+---
 
 ### 4. Start MySQL
 
