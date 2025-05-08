@@ -16,6 +16,7 @@ public class ConditionalGlow : MonoBehaviour
     bool go = false;
     private Renderer renderer;
     private Material[] materials;
+    public int clueIDAssociatedWith;
     void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -34,21 +35,63 @@ public class ConditionalGlow : MonoBehaviour
     void OnMouseEnter()
     {
         go = script.getAlrClk();
-        Debug.Log(go);
-        if (!alreadyClicked && go)
+        //Debug.Log("ConditionalGlow Click on Item: " + alreadyClicked);
+        //Debug.Log("ConditionalGlow on Item: " + go);
+        if (clueIDAssociatedWith == 2)
         {
-            renderer = GetComponent<Renderer>();
-            materials = renderer.materials;
-            materials[1] = tinted;
-            renderer.materials = materials;
-            //Destroy(plane);
-            Debug.Log("Over");
-            Debug.Log(alreadyClicked);
-            //tempColor.a = 100;
-            //GetComponent<Renderer>().materials[1].color = tempColor;
+            if ((!alreadyClicked) && go && (DBManager.multipartCluesCompleted[0] != 1))
+            {
+                renderer = GetComponent<Renderer>();
+                materials = renderer.materials;
+                materials[1] = tinted;
+                renderer.materials = materials;
+                //Destroy(plane);
+                Debug.Log("Over");
+                Debug.Log(alreadyClicked);
+                //tempColor.a = 100;
+                //GetComponent<Renderer>().materials[1].color = tempColor;
 
-            //GetComponent<Renderer>().materials[1] = tinted;
+                //GetComponent<Renderer>().materials[1] = tinted;
+            }
         }
+        else if (clueIDAssociatedWith == 4)
+        {
+            Debug.Log("Clue 4 Clicked: " + go.ToString());
+            if ((!alreadyClicked) && go && (DBManager.multipartCluesCompleted[1] != 1))
+            {
+                renderer = GetComponent<Renderer>();
+                materials = renderer.materials;
+                materials[1] = tinted;
+                renderer.materials = materials;
+                //Destroy(plane);
+                Debug.Log("Over");
+                Debug.Log(alreadyClicked);
+                //tempColor.a = 100;
+                //GetComponent<Renderer>().materials[1].color = tempColor;
+
+                //GetComponent<Renderer>().materials[1] = tinted;
+            }
+        }
+        else if (clueIDAssociatedWith == 8)
+        {
+            Debug.Log("Clue 4 Clicked: " + go.ToString());
+            if ((!alreadyClicked) && go && (DBManager.multipartCluesCompleted[2] != 1))
+            {
+                renderer = GetComponent<Renderer>();
+                materials = renderer.materials;
+                materials[1] = tinted;
+                renderer.materials = materials;
+                //Destroy(plane);
+                Debug.Log("Over");
+                Debug.Log(alreadyClicked);
+                //tempColor.a = 100;
+                //GetComponent<Renderer>().materials[1].color = tempColor;
+
+                //GetComponent<Renderer>().materials[1] = tinted;
+            }
+        }
+
+
 
 
 

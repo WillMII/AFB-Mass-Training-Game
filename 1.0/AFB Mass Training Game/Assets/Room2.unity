@@ -199,6 +199,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 118471855121498938, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_text
+      value: You Passed the Quiz! You can now exit through the door to finish the
+        module! Make sure to click "Save Game" before you close out of the page to
+        save your progress!
+      objectReference: {fileID: 0}
+    - target: {fileID: 118471855121498938, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_fontSize
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 118471855121498938, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 151495928079695423, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
       propertyPath: getQuiz
       value: 

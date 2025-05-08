@@ -91,7 +91,7 @@ public class DBManagerScript : MonoBehaviour
             {
                 Debug.Log("Column " + (i - 1) + ": " + response[i]);
                 // If the index is one of the multipartclueCompletion
-                if (i == 6 || i == 10)
+                if (i == 6 || i == 11)
                 {
                     DBManager.multipartCluesCompleted[multipartClueNum] = int.Parse(response[i]);
                     multipartClueNum++;

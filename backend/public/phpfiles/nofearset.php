@@ -12,7 +12,6 @@ header("Access-Control-Allow-Headers: Content-Type");
 
     $email = $_POST["email"];
     $clue1clicked = (int)$_POST["clue1clicked"];
-    //$clue1clicked = (int) 1;
     $clue1completed = (int)$_POST["clue1completed"];
     $clue2clicked = (int)$_POST["clue2clicked"];
     $clue2completed = (int)$_POST["clue2completed"];

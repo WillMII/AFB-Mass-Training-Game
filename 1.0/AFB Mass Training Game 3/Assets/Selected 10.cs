@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Selected10 : MonoBehaviour
 {
@@ -125,7 +126,10 @@ public class Selected10 : MonoBehaviour
         }
         else
         {
-             finishText.gameObject.SetActive(true);
+            finishText.gameObject.SetActive(true);
+            DBManager.quizCompleted = 1;
+            DBManager.timeCompleted = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            Debug.Log("You passed! " + DBManager.quizCompleted);
         }
 
 

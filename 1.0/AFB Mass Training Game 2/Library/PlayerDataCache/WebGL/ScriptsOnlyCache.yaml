@@ -37,21 +37,13 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.2D.Tilemap.Extras.Editor.dll:
-    - UnityEditor.Tilemaps.GameObjectBrush
-    - UnityEditor.Tilemaps.GroupBrush
-    - UnityEditor.Tilemaps.LineBrush
-    - UnityEditor.Tilemaps.RandomBrush
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -546,15 +538,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7646}
     - Class: 114
-      Script: {instanceID: 7754}
+      Script: {instanceID: 7960}
     - Class: 114
-      Script: {instanceID: 7962}
+      Script: {instanceID: 8008}
     - Class: 114
-      Script: {instanceID: 8010}
+      Script: {instanceID: 8478}
     - Class: 114
-      Script: {instanceID: 8480}
+      Script: {instanceID: 8920}
     - Class: 114
-      Script: {instanceID: 8922}
+      Script: {instanceID: 9616}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -635,15 +627,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7528}
     - Class: 114
-      Script: {instanceID: 7754}
+      Script: {instanceID: 7828}
     - Class: 114
-      Script: {instanceID: 7830}
+      Script: {instanceID: 8008}
     - Class: 114
-      Script: {instanceID: 8010}
+      Script: {instanceID: 8106}
     - Class: 114
-      Script: {instanceID: 8108}
+      Script: {instanceID: 8478}
     - Class: 114
-      Script: {instanceID: 8480}
+      Script: {instanceID: 9616}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1571,12 +1563,6 @@ ScriptsOnlyBuild:
     className: UnityOnPointerEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: DBManagerScript
-  - hash:
-      serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1881,6 +1867,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DBManagerScript
   platform: 20
   scenePathNames:
   - Assets/No Fear Room.unity

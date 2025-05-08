@@ -176,7 +176,7 @@ public class DBManagerScript : MonoBehaviour
         // Sends data to game_progress database
         WWWForm progressForm = new WWWForm();
         progressForm.AddField("user_id", DBManager.userID);
-        progressForm.AddField("module_id", 2);
+        progressForm.AddField("module_id", 3);
         progressForm.AddField("progress", DBManager.calculateProgress().ToString());
         progressForm.AddField("date_complete", DBManager.timeCompleted);
         progressForm.AddField("stage", 1);

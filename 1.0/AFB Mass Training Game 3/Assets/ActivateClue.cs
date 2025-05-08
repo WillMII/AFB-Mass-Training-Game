@@ -6,12 +6,14 @@ using TMPro;
 public class ActivateClue : MonoBehaviour
 {
     private bool alreadyInstantiated = false;
+    private bool alreadyUpdated = false;
     public GameObject canvas;
     public GameObject mini;
     public GameObject toolbar;
     public GameObject clueCounter;
     public List<GameObject> counters;
     private TMP_Text[] texts;
+    public int clueID;
 
 
     private bool alreadyClicked;
@@ -30,7 +32,14 @@ public class ActivateClue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (DBManager.cluesClicked[clueID - 1] == 1 && (alreadyUpdated == false))
+        {
+            Debug.Log("This is being reached!");
+            alreadyClicked = true;
+            alreadyInstantiated = true;
+            Instantiate(mini.gameObject, toolbar.transform);
+            alreadyUpdated = true;
+        }
     }
 
     void OnMouseDown()
@@ -52,6 +61,7 @@ public class ActivateClue : MonoBehaviour
             if (!alreadyInstantiated)
             {
                 Instantiate(mini.gameObject, toolbar.transform);
+                DBManager.cluesClicked[clueID - 1] = 1;
                 //Instantiate(clueCounter.gameObject);
 
                 alreadyInstantiated = true;
@@ -71,6 +81,25 @@ public class ActivateClue : MonoBehaviour
 
     public bool getAlrClk()
     {
+        if (clueID == 2)
+        {
+            if (DBManager.multipartCluesCompleted[0] == 1)
+            {
+                return true;
+            }
+        } else if (clueID == 4)
+        {
+            if (DBManager.multipartCluesCompleted[1] == 1)
+            {
+                return true;
+            }
+        } else if (clueID == 8)
+        {
+            if (DBManager.multipartCluesCompleted[2] == 1)
+            {
+                return true;
+            }
+        }
         return alreadyClicked;
     }
 }

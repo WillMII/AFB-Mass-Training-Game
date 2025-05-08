@@ -2900,6 +2900,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.8695
       objectReference: {fileID: 0}
+    - target: {fileID: 118471855121498938, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_text
+      value: You Passed the Quiz! You can now exit through the door to finish the
+        module! Make sure to click "Save Game" before you close out of the page to
+        save your progress!
+      objectReference: {fileID: 0}
+    - target: {fileID: 118471855121498938, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_fontSize
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 118471855121498938, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 208210836670321356, guid: 48c32d6d7533e554c8aecec064bf69dc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -86.3

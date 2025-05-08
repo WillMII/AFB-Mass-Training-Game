@@ -51,11 +51,22 @@ public class CluePart : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!alreadyClicked && starter.getAlrClk())
+        if (starterClueID == 4)
         {
-            alreadyClicked = true;
-            Instantiate(canvas.gameObject);
-            canvas.gameObject.SetActive(true);
+            if (!alreadyClicked && starter.getAlrClk() && DBManager.multipartCluesCompleted[0] != 1)
+            {
+                alreadyClicked = true;
+                Instantiate(canvas.gameObject);
+                canvas.gameObject.SetActive(true);
+            }
+        } else if (starterClueID == 8)
+        {
+            if (!alreadyClicked && starter.getAlrClk() && DBManager.multipartCluesCompleted[1] != 1)
+            {
+                alreadyClicked = true;
+                Instantiate(canvas.gameObject);
+                canvas.gameObject.SetActive(true);
+            }
         }
     }
 

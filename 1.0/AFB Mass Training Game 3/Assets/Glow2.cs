@@ -14,6 +14,7 @@ public class Glow2 : MonoBehaviour
     private Renderer renderer;
     private Material[] materials;
     private GameObject[] counters = new GameObject[3];
+    public int clueID;
     //public var yellow;
     // Start is called before the first frame update
     void Start()
@@ -57,7 +58,7 @@ public class Glow2 : MonoBehaviour
                 }
             }
         }
-        if (!alreadyClicked && countersEmpty)
+        if (!alreadyClicked && countersEmpty && (DBManager.cluesClicked[clueID - 1] != 1))
         {
             renderer = GetComponent<Renderer>();
             materials = renderer.materials;
