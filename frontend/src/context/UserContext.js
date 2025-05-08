@@ -10,7 +10,10 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     axios.get(`${apiUrl}/api/user`, { withCredentials: true })
-      .then(res => setUser(res.data))
+      .then(res => {
+        console.log(res.data);
+        setUser(res.data)
+  })
       .catch(() => setUser(null));
   }, [apiUrl]);
 

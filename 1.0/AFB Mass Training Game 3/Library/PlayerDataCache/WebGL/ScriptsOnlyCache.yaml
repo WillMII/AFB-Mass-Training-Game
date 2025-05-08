@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - CluePart
     - ConditionalGlow
     - CountingTypes3
+    - DBManagerScript
     - ExitRoomRecords
     - Glow
     - Glow2
@@ -28,6 +29,7 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
+    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -157,6 +159,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: DBManagerScript
+    methodName: callSaveData
   - assembly: Assembly-CSharp
     fullTypeName: Selected11
     methodName: OnClick
@@ -425,6 +430,9 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
+    fullTypeName: DBManagerScript
+    methodName: callSaveData
+  - assembly: Assembly-CSharp
     fullTypeName: LoadRoom1
     methodName: OnClick
   sceneClasses:
@@ -462,45 +470,47 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16608}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 16610}
+      Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 16662}
+      Script: {instanceID: 1620}
     - Class: 114
-      Script: {instanceID: 17188}
+      Script: {instanceID: 2144}
     - Class: 114
-      Script: {instanceID: 17382}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 17514}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 17902}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 18152}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 18356}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 19768}
+      Script: {instanceID: 4724}
     - Class: 114
-      Script: {instanceID: 20084}
+      Script: {instanceID: 5040}
     - Class: 114
-      Script: {instanceID: 20086}
+      Script: {instanceID: 5042}
     - Class: 114
-      Script: {instanceID: 20226}
+      Script: {instanceID: 5944}
     - Class: 114
-      Script: {instanceID: 20990}
+      Script: {instanceID: 6858}
     - Class: 114
-      Script: {instanceID: 21904}
+      Script: {instanceID: 7262}
     - Class: 114
-      Script: {instanceID: 22308}
+      Script: {instanceID: 7524}
     - Class: 114
-      Script: {instanceID: 22570}
+      Script: {instanceID: 8004}
     - Class: 114
-      Script: {instanceID: 23050}
+      Script: {instanceID: 8102}
     - Class: 114
-      Script: {instanceID: 23148}
+      Script: {instanceID: 8472}
     - Class: 114
-      Script: {instanceID: 23518}
+      Script: {instanceID: 9640}
+    - Class: 114
+      Script: {instanceID: 31460}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -551,65 +561,67 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16608}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 16610}
+      Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 16662}
+      Script: {instanceID: 1620}
     - Class: 114
-      Script: {instanceID: 16848}
+      Script: {instanceID: 1806}
     - Class: 114
-      Script: {instanceID: 17010}
+      Script: {instanceID: 2004}
     - Class: 114
-      Script: {instanceID: 17048}
+      Script: {instanceID: 2144}
     - Class: 114
-      Script: {instanceID: 17188}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 17514}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 17902}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 18152}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 18236}
+      Script: {instanceID: 3250}
     - Class: 114
-      Script: {instanceID: 18294}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 18356}
+      Script: {instanceID: 3474}
     - Class: 114
-      Script: {instanceID: 18518}
+      Script: {instanceID: 4438}
     - Class: 114
-      Script: {instanceID: 19482}
+      Script: {instanceID: 5040}
     - Class: 114
-      Script: {instanceID: 20084}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 20424}
+      Script: {instanceID: 5944}
     - Class: 114
-      Script: {instanceID: 20990}
+      Script: {instanceID: 6154}
     - Class: 114
-      Script: {instanceID: 21200}
+      Script: {instanceID: 6298}
     - Class: 114
-      Script: {instanceID: 21344}
+      Script: {instanceID: 6502}
     - Class: 114
-      Script: {instanceID: 21548}
+      Script: {instanceID: 6858}
     - Class: 114
-      Script: {instanceID: 21904}
+      Script: {instanceID: 7010}
     - Class: 114
-      Script: {instanceID: 22056}
+      Script: {instanceID: 7262}
     - Class: 114
-      Script: {instanceID: 22308}
+      Script: {instanceID: 7524}
     - Class: 114
-      Script: {instanceID: 22570}
+      Script: {instanceID: 7642}
     - Class: 114
-      Script: {instanceID: 22688}
+      Script: {instanceID: 7956}
     - Class: 114
-      Script: {instanceID: 23002}
+      Script: {instanceID: 8004}
     - Class: 114
-      Script: {instanceID: 23050}
+      Script: {instanceID: 8102}
     - Class: 114
-      Script: {instanceID: 23148}
+      Script: {instanceID: 8472}
     - Class: 114
-      Script: {instanceID: 23518}
+      Script: {instanceID: 9636}
+    - Class: 114
+      Script: {instanceID: 31460}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -709,12 +721,6 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 6a6dca313e4a63588783861937c981b9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ActivateQuizRecords
-  - hash:
-      serializedVersion: 2
       Hash: 7c809f2b0af76909a6676347ce353070
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -775,7 +781,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 6064591f6e932346c1b3d0ca5888acf7
+      Hash: 504cf38ffbeed760764e920cc2e28c76
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ConditionalGlow
@@ -931,7 +937,7 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 64d11535f13c8296a6a91bb3131533dc
+      Hash: 9ea67e87ce39c1581533225b23bcb50f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CluePart
@@ -1171,7 +1177,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: b4a784c84e3b3ace20ea8fcdc138959f
+      Hash: da89b7ccbd7a1735a39811f342a9aab1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Glow2
@@ -1193,12 +1199,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Tilemap.Extras
     namespaceName: UnityEngine.Tilemaps
     className: AnimatedTile
-  - hash:
-      serializedVersion: 2
-      Hash: ac15dc60a63151bc5268422dd9317cba
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ExitRoomRecords
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1507,7 +1507,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 60332dd2f4f72d4fac1d8f9c729e073c
+      Hash: 3d6ebeb3d75d76e6a804242b9ee1e571
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CountingTypes3
@@ -1621,7 +1621,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: bb60103ce995079b925f00db419352c8
+      Hash: 54564dacf8ae9629fd253f0ac6f21781
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ActivateClue
@@ -1639,7 +1639,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1c3422504b402e4bcd01ea321abcd99f
+      Hash: 0634a97877aead7d546be4efcad9a613
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ShelfClue
@@ -1847,9 +1847,26 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 6a6dca313e4a63588783861937c981b9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ActivateQuizRecords
+  - hash:
+      serializedVersion: 2
+      Hash: ac15dc60a63151bc5268422dd9317cba
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ExitRoomRecords
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DBManagerScript
   platform: 20
   scenePathNames:
   - Assets/Records Room 1.unity
   - Assets/Records Room 2.unity
-  playerPath: C:/Users/drblu/Documents/AFB-Mass-Training-Game/AFB Mass Training Game
-    3/Builds
+  playerPath: C:/Users/chris/OneDrive/Desktop/CSEE 4910/ProjectRepository/AFB-Mass-Training-Game/backend/public/recordsmgmt

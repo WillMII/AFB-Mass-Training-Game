@@ -11,6 +11,7 @@ public class CluePart : MonoBehaviour
     private bool alreadyClicked;
     public ActivateClue starter;
     public GameObject canvas;
+    public int starterClueID;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,30 @@ public class CluePart : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!alreadyClicked && starter.getAlrClk())
+        if (starterClueID == 2)
         {
-            alreadyClicked = true;
-            Instantiate(canvas.gameObject);
-            canvas.gameObject.SetActive(true);
+            if (!alreadyClicked && starter.getAlrClk() && DBManager.multipartCluesCompleted[0] != 1)
+            {
+                alreadyClicked = true;
+                Instantiate(canvas.gameObject);
+                canvas.gameObject.SetActive(true);
+            }
+        } else if (starterClueID == 4)
+        {
+            if (!alreadyClicked && starter.getAlrClk() && DBManager.multipartCluesCompleted[1] != 1)
+            {
+                alreadyClicked = true;
+                Instantiate(canvas.gameObject);
+                canvas.gameObject.SetActive(true);
+            }
+        } else if (starterClueID == 8)
+        {
+            if (!alreadyClicked && starter.getAlrClk() && DBManager.multipartCluesCompleted[2] != 1)
+            {
+                alreadyClicked = true;
+                Instantiate(canvas.gameObject);
+                canvas.gameObject.SetActive(true);
+            }
         }
     }
 

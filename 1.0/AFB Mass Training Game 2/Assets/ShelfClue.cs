@@ -6,11 +6,13 @@ using TMPro;
 public class ShelfClue : MonoBehaviour
 {
     private bool alreadyInstantiated = false;
+    private bool alreadyUpdated;
     public GameObject canvas;
     public GameObject mini;
     public GameObject toolbar;
     private bool alreadyClicked;
     public List<GameObject> counters;
+    public int clueID;
     private TMP_Text[] texts;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,16 @@ public class ShelfClue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (DBManager.cluesClicked[2] == 1 && (alreadyUpdated == false) && clueID == 3)
+        {
+            Debug.Log("This is being reached!");
+            if (toolbar == null)
+                return;
+            Instantiate(mini.gameObject, toolbar.transform);
+            alreadyClicked = true;
+            alreadyInstantiated = true;
+            alreadyUpdated = true;
+        }
     }
 
     void OnMouseDown()
@@ -50,6 +61,7 @@ public class ShelfClue : MonoBehaviour
             {
                 Instantiate(mini.gameObject, toolbar.transform);
                 alreadyInstantiated = true;
+                DBManager.cluesClicked[clueID - 1] = 1;
 
             }
 

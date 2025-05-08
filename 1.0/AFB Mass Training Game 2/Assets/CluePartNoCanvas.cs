@@ -13,6 +13,8 @@ public class CluePartNoCanvas: MonoBehaviour
     public List<GameObject> counters;
     private TMP_Text[] texts;
     public ActivateClue actClue;
+    public int clueID;
+    private bool alreadyUpdated = false;
 
     private bool alreadyClicked;
     // Start is called before the first frame update
@@ -30,7 +32,15 @@ public class CluePartNoCanvas: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (DBManager.cluesClicked[clueID - 1] == 1 && !alreadyUpdated)
+        {
+            Instantiate(mini.gameObject, toolbar.transform);
+            //Instantiate(clueCounter.gameObject);
 
+            alreadyInstantiated = true;
+            alreadyClicked = true;
+            alreadyUpdated = true;
+        }
     }
 
     void OnMouseDown()
@@ -52,6 +62,7 @@ public class CluePartNoCanvas: MonoBehaviour
             if (!alreadyInstantiated)
             {
                 Instantiate(mini.gameObject, toolbar.transform);
+                DBManager.cluesClicked[clueID - 1] = 1;
                 //Instantiate(clueCounter.gameObject);
 
                 alreadyInstantiated = true;

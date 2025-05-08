@@ -25,7 +25,8 @@ public class CanExit : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (A10.didPass() || B10.didPass() || C10.didPass() || D10.didPass())
+
+        if (A10.didPass() || B10.didPass() || C10.didPass() || D10.didPass() || DBManager.quizCompleted == 1)
         {
             Instantiate(modFinished.gameObject);
         }

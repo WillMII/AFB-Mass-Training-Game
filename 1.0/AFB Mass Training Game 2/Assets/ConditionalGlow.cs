@@ -13,6 +13,8 @@ public class ConditionalGlow : MonoBehaviour
     //public var yellow;
     // Start is called before the first frame update
     public ActivateClue script;
+    public int starterClueID;
+    public int clueID;
     bool go = false;
     private Renderer renderer;
     private Material[] materials;
@@ -28,6 +30,61 @@ public class ConditionalGlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (starterClueID == 1)
+        {
+            if ((DBManager.multipartCluesCompleted[0] == 1) || alreadyClicked)
+            {
+                alreadyClicked = true;
+                //go = true;
+            }
+            /*
+            else
+            {
+                alreadyClicked = false;
+            }
+            */
+        }
+        else if (starterClueID == 2)
+        {
+            if ((DBManager.multipartCluesCompleted[1] == 1) || alreadyClicked)
+            {
+                alreadyClicked = true;
+                //go = true;
+            }
+            /*
+            else
+            {
+                alreadyClicked = false;
+            }
+            */
+        }
+        else if (starterClueID == 4)
+        {
+            if ((DBManager.multipartCluesCompleted[2] == 1) || alreadyClicked)
+            {
+                alreadyClicked = true;
+                //go = true;
+            }
+            /*
+            else
+            {
+                alreadyClicked = false;
+            }
+
+            */
+        }
+        else if (starterClueID == 5)
+        {
+            if ((DBManager.multipartCluesCompleted[3] == 1))
+            {
+                alreadyClicked = true;
+            } else if ((DBManager.cluesClicked[clueID - 1] == 1)) {
+                alreadyClicked = true;
+                script.alreadyClicked = true;
+            }
+        }
+        
         //go = script.getAlrClk();
     }
 
@@ -35,6 +92,56 @@ public class ConditionalGlow : MonoBehaviour
     {
         go = script.getAlrClk();
         Debug.Log(go);
+        if (starterClueID == 4)
+        {
+            if (!alreadyClicked && go && DBManager.multipartCluesCompleted[2] != 1)
+            {
+                renderer = GetComponent<Renderer>();
+                materials = renderer.materials;
+                materials[1] = tinted;
+                renderer.materials = materials;
+                //Destroy(plane);
+                Debug.Log("Over");
+                Debug.Log(alreadyClicked);
+                //tempColor.a = 100;
+                //GetComponent<Renderer>().materials[1].color = tempColor;
+
+                //GetComponent<Renderer>().materials[1] = tinted;
+            }
+        } else if (starterClueID == 5)
+        {
+            if (!alreadyClicked && go && DBManager.multipartCluesCompleted[3] != 1 && DBManager.cluesClicked[clueID - 1] != 1)
+            {
+                renderer = GetComponent<Renderer>();
+                materials = renderer.materials;
+                materials[1] = tinted;
+                renderer.materials = materials;
+                //Destroy(plane);
+                Debug.Log("Over");
+                Debug.Log(alreadyClicked);
+                //tempColor.a = 100;
+                //GetComponent<Renderer>().materials[1].color = tempColor;
+
+                //GetComponent<Renderer>().materials[1] = tinted;
+            }
+        } else { 
+        
+            if (!alreadyClicked && go && DBManager.multipartCluesCompleted[starterClueID - 1] != 1)
+            {
+                renderer = GetComponent<Renderer>();
+                materials = renderer.materials;
+                materials[1] = tinted;
+                renderer.materials = materials;
+                //Destroy(plane);
+                Debug.Log("Over");
+                Debug.Log(alreadyClicked);
+                //tempColor.a = 100;
+                //GetComponent<Renderer>().materials[1].color = tempColor;
+
+                //GetComponent<Renderer>().materials[1] = tinted;
+            }
+        }
+        /*
         if (!alreadyClicked && go)
         {
             renderer = GetComponent<Renderer>();
@@ -49,6 +156,7 @@ public class ConditionalGlow : MonoBehaviour
 
             //GetComponent<Renderer>().materials[1] = tinted;
         }
+        */
 
 
 
@@ -68,6 +176,7 @@ public class ConditionalGlow : MonoBehaviour
     {
         if (materials[1] == tinted)
         {
+            Debug.Log("Already Clicked");
             alreadyClicked = true;
         }
         //Destroy(plane);

@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinted: {fileID: 2100000, guid: c9040219fb826db42abbb2859becb7f7, type: 2}
   clear: {fileID: 2100000, guid: 97dd821815e38854a8b4dfb4f233162f, type: 2}
+  clueID: 0
 --- !u!114 &3215703851947316242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +161,5 @@ MonoBehaviour:
   canvas: {fileID: 2203950869843888959, guid: 6ffb9c8ae21dc3c4f9c5c6e529979862, type: 3}
   mini: {fileID: 1879818568459899302}
   toolbar: {fileID: 0}
+  counters: []
+  clueID: 3

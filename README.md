@@ -17,7 +17,7 @@ A web-based training platform designed for Warner Robins Air Force Base to trans
 
 - **Game Engine:** Unity (C#)
 - **Frontend:** React.js
-- **Backend:** Node.js + Express
+- **Backend:** Node.js + Express + php
 - **Database:** MySQL
 
 ---
@@ -71,6 +71,17 @@ npm install react-bootstrap bootstrap
 > import 'bootstrap/dist/css/bootstrap.min.css';
 > ```
 
+#### php
+
+1. Install php from php website.
+2. Extract .zip file to any prefered location
+3. Go into System Environment Variables → **Environment Variables**
+4. Find Path system variable
+5. Click on **Edit...**
+6. Click **New**
+7. Add in path to unzipped folder
+8. Select **OK**
+
 ---
 
 ### 4. Start MySQL
@@ -105,6 +116,13 @@ cd frontend
 npm start
 ```
 React app will open at **http://localhost:3000**.
+
+#### php
+Go to an empty terminal, then type in:
+```bash
+php -S localhost:8001 -t public
+```
+
 
 ---
 
@@ -249,6 +267,9 @@ A popular CSS framework that provides responsive grid layouts and pre-styled com
 
 **Unity (WebGL)**
 Our game engine for the interactive escape-room modules. We build each training scenario in Unity and export a lightweight **WebGL** build that runs in the browser.
+
+**php**
+A scripting language in web development. We used php to send data between MySQL and the Unity game in order to have the user's progress saved.
 
 ---
 
